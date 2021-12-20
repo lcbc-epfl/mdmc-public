@@ -2,7 +2,5 @@ jupyter-book
 matplotlib
 numpy
 ghp-import
-openmm==7.5.0
-numba
 pandas
 ipywidgets
