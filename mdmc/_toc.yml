@@ -1,0 +1,40 @@
+format: jb-book
+root: intro
+parts:
+- caption: Exercises
+  numbered: true
+  chapters:
+  - file: Ex1/MDMC_ex1
+    sections:
+    - file: Ex1/Exercise1Theory
+    # - file: Ex1/questions
+    - file: Ex1/MonteCarloPI
+    - file: Ex1/prng
+  - file: Ex2/MDMC_ex2
+    sections:
+    - file: Ex2/Exercise2Theory
+    - file: Ex2/Exercise2TheoryQ
+    - file: Ex2/Boltzmann_new
+    # - file: Ex2/questions
+  - file: Ex3/MDMC_ex3
+    sections:
+    - file: Ex3/Exercise3Theory
+    - file: Ex3/Photon
+    - file: Ex3/MC_NVT
+    # - file: Ex3/questions  
+  - file: Ex4/MDMC_ex4
+    sections:
+    - file: Ex4/theory
+    # - file: Ex4/Exercise4Questions
+    - file: Ex4/Exercise
+  - file: Ex5/MDMC_ex5
+    sections:
+    - file: Ex5/theory
+    - file: Ex5/Exercise
+  - file: Ex6/MDMC_Ex6
+    sections:
+    - file: Ex6/theory
+    - file: Ex6/proteinmodelling
+    - file: Ex6/TRP_Cage_OpenMM_colab
+    - file: Ex6/hydrogenbonds
+    # - file: Ex6/questions
