@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this course material, please cite it as below."
+authors:
+- family-names: "Roethlisberger"
+  given-names: "Ursula"
+  orcid: https://orcid.org/0000-0002-1704-8591
+- family-names: "Dürr"
+  given-names: Simon Leonard
+  orcid: https://orcid.org/0000-0002-4304-8106
+- family-names: "Levy"
+  given-names: "Andrea"
+  orcid: https://orcid.org/0000-0003-1255-859X)
+- family-names: "Johnson"
+  given-names: "Sophia Kathryn"
+  orcid: https://orcid.org/0000-0003-1255-859X)
+title: "Introduction to Electronic Structure Methods"
+version: 1.0
+date-released: 2021-09-21
+url: "https://github.com/lcbc-epfl/mdmc-public"

@@ -53,7 +53,7 @@ html:
               </div>
               <div class="col-6 d-flex" style="justify-content:center">
                 <ul style="list-style:none">
-                  <li> <a href="https://github.com/lcbc-epfl/iesm-public">GitHub </a> </li> </li>
+                  <li> <a href="https://github.com/lcbc-epfl/mdmc-public">GitHub </a> </li> </li>
                   <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>-->
                 </ul>
               </div>
