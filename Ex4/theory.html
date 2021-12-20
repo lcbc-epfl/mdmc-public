@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.1. Theory &#8212; Molecular Dynamics and Monte Carlo</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.2. How to run the exercises" href="Exercise.html" />
+    <link rel="prev" title="4. Introduction to Molecular Dynamics" href="MDMC_ex4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Molecular Dynamics and Monte Carlo</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Molecular Dynamics and Monte Carlo
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex1/MDMC_ex1.html">
+   1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex1/Exercise1Theory.html">
+     1.1. From Quantum to Classical Mechanics: The Example of Forces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex1/MonteCarloPI.html">
+     1.3. Monte Carlo Pi Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex1/prng.html">
+     1.4. Appendix: Random and Pseudo-random Numbers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex2/MDMC_ex2.html">
+   2. Statistical Thermodynamics and the Boltzmann Distribution
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex2/Exercise2Theory.html">
+     2.1. Statistical Thermodynamics and the Boltzmann Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex2/Exercise2TheoryQ.html">
+     2.2. Theory Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex2/Boltzmann_new.html">
+     2.3. Boltzmann levels python
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex3/MDMC_ex3.html">
+   3. Monte Carlo Simulations and the Photon Gas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex3/Exercise3Theory.html">
+     3.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex3/Photon.html">
+     3.2. Practical: Photon gas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex3/MC_NVT.html">
+     3.3. Configurational sampling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="MDMC_ex4.html">
+   4. Introduction to Molecular Dynamics
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     4.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise.html">
+     4.2. How to run the exercises
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex5/MDMC_ex5.html">
+   5. Classical Molecular Dynamics (MD) Simulations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex5/theory.html">
+     5.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex5/Exercise.html">
+     5.2. ToyMD NVT
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex6/MDMC_Ex6.html">
+   6. Properties from Molecular Dynamics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/theory.html">
+     6.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/proteinmodelling.html">
+     6.3. Protein Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">
+     6.4. Practical: TRP Cage using OpenMM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/hydrogenbonds.html">
+     6.5. TrpCage Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/Ex4/theory.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/lcbc-epfl/mdmc-public"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx4/theory.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-ergodic-hypothesis-in-statistical-mechanics">
+   4.1.1. The Ergodic Hypothesis in Statistical Mechanics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling-phase-space-using-molecular-dynamics">
+   4.1.2. Sampling Phase Space using Molecular Dynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time-evolution">
+   4.1.3. Time Evolution
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-position-verlet-algorithm">
+     4.1.3.1. The Position-Verlet Algorithm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-velocity-verlet-algorithm">
+     4.1.3.2. The Velocity-Verlet Algorithm
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structural-properties-from-md">
+   4.1.4. Structural Properties from MD
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#periodic-boundary-conditions">
+     4.1.4.1. Periodic Boundary Conditions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="theory">
+<h1><span class="section-number">4.1. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-ergodic-hypothesis-in-statistical-mechanics">
+<h2><span class="section-number">4.1.1. </span>The Ergodic Hypothesis in Statistical Mechanics<a class="headerlink" href="#the-ergodic-hypothesis-in-statistical-mechanics" title="Permalink to this headline">¶</a></h2>
+<p>The question whether some properties obtained by averaging over a
+thermodynamical ensemble (the <em>ensemble average</em>) are equal to a <em>time
+average</em> of said properties - <em>i.e.</em> whether a system is <em>ergodic</em> or
+not - poses one of the fundamental problems of statistical mechanics.
+Unfortunately, there exists no complete proof of an <em>ergodic theorem</em>
+applied to thermodynamic ensembles. However, it can be shown that, if
+the only constants of motion of the system are constant functions over
+phase space (<em>i.e.</em> constants independent of coordinates and momenta),
+then the ensemble and time averages are identical for
+<span class="math notranslate nohighlight">\(t \rightarrow \infty\)</span>. Since a more general ergodic theorem has not
+been proven yet, a system is usually considered ergodic as long as <em>all</em>
+regions of phase space are accessible during the time <span class="math notranslate nohighlight">\(t\)</span> for which the
+system is sampled. In practice, the <em>ergodic hypothesis</em>,</p>
+<div class="math notranslate nohighlight" id="equation-ergodic-hypothesis">
+<span class="eqno">(4.1)<a class="headerlink" href="#equation-ergodic-hypothesis" title="Permalink to this equation">¶</a></span>\[
+\begin{aligned}
+\left&lt; O \right&gt; = \int_\Gamma \frac{1}{Z}O(\Gamma)e^{-\beta \mathrm{H}(\Gamma)} \mathrm{d}\Gamma
+                 = \lim_{t \rightarrow \infty} \frac{1}{t} \int_0^\tau O(\tau) \mathrm{d}\tau,
+\end{aligned}
+\]</div>
+<p>is thus assumed - but not guaranteed - to hold.</p>
+</div>
+<div class="section" id="sampling-phase-space-using-molecular-dynamics">
+<h2><span class="section-number">4.1.2. </span>Sampling Phase Space using Molecular Dynamics<a class="headerlink" href="#sampling-phase-space-using-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
+<p>Under the ergodic hypothesis, a direct sampling of phase space
+configurations can be replaced by a sampling of the dynamic evolution of
+the system for long enough times <span class="math notranslate nohighlight">\(t\)</span>. For an <span class="math notranslate nohighlight">\(NVT\)</span> ensemble, an
+observable of a state <span class="math notranslate nohighlight">\(s\)</span> will then be explored with a probability
+corresponding to its Boltzmann weight, and for a sufficiently long <span class="math notranslate nohighlight">\(t\)</span> -
+<em>i.e.</em> for a sufficiently high occurence of all events to be
+representative - the time-average over the <span class="math notranslate nohighlight">\(O(s)\)</span> will reproduce the
+ensemble average. The longer the simulation time <span class="math notranslate nohighlight">\(t\)</span> is chosen, the
+better the convergence of the time average towards the ensemble average
+(it is evident that too short <span class="math notranslate nohighlight">\(t\)</span> do not lead to a converged dynamics,
+<em>i.e.</em> phase space is not properly sampled).</p>
+<p>In this spirit, a (suitable) starting conformer of a system can be
+propagated in time according to Hamilton’s equations of motions:</p>
+<div class="math notranslate nohighlight" id="equation-hamiltoneqmotion">
+<span class="eqno">(4.2)<a class="headerlink" href="#equation-hamiltoneqmotion" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+ \frac{\mathrm{d}\mathbf{p}_i}{\mathrm{d}t} &amp;= -\frac{\partial{H}}{\partial{\mathbf{q}_i}},\\
+ \frac{\mathrm{d}\mathbf{q}_i}{\mathrm{d}t} &amp;= \frac{\partial{H}}{\partial{\mathbf{p}_i}}.
+ \end{aligned}
+ \end{split}\]</div>
+<p>This time-evolution is completely general. If the system is represented
+by a set of classical point particles, the Newtonian formulation of
+classical mechanics can be applied to the problem, and the particles can
+be propagated by evaluating the force acting on them:</p>
+<div class="math notranslate nohighlight" id="equation-newtonianformulation">
+<span class="eqno">(4.3)<a class="headerlink" href="#equation-newtonianformulation" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+\mathbf{F}_I &amp;= \nabla_I E\\
+&amp;= m_I\mathbf{a}_I
+\end{aligned} \end{split}\]</div>
+<p>For small time steps
+<span class="math notranslate nohighlight">\(\Delta t = \tau\)</span>, the particles are accelerated according to <span class="math notranslate nohighlight">\(a\)</span> which
+is determined from <span class="math notranslate nohighlight">\(\frac{\nabla_I E}{m_I}\)</span> at <span class="math notranslate nohighlight">\(t=0\)</span>. At time <span class="math notranslate nohighlight">\(t=\tau\)</span>,
+the forces and the acceleration are re-evaluated, and the system is
+moved according to the updated forces that act on it. These forces may
+be obtained from quantum mechanical calculations (<em>first principles</em>
+dynamics, <em>cf.</em> the discussion of the Hellmann-Feynman theorem) or from
+a parametrised form for <span class="math notranslate nohighlight">\(E(\mathbf{r})\)</span> (<em>classical dynamics</em>, which
+will be discussed in detail in the following lecture). Since the
+evolution of the system is well-defined at every point based on the
+forces acting on it, its dynamics will be <em>deterministic</em>. Given an
+initial set of positions and momenta, every point ever visited by the
+system at time <span class="math notranslate nohighlight">\(t\)</span> is pre-determined. Applying this approach to
+molecular systems results in either <em>classical</em> or <em>first-principles
+molecular dynamics</em> (MD).</p>
+</div>
+<div class="section" id="time-evolution">
+<h2><span class="section-number">4.1.3. </span>Time Evolution<a class="headerlink" href="#time-evolution" title="Permalink to this headline">¶</a></h2>
+<p>Given the potential for atomic interaction in section
+<a class="reference internal" href="../Ex5/theory.html#minimalff"><span class="std std-numref">Section 5.1.4</span></a>, the force
+acting upon the <span class="math notranslate nohighlight">\(i\)</span>th atom is determined by the gradient with respect to
+atomic displacements:</p>
+<div class="math notranslate nohighlight" id="equation-force-on-i">
+<span class="eqno">(4.4)<a class="headerlink" href="#equation-force-on-i" title="Permalink to this equation">¶</a></span>\[
+\mathbf{F}_i = -\nabla_{\mathbf{r}_i} V \left( \mathbf{r_1}, \dots, \mathbf{r_N} \right) = - \left( \frac{\partial V}{\partial x_i}, \frac{\partial V}{\partial y_i}, \frac{\partial V}{\partial z_i} \right).
+\]</div>
+<p>Using Newton’s equations of motion one can then achieve propagation of
+atomic positions in time, using some time step <span class="math notranslate nohighlight">\(\Delta t\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-atomic-position-in-time">
+<span class="eqno">(4.5)<a class="headerlink" href="#equation-atomic-position-in-time" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+\mathbf{a_i}(r_i, t) &amp;= \frac{\mathbf{F}_i(\mathbf{r})}{m_i}, \\
+\mathbf{v}_i(t + \Delta t) &amp;= \mathbf{v}_i(t) + \mathbf{a}_i(t)\Delta t, \\
+\mathbf{r}_i(t + \Delta t) &amp;= \mathbf{r}_i(t) + \mathbf{v}_i(t)\Delta t.
+\end{aligned}
+\end{split}\]</div>
+<div class="section" id="the-position-verlet-algorithm">
+<h3><span class="section-number">4.1.3.1. </span>The Position-Verlet Algorithm<a class="headerlink" href="#the-position-verlet-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>The potential energy
+<span class="math notranslate nohighlight">\(U \left( \mathbf{r_1}, \dots, \mathbf{r_N} \right)\)</span> is a function of
+the positions (3N) of all atoms in the system. Due to the complicated
+nature of this function and the large number of atoms typically modeled
+in classical systems, there is no analytical solution to the equations
+of motion, and hence these must be solved numerically. The most common
+numerical solutions to integrating the equations of motion are called
+finite difference methods. First, the positions, velocities and
+accelerations can be approximated by a Taylor series expansion:</p>
+<div class="math notranslate nohighlight" id="equation-taylor-exp-verlet">
+<span class="eqno">(4.6)<a class="headerlink" href="#equation-taylor-exp-verlet" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+\mathbf{r}(t + \Delta t) &amp;= \mathbf{r}(t) + \mathbf{v}(t)\Delta t + \frac{1}{2}\mathbf{a}(t)\Delta t^2 + \dots, \\
+\mathbf{v}(t + \Delta t) &amp;= \mathbf{v}(t) + \mathbf{a}(t)\Delta t + \frac{1}{2}\mathbf{b}(t)\Delta t^2 + \dots, \\
+\mathbf{a}(t + \Delta t) &amp;= \mathbf{a}(t) + \mathbf{b}(t)\Delta t + \dots,
+\end{aligned}
+\end{split}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\dots\)</span> denotes higher order derivatives of <span class="math notranslate nohighlight">\(\mathbf{r}(t)\)</span>. One
+can then propagate the position function forwards and backwards in time,
+yielding:</p>
+<div class="math notranslate nohighlight" id="equation-step3">
+<span class="eqno">(4.7)<a class="headerlink" href="#equation-step3" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+\mathbf{r}(t + \Delta t) &amp;= \mathbf{r}(t) + \mathbf{v}(t)\Delta t + \frac{1}{2}\mathbf{a}(t)\Delta t^2, \\
+\mathbf{r}(t - \Delta t) &amp;= \mathbf{r}(t) - \mathbf{v}(t)\Delta t + \frac{1}{2}\mathbf{a}(t)\Delta t^2, \\
+\end{aligned}
+\end{split}\]</div>
+<p>and by summing these the position-Verlet is obtained:</p>
+<div class="math notranslate nohighlight" id="equation-step2">
+<span class="eqno">(4.8)<a class="headerlink" href="#equation-step2" title="Permalink to this equation">¶</a></span>\[
+\mathbf{r}(t + \Delta t) = 2\mathbf{r}(t) - \mathbf{r}(t - \Delta t) + \mathbf{a}(t) \Delta t^2,
+\]</div>
+<p>while the subtraction of the Taylor series for
+<span class="math notranslate nohighlight">\(\mathbf{r}(t + \Delta t)\)</span> and <span class="math notranslate nohighlight">\(\mathbf{r}(t - \Delta t)\)</span> yields:</p>
+<div class="math notranslate nohighlight" id="equation-step1">
+<span class="eqno">(4.9)<a class="headerlink" href="#equation-step1" title="Permalink to this equation">¶</a></span>\[
+\mathbf{v}(t) = \frac{\mathbf{r}(t + \Delta t) - \mathbf{r}(t - \Delta t)}{2 \Delta t}.
+\]</div>
+</div>
+<div class="section" id="the-velocity-verlet-algorithm">
+<h3><span class="section-number">4.1.3.2. </span>The Velocity-Verlet Algorithm<a class="headerlink" href="#the-velocity-verlet-algorithm" title="Permalink to this headline">¶</a></h3>
+<p>The position-Verlet algorithm uses positions and accelerations at time
+<span class="math notranslate nohighlight">\(t\)</span>, and the positions from time <span class="math notranslate nohighlight">\(t- \Delta t\)</span> to calculate new
+positions at time <span class="math notranslate nohighlight">\(t+\Delta t\)</span>. The position-Verlet algorithm does not
+use velocities explicitly, and as such it is straightforward to
+implement and requires minimal storage space. However, this form of the
+Verlet algorithm is not self-starting, i.e it requires two time steps
+before propagation can take place, and as such is heavily dependent on
+initial starting conditions. A modification to the above is the
+velocity-Verlet:</p>
+<div class="math notranslate nohighlight" id="equation-velocity-verlet">
+<span class="eqno">(4.10)<a class="headerlink" href="#equation-velocity-verlet" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{aligned}
+\mathbf{r}(t + \Delta t) &amp;= \mathbf{r}(t) + \mathbf{v}(t)\Delta t + \frac{1}{2}\mathbf{a}(t)\Delta t^2, \\
+\mathbf{v}(t + \Delta t) &amp;= \mathbf{v}(t) + \frac{1}{2} \left( \mathbf{a}(t + \Delta t) + \mathbf{a}(t) \right) \Delta t,
+\end{aligned}
+\end{split}\]</div>
+<p>which is self-starting and additionally minimises round-off errors.</p>
+</div>
+</div>
+<div class="section" id="structural-properties-from-md">
+<h2><span class="section-number">4.1.4. </span>Structural Properties from MD<a class="headerlink" href="#structural-properties-from-md" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="periodic-boundary-conditions">
+<h3><span class="section-number">4.1.4.1. </span>Periodic Boundary Conditions<a class="headerlink" href="#periodic-boundary-conditions" title="Permalink to this headline">¶</a></h3>
+<p>Simulating for long times <span class="math notranslate nohighlight">\(t\)</span> ensures that the ensemble average can be
+approached, however, it is impossible to sample in the limit of the
+ergodic theorem <span class="math notranslate nohighlight">\(t\to\infty\)</span>. Additionally, for bulk-property
+calculation it is necessary to use a sufficiently large number of
+molecules to ensure that regions of phase space are sampled
+representatively, such that one may be confident that the ensemble
+average is properly reconstructed from the time average. In practice
+there is a relatively small and finite number of molecules for which
+simulation is computationally feasible, hence, compared to a macroscopic
+system (<span class="math notranslate nohighlight">\(\sum N_A\)</span> molecules), the ratio of molecules near the surface
+of the simulation box is often too large to be representative.
+Computational modelling of molecular systems could therefore have an
+artificially imposed doping of surface effects which negatively impacts
+the calcuation of any bulk property of interest. To remedy this, surface
+effects can be disposed of for all system sizes if periodic boundary
+conditions (PBC) are imposed. In this regime, the simulation box is
+replicated through space to form an infinite lattice. When a molecule
+moves during simulation its periodic images move with the exact same
+displacement, thus, if a molecule leaves the central box, one of its
+images will enter through the opposite face. This is illustrated in
+Figure <a class="reference internal" href="#pbc"><span class="std std-numref">Fig. 4.1</span></a> there
+are no walls at the boundary of the central box and the system has no
+surface.</p>
+<div class="figure align-default" id="pbc">
+<a class="reference internal image-reference" href="../_images/pbc.svg"><img alt="../_images/pbc.svg" height="400px" src="../_images/pbc.svg" /></a>
+<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">Simulation box and its periodic images. When a molecule leaves the
+central box, it is wrapped around to the opposite side. CC by SA <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Limiteperiodicite.svg">Grimlock</a></span><a class="headerlink" href="#pbc" title="Permalink to this image">¶</a></p>
+</div>
+<p>It is not necessary to store the coordinates of all images in a
+simulation (this would require infinite space). When a molecule leaves
+the box by crossing a boundary, attention may be switched to the
+identical molecule entering from the opposite side (see Exercise).</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./Ex4"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="MDMC_ex4.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Introduction to Molecular Dynamics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Exercise.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>How to run the exercises</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
+        
+          <div class="extra_footer">
+            <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
+</div> <div class="col-6 d-flex" style="justify-content:center"> <ul style="list-style:none"> <li> <a href="https://github.com/lcbc-epfl/iesm-public">GitHub </a> </li> </li> <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>--> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license. (Except where indicated otherwise) </div>
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
