@@ -601,7 +601,10 @@ Therefore, the integrals in <a class="reference internal" href="#equation-canoni
 Z(N,V,T) = \sum_i g_i e^{-\beta E_i}.
 \end{align}
 \]</div>
+<div class="exercise admonition" id="ex4">
+<p class="admonition-title">Exercise 1</p>
 <p>A quantum harmonic oscillator has energy levels:</p>
+</div>
 <div class="math notranslate nohighlight">
 \[ E_n = \left(n + \frac{1}{2}\right)\hbar \omega. \]</div>
 <p>Write down the corresponding canonical partition function
@@ -677,11 +680,17 @@ Z(N,V,T) &amp;= \sum_i e^{-\beta E_i},
 \end{align}
 \]</div>
 <p>which recovers the expression for the classical probability distribution function presented in the preceeding section.</p>
+<div class="exercise admonition" id="id1">
+<p class="admonition-title">Exercise 2 - Bonus</p>
 <p>Show that, based on <a class="reference internal" href="#equation-thermodynamic-properties">(2.17)</a>, the canonical partition function <a class="reference internal" href="#equation-classical-probability">(2.18)</a> is obtained from <a class="reference internal" href="#equation-canonical-density-matrix">(2.13)</a> if the Hamiltonian admits an orthonormal eigenbasis <span class="math notranslate nohighlight">\(\left\{\ket{\Psi_i}\right\}\)</span> and the commutator <span class="math notranslate nohighlight">\(\left[\hat{\mathrm{H}},\hat{\mathrm{O}}\right]\)</span> vanishes. (There is no need to use the commutator itself, applying conditions that follow from vanishing commutators is sufficient.)</p>
-</div><p>Show from <a class="reference internal" href="#equation-density-operator">(2.12)</a> and <a class="reference internal" href="#equation-canonical-density-matrix">(2.13)</a> that the <span class="math notranslate nohighlight">\(p_i\)</span> are indeed equal to <span class="math notranslate nohighlight">\(\frac{1}{Z}e^{-\beta E_i}\)</span> for pure states, given that there exists a common eigenbasis <span class="math notranslate nohighlight">\(\left\{\ket{\Psi_i}\right\}\)</span> to the total Hamiltonian and explain the origin of this restriction.
+</div>
+<div class="exercise admonition" id="id2">
+<p class="admonition-title">Exercise 3 - Bonus</p>
+<p>Show from <a class="reference internal" href="#equation-density-operator">(2.12)</a> and <a class="reference internal" href="#equation-canonical-density-matrix">(2.13)</a> that the <span class="math notranslate nohighlight">\(p_i\)</span> are indeed equal to <span class="math notranslate nohighlight">\(\frac{1}{Z}e^{-\beta E_i}\)</span> for pure states, given that there exists a common eigenbasis <span class="math notranslate nohighlight">\(\left\{\ket{\Psi_i}\right\}\)</span> to the total Hamiltonian and explain the origin of this restriction.
 Explain why the density operator and the expression for the expectation value of an observable assume a general form (<a class="reference internal" href="#equation-canonical-density-matrix">(2.13)</a> and <a class="reference internal" href="#equation-thermodynamic-properties">(2.17)</a>), rather than being defined directly in terms of <a class="reference internal" href="#equation-canonical-density-matrix-recast">(2.15)</a> and <a class="reference internal" href="#equation-classical-probability">(2.18)</a>.
 (You may link your answer to the assumptions made in the previous question).</p>
-</div></div>
+</div>
+</div>
 <div class="section" id="the-isothermal-isobaric-ensemble">
 <h3><span class="section-number">2.1.1.4. </span>The Isothermal-Isobaric ensemble<a class="headerlink" href="#the-isothermal-isobaric-ensemble" title="Permalink to this headline">¶</a></h3>
 <p>The isothermal-isobaric or <span class="math notranslate nohighlight">\(NpT\)</span>-ensemble is of great practical relevance in chemistry. The isothermal-isobaric partition function is a weighted sum over canonical partition functions,
@@ -732,10 +741,14 @@ P(E_s) = \frac{N_s}{N} = \frac{g_s e^{-\beta E_s}}{\sum_i g_i e^{-\beta E_i}} = 
 \end{align}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(N_s\)</span> are the number of particles in the microstate <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(N\)</span> is the total number of particles and <span class="math notranslate nohighlight">\(E_s\)</span> is the energy of microstate <span class="math notranslate nohighlight">\(s\)</span>.</p>
+<div class="exercise admonition" id="id3">
+<p class="admonition-title">Exercise 4</p>
 <p>Derive the Boltzmann distribution, <a class="reference internal" href="#equation-boltzmann">(2.24)</a>, from <a class="reference internal" href="#equation-recast-expectation-value">(2.10)</a>, using the   expectation value of the particle number in state <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(N_s\)</span>, as observable.
 <em>Hint</em>: It may be useful to remember that the ensamble average in <a class="reference internal" href="#equation-recast-expectation-value">(2.10)</a> can be always expressed also as the probability of being in that state, times their value:
-$<span class="math notranslate nohighlight">\(\left&lt;O_s\right&gt; = p_s O_s\)</span>$</p>
-</div><p>In this exercise you will apply the Boltzmann distribution <a class="reference internal" href="#equation-boltzmann">(2.24)</a> to determine the occupancy of states for a fictitious harmonic oscillator.  <a class="reference internal" href="#harmonic-oscillator"><span class="std std-numref">Fig. 2.1</span></a> presents our system.</p>
+$<span class="math notranslate nohighlight">\(\left&lt;o_s\right&gt; = p_s O_s\)</span>$
+&lt;/o_s\right&gt;</p>
+</div>
+<p>In this exercise you will apply the Boltzmann distribution <a class="reference internal" href="#equation-boltzmann">(2.24)</a> to determine the occupancy of states for a fictitious harmonic oscillator.  <a class="reference internal" href="#harmonic-oscillator"><span class="std std-numref">Fig. 2.1</span></a> presents our system.</p>
 <p>Here, individual states are separated by the energy <span class="math notranslate nohighlight">\(\epsilon\)</span> with zero-point energy <span class="math notranslate nohighlight">\(\epsilon_0\)</span>. From this point onwards it is practical to use reduced temperature such that <span class="math notranslate nohighlight">\(k_B = 1\)</span>, and define that the energy levels <span class="math notranslate nohighlight">\(\epsilon_0,\epsilon_1, \epsilon_2,\dots, \epsilon_N\)</span> of the harmonic oscillator take the values <span class="math notranslate nohighlight">\(1, 2, 3, \dots, N\)</span>.</p>
 <p>We are particularly interested in the evolution of the distribution of microstates upon changing the temperature or degeneracy, thus in this exercise we will write a program to discover the Boltzmann distribution characteristics of the system.</p>
 <div class="figure align-default" id="harmonic-oscillator">
