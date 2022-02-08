@@ -460,22 +460,6 @@ theorem:</p>
 <p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is some parameter on which the Hamiltonian, and thus the
 wavefunction, parametrically depends.</p>
 <p>Prove the Hellmann-Feynman theorem</p>
-</div><div class="exercise admonition" id="ex4">
-<p class="admonition-title">Note</p>
-<p>Exercise 1</p>
-</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\frac{dE}{d\lambda} &amp;= \frac{d}{d\lambda} \left&lt;\Psi_\lambda\middle|\hat{H}\middle|\Psi_\lambda\right&gt;\\
-&amp;=\left&lt;\frac{d\Psi_\lambda}{d\lambda} \middle|\hat{H}\middle|\Psi_\lambda\right&gt;+\left&lt;\Psi_\lambda\middle| \frac{d\hat{H}}{d\lambda}\middle|\Psi_\lambda\right&gt;+ \left&lt;\Psi_\lambda\middle|\hat{H}\middle|\frac{d\Psi_\lambda}{d\lambda}\right&gt;\\
-&amp;=\left&lt;\frac{d\Psi_\lambda}{d\lambda} \middle|\hat{H}\middle|\Psi_\lambda\right&gt;+\left&lt;\Psi_\lambda\middle| \frac{d\hat{H}}{d\lambda}\middle|\Psi_\lambda\right&gt;+ \left(\left&lt;\frac{d\Psi_\lambda}{d\lambda}\middle|\hat{H}\middle|\Psi_\lambda\right&gt;\right)^*\\
-&amp;=E\left&lt;\frac{d\Psi_\lambda}{d\lambda}\middle|\Psi_\lambda\right&gt;+\left&lt;\Psi_\lambda\middle| \frac{d\hat{H}}{d\lambda}\middle|\Psi_\lambda\right&gt;+ E\left(\left&lt;\frac{d\Psi_\lambda}{d\lambda}\middle|\Psi_\lambda\right&gt;\right)^*\\
-&amp;=E\left&lt;\frac{d\Psi_\lambda}{d\lambda}\middle|\Psi_\lambda\right&gt;+\left&lt;\Psi_\lambda\middle| \frac{d\hat{H}}{d\lambda}\middle|\Psi_\lambda\right&gt;+ E\left&lt;\Psi_\lambda\middle|\frac{d\Psi_\lambda}{d\lambda}\right&gt;\\
-&amp;=E\underbrace{\frac{d}{d\lambda}\underbrace{\left&lt;\Psi_\lambda\middle|\Psi_\lambda\right&gt;}_{1}}_{0}+\left&lt;\Psi_\lambda\middle| \frac{d\hat{H}}{d\lambda}\middle|\Psi_\lambda\right&gt;\\
-&amp;=\left&lt;\Psi_\lambda\middle| \frac{d\hat{H}}{d\lambda}\middle|\Psi_\lambda\right&gt;
-\end{aligned}
-\end{split}\]</div>
 </div><p>By considering the Hamiltonian of
 a system with <span class="math notranslate nohighlight">\(N\)</span> electrons and <span class="math notranslate nohighlight">\(M\)</span> nuclei within the Born-Oppenheimer
 approximation, the forces are easily evaluated from the Hellmann-Feynman
@@ -511,15 +495,6 @@ density <span class="math notranslate nohighlight">\(\rho(\mathbf{r})\)</span> u
 molecular dynamics</em>, the forces are not evaluated from the electron
 density, but are fully parametrised instead.</p>
 <p>Explain the Born-Oppenheimer approximation in your own words.  You do not have to use any equations (but you may if you wish). Take care not to make wrong generalisations</p>
-</div><div class="exercise admonition" id="id1">
-<p class="admonition-title">Note</p>
-<p>Exercise 2 - Bonus</p>
-</div>
-<p>BO should not be simplified as “nuclei are heavier than electrons, thus they move
-faster, and this is why the degrees of freedom can be decoupled” - although it may
-be presented as such in earlier courses (not IESM, though). BO assumes a separable
-Ansatz for the nuclear and electronic wavefunction and then neglects the coupling
-elements for the electronic states. This neglect can be linked to the difference in the mass of nuclei and electrons, using a perturbative approach (see for example <em>Perspective on Zur Quantentheorie der Molekeln</em> by John C. Tully). However, other proofs are possible. Recasting the coupling elements, one obtains a form where the energetic separation of states shows up in the denominator, indicating that BO is only valid if the states are sufficiently well separated on an energetic scale.</p>
 </div></div>
 <div class="tex2jax_ignore mathjax_ignore section" id="statistical-approaches-to-numerical-estimation">
 <h1><span class="section-number">1.2. </span>Statistical Approaches to Numerical Estimation<a class="headerlink" href="#statistical-approaches-to-numerical-estimation" title="Permalink to this headline">¶</a></h1>
@@ -553,24 +528,11 @@ generated coordinates must be uniformly distributed across the entire
 square to prevent bias. In addition, a large enough number of sample
 points must be used to appropriately approximate the areas (and their
 ratio).</p>
-<div class="exercise admonition" id="id2">
+<div class="exercise admonition" id="ex4">
 <p class="admonition-title">Exercise 3</p>
 <p>How can you compute <span class="math notranslate nohighlight">\(\pi\)</span> using the ratio of points that fall within the circle (consider a full circle) and the square?</p>
 </div>
-<div class="exercise admonition" id="id3">
-<p class="admonition-title">Note</p>
-<p>Exercise 3</p>
 </div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-A_{square} &amp;= l^2\\
-A_{circle} &amp;= \pi r^2\\
-\frac{A_{square}}{A_{circle}} &amp;= \frac{l^2}{\pi r^2}\\
-\Rightarrow \pi &amp;= \frac{A_{circle}}{A_{square}}\left(\frac{l}{r}\right)^2
-\end{aligned}
-\end{split}\]</div>
-</div></div>
 </div>
 
     <script type="text/x-thebe-config">
