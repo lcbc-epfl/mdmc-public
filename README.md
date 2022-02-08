@@ -1,4 +1,4 @@
-# MDMDC 
+# MDMDC 
 
 Course script for the introduction to molecular dynamics and monte carlo methods for undergraduate students.
 

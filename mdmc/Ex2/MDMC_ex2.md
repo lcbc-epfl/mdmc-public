@@ -16,17 +16,19 @@ using Boltzmann statistics.
 
 🎯 **Learning goals**
 ^^^
-Perform statistical mechanics on a computer
+(Re)introduction to Statistical Mechanics
+
+Compute the Boltzmann Distribution for an Harmonic Oscillator
 ---
 :header: bg-jb-two
 
 📖 **Chapter in script**
 ^^^
-p.1-2 Course script
+Chapter 2 - Statistical Mechanics in a Nutshell
 ---
 :header: bg-jb-three
 
 📚 **Resources**
 ^^^
-Understanding Molecular Simulation,  Frenkel & Smit, p.200
+Understanding Molecular Simulation,  Frenkel & Smit, p.9-17
 ::::

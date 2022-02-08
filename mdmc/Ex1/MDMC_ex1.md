@@ -18,11 +18,11 @@ certain mathematical problems.
 ---
 :header: bg-jb-one
 
-🎯 **Learning goals**
+🎯 **Learning goals**s
 ^^^
 Link between classical and quantum models
 
-Compute $\pi$ using numerical estimation
+Compute $\pi$ using a Monte Carlo approach
 
 Understand randomness on a computer
 ---
@@ -30,11 +30,13 @@ Understand randomness on a computer
 
 📖 **Chapter in script**
 ^^^
-p.1-2 Course script
+Chapter 1 - From Quantum Mechanics to Classical Mechanics
 ---
 :header: bg-jb-three
 
 📚 **Resources**
 ^^^
-Understanding Molecular Simulation,  Frenkel & Smit, p.200
+Ab initio molecular dynamics: basic theory and advanced methods, Marx & Hutter, p.11-20
+
+Learn Computer Graphics From Scratch!, Scratchapixel, [Monte Carlo Methods in Practice: Generating Random Numbers](https://www.scratchapixel.com/lessons/mathematics-physics-for-computer-graphics/monte-carlo-methods-in-practice/generating-random-numbers)
 ::::

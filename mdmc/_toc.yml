@@ -6,22 +6,18 @@ parts:
   chapters:
   - file: Ex1/MDMC_ex1
     sections:
-    - file: Ex1/Exercise1Theory
-    # - file: Ex1/questions
+    - file: Ex1/Ex1_Theory
     - file: Ex1/MonteCarloPI
     - file: Ex1/prng
   - file: Ex2/MDMC_ex2
     sections:
-    - file: Ex2/Exercise2Theory
-    - file: Ex2/Exercise2TheoryQ
-    - file: Ex2/Boltzmann_new
-    # - file: Ex2/questions
+    - file: Ex2/Ex2_Theory
+    - file: Ex2/Boltzmann
   - file: Ex3/MDMC_ex3
     sections:
-    - file: Ex3/Exercise3Theory
-    - file: Ex3/Photon
-    - file: Ex3/MC_NVT
-    # - file: Ex3/questions  
+    - file: Ex3/Ex3_Theory
+    - file: Ex3/PhotonGas
+    - file: Ex3/LJ_NVT
   - file: Ex4/MDMC_ex4
     sections:
     - file: Ex4/theory
