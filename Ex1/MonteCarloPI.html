@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.3. Monte Carlo Pi Python &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>1.3. Monte Carlo \(\pi\) &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,7 +42,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -53,7 +55,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1.4. Appendix: Random and Pseudo-random Numbers" href="prng.html" />
-    <link rel="prev" title="1.1. From Quantum to Classical Mechanics: The Example of Forces" href="Exercise1Theory.html" />
+    <link rel="prev" title="1.1. From Quantum to Classical Mechanics: The Example of Forces" href="Ex1_Theory.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -109,13 +111,16 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="Exercise1Theory.html">
+    <a class="reference internal" href="Ex1_Theory.html">
      1.1. From Quantum to Classical Mechanics: The Example of Forces
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     1.3. Monte Carlo Pi Python
+     1.3. Monte Carlo
+     <span class="math notranslate nohighlight">
+      \(\pi\)
+     </span>
     </a>
    </li>
    <li class="toctree-l2">
@@ -136,18 +141,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Exercise2Theory.html">
+    <a class="reference internal" href="../Ex2/Ex2_Theory.html">
      2.1. Statistical Thermodynamics and the Boltzmann Distribution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Exercise2TheoryQ.html">
-     2.2. Theory Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Boltzmann_new.html">
-     2.3. Boltzmann levels python
+    <a class="reference internal" href="../Ex2/Boltzmann.html">
+     2.2. Boltzmann Distribution Harmonic Oscillator
     </a>
    </li>
   </ul>
@@ -163,18 +163,18 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex3/Exercise3Theory.html">
+    <a class="reference internal" href="../Ex3/Ex3_Theory.html">
      3.1. Theory
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex3/Photon.html">
-     3.2. Practical: Photon gas
+    <a class="reference internal" href="../Ex3/PhotonGas.html">
+     3.2. The Photon Gas
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex3/MC_NVT.html">
-     3.3. Configurational sampling
+    <a class="reference internal" href="../Ex3/LJ_NVT.html">
+     3.3. The Lennard-Jones Potential
     </a>
    </li>
   </ul>
@@ -301,7 +301,7 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -357,18 +357,29 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Monte Carlo \pi</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="monte-carlo-pi-python">
-<h1><span class="section-number">1.3. </span>Monte Carlo Pi Python<a class="headerlink" href="#monte-carlo-pi-python" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="monte-carlo-pi">
+<h1><span class="section-number">1.3. </span>Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span><a class="headerlink" href="#monte-carlo-pi" title="Permalink to this headline">¶</a></h1>
+<p>For this Exercise, we import some useful libraries to deal with mathematical operations and random numbers:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">r</span>
@@ -378,17 +389,22 @@
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 
-<span class="c1"># Random Seed</span>
+<span class="c1"># The Random Seed is set here, you will focus on it in the last question.</span>
+<span class="c1"># For the moment it is sufficient to know that this is used to initialize</span>
+<span class="c1"># the generation of random numbers (if not set a default value is used, </span>
+<span class="c1"># but it can be useful to know what is the seed for reproducibility)</span>
 <span class="n">r</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Modify the following piece of code to implement a numerical estimation of <span class="math notranslate nohighlight">\(\pi\)</span> via a Monte Carlo approach. Note that you only need to modify the code in the section explicitly highlited).</p>
+<p>You will need to generate demo points using random extractions. There are different ways to do so, one possibility is to use the <code class="docutils literal notranslate"><span class="pre">uniform</span></code> function of the <code class="docutils literal notranslate"><span class="pre">random</span></code> package that we have imported. Refer to the package documentation to understand how this function works, and how to obtain the desired oputcome with it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">estimatePI</span><span class="p">(</span><span class="n">n_trials</span><span class="o">=</span><span class="mi">10</span><span class="p">):</span>
 
-    <span class="n">successfulHits</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">successfulHits</span> <span class="o">=</span> <span class="mi">0</span>  
     <span class="n">circleRadius</span> <span class="o">=</span> <span class="mf">0.5</span>
     <span class="n">squareLength</span> <span class="o">=</span> <span class="mf">1.0</span>
 
@@ -399,14 +415,16 @@
 
     <span class="c1"># Iterate for the number of darts.</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_trials</span><span class="p">):</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># generate a demo point here</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># generate a demo point here from random extraction</span>
         <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="c1"># check if point in circle here and decide whether </span>
         <span class="c1"># to append the point to inside or outside list    </span>
         <span class="c1"># also don&#39;t forget to count the number of succesful hits    </span>
-        
+     
+    <span class="c1"># Estimate Pi </span>
     <span class="n">pi</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Change code here to get an estimate of pi</span>
     <span class="c1">## End Code to modify ##</span>
+     
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">pi</span><span class="si">:</span><span class="s2">.10f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
@@ -421,13 +439,17 @@
 </div>
 </div>
 </div>
-<p>Lets try running a single test of our code with few trials (<code class="docutils literal notranslate"><span class="pre">n=100</span></code>). You should get a square plot with points inside the circle in orange and points outside the circle in blue.</p>
+<p>Try to run a single test of your code with few trials (<code class="docutils literal notranslate"><span class="pre">n=100</span></code>). You should get a square plot with points inside the circle in orange and points outside the circle in blue.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estimatePI</span><span class="p">(</span><span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
+</div>
+<div class="exercise admonition" id="ex4">
+<p class="admonition-title">Exercise 4</p>
+<p>Perform the <span class="math notranslate nohighlight">\(\pi\)</span> estimation for 1000, 100000 and 1000000 trials. Take a screenshot of these estimations and include them in your report (e.g of the python plots). What happens to the accuracy of the <span class="math notranslate nohighlight">\(\pi\)</span> estimation when going from 1000 to 1000000 trials and why?</p>
 </div>
 <p><strong>Everything working correctly?</strong></p>
 <p>Then, lets get a bit more fancy and allow changing the number of trials interactively.</p>
@@ -438,15 +460,21 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "18f018753760459292b24ff67d3d128a", "version_major": 2, "version_minor": 0}
-</script><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;function __main__.estimatePI(n_trials=10)&gt;
-</pre></div>
 </div>
+<div class="exercise admonition" id="id1">
+<p class="admonition-title">Exercise 5</p>
+<p>What happens to the estimation of <span class="math notranslate nohighlight">\(\pi\)</span> when the circle origin is changed? Why?</p>
 </div>
+<div class="exercise admonition" id="id2">
+<p class="admonition-title">Exercise 6</p>
+<p>What happens to the accuracy of the estimation when you increase the square size, or decrease the circle size? Is there an optimal ratio between the square side (<span class="math notranslate nohighlight">\(l\)</span>) and the circle diameter (<span class="math notranslate nohighlight">\(d\)</span>)?</p>
 </div>
+<div class="exercise admonition" id="id3">
+<p class="admonition-title">Exercise 7</p>
+<p>In our code we set the random seed (<code class="docutils literal notranslate"><span class="pre">r.seed()</span></code>) once in the first cell, but then it is unchanged. It means that the first time you run the MC code, the random number set as seed was used for the extraction, but then the later extractions do not start from that seed anymore. What happens if you use the same seed for the pseudo random number generator (PRNG) each time you start the MC code? And what would happen if you would use the same seed for each random number extraction? You can read up more details in <a class="reference internal" href="prng.html"><span class="doc">Appendix: Random and Pseudo-random Numbers</span></a>.</p>
 </div>
+<p><em>Hint</em>: To get an idea, you can either edit the MC code, or you can also write a piece of code to check how the numbers generated depend on the seed set.</p>
+</div></div>
 
     <script type="text/x-thebe-config">
     {
@@ -470,10 +498,10 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Exercise1Theory.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Ex1_Theory.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
@@ -488,22 +516,20 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
-        
-          <div class="extra_footer">
-            <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
+  <p>
+    
+      By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
+    
+      <div class="extra_footer">
+        <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
 </div> <div class="col-6 d-flex" style="justify-content:center"> <ul style="list-style:none"> <li> <a href="https://github.com/lcbc-epfl/mdmc-public">GitHub </a> </li> </li> <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>--> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license. (Except where indicated otherwise) </div>
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 

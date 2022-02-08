@@ -42,9 +42,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -54,7 +54,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.2. Practical: Photon gas" href="Photon.html" />
+    <link rel="next" title="3.2. The Photon Gas" href="PhotonGas.html" />
     <link rel="prev" title="3. Monte Carlo Simulations and the Photon Gas" href="MDMC_ex3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -111,13 +111,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex1/Exercise1Theory.html">
+    <a class="reference internal" href="../Ex1/Ex1_Theory.html">
      1.1. From Quantum to Classical Mechanics: The Example of Forces
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex1/MonteCarloPI.html">
-     1.3. Monte Carlo Pi Python
+     1.3. Monte Carlo
+     <span class="math notranslate nohighlight">
+      \(\pi\)
+     </span>
     </a>
    </li>
    <li class="toctree-l2">
@@ -138,18 +141,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Exercise2Theory.html">
+    <a class="reference internal" href="../Ex2/Ex2_Theory.html">
      2.1. Statistical Thermodynamics and the Boltzmann Distribution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Exercise2TheoryQ.html">
-     2.2. Theory Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Boltzmann_new.html">
-     2.3. Boltzmann levels python
+    <a class="reference internal" href="../Ex2/Boltzmann.html">
+     2.2. Boltzmann Distribution Harmonic Oscillator
     </a>
    </li>
   </ul>
@@ -170,13 +168,13 @@
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Photon.html">
-     3.2. Practical: Photon gas
+    <a class="reference internal" href="PhotonGas.html">
+     3.2. The Photon Gas
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="MC_NVT.html">
-     3.3. Configurational sampling
+    <a class="reference internal" href="LJ_NVT.html">
+     3.3. The Lennard-Jones Potential
     </a>
    </li>
   </ul>
@@ -298,12 +296,12 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Ex3/Exercise3Theory.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Ex3/Ex3_Theory.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -318,7 +316,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx3/Exercise3Theory.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx3/Ex3_Theory.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -334,10 +332,32 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex3/Ex3_Theory.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex3/Ex3_Theory.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -359,37 +379,6 @@
    3.1.3. The Metropolis Algorithm
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-example-of-a-metropolis-monte-carlo-algorithm">
-   3.1.4. An example of a Metropolis Monte Carlo Algorithm
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm">
-     3.1.4.1. Ensemble Averages from the Metropolis Monte Carlo Algorithm
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-photon-gas">
-       3.1.4.1.1. The Photon Gas
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#configurational-sampling-using-the-metropolis-monte-carlo-algorithm">
-     3.1.4.2. Configurational Sampling using the Metropolis Monte Carlo Algorithm
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#the-lennard-jones-potential">
-       3.1.4.2.1. The Lennard-Jones Potential
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
 </ul>
 
             </nav>
@@ -398,7 +387,40 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Theory</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monte-carlo-and-the-importance-of-importance-sampling">
+   3.1.1. Monte Carlo and the Importance of Importance Sampling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-concept-of-detailed-balance">
+   3.1.2. The Concept of Detailed Balance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-metropolis-algorithm">
+   3.1.3. The Metropolis Algorithm
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="theory">
@@ -425,9 +447,8 @@ quadratures work reasonably fine for functions that are smooth on the
 scale of the mesh - but the Boltzmann factor is a highly oscillatory
 quantity. The oscillatory nature of <span class="math notranslate nohighlight">\(e^{-\beta E(\Gamma)}\)</span> will
 furthermore result in many points of no importance being sampled, since
-their Boltzmann factor will be vanishing. The idea behind <em>importance
-sampling</em> lies in an extended sampling of regions where the Boltzmann
-factor is of considerable magnitude, with fewer sampling moves
+their Boltzmann factor will be vanishing.</p>
+<p>The idea behind <em>importance sampling</em> lies in an extended sampling of regions where the Boltzmann factor is of considerable magnitude, with fewer sampling moves
 elsewhere. Very simple importance sampling schemes can be constructed,
 but they fail when used on multidimensional integrals, since they
 require analytical expressions for the partition function. If that were
@@ -452,7 +473,11 @@ integrating out over all momenta. One is thus left with the
 <em>configurational</em> partition function, containing only the <em>potential</em>
 energy in the exponent, rather than the potential and kinetic term. (You
 can easily convince yourself that this is possible if the potential and
-kinetic term are not coupled). Rewriting <a class="reference internal" href="#equation-ensembleaverage">(3.2)</a> in terms of a probability
+kinetic term are not coupled).</p>
+<p>Show that if the Hamiltonian of a system can be written as:
+$<span class="math notranslate nohighlight">\( H = T(\mathbf{p}) + V(\mathbf{q})\)</span><span class="math notranslate nohighlight">\(
+i.e. if the kinetic and potential energy can be decoupled, then the partition function can be divided into a kinetic and potential part. Derive {eq}`ensembleaverage` for an ensemble average of an observable \)</span>O(\mathbf{q})<span class="math notranslate nohighlight">\(, which depends only on \)</span>\mathbf{q}$.</p>
+</div><p>Rewriting <a class="reference internal" href="#equation-ensembleaverage">(3.2)</a> in terms of a probability
 density <span class="math notranslate nohighlight">\(\mathcal{N}(\mathbf{q})\)</span> (<em>cf.</em> the Boltzmann distribution),
 one finds:</p>
 <div class="math notranslate nohighlight" id="equation-ensemble-average-boltzmann">
@@ -521,7 +546,9 @@ accepting this trial move, <span class="math notranslate nohighlight">\(P_\text{
 \end{aligned}
 \]</div>
 <p>The transition matrix <span class="math notranslate nohighlight">\(P^\prime\)</span> is chosen to be symmetric, such that
-<span class="math notranslate nohighlight">\(P^\prime(o \rightarrow n) = P^\prime(n \rightarrow o)\)</span>. Hence when
+<span class="math notranslate nohighlight">\(P^\prime(o \rightarrow n) = P^\prime(n \rightarrow o)\)</span>.</p>
+<p>Why is it important that <span class="math notranslate nohighlight">\(P'\)</span> is a symmetric matrix?</p>
+</div><p>Hence when
 detailed balance is maintained, the acceptance probability is:</p>
 <div class="math notranslate nohighlight" id="equation-acceptance-prob">
 <span class="eqno">(3.8)<a class="headerlink" href="#equation-acceptance-prob" title="Permalink to this equation">¶</a></span>\[\begin{split}
@@ -607,153 +634,6 @@ P_\text{acc}(o \rightarrow n) &amp;= \min \left(1,\frac{P_\text{acc}(o \rightarr
 the sampling preserves the equilibrium distribution, <em>i.e.</em> it fulfills
 <em>detailed balance</em>.</p>
 </div>
-<div class="section" id="an-example-of-a-metropolis-monte-carlo-algorithm">
-<span id="metropolis"></span><h2><span class="section-number">3.1.4. </span>An example of a Metropolis Monte Carlo Algorithm<a class="headerlink" href="#an-example-of-a-metropolis-monte-carlo-algorithm" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="ensemble-averages-from-the-metropolis-monte-carlo-algorithm">
-<h3><span class="section-number">3.1.4.1. </span>Ensemble Averages from the Metropolis Monte Carlo Algorithm<a class="headerlink" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="the-photon-gas">
-<h4><span class="section-number">3.1.4.1.1. </span>The Photon Gas<a class="headerlink" href="#the-photon-gas" title="Permalink to this headline">¶</a></h4>
-<p>In this exercise you will be applying the Metropolis Monte Carlo
-algorithm to calculate the state occupancy of a photon gas. The photon
-gas is a gas-like collection of photons, which has many of the same
-properties of a conventional gas such as pressure, temperature and
-entropy. The most common example of a photon gas in equilibrium is
-black-body radiation. Black-body radiation is an electromagnetic field
-constructed by a superposition of plane waves of different frequencies,
-with the caveat that a mode may only be excited in units of <span class="math notranslate nohighlight">\(\hbar w\)</span>.
-This fact leads to the concept of photons as quanta of the
-electromagnetic field, with the state of the field being specified by
-the occupancy <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span> of each of the modes or, in other
-words, by enumerating the number of photons with each frequency.</p>
-<p>The ensemble average of the state occupancy <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span> of a
-photon gas can be calculated analytically. Deriving the total energy of
-an idealised photon gas from quantum mechanics we know that <span class="math notranslate nohighlight">\(U\)</span> can be
-written as the sum of the harmonic oscillation energies:</p>
-<div class="math notranslate nohighlight" id="equation-total-energy-photongas">
-<span class="eqno">(3.15)<a class="headerlink" href="#equation-total-energy-photongas" title="Permalink to this equation">¶</a></span>\[
-\begin{aligned}
-U= \sum_{j=1}^{N} n_j w_j \hbar = \sum_{j=1}^{N} n_j \epsilon_j,
-\end{aligned}
-\]</div>
-<p>where <span class="math notranslate nohighlight">\(\epsilon_j\)</span> is the energy of state <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(n_j\)</span> is the occupancy of
-state <span class="math notranslate nohighlight">\(j\)</span> (<span class="math notranslate nohighlight">\(n_j \in 0,1,2,\cdots, \infty\)</span>), <span class="math notranslate nohighlight">\(N\)</span> is the total number of
-photons and <span class="math notranslate nohighlight">\(w\)</span> is the oscilator frequency. In this exercise, you are
-going to compute the ensemble average of the occupancy
-<span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span>. The scheme you will employ is as follows:</p>
-<ol>
-<li><p>Start with an arbitrary <span class="math notranslate nohighlight">\(n_j\)</span>.</p></li>
-<li><p>Decide to perform a trial move to randomly increase or decrease
-<span class="math notranslate nohighlight">\(n_j\)</span> by 1.</p></li>
-<li><p>Accept the trial move with probability:</p>
-<div class="math notranslate nohighlight">
-\[
-    \begin{aligned}
-    P_{acc}(o \rightarrow n)= \min \left(1, e^{-\beta(U(n)-U(o))}\right),\end{aligned}
-    \]</div>
-<p>where <span class="math notranslate nohighlight">\(U(n)\)</span> and <span class="math notranslate nohighlight">\(U(o)\)</span> are the energies of the new and old states
-respectively.</p>
-</li>
-<li><p>Update averages regardless of acceptance or rejection.</p></li>
-<li><p>Go to step 2).</p></li>
-</ol>
-</div>
-</div>
-<div class="section" id="configurational-sampling-using-the-metropolis-monte-carlo-algorithm">
-<h3><span class="section-number">3.1.4.2. </span>Configurational Sampling using the Metropolis Monte Carlo Algorithm<a class="headerlink" href="#configurational-sampling-using-the-metropolis-monte-carlo-algorithm" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="the-lennard-jones-potential">
-<h4><span class="section-number">3.1.4.2.1. </span>The Lennard-Jones Potential<a class="headerlink" href="#the-lennard-jones-potential" title="Permalink to this headline">¶</a></h4>
-<p>In this exercise you will study the configuration of a collection of
-gaseous particles using the Metropolis Monte Carlo algorithm. The system
-includes <span class="math notranslate nohighlight">\(N\)</span> particles within a cubic box of volume <span class="math notranslate nohighlight">\(V\)</span> at a given
-temperature <span class="math notranslate nohighlight">\(T\)</span>, in any configuration permitted by the Lennard-Jones
-potential:</p>
-<div class="math notranslate nohighlight" id="equation-ljpotential">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-ljpotential" title="Permalink to this equation">¶</a></span>\[\begin{split}
-\begin{aligned}
-U(r) = 
-\begin{cases} 
-4\epsilon \left[ \left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6 \right] &amp; \text{if r $\le$ r$_c$} \\
-                0 &amp; \text{if r $&gt;$  r$_c$}. 
-\end{cases}
-\end{aligned}
-\end{split}\]</div>
-<p>This potential traditionally has an infinite range, however, the
-potential decays rapidly with separation distance and can be effectively
-ignored at large <span class="math notranslate nohighlight">\(|r|\)</span>, resulting in a faster calculation. In practical
-applications it is customary to establish a cutoff <span class="math notranslate nohighlight">\(r_c\)</span> and disregard
-pairwise interactions separated beyond this radius. This truncation
-leads to a discontinuity in the pairwise potential energy function;
-large numbers of these events are likely to spoil energy conservation
-thus an improvement is to shift the potential such that the energy
-continuously approaches zero at <span class="math notranslate nohighlight">\(r_c\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-shifted-lj">
-<span class="eqno">(3.17)<a class="headerlink" href="#equation-shifted-lj" title="Permalink to this equation">¶</a></span>\[\begin{split}
-\begin{aligned}
-U(r) = 
-\begin{cases} 
-4\epsilon \left( \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^6\right] - \left[\left(\frac{\sigma}{r_c}\right)^{12} - \left(\frac{\sigma}{r_c}\right)^6\right]  \right) &amp; \text{if $r \le r_c$} \\
-                0 &amp; \text{if $r &gt; r_c$}.   
-                 \end{cases}
-\end{aligned}
-\end{split}\]</div>
-<p>This approach results in a potential that produces discontinuities in
-the first and higher order derivatives. To compensate, switching
-functions are often employed to smoothly and continuously taper the pair
-potential to zero between two cutoff limits.</p>
-<p>Truncating pair interactions systematically removes a non-trivial
-contribution to the net potential energy and pressure. For interactions
-that are cut but not shifted, one can approximately add the interactions
-beyond <span class="math notranslate nohighlight">\(r_c\)</span> to the total energy and pressure, assuming the radial
-distribution function <span class="math notranslate nohighlight">\(g(r &gt; r_c) \approx 1\)</span>:</p>
-<div class="math notranslate nohighlight" id="equation-shift">
-<span class="eqno">(3.18)<a class="headerlink" href="#equation-shift" title="Permalink to this equation">¶</a></span>\[\begin{split}
-\begin{aligned}
- U &amp;= U_{pairs} + U_{tail}\\
-P &amp;= P_{pairs} + P_{tail},\end{aligned}
-\end{split}\]</div>
-<p>where</p>
-<div class="math notranslate nohighlight" id="equation-u-tail-pot">
-<span class="eqno">(3.19)<a class="headerlink" href="#equation-u-tail-pot" title="Permalink to this equation">¶</a></span>\[\begin{split}
-  \begin{aligned}
- U_{tail}&amp;= \frac{8\pi N^2}{3V}\epsilon\sigma^3\left[\frac{1}{3}\left(\frac{\sigma}{r_c}\right)^9 - \left(\frac{\sigma}{r_c}\right)^3\right]\\
-P_{tail}&amp;= \frac{16\pi N^2}{3V}\epsilon\sigma^3\left[\frac{2}{3}\left(\frac{\sigma}{r_c}\right)^9 - \left(\frac{\sigma}{r_c}\right)^3\right].
-\end{aligned}
-\end{split}\]</div>
-<p>To sample configurational space using the Lennard-Jones potential, a
-randomly selected particle is first randomly translated to generate a
-new system configuration. Whether the new configuration is accepted
-depends on the acceptance probability discussed in section
-<a class="reference internal" href="#metropolis"><span class="std std-numref">Section 3.1.4</span></a> This procedure repeats iteratively such
-that classical phase space is directly sampled and ensemble averages of
-physical properties become arithmetic averages over their sampled
-values.</p>
-<div class="exercise admonition">
-<p class="admonition-title">Exercise 1</p>
-<p>Show that based on the form of the Hamiltonian:</p>
-<div class="math notranslate nohighlight">
-\[
-    \begin{aligned}
-    \mathrm{H} = \mathrm{T}(\mathbf{p}) + \mathrm{V}(\mathbf{q}),
-    \end{aligned}
-\]</div>
-<p>the partition function can be divided into a kinetic and potential part, and for an ensemble average of an observable <span class="math notranslate nohighlight">\(O(\mathbf{q})\)</span> that depends on <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> only, one has:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\left&lt;O(\mathbf{q})\right&gt; &amp;= \frac{\int_\Gamma O(\Gamma)e^{-\beta E(\Gamma)} \mathrm{d}\Gamma}{\int_\Gamma e^{-\beta E(\Gamma)} \mathrm{d}\Gamma} \\
-&amp;= \frac{\int O(\mathbf{q})e^{-\beta V(\mathbf{q})} \mathrm{d}\mathbf{q}}{\int e^{-\beta V(\mathbf{q})} \mathrm{d}\mathbf{q}},
-     \end{aligned}
-\end{split}\]</div>
-<p>which is the equation you have encountred in the section on detailed balance.</p>
-</div>
-<div class="exercise admonition">
-<p class="admonition-title">Exercise 2</p>
-<p>In the Metropolis scheme, why is it important that
-<span class="math notranslate nohighlight">\(P^\prime\)</span> be a symmetric matrix?</p>
-</div>
-</div>
-</div>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -778,8 +658,8 @@ values.</p>
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="MDMC_ex3.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -788,30 +668,28 @@ values.</p>
             <p class="prev-next-title"><span class="section-number">3. </span>Monte Carlo Simulations and the Photon Gas</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Photon.html" title="next page">
+    <a class='right-next' id="next-link" href="PhotonGas.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.2. </span>Practical: Photon gas</p>
+        <p class="prev-next-title"><span class="section-number">3.2. </span>The Photon Gas</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
-        
-          <div class="extra_footer">
-            <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
+  <p>
+    
+      By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
+    
+      <div class="extra_footer">
+        <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
 </div> <div class="col-6 d-flex" style="justify-content:center"> <ul style="list-style:none"> <li> <a href="https://github.com/lcbc-epfl/mdmc-public">GitHub </a> </li> </li> <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>--> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license. (Except where indicated otherwise) </div>
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 

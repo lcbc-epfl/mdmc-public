@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3.2. Practical: Photon gas &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>3.2. The Photon Gas &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -42,9 +42,9 @@
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -54,8 +54,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.3. Configurational sampling" href="MC_NVT.html" />
-    <link rel="prev" title="3.1. Theory" href="Exercise3Theory.html" />
+    <link rel="next" title="3.3. The Lennard-Jones Potential" href="LJ_NVT.html" />
+    <link rel="prev" title="3.1. Theory" href="Ex3_Theory.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -111,13 +111,16 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex1/Exercise1Theory.html">
+    <a class="reference internal" href="../Ex1/Ex1_Theory.html">
      1.1. From Quantum to Classical Mechanics: The Example of Forces
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex1/MonteCarloPI.html">
-     1.3. Monte Carlo Pi Python
+     1.3. Monte Carlo
+     <span class="math notranslate nohighlight">
+      \(\pi\)
+     </span>
     </a>
    </li>
    <li class="toctree-l2">
@@ -138,18 +141,13 @@
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Exercise2Theory.html">
+    <a class="reference internal" href="../Ex2/Ex2_Theory.html">
      2.1. Statistical Thermodynamics and the Boltzmann Distribution
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Exercise2TheoryQ.html">
-     2.2. Theory Questions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex2/Boltzmann_new.html">
-     2.3. Boltzmann levels python
+    <a class="reference internal" href="../Ex2/Boltzmann.html">
+     2.2. Boltzmann Distribution Harmonic Oscillator
     </a>
    </li>
   </ul>
@@ -165,18 +163,18 @@
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="Exercise3Theory.html">
+    <a class="reference internal" href="Ex3_Theory.html">
      3.1. Theory
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     3.2. Practical: Photon gas
+     3.2. The Photon Gas
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="MC_NVT.html">
-     3.3. Configurational sampling
+    <a class="reference internal" href="LJ_NVT.html">
+     3.3. The Lennard-Jones Potential
     </a>
    </li>
   </ul>
@@ -298,12 +296,12 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Ex3/Photon.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Ex3/PhotonGas.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -318,7 +316,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx3/Photon.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx3/PhotonGas.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -340,14 +338,14 @@
     <div class="dropdown-buttons">
         
         
-        <a class="jupyterhub-button" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex3/Photon.ipynb&branch=main"><button type="button"
+        <a class="jupyterhub-button" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex3/PhotonGas.ipynb&branch=main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
                     alt="Interact on JupyterHub">JupyterHub</button></a>
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex3/Photon.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex3/PhotonGas.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -359,47 +357,111 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm">
+   3.2.1. Ensemble Averages from the Metropolis Monte Carlo Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementing-a-metropolis-monte-carlo-algorithm">
+   3.2.2. Implementing a Metropolis Monte Carlo Algorithm
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>The Photon Gas</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm">
+   3.2.1. Ensemble Averages from the Metropolis Monte Carlo Algorithm
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#implementing-a-metropolis-monte-carlo-algorithm">
+   3.2.2. Implementing a Metropolis Monte Carlo Algorithm
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="practical-photon-gas">
-<h1><span class="section-number">3.2. </span>Practical: Photon gas<a class="headerlink" href="#practical-photon-gas" title="Permalink to this headline">¶</a></h1>
-<div class="exercise admonition" id="ex3">
-<p class="admonition-title">Exercise 3</p>
-<p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(n_j = 0\)</span>? Note
-that <span class="math notranslate nohighlight">\(n_j\)</span> cannot be negative.</p>
-</div>
-<div class="exercise admonition" id="ex4">
-<p class="admonition-title">Exercise 4</p>
-<p>Make modifications in the code, right after the commented section
-‘<code class="docutils literal notranslate"><span class="pre">MODIFICATION</span></code> <span class="math notranslate nohighlight">\(\cdots\)</span> <code class="docutils literal notranslate"><span class="pre">END</span> <span class="pre">MODIFICATION</span></code>’. Include your entire code within your report and comment upon the part that you wrote.</p>
-</div>
-<div class="exercise admonition" id="ex5">
-<p class="admonition-title">Exercise 5</p>
-<p>Using your code, plot the photon-distribution (average occupation number as a function of <span class="math notranslate nohighlight">\(\beta\epsilon \in [0.1, 2]\)</span>). Assume that the initial <span class="math notranslate nohighlight">\(n_j = 1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_j = \epsilon\)</span> and recalculate with the same <span class="math notranslate nohighlight">\(\beta\epsilon\)</span> values using the analytical solution:
-<span class="math notranslate nohighlight">\(
+  <div class="tex2jax_ignore mathjax_ignore section" id="the-photon-gas">
+<h1><span class="section-number">3.2. </span>The Photon Gas<a class="headerlink" href="#the-photon-gas" title="Permalink to this headline">¶</a></h1>
+<p>This exercise gives you an example of a Metropolis Monte Carlo algorithm, where you will apply this type of algorithm to calculate the state occupancy of a photon gas. The photon gas is a gas-like collection of photons, which has many of the same
+properties of a conventional gas such as pressure, temperature and
+entropy. The most common example of a photon gas in equilibrium is
+black-body radiation. Black-body radiation is an electromagnetic field
+constructed by a superposition of plane waves of different frequencies,
+with the caveat that a mode may only be excited in units of <span class="math notranslate nohighlight">\(\hbar w\)</span>.
+This fact leads to the concept of photons as quanta of the
+electromagnetic field, with the state of the field being specified by
+the occupancy <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span> of each of the modes or, in other
+words, by enumerating the number of photons with each frequency.</p>
+<div class="section" id="ensemble-averages-from-the-metropolis-monte-carlo-algorithm">
+<h2><span class="section-number">3.2.1. </span>Ensemble Averages from the Metropolis Monte Carlo Algorithm<a class="headerlink" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>The ensemble average of the state occupancy <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span> of a
+photon gas can be calculated analytically. Deriving the total energy of
+an idealised photon gas from quantum mechanics we know that <span class="math notranslate nohighlight">\(U\)</span> can be
+written as the sum of the harmonic oscillation energies:</p>
+<div class="math notranslate nohighlight" id="equation-total-energy-photongas">
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-total-energy-photongas" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
-\left&lt;n\right&gt; = \frac{1}{e^{\beta\epsilon}-1}.
+U= \sum_{j=1}^{N} n_j w_j \hbar = \sum_{j=1}^{N} n_j \epsilon_j,
 \end{aligned}
-\)</span>
-Plot your calculated values versus those from the analytical solution and include your curve in your report.
-&lt;/n\right&gt;</p>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\epsilon_j\)</span> is the energy of state <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(n_j\)</span> is the occupancy of
+state <span class="math notranslate nohighlight">\(j\)</span> (<span class="math notranslate nohighlight">\(n_j \in 0,1,2,\cdots, \infty\)</span>), <span class="math notranslate nohighlight">\(N\)</span> is the total number of
+photons and <span class="math notranslate nohighlight">\(w\)</span> is the oscilator frequency. In this exercise, you are
+going to compute the ensemble average of the occupancy
+<span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span>.</p>
+<p>The scheme you will employ is as follows:</p>
+<ol>
+<li><p>Start with an arbitrary <span class="math notranslate nohighlight">\(n_j\)</span>.</p></li>
+<li><p>Decide to perform a trial move to randomly increase or decrease
+<span class="math notranslate nohighlight">\(n_j\)</span> by 1.</p></li>
+<li><p>Accept the trial move with probability:</p>
+<div class="math notranslate nohighlight">
+\[
+    \begin{aligned}
+    P_{acc}(o \rightarrow n)= \min \left(1, e^{-\beta(U(n)-U(o))}\right),\end{aligned}
+    \]</div>
+<p>where <span class="math notranslate nohighlight">\(U(n)\)</span> and <span class="math notranslate nohighlight">\(U(o)\)</span> are the energies of the new and old states
+respectively.</p>
+</li>
+<li><p>Update averages regardless of acceptance or rejection.</p></li>
+<li><p>Go to step 2).</p></li>
+</ol>
 </div>
-<div class="exercise admonition" id="bex1">
-<p class="admonition-title">Bonus Exercise 1</p>
-<p>Modify the program in such a way that the averages are updated only after an accepted trial move. Why does ignoring rejected moves lead to erroneous results? Starting from <span class="math notranslate nohighlight">\(P_{acc} ( o \rightarrow n)\)</span>, define <span class="math notranslate nohighlight">\(P'(o \rightarrow o)\)</span> (<em>i.e</em>  the probability that you stay in the old configuration). Recall that the transition probability <span class="math notranslate nohighlight">\(P'\)</span> is normalised.</p>
-</div>
-<div class="exercise admonition" id="bex2">
-<p class="admonition-title">Bonus Exercise 2</p>
-<p>At which values of <span class="math notranslate nohighlight">\(\beta\)</span> does the error you obtain when ignoring rejected moves become more pronounced and why?</p>
-</div>
+<div class="section" id="implementing-a-metropolis-monte-carlo-algorithm">
+<h2><span class="section-number">3.2.2. </span>Implementing a Metropolis Monte Carlo Algorithm<a class="headerlink" href="#implementing-a-metropolis-monte-carlo-algorithm" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">r</span>
@@ -416,6 +478,14 @@ Plot your calculated values versus those from the analytical solution and includ
 </div>
 </div>
 </div>
+<div class="exercise admonition" id="ex4">
+<p class="admonition-title">Exercise 3</p>
+<p>Make modifications in the code, right after the commented section ‘MODIFICATION … END MODIFICATION’. Include the entire code within your report and comment upon the part that you wrote.</p>
+</div>
+<div class="exercise admonition" id="id1">
+<p class="admonition-title">Exercise 4</p>
+<p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(n_j = 0\)</span>? Note that <span class="math notranslate nohighlight">\(n_j\)</span>  cannot be negative.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numberOfIterations</span> <span class="o">=</span> <span class="mi">1000</span>
@@ -429,25 +499,39 @@ Plot your calculated values versus those from the analytical solution and includ
     <span class="n">numStatesVisited</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">estimatedOccupancy</span><span class="o">=</span><span class="mi">0</span>
 
-    <span class="sd">&quot;&quot;&quot; MODIFICATION </span>
+    <span class="sd">&quot;&quot;&quot;  MODIFICATION</span>
 <span class="sd">    Metropolis algorithm implementation to calculate &lt;n_j&gt;</span>
 <span class="sd">    Tasks:</span>
 <span class="sd">    1) Loop from int i = 0 to numberOfiterations</span>
-<span class="sd">    2) Call random(0, 1) to perform a trial move to randomly increase</span>
+<span class="sd">    2) Call r.randint(0,1) to perform a trial move to randomly increase</span>
 <span class="sd">        or decrease trialnj by 1.</span>
-<span class="sd">        Hint: use trialnj = currentnj + 1;</span>
+<span class="sd">        Note: randint(0,1) returns random integers from 0 to 1 (i.e. 0 OR 1)</span>
+<span class="sd">               but you need to extract -1 OR 1</span>
+<span class="sd">        Hint: use trialnj = currentnj +- 1;</span>
 <span class="sd">    3) Test if trialnj &lt; 0, if it is, force it to be 0</span>
-<span class="sd">    4) Accept the trial move with probability defined in section 3.1.4.1</span>
+<span class="sd">    4) Accept the trial move with probability defined in the Theory section</span>
 <span class="sd">        Note: Accepting the trial move means updating current sample (currentnj)</span>
 <span class="sd">        with the new move (trialnj);</span>
 <span class="sd">    5) sum currentnj and increase numStatesVisited by 1</span>
-
-<span class="sd">    *** END MODIFICATION  ***</span>
+<span class="sd">    6) compute estimatedOccupancy after numberOfiterations iterations</span>
+<span class="sd">    </span>
+<span class="sd">    END MODIFICATION</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># insert your code here </span>
-    
-    <span class="c1">#estimatedOccupancy = njsum/numStatesVisited</span>
+    <span class="c1"># INSERT YOUR CODE HERE </span>
 
+    <span class="c1"># Loop from int i = 0 to numberOfiterations</span>
+
+    <span class="c1"># Randomly decrease or increase trialnj</span>
+
+    <span class="c1">#if trialnj is &lt;0, set to 0</span>
+
+    <span class="c1"># Accept move if probability is high</span>
+
+    <span class="c1"># sum currentnj and increase numStatesVisited</span>
+
+    <span class="c1"># compute estimatedOccupancy </span>
+    <span class="n">estimatedOccupancy</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># modify</span>
+    
     <span class="k">return</span> <span class="n">estimatedOccupancy</span>
 
 <span class="c1"># perform a single calculation</span>
@@ -456,7 +540,14 @@ Plot your calculated values versus those from the analytical solution and includ
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="exercise admonition" id="id2">
+<p class="admonition-title">Exercise 5</p>
+<p>Using your code, plot the photon-distribution (average occupation number as a function of <span class="math notranslate nohighlight">\(\beta\epsilon\in[0.1,2]\)</span>).</p>
+</div>
+<p>Assume that the initial <span class="math notranslate nohighlight">\(n_j =1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_j=\epsilon\)</span> and recalculate the with the same <span class="math notranslate nohighlight">\(\beta\epsilon\)</span> values the analytical solution
+$<span class="math notranslate nohighlight">\(\left&lt; N \right&gt; = \frac{1}{e^{\beta\epsilon}-1}\)</span>$
+Plot your calculated values versus those from the analytical solution and include your curve in your report. What is the influence of the number of MC iterations on the estimated result vs the analytical one? Why?</p>
+</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate an array of betas from 0.1 to 2 </span>
 <span class="n">betas</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -488,6 +579,18 @@ Plot your calculated values versus those from the analytical solution and includ
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/PhotonGas_8_0.png" src="../_images/PhotonGas_8_0.png" />
+</div>
+</div>
+<div class="exercise admonition" id="bex1">
+<p class="admonition-title">Exercise 6 - Bonus</p>
+<p>Modify the program in such a way that the averages are updated only after an accepted trial move. Why does ignoring rejected moves lead to erroneous results? <em>Hint</em>: define <span class="math notranslate nohighlight">\(P'(o \rightarrow o)\)</span> (<em>i.e</em>  the probability that you stay in the old configuration) and recall that the transition probability <span class="math notranslate nohighlight">\(P'\)</span> is normalised.</p>
+</div>
+<div class="exercise admonition" id="id3">
+<p class="admonition-title">Exercise 7 - Bonus</p>
+<p>At which values of <span class="math notranslate nohighlight">\(\beta\)</span> does the error you obtain when ignoring rejected moves become more pronounced? Why?</p>
+</div>
 </div>
 </div>
 
@@ -513,40 +616,38 @@ Plot your calculated values versus those from the analytical solution and includ
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Exercise3Theory.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Ex3_Theory.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">3.1. </span>Theory</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="MC_NVT.html" title="next page">
+    <a class='right-next' id="next-link" href="LJ_NVT.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>Configurational sampling</p>
+        <p class="prev-next-title"><span class="section-number">3.3. </span>The Lennard-Jones Potential</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
-        
-          <div class="extra_footer">
-            <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
+  <p>
+    
+      By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
+    
+      <div class="extra_footer">
+        <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
 </div> <div class="col-6 d-flex" style="justify-content:center"> <ul style="list-style:none"> <li> <a href="https://github.com/lcbc-epfl/mdmc-public">GitHub </a> </li> </li> <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>--> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license. (Except where indicated otherwise) </div>
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 
