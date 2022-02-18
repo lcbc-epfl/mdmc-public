@@ -335,7 +335,7 @@ div.firstCol div.d-block {
     footer {
         width: 98.5vw !important;
         position: absolute;
-        /* left: -295px; */
+        left: -295px;
     }
 
     footer *:not(img) {
