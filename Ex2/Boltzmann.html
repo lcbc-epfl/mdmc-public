@@ -383,17 +383,23 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="boltzmann-distribution-harmonic-oscillator">
 <h1><span class="section-number">2.2. </span>Boltzmann Distribution Harmonic Oscillator<a class="headerlink" href="#boltzmann-distribution-harmonic-oscillator" title="Permalink to this headline">¶</a></h1>
 <p>In this part we will create a simple computer program to compute the Boltzmann distribution of a fictious harmonic oscillator.</p>
+<div class="exercise admonition" id="ex3">
+<p class="admonition-title">Exercise 5</p>
 <p>Modify the code below to calculate the occupancy of each state within the harmonic oscillator system.
-Present the entire code file within your report and comment upon the main features using <code class="docutils literal notranslate"><span class="pre">#</span></code>.</p>
-<p>Consider different (<strong>reduced</strong>) temperatures, 0.5, 1, 2 and 3, and energy levels set to 10 (recall <span class="math notranslate nohighlight">\(\epsilon = 1\)</span>).</p>
-<p>You will implement different <code class="docutils literal notranslate"><span class="pre">StateOccupancy()</span></code> functions, correspondng to different degeneracies. Note that in the <span class="math notranslate nohighlight">\((s + N)\)</span> degeneracy, <span class="math notranslate nohighlight">\(s\)</span> is
+Present the entire code file within your report and comment upon the main features using <code class="docutils literal notranslate"><span class="pre">#</span></code>.
+Consider different (<strong>reduced</strong>) temperatures, 0.5, 1, 2 and 3, and energy levels set to 10 (recall <span class="math notranslate nohighlight">\(\epsilon = 1\)</span>).
+You will implement different <code class="docutils literal notranslate"><span class="pre">StateOccupancy()</span></code> functions, correspondng to different degeneracies. Note that in the <span class="math notranslate nohighlight">\((s + N)\)</span> degeneracy, <span class="math notranslate nohighlight">\(s\)</span> is
 the index of the energy level, and its degeneracy is <span class="math notranslate nohighlight">\((s + N)\)</span>, where <span class="math notranslate nohighlight">\(N\)</span> assumes values <span class="math notranslate nohighlight">\(0,1,2\)</span> in this Exercise.</p>
-</div><div class="exercise admonition" id="ex4">
+</div>
+<div class="exercise admonition" id="ex4">
 <p class="admonition-title">Exercise 6</p>
 <p>What do you note as the temperature is increased in terms of state occupancy? Does it make sense physically?</p>
 </div>
+<div class="exercise admonition" id="ex5">
+<p class="admonition-title">Exercise 7</p>
 <p>Compare different degeneracies (no degeneracy, <span class="math notranslate nohighlight">\(s+1\)</span>, and <span class="math notranslate nohighlight">\(s+2\)</span>) for different reduced temperatures. What can you infer?</p>
-</div><div class="cell docutils container">
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -459,8 +465,11 @@ the index of the energy level, and its degeneracy is <span class="math notransla
 </div>
 </div>
 </div>
+<div class="exercise admonition" id="ex6">
+<p class="admonition-title">Exercise 8</p>
 <p>Modify your program such that the state occupancy and partition
 function are calculated for a linear rotor with moment of inertia <span class="math notranslate nohighlight">\(I\)</span> (copy your code in the cell below, and adapt it for the linear rotor case. Present also this code within your report). Compare your results at different temperatures with the approximate result <a class="reference internal" href="#equation-approximateresult">(2.25)</a>.</p>
+</div>
 <p><em>Hint</em>: considering more than four reduced temperatures can be a good idea, you can easily obtain evenly spaced numbers over a specified interval using the numpy function <code class="docutils literal notranslate"><span class="pre">np.linspace(start,</span> <span class="pre">stop,</span> <span class="pre">number_of_points)</span></code>.
 Note that if the higher temperatures considered are far from the highest temperature which was considered so far, more energy levels may become accessible to the system, and you should keep them into account.</p>
 <p>Is this an approximated result for which temperature limit?</p>

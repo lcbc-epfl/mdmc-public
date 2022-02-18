@@ -486,9 +486,15 @@ respectively.</p>
 </div>
 </div>
 </div>
+<div class="exercise admonition" id="ex4">
+<p class="admonition-title">Exercise 3</p>
 <p>Make modifications in the code, right after the commented section <code class="docutils literal notranslate"><span class="pre">MODIFICATION</span> <span class="pre">...</span> <span class="pre">END</span> <span class="pre">MODIFICATION</span></code>. Include the entire code within your report and comment upon the part that you wrote.</p>
-</div><p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(n_j = 0\)</span>? Note that <span class="math notranslate nohighlight">\(n_j\)</span>  cannot be negative.</p>
-</div><div class="cell docutils container">
+</div>
+<div class="exercise admonition" id="id1">
+<p class="admonition-title">Exercise 4</p>
+<p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(n_j = 0\)</span>? Note that <span class="math notranslate nohighlight">\(n_j\)</span>  cannot be negative.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numberOfIterations</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">beta</span> <span class="o">=</span> <span class="mf">1.0</span>
@@ -542,11 +548,14 @@ respectively.</p>
 </div>
 </div>
 </div>
-<p>Using your code, plot the photon-distribution (average occupation number as a function of <span class="math notranslate nohighlight">\(\beta\epsilon\in[0.1,2]\)</span>).</p>
-<p>Assume that the initial <span class="math notranslate nohighlight">\(n_j =1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_j=\epsilon\)</span> and recalculate the with the same <span class="math notranslate nohighlight">\(\beta\epsilon\)</span> values the analytical solution
+<div class="exercise admonition" id="id2">
+<p class="admonition-title">Exercise 5</p>
+<p>Using your code, plot the photon-distribution (average occupation number as a function of <span class="math notranslate nohighlight">\(\beta\epsilon\in[0.1,2]\)</span>).
+Assume that the initial <span class="math notranslate nohighlight">\(n_j =1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_j=\epsilon\)</span> and recalculate the with the same <span class="math notranslate nohighlight">\(\beta\epsilon\)</span> values the analytical solution
 $<span class="math notranslate nohighlight">\(\left&lt; N \right&gt; = \frac{1}{e^{\beta\epsilon}-1}\)</span>$
 Plot your calculated values versus those from the analytical solution and include your curve in your report. What is the influence of the number of MC iterations on the estimated result vs the analytical one? Why?</p>
-</div><div class="cell docutils container">
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate an array of betas from 0.1 to 2 </span>
 <span class="n">betas</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
@@ -579,9 +588,15 @@ Plot your calculated values versus those from the analytical solution and includ
 </div>
 </div>
 </div>
+<div class="exercise admonition" id="bex1">
+<p class="admonition-title">Exercise 6 - Bonus</p>
 <p>Modify the program in such a way that the averages are updated only after an accepted trial move. Why does ignoring rejected moves lead to erroneous results? <em>Hint</em>: define <span class="math notranslate nohighlight">\(P'(o \rightarrow o)\)</span> (<em>i.e</em>  the probability that you stay in the old configuration) and recall that the transition probability <span class="math notranslate nohighlight">\(P'\)</span> is normalised.</p>
-</div><p>At which values of <span class="math notranslate nohighlight">\(\beta\)</span> does the error you obtain when ignoring rejected moves become more pronounced? Why?</p>
-</div></div>
+</div>
+<div class="exercise admonition" id="id3">
+<p class="admonition-title">Exercise 7 - Bonus</p>
+<p>At which values of <span class="math notranslate nohighlight">\(\beta\)</span> does the error you obtain when ignoring rejected moves become more pronounced? Why?</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

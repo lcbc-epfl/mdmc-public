@@ -566,8 +566,11 @@ div.admonition {
 <h1><span class="section-number">5.3. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="md-initialization-and-temperature">
 <h2><span class="section-number">5.3.1. </span>MD Initialization and Temperature<a class="headerlink" href="#md-initialization-and-temperature" title="Permalink to this headline">¶</a></h2>
+<div class="exercise admonition" id="ex1">
+<p class="admonition-title">Exercise 1</p>
 <p>Implement the initialization described in the Theory section in our ToyMD code in <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> in the section <code class="docutils literal notranslate"><span class="pre">##INITIALIZATION</span> <span class="pre">HERE##</span></code>. For this you should pick random velocities using <code class="docutils literal notranslate"><span class="pre">r.random()</span></code> which will produce random numbers between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>. You need to shift this random gaussian distribution appropriately and then multiply it such that the width of the velocity distribution matches the kinetic energy at the target temperature. Use the variables <code class="docutils literal notranslate"><span class="pre">masses[i]</span></code> for the mass of particle <code class="docutils literal notranslate"><span class="pre">i</span></code> and Boltzmanns constant <code class="docutils literal notranslate"><span class="pre">0.00831415</span></code>. Remember that for each degree of freedom (e.g velocity in x direction) <a class="reference internal" href="theory.html#equation-equipart-x">(5.22)</a> holds.</p>
-</div><p>Implement the Berendsen thermostat in the <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> and <code class="docutils literal notranslate"><span class="pre">toy_md_integrate.py</span></code> (change the <code class="docutils literal notranslate"><span class="pre">compute_lambda_T</span></code> function) files.</p>
+</div>
+<p>Implement the Berendsen thermostat in the <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> and <code class="docutils literal notranslate"><span class="pre">toy_md_integrate.py</span></code> (change the <code class="docutils literal notranslate"><span class="pre">compute_lambda_T</span></code> function) files.</p>
 </div><div class="exercise admonition" id="ex3">
 <p class="admonition-title">Exercise 3</p>
 <p>A better thermostat is the Andersen thermostat. It can be implemented as follows. Describe what problems this thermostat will present to us e.g for sampling of diffusion coefficients. What advantage does this thermostat have compared to the Berendsen thermostat?</p>
@@ -612,6 +615,8 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 </div>
 <div class="section" id="timestep-and-coupling">
 <h2><span class="section-number">5.3.3. </span>Timestep and coupling<a class="headerlink" href="#timestep-and-coupling" title="Permalink to this headline">¶</a></h2>
+<div class="exercise admonition" id="ex6">
+<p class="admonition-title">Exercise 6</p>
 <p>Test the influence of the coupling parameter <span class="math notranslate nohighlight">\(\tau\)</span> and timestep <span class="math notranslate nohighlight">\(dt\)</span>.
 Test the combinations of:</p>
 <ul class="simple">
@@ -619,7 +624,8 @@ Test the combinations of:</p>
 <li><p>large <span class="math notranslate nohighlight">\(dt\)</span> and small <span class="math notranslate nohighlight">\(\tau\)</span></p></li>
 <li><p>very large <span class="math notranslate nohighlight">\(dt\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span></p></li>
 </ul>
-</div></div>
+</div>
+</div>
 <div class="section" id="visualization-of-the-trajectory">
 <h2><span class="section-number">5.3.4. </span>Visualization of the trajectory<a class="headerlink" href="#visualization-of-the-trajectory" title="Permalink to this headline">¶</a></h2>
 <p>Here you can visualize the trajectory to see if your simulation is running correctly. A quick visualization often highlights if the parameters/simulation are correct.</p>

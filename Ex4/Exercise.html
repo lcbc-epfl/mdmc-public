@@ -525,12 +525,14 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
 <h1><span class="section-number">4.4. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="time-evolution">
 <h2><span class="section-number">4.4.1. </span>Time Evolution<a class="headerlink" href="#time-evolution" title="Permalink to this headline">¶</a></h2>
+<div class="exercise admonition" id="ex1">
+<p class="admonition-title">Exercise 1</p>
 <p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{r}(t + \Delta t)\)</span> in the velocity-Verlet
 <a class="reference internal" href="theory.html#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: solve equation  <a class="reference internal" href="theory.html#equation-step1">(4.9)</a> for  <span class="math notranslate nohighlight">\(\mathbf{r}(t - \Delta t)\)</span>, and use equations <a class="reference internal" href="theory.html#equation-step2">(4.8)</a> and  <a class="reference internal" href="theory.html#equation-step3">(4.7)</a>.</p>
 </div>
-<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet
-<a class="reference internal" href="theory.html#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: recast equations  <a class="reference internal" href="theory.html#equation-step1">(4.9)</a> and <a class="reference internal" href="theory.html#equation-step2">(4.8)</a> to a
-timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future, and use the result obtained  above.</p>
+<div class="exercise admonition" id="ex2">
+<p class="admonition-title">Exercise 2</p>
+<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet  <a class="reference internal" href="theory.html#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: recast equations  <a class="reference internal" href="theory.html#equation-step1">(4.9)</a> and <a class="reference internal" href="theory.html#equation-step2">(4.8)</a> to a  timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future, and use the result obtained  above.</p>
 </div>
 <div class="exercise admonition" id="ex3">
 <p class="admonition-title">Exercise 3</p>
@@ -545,15 +547,20 @@ timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the f
 performs a molecular dynamics simulation. Point out the main
 differences between your scheme and Monte Carlo methods.</p>
 </div>
+<div class="exercise admonition" id="ex5">
+<p class="admonition-title">Exercise 5</p>
 <p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).
 With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
-</div><div class="exercise admonition" id="ex6">
-<p class="admonition-title">Exercise 6</p>
-<p>Why are most MD and MC simulations based on periodic systems?
-Explain the main purpose of periodic boundary conditions in these schemes.</p>
 </div>
+<div class="exercise admonition" id="ex6">
+<p class="admonition-title">Exercise 6</p>
+<p>Why are most MD and MC simulations based on periodic systems? Explain the main purpose of periodic boundary conditions in these schemes.</p>
+</div>
+<div class="exercise admonition" id="bex">
+<p class="admonition-title">Bonus Exercise 1</p>
 <p>What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with and without periodic boundary conditions?</p>
-</div></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
