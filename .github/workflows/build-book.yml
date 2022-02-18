@@ -28,7 +28,9 @@ jobs:
     - name: Build the book
       run: |
         jupyter-book build mdmc
-
+    - name: Copy pdb files
+      run: |
+          cp mdmc/Ex6/*.pdb mdmc/_build/html/Ex6/
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
       uses: peaceiris/actions-gh-pages@v3.6.1
