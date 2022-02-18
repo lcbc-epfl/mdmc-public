@@ -38,9 +38,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -218,7 +221,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex5/Exercise.html">
-     5.2. ToyMD NVT
+     5.2. ToyMD
     </a>
    </li>
   </ul>
@@ -450,6 +453,16 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="how-to-run-the-exercises">
 <h1><span class="section-number">4.2. </span>How to run the exercises<a class="headerlink" href="#how-to-run-the-exercises" title="Permalink to this headline">¶</a></h1>
 <p>Click this <a class="reference external" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flcbc-epfl%2Fmdmc&amp;urlpath=lab%2Ftree%2Fmdmc%2FEx4%2Ftoy_md.py&amp;branch=main">link</a> to download the files for this exercise.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">helpers</span>
+<span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>To test whether your implementation works you can run a short MD run of a box of CO2 molecules by opening the terminal, navigating to the <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">carbon-dioxide</span></code> and then running this command.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -512,13 +525,9 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
 <h1><span class="section-number">4.4. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="time-evolution">
 <h2><span class="section-number">4.4.1. </span>Time Evolution<a class="headerlink" href="#time-evolution" title="Permalink to this headline">¶</a></h2>
-<div class="exercise admonition" id="ex1">
-<p class="admonition-title">Exercise 1</p>
 <p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{r}(t + \Delta t)\)</span> in the velocity-Verlet
 <a class="reference internal" href="theory.html#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: solve equation  <a class="reference internal" href="theory.html#equation-step1">(4.9)</a> for  <span class="math notranslate nohighlight">\(\mathbf{r}(t - \Delta t)\)</span>, and use equations <a class="reference internal" href="theory.html#equation-step2">(4.8)</a> and  <a class="reference internal" href="theory.html#equation-step3">(4.7)</a>.</p>
 </div>
-<div class="exercise admonition" id="ex2">
-<p class="admonition-title">Exercise 2</p>
 <p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet
 <a class="reference internal" href="theory.html#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: recast equations  <a class="reference internal" href="theory.html#equation-step1">(4.9)</a> and <a class="reference internal" href="theory.html#equation-step2">(4.8)</a> to a
 timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future, and use the result obtained  above.</p>
@@ -536,21 +545,15 @@ timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the f
 performs a molecular dynamics simulation. Point out the main
 differences between your scheme and Monte Carlo methods.</p>
 </div>
-<div class="exercise admonition" id="ex5">
-<p class="admonition-title">Exercise 5</p>
 <p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).
 With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
-</div>
-<div class="exercise admonition" id="ex6">
+</div><div class="exercise admonition" id="ex6">
 <p class="admonition-title">Exercise 6</p>
 <p>Why are most MD and MC simulations based on periodic systems?
 Explain the main purpose of periodic boundary conditions in these schemes.</p>
 </div>
-<div class="exercise admonition" id="bex">
-<p class="admonition-title">Bonus Exercise 1</p>
 <p>What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with and without periodic boundary conditions?</p>
-</div>
-</div>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">

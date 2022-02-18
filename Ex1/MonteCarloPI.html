@@ -38,9 +38,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -218,7 +221,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex5/Exercise.html">
-     5.2. ToyMD NVT
+     5.2. ToyMD
     </a>
    </li>
   </ul>
@@ -389,6 +392,11 @@
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">helpers</span>
+<span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
+
 <span class="c1"># The Random Seed is set here, you will focus on it in the last question.</span>
 <span class="c1"># For the moment it is sufficient to know that this is used to initialize</span>
 <span class="c1"># the generation of random numbers (if not set a default value is used, </span>
@@ -447,11 +455,8 @@
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ex4">
-<p class="admonition-title">Exercise 4</p>
 <p>Perform the <span class="math notranslate nohighlight">\(\pi\)</span> estimation for 1000, 100000 and 1000000 trials. Take a screenshot of these estimations and include them in your report (e.g of the python plots). What happens to the accuracy of the <span class="math notranslate nohighlight">\(\pi\)</span> estimation when going from 1000 to 1000000 trials and why?</p>
-</div>
-<p><strong>Everything working correctly?</strong></p>
+</div><p><strong>Everything working correctly?</strong></p>
 <p>Then, lets get a bit more fancy and allow changing the number of trials interactively.</p>
 <p>The below code provides an interactive widget with a slider that will redraw the plot once you change the slider.</p>
 <div class="cell docutils container">
@@ -461,15 +466,12 @@
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="id1">
+<div class="exercise admonition" id="ex4">
 <p class="admonition-title">Exercise 5</p>
 <p>What happens to the estimation of <span class="math notranslate nohighlight">\(\pi\)</span> when the circle origin is changed? Why?</p>
 </div>
-<div class="exercise admonition" id="id2">
-<p class="admonition-title">Exercise 6</p>
 <p>What happens to the accuracy of the estimation when you increase the square size, or decrease the circle size? Is there an optimal ratio between the square side (<span class="math notranslate nohighlight">\(l\)</span>) and the circle diameter (<span class="math notranslate nohighlight">\(d\)</span>)?</p>
-</div>
-<div class="exercise admonition" id="id3">
+</div><div class="exercise admonition" id="id1">
 <p class="admonition-title">Exercise 7</p>
 <p>In our code we set the random seed (<code class="docutils literal notranslate"><span class="pre">r.seed()</span></code>) once in the first cell, but then it is unchanged. It means that the first time you run the MC code, the random number set as seed was used for the extraction, but then the later extractions do not start from that seed anymore. What happens if you use the same seed for the pseudo random number generator (PRNG) each time you start the MC code? And what would happen if you would use the same seed for each random number extraction? You can read up more details in <a class="reference internal" href="prng.html"><span class="doc">Appendix: Random and Pseudo-random Numbers</span></a>.</p>
 </div>

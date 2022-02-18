@@ -38,9 +38,12 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -218,7 +221,7 @@
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex5/Exercise.html">
-     5.2. ToyMD NVT
+     5.2. ToyMD
     </a>
    </li>
   </ul>
@@ -472,21 +475,20 @@ respectively.</p>
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
 
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">helpers</span>
+<span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
+
 <span class="c1"># Random Seed</span>
 <span class="n">r</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ex4">
-<p class="admonition-title">Exercise 3</p>
-<p>Make modifications in the code, right after the commented section ‘MODIFICATION … END MODIFICATION’. Include the entire code within your report and comment upon the part that you wrote.</p>
-</div>
-<div class="exercise admonition" id="id1">
-<p class="admonition-title">Exercise 4</p>
-<p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(n_j = 0\)</span>? Note that <span class="math notranslate nohighlight">\(n_j\)</span>  cannot be negative.</p>
-</div>
-<div class="cell docutils container">
+<p>Make modifications in the code, right after the commented section <code class="docutils literal notranslate"><span class="pre">MODIFICATION</span> <span class="pre">...</span> <span class="pre">END</span> <span class="pre">MODIFICATION</span></code>. Include the entire code within your report and comment upon the part that you wrote.</p>
+</div><p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(n_j = 0\)</span>? Note that <span class="math notranslate nohighlight">\(n_j\)</span>  cannot be negative.</p>
+</div><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numberOfIterations</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">beta</span> <span class="o">=</span> <span class="mf">1.0</span>
@@ -540,10 +542,7 @@ respectively.</p>
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="id2">
-<p class="admonition-title">Exercise 5</p>
 <p>Using your code, plot the photon-distribution (average occupation number as a function of <span class="math notranslate nohighlight">\(\beta\epsilon\in[0.1,2]\)</span>).</p>
-</div>
 <p>Assume that the initial <span class="math notranslate nohighlight">\(n_j =1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_j=\epsilon\)</span> and recalculate the with the same <span class="math notranslate nohighlight">\(\beta\epsilon\)</span> values the analytical solution
 $<span class="math notranslate nohighlight">\(\left&lt; N \right&gt; = \frac{1}{e^{\beta\epsilon}-1}\)</span>$
 Plot your calculated values versus those from the analytical solution and include your curve in your report. What is the influence of the number of MC iterations on the estimated result vs the analytical one? Why?</p>
@@ -580,15 +579,9 @@ Plot your calculated values versus those from the analytical solution and includ
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="bex1">
-<p class="admonition-title">Exercise 6 - Bonus</p>
 <p>Modify the program in such a way that the averages are updated only after an accepted trial move. Why does ignoring rejected moves lead to erroneous results? <em>Hint</em>: define <span class="math notranslate nohighlight">\(P'(o \rightarrow o)\)</span> (<em>i.e</em>  the probability that you stay in the old configuration) and recall that the transition probability <span class="math notranslate nohighlight">\(P'\)</span> is normalised.</p>
-</div>
-<div class="exercise admonition" id="id3">
-<p class="admonition-title">Exercise 7 - Bonus</p>
-<p>At which values of <span class="math notranslate nohighlight">\(\beta\)</span> does the error you obtain when ignoring rejected moves become more pronounced? Why?</p>
-</div>
-</div>
+</div><p>At which values of <span class="math notranslate nohighlight">\(\beta\)</span> does the error you obtain when ignoring rejected moves become more pronounced? Why?</p>
+</div></div>
 </div>
 
     <script type="text/x-thebe-config">
