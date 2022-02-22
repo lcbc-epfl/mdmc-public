@@ -20,11 +20,11 @@ certain mathematical problems.
 
 🎯 **Learning goals**s
 ^^^
-Link between classical and quantum models
+Follow the link between classical and quantum models
 
-Compute $\pi$ using a Monte Carlo approach
+Learn to compute $\pi$ using a Monte Carlo approach
 
-Understand randomness on a computer
+Understand how to generate randomness on a computer
 ---
 :header: bg-jb-two
 
