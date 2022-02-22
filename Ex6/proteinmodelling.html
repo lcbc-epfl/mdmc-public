@@ -46,15 +46,14 @@
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="6.4. Practical: TRP Cage using OpenMM" href="TRP_Cage_OpenMM_colab.html" />
@@ -682,7 +681,7 @@ larger systems. Simulating the folding dynamics of this protein with
 explicitly defined water molecules is both a lengthy and computationally
 costly process <a class="reference internal" href="#trpcagekinetics"><span class="std std-numref">Fig. 6.5</span></a>. Instead, we make use of an implicit
 solvent model to reduce computational cost and still include, in
-approximate detail, the effects of water solvation. This is inspired by work of Simmerling et. al.<span id="id3">[<a class="reference internal" href="../intro.html#id4">SSR02</a>]</span> in 2004.</p>
+approximate detail, the effects of water solvation. This is inspired by work of Simmerling et. al.<span id="id3">[<a class="reference internal" href="../intro.html#id4" title="Carlos Simmerling, Bentley Strockbine, and Adrian E. Roitberg. All-atom structure prediction and folding simulations of a stable protein. Journal of the American Chemical Society, 124(38):11258-11259, 2002. doi:10.1021/ja0273851.">SSR02</a>]</span> in 2004.</p>
 <div class="figure align-default" id="trpcagekinetics">
 <img alt="../_images/trpc.png" src="../_images/trpc.png" />
 <p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">A computationally determined kinetic model of Trp-cage showing different states in the folding process and their interconversion rates. Yellow unfolded protein, red folded state, gray molten globule (i.e partially folded states)  <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1000452">Marinelli et. al.</a> CC by SA</span><a class="headerlink" href="#trpcagekinetics" title="Permalink to this image">¶</a></p>
