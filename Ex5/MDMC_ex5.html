@@ -52,8 +52,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5.1. Theory" href="theory.html" />
@@ -370,9 +368,10 @@ atomic positions in time. We will finalize our ToyMD program and run molecular d
 <p class="card-text">🎯 <strong>Learning goals</strong></p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">How is an MD simulation initialized?</p>
-<p class="card-text">How can we control temperature in an MD simulation?</p>
-<p class="card-text">Run an MD simulation of CO2 in the <span class="math notranslate nohighlight">\(NVT\)</span> ensemble</p>
+<p class="card-text">Review inter- and intramolecular interactions for building a classical force field</p>
+<p class="card-text">Compare common thermostat schemes</p>
+<p class="card-text">Understand how and why we initialize MD simulations</p>
+<p class="card-text">Draw a connection between the pair radial distribution function, the partition function, and ensemble average</p>
 </div>
 </div>
 </div>
@@ -382,7 +381,7 @@ atomic positions in time. We will finalize our ToyMD program and run molecular d
 <p class="card-text">📖 <strong>Chapter in script</strong></p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">p.1-2 Course script</p>
+<p class="card-text">Chapter 5 - Molecular Dynamics Simulations (II)</p>
 </div>
 </div>
 </div>
@@ -392,7 +391,7 @@ atomic positions in time. We will finalize our ToyMD program and run molecular d
 <p class="card-text">📚 <strong>Resources</strong></p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">Understanding Molecular Simulation,  Frenkel &amp; Smit, p.200</p>
+<p class="card-text">Understanding Molecular Simulation, Frenkel &amp; Smit, 2nd Edition - Chapter 6</p>
 </div>
 </div>
 </div>

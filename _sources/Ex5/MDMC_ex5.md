@@ -14,21 +14,23 @@ atomic positions in time. We will finalize our ToyMD program and run molecular d
 
 🎯 **Learning goals**
 ^^^
-How is an MD simulation initialized?
+Review inter- and intramolecular interactions for building a classical force field
 
-How can we control temperature in an MD simulation?
+Compare common thermostat schemes
 
-Run an MD simulation of CO2 in the $NVT$ ensemble
+Understand how and why we initialize MD simulations
+
+Draw a connection between the pair radial distribution function, the partition function, and ensemble average
 ---
 :header: bg-jb-two
 
 📖 **Chapter in script**
 ^^^
-p.1-2 Course script
+Chapter 5 - Molecular Dynamics Simulations (II)
 ---
 :header: bg-jb-three
 
 📚 **Resources**
 ^^^
-Understanding Molecular Simulation,  Frenkel & Smit, p.200
+Understanding Molecular Simulation, Frenkel & Smit, 2nd Edition - Chapter 6
 ::::
