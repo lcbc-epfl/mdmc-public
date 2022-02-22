@@ -16,19 +16,23 @@ energies from proper phase-space averages.
 
 🎯 **Learning goals**
 ^^^
-Importance sampling 
+Understand importance sampling
 
-Metropolis Monte Carlo
+Learn importance of detailed balance
+
+Apply the Metropolis Monte Carlo algorithm to calculate properties of a model gas
 ---
 :header: bg-jb-two
 
 📖 **Chapter in script**
 ^^^
-p.1-2 Course script
+Chapter 3 - Monte Carlo Simulations
 ---
 :header: bg-jb-three
 
 📚 **Resources**
 ^^^
-Understanding Molecular Simulation,  Frenkel & Smit, p.200
+Understanding Molecular Simulation, Frenkel & Smit, 2nd Edition - Chapter 3 & Chapter 5 (extra)
+
+Computer Simulation of Liquids, Allen & Tildesley, 2nd Edition - Chapter 4
 ::::
