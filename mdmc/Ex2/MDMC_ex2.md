@@ -16,9 +16,11 @@ using Boltzmann statistics.
 
 🎯 **Learning goals**
 ^^^
-(Re)introduction to Statistical Mechanics
+Follow a (re)introduction to statistical mechanics
 
-Compute the Boltzmann Distribution for an Harmonic Oscillator
+Learn differeces between canonical and microcanonical ensembles
+
+Understand how to calculate the Boltzmann distribution for a harmonic oscillator
 ---
 :header: bg-jb-two
 
