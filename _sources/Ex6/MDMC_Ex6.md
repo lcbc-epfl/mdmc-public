@@ -15,21 +15,25 @@ will analyse the folding of the Trp-cage miniprotein.
 
 🎯 **Learning goals**
 ^^^
+Learn how to simulate solvated systems
+
 Run a production grade simulation using a GPU 
 
 Simulate protein folding of a small peptide
 
-Basic analysis of an MD trajectory
+Perform a basic analysis of an MD trajectory
 ---
 :header: bg-jb-two
 
 📖 **Chapter in script**
 ^^^
-p.1-2 Course script
+Chapter 6 - Advanced Molecular Dynamics Techniques
 ---
 :header: bg-jb-three
 
 📚 **Resources**
 ^^^
-Understanding Molecular Simulation,  Frenkel & Smit, p.200
+Anandakrishnan, R., Drozdetski, A., Walker, R. C. and Onufriev, A. V.,
+Speed of Conformational Change: Comparing Explicit and Implicit Solvent Molecular Dynamics Simulations,
+Biophysical Journal, Vol 108, 5, 2015, pgs 1153-1164. https://doi.org/10.1016/j.bpj.2014.12.047.
 ::::
