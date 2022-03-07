@@ -393,14 +393,20 @@ const thebe_selector_output = ".output, .cell_output"
 
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">helpers</span>
-<span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
 
 <span class="c1"># The Random Seed is set here, you will focus on it in the last question.</span>
 <span class="c1"># For the moment it is sufficient to know that this is used to initialize</span>
 <span class="c1"># the generation of random numbers (if not set a default value is used, </span>
 <span class="c1"># but it can be useful to know what is the seed for reproducibility)</span>
 <span class="n">r</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">helpers</span>
+<span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -468,15 +474,15 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="id1">
+<div class="exercise admonition" id="ex5">
 <p class="admonition-title">Exercise 5</p>
 <p>What happens to the estimation of <span class="math notranslate nohighlight">\(\pi\)</span> when the circle origin is changed? Why?</p>
 </div>
-<div class="exercise admonition" id="id2">
+<div class="exercise admonition" id="ex6">
 <p class="admonition-title">Exercise 6</p>
 <p>What happens to the accuracy of the estimation when you increase the square size, or decrease the circle size? Is there an optimal ratio between the square side (<span class="math notranslate nohighlight">\(l\)</span>) and the circle diameter (<span class="math notranslate nohighlight">\(d\)</span>)?</p>
 </div>
-<div class="exercise admonition" id="id3">
+<div class="exercise admonition" id="ex7">
 <p class="admonition-title">Exercise 7</p>
 <p>In our code we set the random seed (<code class="docutils literal notranslate"><span class="pre">r.seed()</span></code>) once in the first cell, but then it is unchanged. It means that the first time you run the MC code, the random number set as seed was used for the extraction, but then the later extractions do not start from that seed anymore. What happens if you use the same seed for the pseudo random number generator (PRNG) each time you start the MC code? And what would happen if you would use the same seed for each random number extraction? You can read up more details in <a class="reference internal" href="prng.html"><span class="doc">Appendix: Random and Pseudo-random Numbers</span></a>.
 <em>Hint</em>: To get an idea, you can either edit the MC code, or you can also write a piece of code to check how the numbers generated depend on the seed set.</p>
