@@ -50,7 +50,7 @@ Simulations tutorial provided by the University of Amsterdam.
 ## Practical information
 
 ### Time Table Spring Semester 2022
-The course will be **Tue 10:15-12:00am** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118) (Access via the tower that goes up where the computer room is), Exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
+The course will be **Tue 11:15-1:00pm** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118) (Access via the tower that goes up where the computer room is), Exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
 
 
 | date            | type     | description                                               |            |
