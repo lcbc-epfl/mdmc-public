@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Theory &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>6.1. Theory &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,6 +56,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.3. Protein Modelling" href="proteinmodelling.html" />
+    <link rel="prev" title="6. Properties from Molecular Dynamics" href="MDMC_Ex6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -99,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
   Exercises
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Ex1/MDMC_ex1.html">
    1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
@@ -223,6 +225,38 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="MDMC_Ex6.html">
+   6. Properties from Molecular Dynamics
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     6.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proteinmodelling.html">
+     6.3. Protein Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="TRP_Cage_OpenMM_colab.html">
+     6.4. Practical: TRP Cage using OpenMM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hydrogenbonds.html">
+     6.5. TrpCage Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
@@ -312,37 +346,37 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Theory
+   6.1. Theory
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solvent-models-in-molecular-dynamics">
-     Solvent Models in Molecular Dynamics
+     6.1.1. Solvent Models in Molecular Dynamics
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#explicit-solvent">
-       Explicit Solvent
+       6.1.1.1. Explicit Solvent
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#implicit-solvent">
-       Implicit Solvent
+       6.1.1.2. Implicit Solvent
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h4 nav-item toc-entry">
         <a class="reference internal nav-link" href="#sasa-solvent-accessible-surface-area-models">
-         SASA: Solvent-accessible surface area models
+         6.1.1.2.1. SASA: Solvent-accessible surface area models
         </a>
        </li>
        <li class="toc-h4 nav-item toc-entry">
         <a class="reference internal nav-link" href="#pb-poisson-boltzmann">
-         PB: Poisson-Boltzmann
+         6.1.1.2.2. PB: Poisson-Boltzmann
         </a>
        </li>
        <li class="toc-h4 nav-item toc-entry">
         <a class="reference internal nav-link" href="#gb-the-generalised-born-equation">
-         GB: The Generalised Born equation
+         6.1.1.2.3. GB: The Generalised Born equation
         </a>
        </li>
       </ul>
@@ -351,17 +385,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#properties-from-md">
-     Properties from MD
+     6.1.2. Properties from MD
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#rmsd">
-       RMSD
+       6.1.2.1. RMSD
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#pressure-and-the-virial-theorem">
-       Pressure and the virial theorem
+       6.1.2.2. Pressure and the virial theorem
       </a>
      </li>
     </ul>
@@ -370,12 +404,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercises">
-   Exercises
+   6.2. Exercises
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#theory-solvent-models-in-molecular-dynamics">
-     Theory - Solvent Models in Molecular Dynamics
+     6.2.1. Theory - Solvent Models in Molecular Dynamics
     </a>
    </li>
   </ul>
@@ -402,37 +436,37 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Theory
+   6.1. Theory
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#solvent-models-in-molecular-dynamics">
-     Solvent Models in Molecular Dynamics
+     6.1.1. Solvent Models in Molecular Dynamics
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#explicit-solvent">
-       Explicit Solvent
+       6.1.1.1. Explicit Solvent
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#implicit-solvent">
-       Implicit Solvent
+       6.1.1.2. Implicit Solvent
       </a>
       <ul class="nav section-nav flex-column">
        <li class="toc-h4 nav-item toc-entry">
         <a class="reference internal nav-link" href="#sasa-solvent-accessible-surface-area-models">
-         SASA: Solvent-accessible surface area models
+         6.1.1.2.1. SASA: Solvent-accessible surface area models
         </a>
        </li>
        <li class="toc-h4 nav-item toc-entry">
         <a class="reference internal nav-link" href="#pb-poisson-boltzmann">
-         PB: Poisson-Boltzmann
+         6.1.1.2.2. PB: Poisson-Boltzmann
         </a>
        </li>
        <li class="toc-h4 nav-item toc-entry">
         <a class="reference internal nav-link" href="#gb-the-generalised-born-equation">
-         GB: The Generalised Born equation
+         6.1.1.2.3. GB: The Generalised Born equation
         </a>
        </li>
       </ul>
@@ -441,17 +475,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#properties-from-md">
-     Properties from MD
+     6.1.2. Properties from MD
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#rmsd">
-       RMSD
+       6.1.2.1. RMSD
       </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#pressure-and-the-virial-theorem">
-       Pressure and the virial theorem
+       6.1.2.2. Pressure and the virial theorem
       </a>
      </li>
     </ul>
@@ -460,12 +494,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exercises">
-   Exercises
+   6.2. Exercises
   </a>
   <ul class="visible nav section-nav flex-column">
    <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#theory-solvent-models-in-molecular-dynamics">
-     Theory - Solvent Models in Molecular Dynamics
+     6.2.1. Theory - Solvent Models in Molecular Dynamics
     </a>
    </li>
   </ul>
@@ -480,9 +514,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="theory">
-<span id="id1"></span><h1>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1><span class="section-number">6.1. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="solvent-models-in-molecular-dynamics">
-<h2>Solvent Models in Molecular Dynamics<a class="headerlink" href="#solvent-models-in-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1.1. </span>Solvent Models in Molecular Dynamics<a class="headerlink" href="#solvent-models-in-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
 <p>The simulation of complex systems in their natural environment poses a
 considerable challenge; the possibility of simulating a protein in a
 cellular environment is not only constrained by the protein size itself,
@@ -492,7 +526,7 @@ the properties of any system in solution are governed by its
 environment, the inclusion of solvation effects is a crucial ingredient
 for any successful MD simulation (idem for MC).</p>
 <div class="section" id="explicit-solvent">
-<h3>Explicit Solvent<a class="headerlink" href="#explicit-solvent" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.1.1. </span>Explicit Solvent<a class="headerlink" href="#explicit-solvent" title="Permalink to this headline">¶</a></h3>
 <p>The sheer number of water molecules surrounding a protein will
 considerably increase the computational cost of a simulation, since the
 simulation box has to be chosen reasonably big in order for the solvent
@@ -515,7 +549,7 @@ the system by using appropriate <em>implicit</em> solvent models instead of
 explicit solvent.</p>
 </div>
 <div class="section" id="implicit-solvent">
-<h3>Implicit Solvent<a class="headerlink" href="#implicit-solvent" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.1.2. </span>Implicit Solvent<a class="headerlink" href="#implicit-solvent" title="Permalink to this headline">¶</a></h3>
 <p>Although an explicit description of solvent molecules is clearly
 preferrable due to the natural inclusion of effects such as the
 solvent’s response to polarisation, bridging and hydrogen-bonding, an
@@ -524,7 +558,7 @@ effects of the environment (such as changes in polarisability).
 Formally, the solvent contribution to the Helmholtz (or Gibbs) free
 energy (<span class="math notranslate nohighlight">\(F\)</span> and <span class="math notranslate nohighlight">\(G\)</span>, respectively) may be divided into different terms:</p>
 <div class="math notranslate nohighlight" id="equation-free-energy-solvation">
-<span class="eqno">()<a class="headerlink" href="#equation-free-energy-solvation" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-free-energy-solvation" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 \Delta F_\text{sol} = \Delta F_\text{cav} + \Delta F_\text{vdW} + \Delta F_\text{ele},
 \end{aligned}
@@ -537,7 +571,7 @@ Solvent-accessible surface area models may take the entire
 <span class="math notranslate nohighlight">\(\Delta F_\text{sol}\)</span> into account, the Poisson-Boltzmann and
 Generalised-Born methods model solely <span class="math notranslate nohighlight">\(\Delta F_\text{ele}\)</span>.</p>
 <div class="section" id="sasa-solvent-accessible-surface-area-models">
-<h4>SASA: Solvent-accessible surface area models<a class="headerlink" href="#sasa-solvent-accessible-surface-area-models" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.1.2.1. </span>SASA: Solvent-accessible surface area models<a class="headerlink" href="#sasa-solvent-accessible-surface-area-models" title="Permalink to this headline">¶</a></h4>
 <p>SASA models assume the interactions between solute and solvent to be
 proportional to the solute’s surface area. The free energy of solvation
 is described by a mean solvent potential
@@ -545,7 +579,7 @@ is described by a mean solvent potential
 atom-specific solvation energy per surface area <span class="math notranslate nohighlight">\(\sigma_i\)</span> and the
 solvent-accessible surface area (SASA<span class="math notranslate nohighlight">\(_i\)</span>) for atom <span class="math notranslate nohighlight">\(i\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-sasa">
-<span class="eqno">()<a class="headerlink" href="#equation-sasa" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-sasa" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 V_\text{sol}^\text{SASA} = \sum_i \sigma_i \cdot \text{SASA}_i(\mathbf{r}_i).
 \end{aligned}
@@ -553,11 +587,11 @@ V_\text{sol}^\text{SASA} = \sum_i \sigma_i \cdot \text{SASA}_i(\mathbf{r}_i).
 <p>Various algorithms of different accuracy exist to calculate the SASA.</p>
 </div>
 <div class="section" id="pb-poisson-boltzmann">
-<h4>PB: Poisson-Boltzmann<a class="headerlink" href="#pb-poisson-boltzmann" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.1.2.2. </span>PB: Poisson-Boltzmann<a class="headerlink" href="#pb-poisson-boltzmann" title="Permalink to this headline">¶</a></h4>
 <p>The Poisson equation relates the scalar electric potential
 <span class="math notranslate nohighlight">\(\Phi(\mathbf{r})\)</span> to the charge density <span class="math notranslate nohighlight">\(\rho(\mathbf{r})\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eqpb1">
-<span class="eqno">()<a class="headerlink" href="#equation-eqpb1" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-eqpb1" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 \nabla \cdot \left[\epsilon(\mathbf{r})\nabla \Phi(\mathbf{r})  \right] = -\frac{\rho(\mathbf{r})}{\epsilon_0},
 \end{aligned}
@@ -567,7 +601,7 @@ V_\text{sol}^\text{SASA} = \sum_i \sigma_i \cdot \text{SASA}_i(\mathbf{r}_i).
 for the potential requires knowing the charge density distribution such
 that</p>
 <div class="math notranslate nohighlight" id="equation-charge-density-dist">
-<span class="eqno">()<a class="headerlink" href="#equation-charge-density-dist" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-charge-density-dist" title="Permalink to this equation">¶</a></span>\[
  \begin{aligned}
 \Phi(\mathbf{r}) = \frac{1}{4\pi \epsilon_0 \epsilon(\mathbf{r})} \int \frac{\rho(\mathbf{r})}{\left|\mathbf{r}\right|} \mathrm{d}V(\mathbf{r}).
 \end{aligned}
@@ -579,21 +613,21 @@ well as the ions thermal motion. Assuming ions as point charges, their
 concentrations is expected to follow a Boltzmann distribution at thermal
 equilibrium:</p>
 <div class="math notranslate nohighlight" id="equation-conc">
-<span class="eqno">()<a class="headerlink" href="#equation-conc" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-conc" title="Permalink to this equation">¶</a></span>\[
 c_i(\mathbf{r}) = c_i^{\infty} \cdot \text{exp}\left(-\frac{U_i(\mathbf{r})}{k_B T}\right)
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(c_i^{\infty}\)</span> represents the concentration of the ion <span class="math notranslate nohighlight">\(i\)</span>, of
 electrostatic energy <span class="math notranslate nohighlight">\(U_i(\mathbf{r})\)</span>, at a distance of infinity from
 the solute (bulk concentration). <span class="math notranslate nohighlight">\(k_B\)</span> is the Boltzmann constant and <span class="math notranslate nohighlight">\(T\)</span>
 the temperature.</p>
-<p>Considering <a class="reference internal" href="#equation-conc">()</a>
-in <a class="reference internal" href="#equation-eqpb1">()</a>, one
+<p>Considering <a class="reference internal" href="#equation-conc">(6.5)</a>
+in <a class="reference internal" href="#equation-eqpb1">(6.3)</a>, one
 obtains a special case of the Poisson equation, the <em>Poisson-Boltzmann</em>
 (PB) equation. You will go through the derivation of the PB equation as
 an exercise. The PB equation can further be linearized under the
 assumption that the potential is small which yields:</p>
 <div class="math notranslate nohighlight" id="equation-eqpb2">
-<span class="eqno">()<a class="headerlink" href="#equation-eqpb2" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-eqpb2" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 \nabla \cdot \left[\epsilon_0\epsilon(\mathbf{r})\nabla \Phi(\mathbf{r})  \right] + \rho_\text{ext}(\mathbf{r}) =  \left(\frac{q^2}{k_B T} \sum_i c_i^{\infty} z_i^2\right) \Phi(\mathbf{r})
 \end{aligned}
@@ -603,12 +637,12 @@ assumption that the potential is small which yields:</p>
 solvent.</p>
 </div>
 <div class="section" id="gb-the-generalised-born-equation">
-<h4>GB: The Generalised Born equation<a class="headerlink" href="#gb-the-generalised-born-equation" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.1.2.3. </span>GB: The Generalised Born equation<a class="headerlink" href="#gb-the-generalised-born-equation" title="Permalink to this headline">¶</a></h4>
 <p>Alternatively, the Poisson-Boltzmann equation may be solved for a charge
 in the centre of an ideally spherical solute, yielding the Generalised
 Born (GB) equation:</p>
 <div class="math notranslate nohighlight" id="equation-gb">
-<span class="eqno">()<a class="headerlink" href="#equation-gb" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-gb" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 \Delta F_\text{solv} = \frac{1}{2} \left( \frac{1}{\epsilon_\text{int}} -\frac{1}{\epsilon_\text{ext}} \right) \frac{q^2}{\alpha}.
 \end{aligned}
@@ -622,7 +656,7 @@ the best possible value with respect to some reference data. The
 effective Born radii of all species are then used to compute GB pair
 terms:</p>
 <div class="math notranslate nohighlight" id="equation-gb-pair-terms">
-<span class="eqno">()<a class="headerlink" href="#equation-gb-pair-terms" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-gb-pair-terms" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 \Delta F_\text{solv} = \frac{1}{2} \sum_{ij} \frac{\left( \frac{1}{\epsilon_\text{int}} -\frac{1}{\epsilon_\text{ext}} \right)
  q_i q_j}{\left(r_{ij}^2 +\alpha_i \alpha_j e^{-\frac{r_{ij}^2}{4\alpha_i \alpha_j}} \right)^{\frac{1}{2}} }.
@@ -632,7 +666,7 @@ terms:</p>
 </div>
 </div>
 <div class="section" id="properties-from-md">
-<h2>Properties from MD<a class="headerlink" href="#properties-from-md" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1.2. </span>Properties from MD<a class="headerlink" href="#properties-from-md" title="Permalink to this headline">¶</a></h2>
 <p>The great value of MD simulation techniques is rooted in the possibility
 of easily deriving a certain set of properties from a complete
 trajectory. Although the visual inspection of the changes that the
@@ -642,16 +676,16 @@ measures may be based on simple concepts such as atomic displacements up
 to more involved frameworks where the power spectra of the
 time-evolution of the system are considered.</p>
 <div class="section" id="rmsd">
-<h3>RMSD<a class="headerlink" href="#rmsd" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.2.1. </span>RMSD<a class="headerlink" href="#rmsd" title="Permalink to this headline">¶</a></h3>
 <p>The root-mean-square deviation (RMSD) of atomic positions is an
 important measure for studying conformational differences between
 superimposed structures (<em>e.g.</em> proteins). Typically, structurally
 relevant parts of a system are identified, superimposed and then aligned
-such that the RMSD <a class="reference internal" href="#equation-rmsd">()</a> is minimised. This allows for a quantification of the
+such that the RMSD <a class="reference internal" href="#equation-rmsd">(6.9)</a> is minimised. This allows for a quantification of the
 average displacement of the atoms between different systems, or between
 different structures (snapshots) of the same system:</p>
 <div class="math notranslate nohighlight" id="equation-rmsd">
-<span class="eqno">()<a class="headerlink" href="#equation-rmsd" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-rmsd" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 \text{RMSD}^{a-b} = \sqrt{\frac{1}{N} \sum_{i=1}^N \left(\mathbf{r}_i^a-\mathbf{r}_i^b\right)^2},
 \end{aligned}
@@ -662,14 +696,14 @@ be especially useful in comparing protein structures, <em>i.e.</em> between
 native and partially folded conformations.</p>
 </div>
 <div class="section" id="pressure-and-the-virial-theorem">
-<h3>Pressure and the virial theorem<a class="headerlink" href="#pressure-and-the-virial-theorem" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.2.2. </span>Pressure and the virial theorem<a class="headerlink" href="#pressure-and-the-virial-theorem" title="Permalink to this headline">¶</a></h3>
 <p>Many chemically relevant processes take place in the isothermal-isobaric
 ensemble (<span class="math notranslate nohighlight">\(NpT\)</span>). In <span class="math notranslate nohighlight">\(NpT\)</span>-simulations, the simulation cell size changes
 during the course of the simulation in order to keep the pressure
 constant. The pressure is in practice often calculated based on the
 <em>virial theorem</em> of Clausius. The virial is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-virial-theorem">
-<span class="eqno">()<a class="headerlink" href="#equation-virial-theorem" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-virial-theorem" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 W = \sum_i^N \mathbf{q}_i \frac{\partial \mathbf{p}_i}{\partial \mathbf{q}_i},
 \end{aligned}
@@ -678,7 +712,7 @@ W = \sum_i^N \mathbf{q}_i \frac{\partial \mathbf{p}_i}{\partial \mathbf{q}_i},
 sum runs over all <span class="math notranslate nohighlight">\(i\)</span> out of a total of <span class="math notranslate nohighlight">\(N\)</span> atoms. According to the
 virial theorem, this is equivalent to:</p>
 <div class="math notranslate nohighlight" id="equation-virial-alt">
-<span class="eqno">()<a class="headerlink" href="#equation-virial-alt" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.11)<a class="headerlink" href="#equation-virial-alt" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 W = -3Nk_BT.
 \end{aligned}
@@ -687,7 +721,7 @@ W = -3Nk_BT.
 ideal gas part (<span class="math notranslate nohighlight">\(-3PV\)</span>) and a contribution due to the interaction
 between the particles:</p>
 <div class="math notranslate nohighlight" id="equation-virial">
-<span class="eqno">()<a class="headerlink" href="#equation-virial" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.12)<a class="headerlink" href="#equation-virial" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 W = -3PV + \sum_{i=1}^N \sum_{j=N+1}^N r_{ij} \frac{\partial \upsilon(r_{ij})}{\partial r_{ij}},
 \end{aligned}
@@ -696,7 +730,7 @@ W = -3PV + \sum_{i=1}^N \sum_{j=N+1}^N r_{ij} \frac{\partial \upsilon(r_{ij})}{\
 denotes the forces on the ions. The resulting expression for the
 pressure is simply:</p>
 <div class="math notranslate nohighlight" id="equation-pressure">
-<span class="eqno">()<a class="headerlink" href="#equation-pressure" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(6.13)<a class="headerlink" href="#equation-pressure" title="Permalink to this equation">¶</a></span>\[
 \begin{aligned}
 P = \frac{1}{V} \left[Nk_BT - \frac{1}{3k_BT}\sum_{i=1}^N \sum_{j=i+1}^N r_{ij} f_{ij} \right].
 \end{aligned}
@@ -705,14 +739,14 @@ P = \frac{1}{V} \left[Nk_BT - \frac{1}{3k_BT}\sum_{i=1}^N \sum_{j=i+1}^N r_{ij} 
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="exercises">
-<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6.2. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="theory-solvent-models-in-molecular-dynamics">
-<h2>Theory - Solvent Models in Molecular Dynamics<a class="headerlink" href="#theory-solvent-models-in-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2.1. </span>Theory - Solvent Models in Molecular Dynamics<a class="headerlink" href="#theory-solvent-models-in-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Derive <a class="reference internal" href="#equation-eqpb2">()</a> from
-<a class="reference internal" href="#equation-eqpb1">()</a> by
+<li><p>Derive <a class="reference internal" href="#equation-eqpb2">(6.6)</a> from
+<a class="reference internal" href="#equation-eqpb1">(6.3)</a> by
 passing via the exponential form of the Poisson-Boltzmann equation
-<a class="reference internal" href="#equation-conc">()</a>.
+<a class="reference internal" href="#equation-conc">(6.5)</a>.
 Give an appropriate expression for the equilibrium charge density
 <span class="math notranslate nohighlight">\(\rho_\text{ext}(\mathbf{r})\)</span> in the Poisson-Boltzmann approach.</p></li>
 <li><p>How may the solvent environment (especially in the case of a polar
@@ -725,10 +759,10 @@ water?</p></li>
 advantages and pitfalls of using an implicit solvent compared to an
 explicit treatment.</p></li>
 <li><p><strong>Bonus:</strong> How expensive is the computation of the pressure in
-<a class="reference internal" href="#equation-pressure">()</a>, via the virial, in an MD and an MC
+<a class="reference internal" href="#equation-pressure">(6.13)</a>, via the virial, in an MD and an MC
 algorithm, respectively?</p></li>
 <li><p><strong>Bonus:</strong> Derive the ideal gas part of the virial in
-<a class="reference internal" href="#equation-virial">()</a>.</p></li>
+<a class="reference internal" href="#equation-virial">(6.12)</a>.</p></li>
 <li><p>A protein has the tendency to fold much quicker in
 implicit than in explicit solvent. Why is this? What are possible
 issues?</p></li>
@@ -760,7 +794,21 @@ issues?</p></li>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="MDMC_Ex6.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6. </span>Properties from Molecular Dynamics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="proteinmodelling.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.3. </span>Protein Modelling</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
