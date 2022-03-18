@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.3. Protein Modelling &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>Protein Modelling &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,8 +56,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.4. Practical: TRP Cage using OpenMM" href="TRP_Cage_OpenMM_colab.html" />
-    <link rel="prev" title="6.1. Theory" href="theory.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -101,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
   Exercises
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Ex1/MDMC_ex1.html">
    1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
@@ -225,38 +223,6 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="MDMC_Ex6.html">
-   6. Properties from Molecular Dynamics
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="theory.html">
-     6.1. Theory
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     6.3. Protein Modelling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="TRP_Cage_OpenMM_colab.html">
-     6.4. Practical: TRP Cage using OpenMM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="hydrogenbonds.html">
-     6.5. TrpCage Analysis
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -346,32 +312,31 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#molecular-dynamics-simulations-in-biochemistry">
-   6.3.1. Molecular Dynamics Simulations in Biochemistry
+   Molecular Dynamics Simulations in Biochemistry
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#amino-acids-and-proteins">
-   6.3.2. Amino Acids and Proteins
+   Amino Acids and Proteins
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#amino-acids">
-     6.3.2.1. Amino Acids
+     Amino Acids
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#proteins">
-     6.3.2.2. Proteins
+     Proteins
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#proteins-form-and-function">
-       6.3.2.2.1. Proteins: Form and Function
+       Proteins: Form and Function
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#alpha-helices-and-beta-sheets">
-       6.3.2.2.2.
        <span class="math notranslate nohighlight">
         \(\alpha\)
        </span>
@@ -388,39 +353,39 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#protein-assemblies">
-   6.3.3. Protein Assemblies
+   Protein Assemblies
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#secondary-structures">
-     6.3.3.1. Secondary Structures
+     Secondary Structures
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tertiary-structures">
-     6.3.3.2. Tertiary Structures
+     Tertiary Structures
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quaternary-structures">
-     6.3.3.3. Quaternary Structures
+     Quaternary Structures
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#protein-folding">
-   6.3.4. Protein Folding
+   Protein Folding
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-methods">
-   6.3.5. Computational methods
+   Computational methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#analysis-of-the-folding-dynamics-of-the-trp-cage-miniprotein">
-     6.3.5.1. Analysis of the Folding Dynamics of the Trp-cage Miniprotein
+     Analysis of the Folding Dynamics of the Trp-cage Miniprotein
     </a>
    </li>
   </ul>
@@ -447,32 +412,31 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#molecular-dynamics-simulations-in-biochemistry">
-   6.3.1. Molecular Dynamics Simulations in Biochemistry
+   Molecular Dynamics Simulations in Biochemistry
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#amino-acids-and-proteins">
-   6.3.2. Amino Acids and Proteins
+   Amino Acids and Proteins
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#amino-acids">
-     6.3.2.1. Amino Acids
+     Amino Acids
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#proteins">
-     6.3.2.2. Proteins
+     Proteins
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#proteins-form-and-function">
-       6.3.2.2.1. Proteins: Form and Function
+       Proteins: Form and Function
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#alpha-helices-and-beta-sheets">
-       6.3.2.2.2.
        <span class="math notranslate nohighlight">
         \(\alpha\)
        </span>
@@ -489,39 +453,39 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#protein-assemblies">
-   6.3.3. Protein Assemblies
+   Protein Assemblies
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#secondary-structures">
-     6.3.3.1. Secondary Structures
+     Secondary Structures
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tertiary-structures">
-     6.3.3.2. Tertiary Structures
+     Tertiary Structures
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quaternary-structures">
-     6.3.3.3. Quaternary Structures
+     Quaternary Structures
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#protein-folding">
-   6.3.4. Protein Folding
+   Protein Folding
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#computational-methods">
-   6.3.5. Computational methods
+   Computational methods
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#analysis-of-the-folding-dynamics-of-the-trp-cage-miniprotein">
-     6.3.5.1. Analysis of the Folding Dynamics of the Trp-cage Miniprotein
+     Analysis of the Folding Dynamics of the Trp-cage Miniprotein
     </a>
    </li>
   </ul>
@@ -536,9 +500,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="protein-modelling">
-<h1><span class="section-number">6.3. </span>Protein Modelling<a class="headerlink" href="#protein-modelling" title="Permalink to this headline">¶</a></h1>
+<h1>Protein Modelling<a class="headerlink" href="#protein-modelling" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="molecular-dynamics-simulations-in-biochemistry">
-<h2><span class="section-number">6.3.1. </span>Molecular Dynamics Simulations in Biochemistry<a class="headerlink" href="#molecular-dynamics-simulations-in-biochemistry" title="Permalink to this headline">¶</a></h2>
+<h2>Molecular Dynamics Simulations in Biochemistry<a class="headerlink" href="#molecular-dynamics-simulations-in-biochemistry" title="Permalink to this headline">¶</a></h2>
 <p>Individual cellular processes are complex; involving a plethora of
 reactants, reaction pathways, intermediary states and biological
 catalysts. Such processes are often very large (<span class="math notranslate nohighlight">\(&gt;1,000,000\)</span> atoms), and
@@ -560,11 +524,11 @@ can be performed in visual and mathematical detail, in an environment in
 which the protein is active.</p>
 </div>
 <div class="section" id="amino-acids-and-proteins">
-<h2><span class="section-number">6.3.2. </span>Amino Acids and Proteins<a class="headerlink" href="#amino-acids-and-proteins" title="Permalink to this headline">¶</a></h2>
+<h2>Amino Acids and Proteins<a class="headerlink" href="#amino-acids-and-proteins" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="amino-acids">
-<h3><span class="section-number">6.3.2.1. </span>Amino Acids<a class="headerlink" href="#amino-acids" title="Permalink to this headline">¶</a></h3>
+<h3>Amino Acids<a class="headerlink" href="#amino-acids" title="Permalink to this headline">¶</a></h3>
 <p>Amino acids are the structural units that make up proteins. They join
-together via dehydration (<a class="reference internal" href="#dehydration-reaction"><span class="std std-numref">Fig. 6.1</span></a>) to form short polymer chains named peptides,
+together via dehydration (<code class="xref std std-numref docutils literal notranslate"><span class="pre">dehydration_reaction</span></code>) to form short polymer chains named peptides,
 or longer chains called polypeptides or proteins. These polypeditic
 chains are unbranched, with each amino acid within the chain attached to
 two neighbouring amino acids. There are a total of 23 amino acids that
@@ -574,13 +538,13 @@ remaining two, selenocysteine and pyrrolysine, are incorporated into
 polypeptides by unique biological mechanisms.</p>
 <div class="figure align-default" id="dehydration-reaction">
 <img alt="../_images/dehydration_reaction.png" src="../_images/dehydration_reaction.png" />
-<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">Dehydration of two amino acids to yield a dipeptide. Each amino acid
+<p class="caption"><span class="caption-text">Dehydration of two amino acids to yield a dipeptide. Each amino acid
 differs in the <strong>R</strong> group, thus polypeptide chains have a preserved and
 regular backbone. Public domain <a class="reference external" href="https://commons.wikimedia.org/wiki/File:AminoacidCondensation.svg">V8rik</a></span><a class="headerlink" href="#dehydration-reaction" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="proteins">
-<h3><span class="section-number">6.3.2.2. </span>Proteins<a class="headerlink" href="#proteins" title="Permalink to this headline">¶</a></h3>
+<h3>Proteins<a class="headerlink" href="#proteins" title="Permalink to this headline">¶</a></h3>
 <p>Proteins are large macromolecules consisting of one or more polypeptide
 chains. They differ from one another primarily in their sequence of
 amino acids, which is dictated by the genetic coding responsible for
@@ -590,7 +554,7 @@ particular process. Proteins perform the majority of the vast array of
 functions required for life within living organisms, including:
 metabolic catalysis, DNA replication and signal transduction.</p>
 <div class="section" id="proteins-form-and-function">
-<h4><span class="section-number">6.3.2.2.1. </span>Proteins: Form and Function<a class="headerlink" href="#proteins-form-and-function" title="Permalink to this headline">¶</a></h4>
+<h4>Proteins: Form and Function<a class="headerlink" href="#proteins-form-and-function" title="Permalink to this headline">¶</a></h4>
 <p>The activity and task of a protein, in large part, is determined by its
 3D structural characteristics. This is defined by the sequence of amino
 acids in the polypeptide chains that constitute the protein, which, in
@@ -598,11 +562,11 @@ turn, is defined by the sequence of genetic code on the encoding mRNA
 strand.</p>
 </div>
 <div class="section" id="alpha-helices-and-beta-sheets">
-<span id="alpha-helix"></span><h4><span class="section-number">6.3.2.2.2. </span><span class="math notranslate nohighlight">\(\alpha\)</span>-helices and <span class="math notranslate nohighlight">\(\beta\)</span>-sheets<a class="headerlink" href="#alpha-helices-and-beta-sheets" title="Permalink to this headline">¶</a></h4>
+<span id="alpha-helix"></span><h4><span class="math notranslate nohighlight">\(\alpha\)</span>-helices and <span class="math notranslate nohighlight">\(\beta\)</span>-sheets<a class="headerlink" href="#alpha-helices-and-beta-sheets" title="Permalink to this headline">¶</a></h4>
 <p>Polypeptide chains are not usually linear, in fact, they can adopt very
 specific conformations which are vitally important to the structural
 characteristics of proteins. The most common conformations are the
-<span class="math notranslate nohighlight">\(\alpha\)</span>-helix and <span class="math notranslate nohighlight">\(\beta\)</span>-sheet (<a class="reference internal" href="#polypeptide-structures"><span class="std std-numref">Fig. 6.2</span></a>), however, there are variants which
+<span class="math notranslate nohighlight">\(\alpha\)</span>-helix and <span class="math notranslate nohighlight">\(\beta\)</span>-sheet (<code class="xref std std-numref docutils literal notranslate"><span class="pre">polypeptide-structures</span></code>), however, there are variants which
 differ in their symmetry. The <span class="math notranslate nohighlight">\(\alpha\)</span>-helix conformation results when
 every backbone <span class="math notranslate nohighlight">\(N-H\)</span> group donates a hydrogen bond to the backbone <span class="math notranslate nohighlight">\(C=O\)</span>
 of the amino acid four residues earlier (<span class="math notranslate nohighlight">\(i+4 \rightarrow i\)</span> hydrogen
@@ -618,59 +582,59 @@ motif.</p>
 <div style="height: 400px; width: 100%; position: relative;" class='viewer_3Dmoljs' data-href='alpha_helix.pdb' data-backgroundcolor='0xffffff' ddata-select1='chain:A' data-style1='cartoon' data-select2='chain:A' data-style2='cartoon;stick'></div> <div style="height: 400px; width: 100%; position: relative;" class='viewer_3Dmoljs' data-href='beta_sheet.pdb' data-backgroundcolor='0xffffff' data-select1='chain:A' data-style1='cartoon' data-select2='chain:A' data-style2='cartoon;stick'></div>       
 <div class="figure align-default" id="polypeptide-structures">
 <a class="reference internal image-reference" href="../_images/empty.svg"><img alt="../_images/empty.svg" height="1px" src="../_images/empty.svg" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.2 </span><span class="caption-text">Hydrogen-bonding is the primary driving force of the formation of <span class="math notranslate nohighlight">\(\alpha\)</span>-helices and <span class="math notranslate nohighlight">\(\beta\)</span>-sheets. This in turn depends on the type and sequence of amino acids involved in the polypeptide. Top alpha helix from the GB1 protein, bottom beta hairpin from the GB1 protein containing a beta sheet connected with a short loop.</span><a class="headerlink" href="#polypeptide-structures" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Hydrogen-bonding is the primary driving force of the formation of <span class="math notranslate nohighlight">\(\alpha\)</span>-helices and <span class="math notranslate nohighlight">\(\beta\)</span>-sheets. This in turn depends on the type and sequence of amino acids involved in the polypeptide. Top alpha helix from the GB1 protein, bottom beta hairpin from the GB1 protein containing a beta sheet connected with a short loop.</span><a class="headerlink" href="#polypeptide-structures" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="protein-assemblies">
-<h2><span class="section-number">6.3.3. </span>Protein Assemblies<a class="headerlink" href="#protein-assemblies" title="Permalink to this headline">¶</a></h2>
+<h2>Protein Assemblies<a class="headerlink" href="#protein-assemblies" title="Permalink to this headline">¶</a></h2>
 <p>There are three common structures involving proteins: secondary,
-tertiary and quaternary structures (<a class="reference internal" href="#protein-structures"><span class="std std-numref">Fig. 6.3</span></a>). The study of these structures is vital
+tertiary and quaternary structures (<code class="xref std std-numref docutils literal notranslate"><span class="pre">protein-structures</span></code>). The study of these structures is vital
 to the understanding of diseases, metabolism and other biological
 processes.</p>
 <div class="section" id="secondary-structures">
-<h3><span class="section-number">6.3.3.1. </span>Secondary Structures<a class="headerlink" href="#secondary-structures" title="Permalink to this headline">¶</a></h3>
+<h3>Secondary Structures<a class="headerlink" href="#secondary-structures" title="Permalink to this headline">¶</a></h3>
 <p>Secondary structures evolve from the interaction behaviour of hydrogen
 bonding formed between the amine hydrogen and carbonyl oxygen atoms
 contained in the backbone peptide bonds of the protein. There are a
 number of secondary structures observed in nature, the two most common
-being the <span class="math notranslate nohighlight">\(\alpha\)</span>-helix and <span class="math notranslate nohighlight">\(\beta\)</span>-sheet described in <a class="reference internal" href="#alpha-helix"><span class="std std-numref">Section 6.3.2.2.2</span></a></p>
+being the <span class="math notranslate nohighlight">\(\alpha\)</span>-helix and <span class="math notranslate nohighlight">\(\beta\)</span>-sheet described in <code class="xref std std-numref docutils literal notranslate"><span class="pre">alpha-helix</span></code></p>
 </div>
 <div class="section" id="tertiary-structures">
-<h3><span class="section-number">6.3.3.2. </span>Tertiary Structures<a class="headerlink" href="#tertiary-structures" title="Permalink to this headline">¶</a></h3>
+<h3>Tertiary Structures<a class="headerlink" href="#tertiary-structures" title="Permalink to this headline">¶</a></h3>
 <p>Tertiary structures are proteins which have a single polypeptide chain,
 with one or more protein secondary structures.</p>
 </div>
 <div class="section" id="quaternary-structures">
-<h3><span class="section-number">6.3.3.3. </span>Quaternary Structures<a class="headerlink" href="#quaternary-structures" title="Permalink to this headline">¶</a></h3>
+<h3>Quaternary Structures<a class="headerlink" href="#quaternary-structures" title="Permalink to this headline">¶</a></h3>
 <p>Quaternary structures involve the folding of multiple folded protein or
 coiling protein molecules in a multi-subunit complex.</p>
 <div class="figure align-default" id="protein-structures">
 <a class="reference internal image-reference" href="../_images/protein_structure.jpg"><img alt="../_images/protein_structure.jpg" src="../_images/protein_structure.jpg" style="height: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.3 </span><span class="caption-text">Depiction of the components of quaternary
+<p class="caption"><span class="caption-text">Depiction of the components of quaternary
 structures. (CC by SA 3.0 <a class="reference external" href="http://cnx.org/content/col11496/1.6/">
 OpenStax College - Anatomy &amp; Physiology,</a>)</span><a class="headerlink" href="#protein-structures" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="protein-folding">
-<h2><span class="section-number">6.3.4. </span>Protein Folding<a class="headerlink" href="#protein-folding" title="Permalink to this headline">¶</a></h2>
+<h2>Protein Folding<a class="headerlink" href="#protein-folding" title="Permalink to this headline">¶</a></h2>
 <p>Protein folding is the process by which a protein assumes its functional
 shape or conformation. Each protein exists as an unfolded polypeptide
 chain when translated from a sequence of mRNA to a linear chain of amino
-acids (Figure <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 6.4</span></a>). Early folding already occurs in the exit tunnel of the ribosome (such as formation of alpha helices). After exiting the polypeptide
-chain then further folds up in a complex process than can involve multiple intermediary state which sometimes require chaperone proteins to fold the protein into the global energy minimum. This free energy minimum exists because displacement of ordered solvent around the hydrophobic core into bulk solvent is favorable (so called hydrophobic collapse, <a class="reference internal" href="#id1"><span class="std std-numref">Fig. 6.4</span></a>).</p>
+acids (Figure <code class="xref std std-numref docutils literal notranslate"><span class="pre">protein-folding</span></code>). Early folding already occurs in the exit tunnel of the ribosome (such as formation of alpha helices). After exiting the polypeptide
+chain then further folds up in a complex process than can involve multiple intermediary state which sometimes require chaperone proteins to fold the protein into the global energy minimum. This free energy minimum exists because displacement of ordered solvent around the hydrophobic core into bulk solvent is favorable (so called hydrophobic collapse, <code class="xref std std-numref docutils literal notranslate"><span class="pre">protein-folding</span></code>).</p>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/Protein_folding_schematic.png"><img alt="../_images/Protein_folding_schematic.png" src="../_images/Protein_folding_schematic.png" style="height: 400px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.4 </span><span class="caption-text">An example of a protein primary chain folding into a complex tertiary
+<p class="caption"><span class="caption-text">An example of a protein primary chain folding into a complex tertiary
 structure by hydrophobic collapse. Filled black dots are hydrophobic amino acids. Public Domain <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Protein_folding_schematic.png">Tomixdf</a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="computational-methods">
-<span id="id2"></span><h2><span class="section-number">6.3.5. </span>Computational methods<a class="headerlink" href="#computational-methods" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Computational methods<a class="headerlink" href="#computational-methods" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="analysis-of-the-folding-dynamics-of-the-trp-cage-miniprotein">
-<h3><span class="section-number">6.3.5.1. </span>Analysis of the Folding Dynamics of the Trp-cage Miniprotein<a class="headerlink" href="#analysis-of-the-folding-dynamics-of-the-trp-cage-miniprotein" title="Permalink to this headline">¶</a></h3>
+<h3>Analysis of the Folding Dynamics of the Trp-cage Miniprotein<a class="headerlink" href="#analysis-of-the-folding-dynamics-of-the-trp-cage-miniprotein" title="Permalink to this headline">¶</a></h3>
 <p>The Trp-cage miniprotein is a designed and stable polypeptide that
 behaves like larger globular proteins. It is currently the smallest
 protein to display two state folding properties which is easy to analyze in the laboratory e.g via thermal or chemical denaturation. The small size of this
@@ -679,16 +643,16 @@ simulations, thus it is frequently used to benchmark new computational
 techniques and as a model system to compare folding morphologies in
 larger systems. Simulating the folding dynamics of this protein with
 explicitly defined water molecules is both a lengthy and computationally
-costly process <a class="reference internal" href="#trpcagekinetics"><span class="std std-numref">Fig. 6.5</span></a>. Instead, we make use of an implicit
+costly process <code class="xref std std-numref docutils literal notranslate"><span class="pre">trpcagekinetics</span></code>. Instead, we make use of an implicit
 solvent model to reduce computational cost and still include, in
 approximate detail, the effects of water solvation. This is inspired by work of Simmerling et. al.<span id="id3">[<a class="reference internal" href="../intro.html#id4" title="Carlos Simmerling, Bentley Strockbine, and Adrian E. Roitberg. All-atom structure prediction and folding simulations of a stable protein. Journal of the American Chemical Society, 124(38):11258-11259, 2002. doi:10.1021/ja0273851.">SSR02</a>]</span> in 2004.</p>
 <div class="figure align-default" id="trpcagekinetics">
 <img alt="../_images/trpc.png" src="../_images/trpc.png" />
-<p class="caption"><span class="caption-number">Fig. 6.5 </span><span class="caption-text">A computationally determined kinetic model of Trp-cage showing different states in the folding process and their interconversion rates. Yellow unfolded protein, red folded state, gray molten globule (i.e partially folded states)  <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1000452">Marinelli et. al.</a> CC by SA</span><a class="headerlink" href="#trpcagekinetics" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">A computationally determined kinetic model of Trp-cage showing different states in the folding process and their interconversion rates. Yellow unfolded protein, red folded state, gray molten globule (i.e partially folded states)  <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1000452">Marinelli et. al.</a> CC by SA</span><a class="headerlink" href="#trpcagekinetics" title="Permalink to this image">¶</a></p>
 </div>
 <div class="figure align-default" id="startingtrpstructure">
 <img alt="../_images/startingStructure2.png" src="../_images/startingStructure2.png" />
-<p class="caption"><span class="caption-number">Fig. 6.6 </span><span class="caption-text">Trp-cage starting structure in which cyan represents carbon, red is oxygen, white is hydrogen and blue is nitrogen. Built using the xLeap program within the AmberTools package.</span><a class="headerlink" href="#startingtrpstructure" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text">Trp-cage starting structure in which cyan represents carbon, red is oxygen, white is hydrogen and blue is nitrogen. Built using the xLeap program within the AmberTools package.</span><a class="headerlink" href="#startingtrpstructure" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -718,21 +682,7 @@ approximate detail, the effects of water solvation. This is inspired by work of 
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="theory.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6.1. </span>Theory</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="TRP_Cage_OpenMM_colab.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.4. </span>Practical: TRP Cage using OpenMM</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
