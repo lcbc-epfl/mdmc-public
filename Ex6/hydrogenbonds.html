@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6.5. TrpCage Analysis &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>TrpCage Analysis &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="6.4. Practical: TRP Cage using OpenMM" href="TRP_Cage_OpenMM_colab.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -98,7 +97,7 @@ const thebe_selector_output = ".output, .cell_output"
   Exercises
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Ex1/MDMC_ex1.html">
    1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
@@ -222,38 +221,6 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="MDMC_Ex6.html">
-   6. Properties from Molecular Dynamics
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="theory.html">
-     6.1. Theory
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="proteinmodelling.html">
-     6.3. Protein Modelling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="TRP_Cage_OpenMM_colab.html">
-     6.4. Practical: TRP Cage using OpenMM
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     6.5. TrpCage Analysis
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 
     </div>
@@ -365,27 +332,27 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lets-load-the-trajectory-files">
-   6.5.1. Lets load the trajectory files
+   Lets load the trajectory files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#align-trajectory">
-   6.5.2. Align trajectory
+   Align trajectory
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#emergence-of-secondary-structure">
-   6.5.3. Emergence of secondary structure
+   Emergence of secondary structure
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hbond-analysis">
-   6.5.4. Hbond analysis
+   Hbond analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visualize-trajectory">
-   6.5.5. Visualize trajectory
+   Visualize trajectory
   </a>
  </li>
 </ul>
@@ -410,27 +377,27 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lets-load-the-trajectory-files">
-   6.5.1. Lets load the trajectory files
+   Lets load the trajectory files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#align-trajectory">
-   6.5.2. Align trajectory
+   Align trajectory
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#emergence-of-secondary-structure">
-   6.5.3. Emergence of secondary structure
+   Emergence of secondary structure
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hbond-analysis">
-   6.5.4. Hbond analysis
+   Hbond analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visualize-trajectory">
-   6.5.5. Visualize trajectory
+   Visualize trajectory
   </a>
  </li>
 </ul>
@@ -443,7 +410,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="trpcage-analysis">
-<h1><span class="section-number">6.5. </span>TrpCage Analysis<a class="headerlink" href="#trpcage-analysis" title="Permalink to this headline">¶</a></h1>
+<h1>TrpCage Analysis<a class="headerlink" href="#trpcage-analysis" title="Permalink to this headline">¶</a></h1>
 <p>First we need to download the files from colab:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -489,7 +456,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="lets-load-the-trajectory-files">
-<h2><span class="section-number">6.5.1. </span>Lets load the trajectory files<a class="headerlink" href="#lets-load-the-trajectory-files" title="Permalink to this headline">¶</a></h2>
+<h2>Lets load the trajectory files<a class="headerlink" href="#lets-load-the-trajectory-files" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;trp_cage_gb.dcd&#39;</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="s1">&#39;trp_cage.prmtop&#39;</span> <span class="p">)</span>
@@ -544,7 +511,7 @@ The new kid on the block of structural biology. Works very well especially for l
 </div>
 </div>
 <div class="section" id="align-trajectory">
-<h2><span class="section-number">6.5.2. </span>Align trajectory<a class="headerlink" href="#align-trajectory" title="Permalink to this headline">¶</a></h2>
+<h2>Align trajectory<a class="headerlink" href="#align-trajectory" title="Permalink to this headline">¶</a></h2>
 <p>Aligning a trajectory is an important step when analysing molecular dynamics simulations. We will choose a reference structure/frame and project each frame to the reference (e.g by minimizing RMSD to reference).</p>
 <p>In this case we align on the backbone nitrogen and carbon atoms.</p>
 <p>As a reference we use one structure from the experimental NMR ensemble (PDB <code class="docutils literal notranslate"><span class="pre">1l2y</span></code>).</p>
@@ -624,7 +591,7 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </div>
 <div class="section" id="emergence-of-secondary-structure">
-<h2><span class="section-number">6.5.3. </span>Emergence of secondary structure<a class="headerlink" href="#emergence-of-secondary-structure" title="Permalink to this headline">¶</a></h2>
+<h2>Emergence of secondary structure<a class="headerlink" href="#emergence-of-secondary-structure" title="Permalink to this headline">¶</a></h2>
 <p>The central tryptophan in the Trp cage protein is located in the alpha helix. Here we track the dihedral angle along our simulation. When the protein forms ordered secondary structure elements we expect to see the dihedral only fluctuate a little.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -654,7 +621,7 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </div>
 <div class="section" id="hbond-analysis">
-<h2><span class="section-number">6.5.4. </span>Hbond analysis<a class="headerlink" href="#hbond-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Hbond analysis<a class="headerlink" href="#hbond-analysis" title="Permalink to this headline">¶</a></h2>
 <p>We know that hydrogen bonds are very important for the formation of secondary structure elements. Let’s count the number of hbonds per frame and bin them in 1 ns bins by taking the mean of 10 frames.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -700,7 +667,7 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </div>
 <div class="section" id="visualize-trajectory">
-<h2><span class="section-number">6.5.5. </span>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Permalink to this headline">¶</a></h2>
+<h2>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Permalink to this headline">¶</a></h2>
 <p>Now let’s compare the trajectory to one of the structures from the NMR structural ensemble to see how our linear Trp cage folded.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -757,14 +724,7 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="TRP_Cage_OpenMM_colab.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6.4. </span>Practical: TRP Cage using OpenMM</p>
-        </div>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
