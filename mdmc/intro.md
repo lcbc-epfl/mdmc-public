@@ -82,7 +82,7 @@ by a written report.
 During all except the first exercise session, each person will spend
 5-10 minutes with an assistant where they will be asked questions about
 the past week's exercises and the respective report, which must have
-been handed in as a hard copy at the beginning of the session. The
+been handed in as an electronic copy at the beginning of the session (as a pdf). The
 answers to these questions will be graded and, together with the written
 report, contribute 1/2 to your overall grade. Please note that the last
 session will be an exception, as the grading will be based on the
