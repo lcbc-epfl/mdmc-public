@@ -397,7 +397,7 @@ const thebe_selector_output = ".output, .cell_output"
 <h1><span class="section-number">3.1. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="monte-carlo-and-the-importance-of-importance-sampling">
 <h2><span class="section-number">3.1.1. </span>Monte Carlo and the Importance of Importance Sampling<a class="headerlink" href="#monte-carlo-and-the-importance-of-importance-sampling" title="Permalink to this headline">¶</a></h2>
-<p>In the last exercise session, you applied the simplest Monte Carlo
+<p>In the first exercise session, you applied the simplest Monte Carlo
 technique - a <em>random sampling</em> technique - to find the value of <span class="math notranslate nohighlight">\(\pi\)</span>.
 A generalisation of such a Monte Carlo scheme is, however, less than
 straightforward. Imagine you are interested in a microcanonical
@@ -438,7 +438,7 @@ instead:</p>
 \left&lt;O\right&gt; = \frac{\int O(\mathbf{q})e^{-\beta V(\mathbf{q})} \mathrm{d}\mathbf{q}}{\int e^{-\beta V(\mathbf{q})} \mathrm{d}\mathbf{q}},
 \end{aligned}
 \]</div>
-<p>where we have restricted the expression to a configurational average,
+<p>where with respect to <a class="reference internal" href="#equation-microcanonical-average">(3.1)</a>, we have restricted the expression to a configurational average,
 integrating out over all momenta. One is thus left with the
 <em>configurational</em> partition function, containing only the <em>potential</em>
 energy in the exponent, rather than the potential and kinetic term. (You
@@ -473,7 +473,7 @@ may therefore rewrite the above expression in an approximate form:</p>
 \end{aligned}
 \]</div>
 <p>The average over an observable will be given by the sum over all <span class="math notranslate nohighlight">\(L\)</span>
-points <span class="math notranslate nohighlight">\(i\)</span> that have been generated in the sampling, weighted each by
+points <span class="math notranslate nohighlight">\(i\)</span> that have been generated in the sampling, each weighted by
 the number of occurence <span class="math notranslate nohighlight">\(n_i\)</span> of state <span class="math notranslate nohighlight">\(O(\mathbf{q}_i)\)</span>. Still, one is
 left with the problem that the points have to be generated with a
 relative probability that corresponds to the Boltzmann distribution

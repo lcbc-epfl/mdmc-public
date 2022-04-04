@@ -407,9 +407,9 @@ written as the sum of the harmonic oscillation energies:</p>
 U= \sum_{j=1}^{N} n_j w_j \hbar = \sum_{j=1}^{N} n_j \epsilon_j,
 \end{aligned}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(\epsilon_j\)</span> is the energy of state <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(n_j\)</span> is the occupancy of
-state <span class="math notranslate nohighlight">\(j\)</span> (<span class="math notranslate nohighlight">\(n_j \in 0,1,2,\cdots, \infty\)</span>), <span class="math notranslate nohighlight">\(N\)</span> is the total number of
-photons and <span class="math notranslate nohighlight">\(w\)</span> is the oscilator frequency. In this exercise, you are
+<p>where <span class="math notranslate nohighlight">\(w_j\)</span>  and <span class="math notranslate nohighlight">\(\epsilon_j\)</span> are the oscilator frequency and energy of state <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(n_j\)</span> is the occupancy of
+state <span class="math notranslate nohighlight">\(j\)</span> (<span class="math notranslate nohighlight">\(n_j \in 0,1,2,\cdots, \infty\)</span>), and <span class="math notranslate nohighlight">\(N\)</span> is the total number of
+photons. In this exercise, you are
 going to compute the ensemble average of the occupancy
 <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span>.</p>
 <p>The scheme you will employ is as follows:</p>
@@ -417,7 +417,7 @@ going to compute the ensemble average of the occupancy
 <li><p>Start with an arbitrary <span class="math notranslate nohighlight">\(n_j\)</span>.</p></li>
 <li><p>Decide to perform a trial move to randomly increase or decrease
 <span class="math notranslate nohighlight">\(n_j\)</span> by 1.</p></li>
-<li><p>Accept the trial move with probability:</p>
+<li><p>Accept the trial move with probability (i.e. perform a Metropolis Monte Carlo move):</p>
 <div class="math notranslate nohighlight">
 \[
     \begin{aligned}
@@ -427,7 +427,7 @@ going to compute the ensemble average of the occupancy
 respectively.</p>
 </li>
 <li><p>Update averages regardless of acceptance or rejection.</p></li>
-<li><p>Go to step 2).</p></li>
+<li><p>Iterate from 2).</p></li>
 </ol>
 </div>
 <div class="section" id="implementing-a-metropolis-monte-carlo-algorithm">

@@ -725,11 +725,11 @@ MC Step 900  Energy -580.30091
 <p>Executing the code below you can visualize the MC trajectory for the particles</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;trajectory_new.pdb&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;trajectory.pdb&#39;</span><span class="p">)</span>
 <span class="n">view</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">show_pytraj</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
 <span class="n">view</span><span class="o">.</span><span class="n">clear_representations</span><span class="p">()</span>
 <span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="s1">&#39;spacefill&#39;</span><span class="p">,</span><span class="n">radiusSize</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">radiusScale</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="c1"># view.add_distance(atom_pair=[[0,1]], color=&#39;black&#39;, labelColor=&#39;black&#39;)</span>
+<span class="c1"># view.add_distance(atom_pair=[[0,1]], color=&#39;black&#39;, labelColor=&#39;black&#39;) # you can use this to plot the distance between a pair of selected atoms </span>
 <span class="n">view</span>
 </pre></div>
 </div>
