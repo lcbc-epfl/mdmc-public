@@ -482,7 +482,9 @@ respectively.</p>
 <span class="sd">        or decrease trialnj by 1.</span>
 <span class="sd">        Note: randint(0,1) returns random integers from 0 to 1 (i.e. 0 OR 1)</span>
 <span class="sd">               but you need to extract -1 OR 1</span>
-<span class="sd">        Hint: use trialnj = currentnj +- 1;</span>
+<span class="sd">        Hint:   what happens to the extraction if you multiply r.randint(0,1)*A, where A is an integer?</span>
+<span class="sd">                what happens to the extraction if you sum r.randint(0,1)+B, where B is an integer (positive or negative)?</span>
+<span class="sd">                The above hints shall suggest how to obtain the desired numbers from the extraction of 0 or 1</span>
 <span class="sd">    3) Test if trialnj &lt; 0, if it is, force it to be 0</span>
 <span class="sd">    4) Accept the trial move with probability defined in the Theory section</span>
 <span class="sd">        Note: Accepting the trial move means updating current sample (currentnj)</span>
