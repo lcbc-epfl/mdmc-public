@@ -340,8 +340,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#helper-functions">
-     3.3.1.1. Helper Functions
+    <a class="reference internal nav-link" href="#imports-and-helper-functions">
+     3.3.1.1. Imports and Helper Functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -387,8 +387,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#helper-functions">
-     3.3.1.1. Helper Functions
+    <a class="reference internal nav-link" href="#imports-and-helper-functions">
+     3.3.1.1. Imports and Helper Functions
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -485,22 +485,16 @@ physical properties become arithmetic averages over their sampled
 values.</p>
 <div class="section" id="configurational-sampling-code">
 <h2><span class="section-number">3.3.1. </span>Configurational Sampling Code<a class="headerlink" href="#configurational-sampling-code" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="helper-functions">
-<h3><span class="section-number">3.3.1.1. </span>Helper Functions<a class="headerlink" href="#helper-functions" title="Permalink to this headline">¶</a></h3>
-<p>Below are some useful helper functions to make the code run, just run the following cells once</p>
-<div class="cell docutils container">
+<div class="section" id="imports-and-helper-functions">
+<h3><span class="section-number">3.3.1.1. </span>Imports and Helper Functions<a class="headerlink" href="#imports-and-helper-functions" title="Permalink to this headline">¶</a></h3>
+<p>Below are some necessary imports and useful helper functions to make the code run, just run the following cells once</p>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Necessary imports</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">nglview</span> <span class="k">as</span> <span class="nn">nv</span>
 <span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">helpers</span>
 <span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
@@ -508,7 +502,7 @@ values.</p>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">printXYZ</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;vmd&#39;</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; Write Coordinates to trajectory file &quot;&quot;&quot;</span>
@@ -872,16 +866,16 @@ Average Box Size 4.900
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "mdmc_temp"
+            mode: "compchem"
         },
         kernelOptions: {
-            kernelName: "mdmc_temp",
+            kernelName: "compchem",
             path: "./Ex3"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'mdmc_temp'</script>
+    <script>kernelName = 'compchem'</script>
 
               </div>
               
