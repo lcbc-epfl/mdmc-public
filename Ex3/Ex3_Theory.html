@@ -411,7 +411,7 @@ observable average:</p>
 <p>If such an integral were to be obtained from numerical quadrature
 procedures, with a suitably fine mesh with <span class="math notranslate nohighlight">\(M\)</span> points along each degree
 of freedom, the calculation would become completely untractable all too
-quickly, since the procedure scales as <span class="math notranslate nohighlight">\(O(M^{3N})\)</span>. Furthermore, such a
+quickly, since the procedure scales as <span class="math notranslate nohighlight">\(O(M^{6N})\)</span> (remember <span class="math notranslate nohighlight">\(\mathrm{d}\Gamma = \mathrm{d}x \mathrm{d}y \mathrm{d}z \mathrm{d}v_x \mathrm{d}v_y \mathrm{d}v_z\)</span>, so in the 3 dimensional case each particle has <span class="math notranslate nohighlight">\(6\)</span> degrees of freedoms). Furthermore, such a
 scheme would be associated to a large statistical error; numerical
 quadratures work reasonably fine for functions that are smooth on the
 scale of the mesh - but the Boltzmann factor is a highly oscillatory
