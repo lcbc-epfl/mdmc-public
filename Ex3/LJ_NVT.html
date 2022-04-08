@@ -762,13 +762,12 @@ displaced. What do you expect will happen to the maximum displacements of these 
 <span class="c1">#Set simulation parameters</span>
 <span class="n">Temp</span> <span class="o">=</span> <span class="mf">2.0</span>         <span class="c1"># Simulation temperature</span>
 <span class="n">beta</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">Temp</span>    <span class="c1"># Inverse temperature</span>
-<span class="n">maxDr</span> <span class="o">=</span> <span class="mf">0.1</span>        <span class="c1"># Maximal displacement</span>
+<span class="n">maxDr</span> <span class="o">=</span> <span class="mf">0.001</span>        <span class="c1"># Maximal displacement</span>
 <span class="n">press</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">maxDv</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">maxDv</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="c1"># Change in volume</span>
 
-<span class="n">nSteps</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>     <span class="c1">#Total simulation time (in integration steps)</span>
-<span class="n">printFreq</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c1">#Printing frequency</span>
-<span class="n">sampleCounter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">nSteps</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>     <span class="c1"># Total simulation time (in integration steps)</span>
+<span class="n">printFreq</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c1"># Printing frequency</span>
 <span class="n">sampleFreq</span> <span class="o">=</span> <span class="mi">100</span>
         
 </pre></div>
@@ -784,12 +783,14 @@ displaced. What do you expect will happen to the maximum displacements of these 
 <span class="n">energy</span> <span class="o">=</span> <span class="n">LJ_Energy</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
 
 <span class="n">avgL</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sampleCounter</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Set counter to 0</span>
 
 <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nSteps</span><span class="p">):</span>
     
     <span class="c1"># Choose whether to do a volume move or a displacement move</span>
     
     <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="n">nPart</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="n">nPart</span><span class="p">):</span>
+        <span class="c1"># Displacement move</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nPart</span><span class="p">):</span>
             <span class="n">rTrial</span> <span class="o">=</span> <span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">maxDr</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
             <span class="n">rTrial</span> <span class="o">=</span> <span class="n">putParticlesInBox</span><span class="p">(</span><span class="n">rTrial</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
@@ -800,6 +801,7 @@ displaced. What do you expect will happen to the maximum displacements of these 
                 <span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">rTrial</span>
                 <span class="n">energy</span> <span class="o">+=</span><span class="n">deltaE</span>
     <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Volume move</span>
         <span class="n">oldV</span><span class="o">=</span> <span class="n">L</span><span class="o">**</span><span class="mi">3</span>
         
         <span class="n">lnvTrial</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">oldV</span><span class="p">)</span><span class="o">+</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="n">maxDv</span>
