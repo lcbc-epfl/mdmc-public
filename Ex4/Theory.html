@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.2. How to run the exercises" href="Exercise.html" />
+    <link rel="next" title="4.2. MD simulation from scratch" href="Exercise.html" />
     <link rel="prev" title="4. Introduction to Molecular Dynamics" href="MDMC_ex4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -198,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Exercise.html">
-     4.2. How to run the exercises
+     4.2. MD simulation from scratch
     </a>
    </li>
   </ul>
@@ -221,6 +221,38 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex5/Exercise.html">
      5.2. ToyMD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex6/MDMC_ex6.html">
+   6. Properties from Molecular Dynamics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/theory.html">
+     6.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/proteinmodelling.html">
+     6.3. Protein Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">
+     6.4. Practical: TRP Cage using OpenMM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/hydrogenbonds.html">
+     6.5. TrpCage Analysis
     </a>
    </li>
   </ul>
@@ -266,9 +298,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Ex4/theory.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Ex4/Theory.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -286,7 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx4/theory.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx4/Theory.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -301,6 +333,28 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex4/Theory.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex4/Theory.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -573,6 +627,15 @@ velocity-Verlet:</p>
 \end{aligned}
 \end{split}\]</div>
 <p>which is self-starting and additionally minimises round-off errors.</p>
+<div class="exercise admonition" id="ex1">
+<p class="admonition-title">Exercise 1</p>
+<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{r}(t + \Delta t)\)</span> in the velocity-Verlet
+<a class="reference internal" href="#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: solve equation  <a class="reference internal" href="#equation-step1">(4.9)</a> for  <span class="math notranslate nohighlight">\(\mathbf{r}(t - \Delta t)\)</span>, and use equations <a class="reference internal" href="#equation-step2">(4.8)</a> and  <a class="reference internal" href="#equation-step3">(4.7)</a>.</p>
+</div>
+<div class="exercise admonition" id="ex2">
+<p class="admonition-title">Exercise 2</p>
+<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet  <a class="reference internal" href="#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: recast equations  <a class="reference internal" href="#equation-step1">(4.9)</a> and <a class="reference internal" href="#equation-step2">(4.8)</a> to a  timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future, and use the result obtained  above.</p>
+</div>
 </div>
 </div>
 <div class="section" id="structural-properties-from-md">
@@ -650,7 +713,7 @@ identical molecule entering from the opposite side (see Exercise).</p>
     <a class='right-next' id="next-link" href="Exercise.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.2. </span>How to run the exercises</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>MD simulation from scratch</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practical: TRP Cage using OpenMM &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>6.4. Practical: TRP Cage using OpenMM &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,6 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.5. TrpCage Analysis" href="hydrogenbonds.html" />
+    <link rel="prev" title="6.3. Protein Modelling" href="proteinmodelling.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -97,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
   Exercises
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../Ex1/MDMC_ex1.html">
    1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
@@ -188,13 +190,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex4/theory.html">
+    <a class="reference internal" href="../Ex4/Theory.html">
      4.1. Theory
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex4/Exercise.html">
-     4.2. How to run the exercises
+     4.2. MD simulation from scratch
     </a>
    </li>
   </ul>
@@ -217,6 +219,38 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex5/Exercise.html">
      5.2. ToyMD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="MDMC_ex6.html">
+   6. Properties from Molecular Dynamics
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="theory.html">
+     6.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="proteinmodelling.html">
+     6.3. Protein Modelling
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     6.4. Practical: TRP Cage using OpenMM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hydrogenbonds.html">
+     6.5. TrpCage Analysis
     </a>
    </li>
   </ul>
@@ -332,44 +366,44 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#imports">
-   Imports
+   6.4.1. Imports
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-our-system">
-   Creating our system
+   6.4.2. Creating our system
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#looking-at-the-starting-structure">
-     Looking at the starting structure
+     6.4.2.1. Looking at the starting structure
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simulating-the-system">
-   Simulating the system
+   6.4.3. Simulating the system
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#loading-amber-files">
-     Loading Amber files
+     6.4.3.1. Loading Amber files
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-the-openmm-system">
-     Create the OpenMM System
+     6.4.3.2. Create the OpenMM System
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-the-integrator-to-do-langevin-dynamics">
-     Create the integrator to do Langevin Dynamics
+     6.4.3.3. Create the integrator to do Langevin Dynamics
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-the-simulation-object">
-     Create the
+     6.4.3.4. Create the
      <code class="docutils literal notranslate">
       <span class="pre">
        Simulation
@@ -380,24 +414,24 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#minimize-the-energy">
-     Minimize the energy
+     6.4.3.5. Minimize the energy
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#heating-phase">
-     Heating phase
+     6.4.3.6. Heating phase
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-dynamics">
-   Running dynamics
+   6.4.4. Running dynamics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#save-trajectory-for-later-processing">
-   Save trajectory for later processing
+   6.4.5. Save trajectory for later processing
   </a>
  </li>
 </ul>
@@ -422,44 +456,44 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#imports">
-   Imports
+   6.4.1. Imports
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-our-system">
-   Creating our system
+   6.4.2. Creating our system
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#looking-at-the-starting-structure">
-     Looking at the starting structure
+     6.4.2.1. Looking at the starting structure
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simulating-the-system">
-   Simulating the system
+   6.4.3. Simulating the system
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#loading-amber-files">
-     Loading Amber files
+     6.4.3.1. Loading Amber files
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-the-openmm-system">
-     Create the OpenMM System
+     6.4.3.2. Create the OpenMM System
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-the-integrator-to-do-langevin-dynamics">
-     Create the integrator to do Langevin Dynamics
+     6.4.3.3. Create the integrator to do Langevin Dynamics
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#create-the-simulation-object">
-     Create the
+     6.4.3.4. Create the
      <code class="docutils literal notranslate">
       <span class="pre">
        Simulation
@@ -470,24 +504,24 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#minimize-the-energy">
-     Minimize the energy
+     6.4.3.5. Minimize the energy
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#heating-phase">
-     Heating phase
+     6.4.3.6. Heating phase
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-dynamics">
-   Running dynamics
+   6.4.4. Running dynamics
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#save-trajectory-for-later-processing">
-   Save trajectory for later processing
+   6.4.5. Save trajectory for later processing
   </a>
  </li>
 </ul>
@@ -502,12 +536,12 @@ const thebe_selector_output = ".output, .cell_output"
   <p><strong>Note</strong> This tutorial should be run on Google Colab and not on JupyterHub.</p>
 <p>Change the runtime to use a GPU by selecting <code class="docutils literal notranslate"><span class="pre">Runtime</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Change</span> <span class="pre">Runtime</span> <span class="pre">type</span></code> -&gt; select <code class="docutils literal notranslate"><span class="pre">GPU</span></code></p>
 <div class="tex2jax_ignore mathjax_ignore section" id="practical-trp-cage-using-openmm">
-<h1>Practical: TRP Cage using OpenMM<a class="headerlink" href="#practical-trp-cage-using-openmm" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6.4. </span>Practical: TRP Cage using OpenMM<a class="headerlink" href="#practical-trp-cage-using-openmm" title="Permalink to this headline">¶</a></h1>
 <p>We will use a modern and open source simulation program to run our molecular dynamics simulation of the TRP cage protein.</p>
 <p>OpenMM is different from most other simulations tools in that it is not controlled by executing different subprograms in the command line but instead one uses a python program to control the flow of our simulation. This allows us to easily rerun parts or the whole simulation.</p>
 <p>Below is a detailed description of our workflow. The respective parts you need to change during the exercise are indicated.</p>
 <div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4.1. </span>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
 <p>First we need to install the necessary modules and import them.  We install our simulation package openmm and parmed, which we use to load our Amber trajectory files.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -547,7 +581,7 @@ Calculate the correct number of steps for the simulations to run 50 ps of heatin
 </div>
 </div>
 <div class="section" id="creating-our-system">
-<h2>Creating our system<a class="headerlink" href="#creating-our-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4.2. </span>Creating our system<a class="headerlink" href="#creating-our-system" title="Permalink to this headline">¶</a></h2>
 <p>Creating the system will be done using tleap which is part of the Amber software package. Linear peptides can be easily created using this tool.</p>
 <p>Below we create this file using python and save it as <code class="docutils literal notranslate"><span class="pre">leap.in</span></code> to the filesystem.</p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">!cat</span> <span class="pre">filename</span></code> we can check whether it was sucessfully created.</p>
@@ -576,7 +610,7 @@ Calculate the correct number of steps for the simulations to run 50 ps of heatin
 </div>
 </div>
 <div class="section" id="looking-at-the-starting-structure">
-<h3>Looking at the starting structure<a class="headerlink" href="#looking-at-the-starting-structure" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.2.1. </span>Looking at the starting structure<a class="headerlink" href="#looking-at-the-starting-structure" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show starting structure here</span>
@@ -765,7 +799,7 @@ Next we see terms, that align with the functional form of the AMBER forcefield:<
 </div>
 </div>
 <div class="section" id="simulating-the-system">
-<h2>Simulating the system<a class="headerlink" href="#simulating-the-system" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4.3. </span>Simulating the system<a class="headerlink" href="#simulating-the-system" title="Permalink to this headline">¶</a></h2>
 <p>Now we can start the simulation by writing our simulation script in python.</p>
 <p>First, lets import the required modules:</p>
 <ul class="simple">
@@ -789,7 +823,7 @@ Next we see terms, that align with the functional form of the AMBER forcefield:<
 </div>
 </div>
 <div class="section" id="loading-amber-files">
-<h3>Loading Amber files<a class="headerlink" href="#loading-amber-files" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3.1. </span>Loading Amber files<a class="headerlink" href="#loading-amber-files" title="Permalink to this headline">¶</a></h3>
 <p>In this stage, we simply instantiate the AmberParm object from the input topology and coordinate files. After this command, <code class="docutils literal notranslate"><span class="pre">trp_cage_gas</span></code> will contain a full description of every particle, the parameters defining their interactions, and their position.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -807,7 +841,7 @@ Next we see terms, that align with the functional form of the AMBER forcefield:<
 </div>
 </div>
 <div class="section" id="create-the-openmm-system">
-<h3>Create the OpenMM System<a class="headerlink" href="#create-the-openmm-system" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3.2. </span>Create the OpenMM System<a class="headerlink" href="#create-the-openmm-system" title="Permalink to this headline">¶</a></h3>
 <p>This command creates an OpenMM <code class="docutils literal notranslate"><span class="pre">System</span></code> object from the information stored in
 <code class="docutils literal notranslate"><span class="pre">trp_cage_gas</span></code>. It contains multiple <code class="docutils literal notranslate"><span class="pre">Force</span></code> instances for the bonds, angles,
 periodic torsions, and nonbonded (electrostatic and van der Waals) interactions.
@@ -839,7 +873,7 @@ ones specified. In particular:</p>
 </div>
 </div>
 <div class="section" id="create-the-integrator-to-do-langevin-dynamics">
-<h3>Create the integrator to do Langevin Dynamics<a class="headerlink" href="#create-the-integrator-to-do-langevin-dynamics" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3.3. </span>Create the integrator to do Langevin Dynamics<a class="headerlink" href="#create-the-integrator-to-do-langevin-dynamics" title="Permalink to this headline">¶</a></h3>
 <p>In this stage we specify an integrator. Common choices are
 <code class="docutils literal notranslate"><span class="pre">LangevinIntegrator</span></code> (as we’ve chosen here) to do simulations in the NVT
 ensemble.  In this
@@ -859,7 +893,7 @@ example, we’ve chosen the Langevin integrator with a target temperature of
 </div>
 </div>
 <div class="section" id="create-the-simulation-object">
-<h3>Create the <code class="docutils literal notranslate"><span class="pre">Simulation</span></code> object<a class="headerlink" href="#create-the-simulation-object" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3.4. </span>Create the <code class="docutils literal notranslate"><span class="pre">Simulation</span></code> object<a class="headerlink" href="#create-the-simulation-object" title="Permalink to this headline">¶</a></h3>
 <p>This step creates a <code class="docutils literal notranslate"><span class="pre">Simulation</span></code> object that will be used to run the actual
 simulations.  OpenMM picks the fastest platform for us
 if we do not specify a platform.</p>
@@ -885,7 +919,7 @@ positions have been parsed from the input coordinate file.</p>
 </div>
 </div>
 <div class="section" id="minimize-the-energy">
-<h3>Minimize the energy<a class="headerlink" href="#minimize-the-energy" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3.5. </span>Minimize the energy<a class="headerlink" href="#minimize-the-energy" title="Permalink to this headline">¶</a></h3>
 <p>This stage performs a basic energy minimization to relax particle positions.
 This particular invocation will perform at most 500 iterations.</p>
 <div class="cell docutils container">
@@ -908,7 +942,7 @@ This particular invocation will perform at most 500 iterations.</p>
 </div>
 </div>
 <div class="section" id="heating-phase">
-<h3>Heating phase<a class="headerlink" href="#heating-phase" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3.6. </span>Heating phase<a class="headerlink" href="#heating-phase" title="Permalink to this headline">¶</a></h3>
 <p>After having obtained the minimized coordinates of our system we can begin slowly heating it.
 We define reporters that will “report” on the status of the simulation
 periodically throughout the heating phase. The first is a <code class="docutils literal notranslate"><span class="pre">StateDataReporter</span></code>
@@ -986,7 +1020,7 @@ Amber NetCDF format.</p>
 </div>
 </div>
 <div class="section" id="running-dynamics">
-<h2>Running dynamics<a class="headerlink" href="#running-dynamics" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4.4. </span>Running dynamics<a class="headerlink" href="#running-dynamics" title="Permalink to this headline">¶</a></h2>
 <p>We first reset our Integrator to update the timestep, create the simulation object and then we actually run the MD of our heated system to see if our linear peptide folds up into its 3D form. We use again the <code class="docutils literal notranslate"><span class="pre">NetCDF</span></code> and <code class="docutils literal notranslate"><span class="pre">StateDataReporter</span></code> to retrieve information about our simulation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1081,7 +1115,7 @@ Amber NetCDF format.</p>
 </div>
 </div>
 <div class="section" id="save-trajectory-for-later-processing">
-<h2>Save trajectory for later processing<a class="headerlink" href="#save-trajectory-for-later-processing" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4.5. </span>Save trajectory for later processing<a class="headerlink" href="#save-trajectory-for-later-processing" title="Permalink to this headline">¶</a></h2>
 <p>Now we zip the files and upload the files to a filesharing provider to download them again on noto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1131,7 +1165,21 @@ Amber NetCDF format.</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="proteinmodelling.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">6.3. </span>Protein Modelling</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="hydrogenbonds.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6.5. </span>TrpCage Analysis</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>

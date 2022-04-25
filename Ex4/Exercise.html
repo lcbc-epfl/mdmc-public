@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4.2. How to run the exercises &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>4.2. MD simulation from scratch &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5. Classical Molecular Dynamics (MD) Simulations" href="../Ex5/MDMC_ex5.html" />
-    <link rel="prev" title="4.1. Theory" href="theory.html" />
+    <link rel="prev" title="4.1. Theory" href="Theory.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -192,13 +192,13 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="theory.html">
+    <a class="reference internal" href="Theory.html">
      4.1. Theory
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     4.2. How to run the exercises
+     4.2. MD simulation from scratch
     </a>
    </li>
   </ul>
@@ -221,6 +221,38 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../Ex5/Exercise.html">
      5.2. ToyMD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex6/MDMC_ex6.html">
+   6. Properties from Molecular Dynamics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/theory.html">
+     6.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/proteinmodelling.html">
+     6.3. Protein Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">
+     6.4. Practical: TRP Cage using OpenMM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/hydrogenbonds.html">
+     6.5. TrpCage Analysis
     </a>
    </li>
   </ul>
@@ -336,30 +368,13 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   4.2. How to run the exercises
+   4.2. MD simulation from scratch
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visualize-trajectory">
    4.3. Visualize trajectory
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#questions">
-   4.4. Questions
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-evolution">
-     4.4.1. Time Evolution
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sampling-phase-space-using-molecular-dynamics">
-     4.4.2. Sampling Phase Space using Molecular Dynamics
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -371,7 +386,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>How to run the exercises</h1>
+                <h1>MD simulation from scratch</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -383,30 +398,13 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   4.2. How to run the exercises
+   4.2. MD simulation from scratch
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#visualize-trajectory">
    4.3. Visualize trajectory
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#questions">
-   4.4. Questions
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#time-evolution">
-     4.4.1. Time Evolution
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sampling-phase-space-using-molecular-dynamics">
-     4.4.2. Sampling Phase Space using Molecular Dynamics
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -417,8 +415,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="how-to-run-the-exercises">
-<h1><span class="section-number">4.2. </span>How to run the exercises<a class="headerlink" href="#how-to-run-the-exercises" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="md-simulation-from-scratch">
+<h1><span class="section-number">4.2. </span>MD simulation from scratch<a class="headerlink" href="#md-simulation-from-scratch" title="Permalink to this headline">¶</a></h1>
 <p>Click <a class="reference external" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flcbc-epfl%2Fmdmc&amp;urlpath=lab%2Ftree%2Fmdmc%2FEx4%2Ftoy_md.py&amp;branch=main">this  link</a> to open the files for this exercise on noto.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -429,6 +427,10 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
+</div>
+<div class="exercise admonition" id="ex3">
+<p class="admonition-title">Exercise 3</p>
+<p>Implement the velocity verlet algorithm in the Toy MD program.</p>
 </div>
 <p>To test whether your implementation works you can run a short MD run of a box of CO2 molecules by opening the terminal, navigating to the <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">carbon-dioxide</span></code> and then running this command.</p>
 <div class="cell docutils container">
@@ -456,9 +458,29 @@ Step:     8 Epot   -710.875 Ekin     61.903 Etot   -648.973 T    7.66 lambda 1.0
 Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.00
 </pre></div>
 </div>
+<div class="exercise admonition" id="ex4">
+<p class="admonition-title">Exercise 4</p>
+<p>How does an MD program work? Describe schematically how one
+performs a molecular dynamics simulation. Point out the main
+differences between your scheme and Monte Carlo methods.</p>
+</div>
+<div class="exercise admonition" id="ex5">
+<p class="admonition-title">Exercise 5</p>
+<p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).
+With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
+</div>
+<div class="exercise admonition" id="ex6">
+<p class="admonition-title">Exercise 6</p>
+<p>Why are most MD and MC simulations based on periodic systems? Explain the main purpose of periodic boundary conditions in these schemes.</p>
+</div>
+<div class="exercise admonition" id="bex">
+<p class="admonition-title">Bonus Exercise 1</p>
+<p>What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with and without periodic boundary conditions?</p>
+</div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="visualize-trajectory">
 <h1><span class="section-number">4.3. </span>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Permalink to this headline">¶</a></h1>
+<p>using the cells below you can visualize the trajectory generated in the terminal. You first need to finish and run the code before you can look at the trajectory.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nglview</span> <span class="k">as</span> <span class="nn">nv</span>
@@ -488,47 +510,6 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
 </script></div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="questions">
-<h1><span class="section-number">4.4. </span>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="time-evolution">
-<h2><span class="section-number">4.4.1. </span>Time Evolution<a class="headerlink" href="#time-evolution" title="Permalink to this headline">¶</a></h2>
-<div class="exercise admonition" id="ex1">
-<p class="admonition-title">Exercise 1</p>
-<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{r}(t + \Delta t)\)</span> in the velocity-Verlet
-<a class="reference internal" href="theory.html#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: solve equation  <a class="reference internal" href="theory.html#equation-step1">(4.9)</a> for  <span class="math notranslate nohighlight">\(\mathbf{r}(t - \Delta t)\)</span>, and use equations <a class="reference internal" href="theory.html#equation-step2">(4.8)</a> and  <a class="reference internal" href="theory.html#equation-step3">(4.7)</a>.</p>
-</div>
-<div class="exercise admonition" id="ex2">
-<p class="admonition-title">Exercise 2</p>
-<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet  <a class="reference internal" href="theory.html#equation-velocity-verlet">(4.10)</a>. <strong>Hint</strong>: recast equations  <a class="reference internal" href="theory.html#equation-step1">(4.9)</a> and <a class="reference internal" href="theory.html#equation-step2">(4.8)</a> to a  timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future, and use the result obtained  above.</p>
-</div>
-<div class="exercise admonition" id="ex3">
-<p class="admonition-title">Exercise 3</p>
-<p>Implement the velocity verlet algorithm in the Toy MD program.</p>
-</div>
-</div>
-<div class="section" id="sampling-phase-space-using-molecular-dynamics">
-<h2><span class="section-number">4.4.2. </span>Sampling Phase Space using Molecular Dynamics<a class="headerlink" href="#sampling-phase-space-using-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
-<div class="exercise admonition" id="ex4">
-<p class="admonition-title">Exercise 4</p>
-<p>How does an MD program work? Describe schematically how one
-performs a molecular dynamics simulation. Point out the main
-differences between your scheme and Monte Carlo methods.</p>
-</div>
-<div class="exercise admonition" id="ex5">
-<p class="admonition-title">Exercise 5</p>
-<p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).
-With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
-</div>
-<div class="exercise admonition" id="ex6">
-<p class="admonition-title">Exercise 6</p>
-<p>Why are most MD and MC simulations based on periodic systems? Explain the main purpose of periodic boundary conditions in these schemes.</p>
-</div>
-<div class="exercise admonition" id="bex">
-<p class="admonition-title">Bonus Exercise 1</p>
-<p>What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with and without periodic boundary conditions?</p>
-</div>
-</div>
-</div>
 
     <script type="text/x-thebe-config">
     {
@@ -555,7 +536,7 @@ With a box size of <code class="docutils literal notranslate"><span class="pre">
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="theory.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Theory.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>

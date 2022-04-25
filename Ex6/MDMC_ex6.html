@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Introduction to Molecular Dynamics &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>6. Properties from Molecular Dynamics &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -52,12 +52,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4.1. Theory" href="Theory.html" />
-    <link rel="prev" title="3.3. The Lennard-Jones Potential" href="../Ex3/LJ_NVT.html" />
+    <link rel="next" title="6.1. Theory" href="theory.html" />
+    <link rel="prev" title="5.2. ToyMD" href="../Ex5/Exercise.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -181,23 +179,23 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex4/MDMC_ex4.html">
    4. Introduction to Molecular Dynamics
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="Theory.html">
+    <a class="reference internal" href="../Ex4/Theory.html">
      4.1. Theory
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="Exercise.html">
+    <a class="reference internal" href="../Ex4/Exercise.html">
      4.2. MD simulation from scratch
     </a>
    </li>
@@ -225,33 +223,33 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Ex6/MDMC_ex6.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    6. Properties from Molecular Dynamics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/theory.html">
+    <a class="reference internal" href="theory.html">
      6.1. Theory
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/proteinmodelling.html">
+    <a class="reference internal" href="proteinmodelling.html">
      6.3. Protein Modelling
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">
+    <a class="reference internal" href="TRP_Cage_OpenMM_colab.html">
      6.4. Practical: TRP Cage using OpenMM
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/hydrogenbonds.html">
+    <a class="reference internal" href="hydrogenbonds.html">
      6.5. TrpCage Analysis
     </a>
    </li>
@@ -298,7 +296,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Ex4/MDMC_ex4.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Ex6/MDMC_ex6.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -318,7 +316,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx4/MDMC_ex4.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx6/MDMC_ex6.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -340,14 +338,14 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="dropdown-buttons">
         
         
-        <a class="jupyterhub-button" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex4/MDMC_ex4.ipynb&branch=main"><button type="button"
+        <a class="jupyterhub-button" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex6/MDMC_ex6.ipynb&branch=main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
                     alt="Interact on JupyterHub">JupyterHub</button></a>
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex4/MDMC_ex4.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex6/MDMC_ex6.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -368,7 +366,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Introduction to Molecular Dynamics</h1>
+                <h1>Properties from Molecular Dynamics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -379,10 +377,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-molecular-dynamics">
-<h1><span class="section-number">4. </span>Introduction to Molecular Dynamics<a class="headerlink" href="#introduction-to-molecular-dynamics" title="Permalink to this headline">¶</a></h1>
-<p>In this set of exercises, you will be introduced to the basic concepts
-of Molecular Dynamics in the <span class="math notranslate nohighlight">\(NVE\)</span>. In this exercise you will implement the propagation and periodic boundary conditions in a simple molecular dynamics program written in python.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="properties-from-molecular-dynamics">
+<h1><span class="section-number">6. </span>Properties from Molecular Dynamics<a class="headerlink" href="#properties-from-molecular-dynamics" title="Permalink to this headline">¶</a></h1>
+<p>In this last set of exercises, you will be introduced to practical
+applications of molecular dynamics. After a brief treatment of advanced
+simulation concepts and an introduction to protein biochemistry, you
+will analyse the folding of the Trp-cage miniprotein.</p>
 <div class="sphinx-bs container pb-4 full-width docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-4 px-2 py-2 docutils">
@@ -391,9 +391,10 @@ of Molecular Dynamics in the <span class="math notranslate nohighlight">\(NVE\)<
 <p class="card-text">🎯 <strong>Learning goals</strong></p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">Derive a time evolution integrator (e.g. Verlet)</p>
-<p class="card-text">Understand importance of periodic boundary conditions</p>
-<p class="card-text">Run a molecular dynamics simulation for a small molecule (<span class="math notranslate nohighlight">\(CO_2\)</span>) in <span class="math notranslate nohighlight">\(NVE\)</span> ensemble</p>
+<p class="card-text">Learn how to simulate solvated systems</p>
+<p class="card-text">Run a production grade simulation using a GPU</p>
+<p class="card-text">Simulate protein folding of a small peptide</p>
+<p class="card-text">Perform a basic analysis of an MD trajectory</p>
 </div>
 </div>
 </div>
@@ -403,7 +404,7 @@ of Molecular Dynamics in the <span class="math notranslate nohighlight">\(NVE\)<
 <p class="card-text">📖 <strong>Chapter in script</strong></p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">Chapter 4 - Molecular Dynamics Simulations</p>
+<p class="card-text">Chapter 6 - Advanced Molecular Dynamics Techniques</p>
 </div>
 </div>
 </div>
@@ -413,8 +414,9 @@ of Molecular Dynamics in the <span class="math notranslate nohighlight">\(NVE\)<
 <p class="card-text">📚 <strong>Resources</strong></p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">Understanding Molecular Simulation, Frenkel &amp; Smit, 2nd Edition - Chapter 4 &amp; Chapter 6 (extra)</p>
-<p class="card-text">Computer Simulation of Liquids, Allen &amp; Tildesley, 2nd Edition - Chapter 3</p>
+<p class="card-text">Anandakrishnan, R., Drozdetski, A., Walker, R. C. and Onufriev, A. V.,
+Speed of Conformational Change: Comparing Explicit and Implicit Solvent Molecular Dynamics Simulations,
+Biophysical Journal, Vol 108, 5, 2015, pgs 1153-1164. <a class="reference external" href="https://doi.org/10.1016/j.bpj.2014.12.047">https://doi.org/10.1016/j.bpj.2014.12.047</a>.</p>
 </div>
 </div>
 </div>
@@ -437,7 +439,7 @@ of Molecular Dynamics in the <span class="math notranslate nohighlight">\(NVE\)<
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./Ex4"
+            path: "./Ex6"
         },
         predefinedOutput: true
     }
@@ -449,17 +451,17 @@ of Molecular Dynamics in the <span class="math notranslate nohighlight">\(NVE\)<
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../Ex3/LJ_NVT.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../Ex5/Exercise.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.3. </span>The Lennard-Jones Potential</p>
+            <p class="prev-next-title"><span class="section-number">5.2. </span>ToyMD</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Theory.html" title="next page">
+    <a class='right-next' id="next-link" href="theory.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.1. </span>Theory</p>
+        <p class="prev-next-title"><span class="section-number">6.1. </span>Theory</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
