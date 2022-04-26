@@ -569,8 +569,11 @@ div.admonition {
 <p class="admonition-title">Exercise 1</p>
 <p>Implement the initialization described in the Theory section in our ToyMD code in <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> in the section <code class="docutils literal notranslate"><span class="pre">##INITIALIZATION</span> <span class="pre">HERE##</span></code>. For this you should pick random velocities using <code class="docutils literal notranslate"><span class="pre">r.random()</span></code> which will produce random numbers between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>. You need to shift this random gaussian distribution appropriately and then multiply it such that the width of the velocity distribution matches the kinetic energy at the target temperature. Use the variables <code class="docutils literal notranslate"><span class="pre">masses[i]</span></code> for the mass of particle <code class="docutils literal notranslate"><span class="pre">i</span></code> and Boltzmanns constant <code class="docutils literal notranslate"><span class="pre">0.00831415</span></code>. Remember that for each degree of freedom (e.g velocity in x direction) <a class="reference internal" href="theory.html#equation-equipart-x">(5.22)</a> holds.</p>
 </div>
+<div class="exercise admonition" id="ex2">
+<p class="admonition-title">Exercise 2</p>
 <p>Implement the Berendsen thermostat in the <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> and <code class="docutils literal notranslate"><span class="pre">toy_md_integrate.py</span></code> (change the <code class="docutils literal notranslate"><span class="pre">compute_lambda_T</span></code> function) files.</p>
-</div><div class="exercise admonition" id="ex3">
+</div>
+<div class="exercise admonition" id="ex3">
 <p class="admonition-title">Exercise 3</p>
 <p>A better thermostat is the Andersen thermostat. It can be implemented as follows. Describe what problems this thermostat will present to us e.g for sampling of diffusion coefficients. What advantage does this thermostat have compared to the Berendsen thermostat?</p>
 </div>
