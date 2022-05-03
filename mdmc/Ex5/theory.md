@@ -1,3 +1,4 @@
+---
 # Theory 
 
 
@@ -104,7 +105,6 @@ most well known being bond stretching (vibration), bond angle bending
 and bond torsional modes. These are illustrated in {numref}`intramolecular`
 
 ```{figure} ../images/intramolecular_forces.svg
----
 name: intramolecular
 ---
 Depiction of the 2, 3, and 4-centre intramolecular forces.
