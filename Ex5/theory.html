@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>5.1. Bond Angle Bending &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>5.1. Theory &#8212; Molecular Dynamics and Monte Carlo</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5.8. ToyMD" href="Exercise.html" />
+    <link rel="next" title="5.2. ToyMD" href="Exercise.html" />
     <link rel="prev" title="5. Classical Molecular Dynamics (MD) Simulations" href="MDMC_ex5.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -215,12 +215,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     5.1. Bond Angle Bending
+     5.1. Theory
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="Exercise.html">
-     5.8. ToyMD
+     5.2. ToyMD
     </a>
    </li>
   </ul>
@@ -344,90 +344,114 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   5.1. Bond Angle Bending
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-molecular-dynamics">
+   5.1.1. Classical Molecular Dynamics
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bond-torsions">
-   5.2. Bond Torsions
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-approximation-basic-features">
+   5.1.2. Classical Approximation: Basic Features
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intramolecular-interactions">
+     5.1.2.1. Intramolecular Interactions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bond-stretching">
+       5.1.2.1.1. Bond Stretching
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-angle-bending">
+     5.1.2.2. Bond Angle Bending
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-torsions">
+     5.1.2.3. Bond Torsions
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#intermolecular-interactions">
-   5.3. Intermolecular Interactions
+   5.1.3. Intermolecular Interactions
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#electrostatics">
-     5.3.1. Electrostatics
+     5.1.3.1. Electrostatics
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#london-dispersion-forces">
-     5.3.2. London Dispersion Forces
+     5.1.3.2. London Dispersion Forces
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#excluded-volume-repulsion">
-     5.3.3. Excluded Volume Repulsion
+     5.1.3.3. Excluded Volume Repulsion
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lennard-jones-potential">
-     5.3.4. Lennard-Jones Potential
+     5.1.3.4. Lennard-Jones Potential
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-atomic-force-field">
-   5.4. The Atomic Force Field
+   5.1.4. The Atomic Force Field
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#force-field-parameterisation-and-transferability">
-     5.4.1. Force Field Parameterisation and Transferability
+     5.1.4.1. Force Field Parameterisation and Transferability
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sampling-specific-ensembles">
-   5.5. Sampling specific ensembles
+   5.1.5. Sampling specific ensembles
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#velocity-rescaling">
-     5.5.1. Velocity rescaling
+     5.1.5.1. Velocity rescaling
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#berendsen-thermostat">
-     5.5.2. Berendsen thermostat
+     5.1.5.2. Berendsen thermostat
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#andersen-thermostat">
-     5.5.3. Andersen thermostat
+     5.1.5.3. Andersen thermostat
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nose-hoover-thermostat">
-     5.5.4. Nose-Hoover thermostat
+     5.1.5.4. Nose-Hoover thermostat
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#initialization">
-   5.6. Initialization
+   5.1.6. Initialization
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pair-radial-distribution-functions-g-r">
-   5.7. Pair Radial Distribution Functions
+   5.1.7. Pair Radial Distribution Functions
    <span class="math notranslate nohighlight">
     \(g(r)\)
    </span>
@@ -443,7 +467,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Bond Angle Bending</h1>
+                <h1>Theory</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -453,90 +477,114 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   5.1. Bond Angle Bending
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-molecular-dynamics">
+   5.1.1. Classical Molecular Dynamics
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bond-torsions">
-   5.2. Bond Torsions
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-approximation-basic-features">
+   5.1.2. Classical Approximation: Basic Features
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intramolecular-interactions">
+     5.1.2.1. Intramolecular Interactions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bond-stretching">
+       5.1.2.1.1. Bond Stretching
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-angle-bending">
+     5.1.2.2. Bond Angle Bending
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-torsions">
+     5.1.2.3. Bond Torsions
+    </a>
+   </li>
+  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#intermolecular-interactions">
-   5.3. Intermolecular Interactions
+   5.1.3. Intermolecular Interactions
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#electrostatics">
-     5.3.1. Electrostatics
+     5.1.3.1. Electrostatics
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#london-dispersion-forces">
-     5.3.2. London Dispersion Forces
+     5.1.3.2. London Dispersion Forces
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#excluded-volume-repulsion">
-     5.3.3. Excluded Volume Repulsion
+     5.1.3.3. Excluded Volume Repulsion
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lennard-jones-potential">
-     5.3.4. Lennard-Jones Potential
+     5.1.3.4. Lennard-Jones Potential
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-atomic-force-field">
-   5.4. The Atomic Force Field
+   5.1.4. The Atomic Force Field
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#force-field-parameterisation-and-transferability">
-     5.4.1. Force Field Parameterisation and Transferability
+     5.1.4.1. Force Field Parameterisation and Transferability
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#sampling-specific-ensembles">
-   5.5. Sampling specific ensembles
+   5.1.5. Sampling specific ensembles
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#velocity-rescaling">
-     5.5.1. Velocity rescaling
+     5.1.5.1. Velocity rescaling
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#berendsen-thermostat">
-     5.5.2. Berendsen thermostat
+     5.1.5.2. Berendsen thermostat
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#andersen-thermostat">
-     5.5.3. Andersen thermostat
+     5.1.5.3. Andersen thermostat
     </a>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#nose-hoover-thermostat">
-     5.5.4. Nose-Hoover thermostat
+     5.1.5.4. Nose-Hoover thermostat
     </a>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#initialization">
-   5.6. Initialization
+   5.1.6. Initialization
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#pair-radial-distribution-functions-g-r">
-   5.7. Pair Radial Distribution Functions
+   5.1.7. Pair Radial Distribution Functions
    <span class="math notranslate nohighlight">
     \(g(r)\)
    </span>
@@ -551,74 +599,163 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <p>Depiction of the 2, 3, and 4-centre intramolecular forces.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-#### Bond Stretching
-
-An accurate description of bond stretching that well-describes the
-intramolecular behaviour is the empirical Morse potential:
-
-$$
+  <div class="tex2jax_ignore mathjax_ignore section" id="theory">
+<h1><span class="section-number">5.1. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="classical-molecular-dynamics">
+<h2><span class="section-number">5.1.1. </span>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
+<p>The extensive computational demand of electronic structure elucidation
+implies that an exact (fully quantum mechanical) description and
+time-propagation of even modestly sized molecular systems is in practice
+impossible. Although systems that comprise about <span class="math notranslate nohighlight">\(10^3\)</span> atoms are
+nowadays routinely described using approximate quantum mechanical (such
+as state-of-the-art Kohn-Sham Density Functional Theory) or
+semi-empirical methods, the computational demand of explicitly treating
+electrons in even larger systems such as biomolecules (<span class="math notranslate nohighlight">\(10^5\)</span> atoms and
+more) becomes untractable all too quickly.</p>
+<p>Fortunately, for such systems it is frequently sufficient to use a
+classical approximation to accurately reproduce supramolecular
+properties, such as the folding of a protein or the structure of a
+liquid. Classical approximations typically scale better with system
+size, and they therefore allow both for large systems and long
+simulation times to be taken into account. Here, atoms are treated as
+effective point charges with mass, instead of nuclei with explicit
+electrons. The classical approach makes use of a parameterised force
+field (or classical potential energy function), which is an
+approximation of the quantum-mechanical potential energy surface due to
+the electronic and nuclear potential, as a function of nuclear position.
+Such classical force fields typically work well under the following
+assumptions:</p>
+<ol class="simple">
+<li><p>The Born-Oppenheimer approximation is valid.</p></li>
+<li><p>The electronic structure is not of interest.</p></li>
+<li><p>The temperature is modest.</p></li>
+<li><p>There is no bond breaking or forming.</p></li>
+<li><p>Electrons are highly localised.</p></li>
+</ol>
+</div>
+<div class="section" id="classical-approximation-basic-features">
+<h2><span class="section-number">5.1.2. </span>Classical Approximation: Basic Features<a class="headerlink" href="#classical-approximation-basic-features" title="Permalink to this headline">¶</a></h2>
+<p>In the classical approximation, one describes positions and momenta of
+all the atomic nuclei:</p>
+<div class="math notranslate nohighlight" id="equation-momenta-of-nuclei">
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-momenta-of-nuclei" title="Permalink to this equation">¶</a></span>\[\begin{split}
+ \begin{aligned}
+\mathbf{r}^N &amp;= \{x^1, y^1, z^1, \ldots,x^N, y^N, z^N\} \\
+\mathbf{p}^N &amp;= \{p_{x1}, p_{y1}, p_{z1}, \ldots,p_{xN}, p_{yN}, p_{zN}\},
+\end{aligned}
+\end{split}\]</div>
+<p>where each position and all momenta are known simultaneously. One
+microstate is then characterised by a set of the <span class="math notranslate nohighlight">\(3N\)</span> positions
+<span class="math notranslate nohighlight">\(\{\mathbf{r}^N\}\)</span> and <span class="math notranslate nohighlight">\(3N\)</span> momenta <span class="math notranslate nohighlight">\(\{\mathbf{p}^N\}\)</span> for a total of 6N
+degrees of freedom, such that the notation
+<span class="math notranslate nohighlight">\(\{\mathbf{p}^N_m, \mathbf{r}^N_m\}\)</span> defines a particular microstate
+<span class="math notranslate nohighlight">\(m\)</span>. For any microstate, one can calculate the total energy as a sum of
+the kinetic <span class="math notranslate nohighlight">\(T(\{\mathbf{p}^N\})\)</span> and potential <span class="math notranslate nohighlight">\(V(\{\mathbf{r}^N\})\)</span>
+terms. The Hamiltonian of a classical system then becomes:</p>
+<div class="math notranslate nohighlight" id="equation-hamiltonian-classical">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-hamiltonian-classical" title="Permalink to this equation">¶</a></span>\[
+\mathbf{H}(\{\mathbf{p}^N\}, \{\mathbf{r}^N\}) = \mathbf{T}(\{\mathbf{p}^N\}) + \mathbf{V}(\{\mathbf{r}^N\}),
+\]</div>
+<p>where the kinetic term is simply:</p>
+<div class="math notranslate nohighlight" id="equation-kinetic-term">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-kinetic-term" title="Permalink to this equation">¶</a></span>\[
+\mathbf{T}(\{\mathbf{p}^N\}) = \sum_i^N \frac{|\mathbf{p_i}|^2}{2m_i}.
+\]</div>
+<p>Interactions between atoms are then described by a potential energy
+function <span class="math notranslate nohighlight">\(\mathbf{V}(\{\mathbf{r}^N\})\)</span> that depends solely on the
+positions of all atoms <span class="math notranslate nohighlight">\(\{\mathbf{r}^N\}\)</span>. A key part of describing time
+evolution of a molecular system classically is then the definition of
+the potential energy function <span class="math notranslate nohighlight">\(\mathbf{V}(\{\mathbf{r}^N\})\)</span>. In fact,
+the functional form of <span class="math notranslate nohighlight">\(\mathbf{V}(\{\mathbf{r}^N\})\)</span> is often chosen by
+examining the various modes by which atoms interact according to a
+quantum mechanical treatment of the molecular system and patching
+simple, often first-order theoretical expressions for these modes
+together. These modes can also be fitted to experimental (and/or quantum
+mechanical calculations of) model compounds such that the force field
+reproduces selected properties of a database of representative test
+structures.</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{V}(\mathbf{r}^N)\)</span> can be mainly decomposed into the following
+components:</p>
+<div class="math notranslate nohighlight" id="equation-decomposition-of-potential">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-decomposition-of-potential" title="Permalink to this equation">¶</a></span>\[
+\mathbf{V}(\{\mathbf{r}^N\}) =\mathbf{V}_{bonded}(\{\mathbf{r}^N\}) + \mathbf{V}_{non-bonded}(\{\mathbf{r}^N\}),
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathbf{V}_{bonded}(\{\mathbf{r}^N\})\)</span> and
+<span class="math notranslate nohighlight">\(\mathbf{V}_{non-bonded}(\{\mathbf{r}^N\})\)</span> correspond to intermolecular
+and intramolecular potentials respectively. Intramolecular interactions
+typically include bond stretching, bond angle bending and bond torsional
+modes, while intermolecular interactions include dispersion and
+coulombic potentials. These are discussed in more detail below.</p>
+<div class="section" id="intramolecular-interactions">
+<h3><span class="section-number">5.1.2.1. </span>Intramolecular Interactions<a class="headerlink" href="#intramolecular-interactions" title="Permalink to this headline">¶</a></h3>
+<p>Intramolecular interactions occur through bonds between atoms, the three
+most well known being bond stretching (vibration), bond angle bending
+and bond torsional modes. These are illustrated in <a class="reference internal" href="#intramolecular"><span class="std std-numref">Fig. 5.1</span></a></p>
+<div class="figure align-default" id="intramolecular">
+<img alt="../_images/intramolecular_forces.svg" src="../_images/intramolecular_forces.svg" /><p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Depiction of the 2, 3, and 4-centre intramolecular forces.</span><a class="headerlink" href="#intramolecular" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="bond-stretching">
+<h4><span class="section-number">5.1.2.1.1. </span>Bond Stretching<a class="headerlink" href="#bond-stretching" title="Permalink to this headline">¶</a></h4>
+<p>An accurate description of bond stretching that well-describes the
+intramolecular behaviour is the empirical Morse potential:</p>
+<div class="math notranslate nohighlight" id="equation-bond-streching">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-bond-streching" title="Permalink to this equation">¶</a></span>\[
 V_B(d) = D_e[1-e^{-a(d-d_0)}]^2,
-$$ (bond_streching)
-
-where $d$ is the length of the bond, $a$ is a constant, $d_0$ is the
-equilibrium bond length, and $D_e$ is the well-depth minimum. Typically
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(d\)</span> is the length of the bond, <span class="math notranslate nohighlight">\(a\)</span> is a constant, <span class="math notranslate nohighlight">\(d_0\)</span> is the
+equilibrium bond length, and <span class="math notranslate nohighlight">\(D_e\)</span> is the well-depth minimum. Typically
 this form is not used, as it requires three parameters per bond and is
 somewhat expensive to compute in simulation due to the exponential.
 Since the energy scales of bond stretching are relatively high, bonds
 rarely deviate significantly from the equilibrium bond length, thus one
-can use a second-order Taylor expansion around the energy minimum:
-
-$$
+can use a second-order Taylor expansion around the energy minimum:</p>
+<div class="math notranslate nohighlight" id="equation-bond-taylor">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-bond-taylor" title="Permalink to this equation">¶</a></span>\[
 V_B(d) = \alpha(d-d_0)^2,
-$$ (bond_taylor)
-
-where $\alpha$ is a constant. This form treats bond vibrations as
-harmonic oscillations, and thus atoms cannot be dissociated. {numref}`morse` provides a depiction
-of both the Morse potential and the corresponding harmonic approximation.
-
-
-```{figure} ../images/morse-potential.png
----
-name: morse
----
-Depiction of a Morse and harmonic potential used to approximate chemical bonds. CC by SA 3.0 [Somoza](https://commons.wikimedia.org/wiki/File:Morse-potential.png)
-</pre></div>
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\alpha\)</span> is a constant. This form treats bond vibrations as
+harmonic oscillations, and thus atoms cannot be dissociated. <a class="reference internal" href="#morse"><span class="std std-numref">Fig. 5.2</span></a> provides a depiction
+of both the Morse potential and the corresponding harmonic approximation.</p>
+<div class="figure align-default" id="morse">
+<img alt="../_images/morse-potential.png" src="../_images/morse-potential.png" />
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Depiction of a Morse and harmonic potential used to approximate chemical bonds. CC by SA 3.0 <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Morse-potential.png">Somoza</a></span><a class="headerlink" href="#morse" title="Permalink to this image">¶</a></p>
+</div>
+</div>
 </div>
 <div class="section" id="bond-angle-bending">
-<h1><span class="section-number">5.1. </span>Bond Angle Bending<a class="headerlink" href="#bond-angle-bending" title="Permalink to this headline">¶</a></h1>
+<h3><span class="section-number">5.1.2.2. </span>Bond Angle Bending<a class="headerlink" href="#bond-angle-bending" title="Permalink to this headline">¶</a></h3>
 <p>This term accounts for deviations from the preferred hybridisation
 geometry (e.g sp<span class="math notranslate nohighlight">\(^3\)</span>). Again, a common form is the second-order Taylor
 expansion about the energy minimum:</p>
 <div class="math notranslate nohighlight" id="equation-angle">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-angle" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-angle" title="Permalink to this equation">¶</a></span>\[
 V_A(\theta) = b(\theta-\theta_0)^2,
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\theta\)</span> is the bond angle between three atoms, <span class="math notranslate nohighlight">\(b\)</span> is a constant
 and <span class="math notranslate nohighlight">\(\theta_0\)</span> is the equilibrium bond angle.</p>
 </div>
 <div class="section" id="bond-torsions">
-<h1><span class="section-number">5.2. </span>Bond Torsions<a class="headerlink" href="#bond-torsions" title="Permalink to this headline">¶</a></h1>
+<h3><span class="section-number">5.1.2.3. </span>Bond Torsions<a class="headerlink" href="#bond-torsions" title="Permalink to this headline">¶</a></h3>
 <p>These interactions occur among four atoms and account for rotational
 energies along bonds. Unlike the previous terms, torsional modes are
 “soft” such that energies are often not so high as to only allow small
 deviations from an equilibrium structure. Torsional modes are frequently
 modeled with the following expression:</p>
 <div class="math notranslate nohighlight" id="equation-torsions">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-torsions" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.8)<a class="headerlink" href="#equation-torsions" title="Permalink to this equation">¶</a></span>\[
 V_T(\phi)= \sum_{n=0}^N k_n[1 + cos(n\phi - \delta)],
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\phi\)</span> is the torsional angle, <span class="math notranslate nohighlight">\(n\)</span> is the periodicity and <span class="math notranslate nohighlight">\(k_n\)</span> is the rotational energy barrier,  and <span class="math notranslate nohighlight">\(\gamma\)</span> is an additional
 dihedral-dependent parameter which models the offset of the minima. A depiction of <span class="math notranslate nohighlight">\(V_T(\omega)\)</span> is provided
-in <a class="reference internal" href="#dihedral"><span class="std std-numref">Fig. 5.1</span></a></p>
+in <a class="reference internal" href="#dihedral"><span class="std std-numref">Fig. 5.3</span></a></p>
 <div class="figure align-default" id="dihedral">
 <img alt="../_images/Dihedral_angle_potential_schematic.png" src="../_images/Dihedral_angle_potential_schematic.png" />
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The representation of the potential energy of a torsional angle rotation using a cosine representation. CC by SA <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Dihedral_angle_potential_schematic.png">cnrowley</a></span><a class="headerlink" href="#dihedral" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The representation of the potential energy of a torsional angle rotation using a cosine representation. CC by SA <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Dihedral_angle_potential_schematic.png">cnrowley</a></span><a class="headerlink" href="#dihedral" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 <div class="section" id="intermolecular-interactions">
-<h1><span class="section-number">5.3. </span>Intermolecular Interactions<a class="headerlink" href="#intermolecular-interactions" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">5.1.3. </span>Intermolecular Interactions<a class="headerlink" href="#intermolecular-interactions" title="Permalink to this headline">¶</a></h2>
 <p>Intermolecular interactions apply to any atoms that are not bonded,
 either within the same molecule or between different molecules.</p>
 <p>These interactions are described using a pairwise decomposition of the
@@ -626,7 +763,7 @@ energy. Formally one can decompose the potential energy function into
 interactions involving single atoms, pairs of atoms, triplets of atoms
 and so forth:</p>
 <div class="math notranslate nohighlight" id="equation-intermolecular">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-intermolecular" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.9)<a class="headerlink" href="#equation-intermolecular" title="Permalink to this equation">¶</a></span>\[
 \mathbf{V}(\{\mathbf{r}^N\}) = \sum_{i=1}^N \mathbf{v}_1(\mathbf{r}_i) + \sum_{i=1}\sum_{j=i+1} \mathbf{v}_2(\mathbf{r}_{ij}) +  \sum_{i=1}\sum_{j=i+1}\sum_{k=j+1}\mathbf{v}_3(\mathbf{r}_{ij}, \mathbf{r}_{ik}, \mathbf{r}_{jk}) + \dots.
 \]</div>
 <p>It is convenient to truncate this expansion beyond pairwise interactions
@@ -636,15 +773,15 @@ is performed at the expense of certain polarization effects which can
 lead to subtle deviations away from experimental results. The resulting
 effective pair potential is given by:</p>
 <div class="math notranslate nohighlight" id="equation-effective">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-effective" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.10)<a class="headerlink" href="#equation-effective" title="Permalink to this equation">¶</a></span>\[
 \mathbf{V}(\{\mathbf{r}^N\}) = \sum_{i=1}^N \mathbf{v}_1(\mathbf{r}_i) + \sum_{i=1}\sum_{j=i+1} \mathbf{v}_{eff}(\mathbf{r}_{ij}).
 \]</div>
 <div class="section" id="electrostatics">
-<h2><span class="section-number">5.3.1. </span>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.3.1. </span>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this headline">¶</a></h3>
 <p>Interactions between charges (partial or formal) are modeled using
 Coulomb’s law:</p>
 <div class="math notranslate nohighlight" id="equation-coulomb">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-coulomb" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.11)<a class="headerlink" href="#equation-coulomb" title="Permalink to this equation">¶</a></span>\[
 \mathbf{V}_{c}(\mathbf{r}_{ij}) = \frac{q_i q_j}{4 \pi \epsilon_0 \mathbf{r}_{ij}},
 \]</div>
 <p>for which the atoms <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> are separated by distance
@@ -652,7 +789,7 @@ Coulomb’s law:</p>
 while <span class="math notranslate nohighlight">\(\epsilon_0\)</span> denotes the free space permittivity.</p>
 </div>
 <div class="section" id="london-dispersion-forces">
-<h2><span class="section-number">5.3.2. </span>London Dispersion Forces<a class="headerlink" href="#london-dispersion-forces" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.3.2. </span>London Dispersion Forces<a class="headerlink" href="#london-dispersion-forces" title="Permalink to this headline">¶</a></h3>
 <p>Correlations between instantaneous electron densities surrounding two
 atoms gives rise to an attractive potential:</p>
 <div class="math notranslate nohighlight">
@@ -662,38 +799,38 @@ atoms gives rise to an attractive potential:</p>
 <p>and is a component of the Van der Waals force, which contains other forces
 including dipole-dipole (Keesom force), permanent dipole-induced dipole
 (Debye force) and London dispersion forces. A depiction of London
-dispersion and Coulombic forces can be seen in <a class="reference internal" href="#intermolecular"><span class="std std-numref">Fig. 5.2</span></a></p>
+dispersion and Coulombic forces can be seen in <a class="reference internal" href="#intermolecular"><span class="std std-numref">Fig. 5.4</span></a></p>
 <div class="figure align-default" id="intermolecular">
-<img alt="../_images/london_coloumb.svg" src="../_images/london_coloumb.svg" /><p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Depiction of London dispersion and Coulombic forces.</span><a class="headerlink" href="#intermolecular" title="Permalink to this image">¶</a></p>
+<img alt="../_images/london_coloumb.svg" src="../_images/london_coloumb.svg" /><p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Depiction of London dispersion and Coulombic forces.</span><a class="headerlink" href="#intermolecular" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="excluded-volume-repulsion">
-<h2><span class="section-number">5.3.3. </span>Excluded Volume Repulsion<a class="headerlink" href="#excluded-volume-repulsion" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.3.3. </span>Excluded Volume Repulsion<a class="headerlink" href="#excluded-volume-repulsion" title="Permalink to this headline">¶</a></h3>
 <p>When two atoms approach and their electron densities overlap, they
 experience a steep increase in energy and a corresponding strong
 repulsion. This occurs due to the Pauli principle: two electrons are
 forbidden to have the same quantum number. At moderate inter-nuclear
 distances, this potential has the approximate form:</p>
 <div class="math notranslate nohighlight" id="equation-excluded-volume-repulsion">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-excluded-volume-repulsion" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.12)<a class="headerlink" href="#equation-excluded-volume-repulsion" title="Permalink to this equation">¶</a></span>\[
 \mathbf{V}_{evr}(\mathbf{r}_{ij}) \propto e^{-c \mathbf{r}_{ij}},
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(c\)</span> is a constant. To alleviate computational complexity this can
 be successfully modeled by a simple power law that is much more
 convenient to compute:</p>
 <div class="math notranslate nohighlight" id="equation-simple-evr">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-simple-evr" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.13)<a class="headerlink" href="#equation-simple-evr" title="Permalink to this equation">¶</a></span>\[
 \mathbf{V}_{evr}(\mathbf{r}_{ij}) \propto \mathbf{r}_{ij}^{-m},
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(m\)</span> is greater than 6.</p>
 </div>
 <div class="section" id="lennard-jones-potential">
-<h2><span class="section-number">5.3.4. </span>Lennard-Jones Potential<a class="headerlink" href="#lennard-jones-potential" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.3.4. </span>Lennard-Jones Potential<a class="headerlink" href="#lennard-jones-potential" title="Permalink to this headline">¶</a></h3>
 <p>An effective method to model both the excluded volume and London
 dispersion forces is to combine them into a single expression, which
 Lennard-Jones proposed in the following pairwise interaction:</p>
 <div class="math notranslate nohighlight" id="equation-lj-pairwise">
-<span class="eqno">(5.8)<a class="headerlink" href="#equation-lj-pairwise" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.14)<a class="headerlink" href="#equation-lj-pairwise" title="Permalink to this equation">¶</a></span>\[
 \mathbf{V}(\mathbf{r}_{ij}) = 4 \epsilon_{ij} \left[ \left( \frac{\mathbf{r}_{ij}}{\sigma}\right)^{-12} - \left( \frac{\mathbf{r}_{ij}}{\sigma}\right)^{-6}  \right]
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span> are atom-dependent constants. The factor
@@ -702,12 +839,12 @@ square the attractive <span class="math notranslate nohighlight">\(\mathbf{r}_{i
 </div>
 </div>
 <div class="section" id="the-atomic-force-field">
-<h1><span class="section-number">5.4. </span>The Atomic Force Field<a class="headerlink" href="#the-atomic-force-field" title="Permalink to this headline">¶</a></h1>
+<span id="minimalff"></span><h2><span class="section-number">5.1.4. </span>The Atomic Force Field<a class="headerlink" href="#the-atomic-force-field" title="Permalink to this headline">¶</a></h2>
 <p>A bare-minimum force field can now be constructed as a simple addition
 of individual contributions to the approximation of the potential energy
 surface:</p>
 <div class="math notranslate nohighlight" id="equation-minimumforcefield">
-<span class="eqno">(5.9)<a class="headerlink" href="#equation-minimumforcefield" title="Permalink to this equation">¶</a></span>\[\begin{split}
+<span class="eqno">(5.15)<a class="headerlink" href="#equation-minimumforcefield" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{gathered}
 \mathbf{V}(\{\mathbf{r}^N\}) = \sum_{\text{bonds}, i}\alpha_i(d_i - d_{i,0})^2 + \sum_{\text{angles}, j}\beta_j(\theta_j - \theta_{j,0})^2+
 \sum_{\text{torsions}, k} \left[ \sum_{n=0}^N k_n[1 + cos(n\phi - \delta)]\right] \\
@@ -716,12 +853,12 @@ surface:</p>
  \end{gathered}
  \end{split}\]</div>
 <div class="section" id="force-field-parameterisation-and-transferability">
-<h2><span class="section-number">5.4.1. </span>Force Field Parameterisation and Transferability<a class="headerlink" href="#force-field-parameterisation-and-transferability" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.4.1. </span>Force Field Parameterisation and Transferability<a class="headerlink" href="#force-field-parameterisation-and-transferability" title="Permalink to this headline">¶</a></h3>
 <p>The minimal force field in section
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">minimalFF</span></code> contains a
+<a class="reference internal" href="#minimalff"><span class="std std-numref">Section 5.1.4</span></a> contains a
 large number of parameters:</p>
 <div class="math notranslate nohighlight" id="equation-parameters">
-<span class="eqno">(5.10)<a class="headerlink" href="#equation-parameters" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.16)<a class="headerlink" href="#equation-parameters" title="Permalink to this equation">¶</a></span>\[
 \alpha_i, d_{i,0},\beta_j, \theta_{j, 0}, c_{k,n}, \gamma_k, q_{i,j}, \epsilon_{ij}, \sigma_{ij}, \delta, k_n
 \]</div>
 <p>which must be chosen, depending on the kind of atoms involved and their
@@ -741,55 +878,55 @@ as a result, the majority of force fields are semi-empirical.</p>
 </div>
 </div>
 <div class="section" id="sampling-specific-ensembles">
-<h1><span class="section-number">5.5. </span>Sampling specific ensembles<a class="headerlink" href="#sampling-specific-ensembles" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">5.1.5. </span>Sampling specific ensembles<a class="headerlink" href="#sampling-specific-ensembles" title="Permalink to this headline">¶</a></h2>
 <p>When running a Molecular dynamics simulation, we often want to sample from a specific ensemble. In a standard MD run as implemented in the toy example in Exercise 4 we sample in the microcanonical ensemble - <span class="math notranslate nohighlight">\(NVE\)</span>.  <span class="math notranslate nohighlight">\(N\)</span> is constant as we do not add or remove particles during the simulation, <span class="math notranslate nohighlight">\(V\)</span> is constant as the size of the box does not change, and <span class="math notranslate nohighlight">\(E\)</span> is constant as we use an integrator that conserves energy. In the NVE ensemble we will get the truly correct dynamics of the system. If we want to compare our simulation to experimental values then we however need to use either the canonical ensemble - <span class="math notranslate nohighlight">\(NVT\)</span> or the isothermal-isobaric ensemble <span class="math notranslate nohighlight">\(NpT\)</span>.</p>
 <p>In order to run in the NVT ensemble, we can use our NVE simulation code, and adjust the total energy such that the average temperature is equal to the one we want to simulate it. We can adjust the total energy easily by changing the momenta. The routine of doing this is called <strong>thermostat</strong> or <strong>barostat</strong> for the pressure.</p>
 <div class="section" id="velocity-rescaling">
-<h2><span class="section-number">5.5.1. </span>Velocity rescaling<a class="headerlink" href="#velocity-rescaling" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.5.1. </span>Velocity rescaling<a class="headerlink" href="#velocity-rescaling" title="Permalink to this headline">¶</a></h3>
 <p>Clearly the simplest form of a thermostat is to rescale all velocities after each update so that their distribution matches the target temperature <span class="math notranslate nohighlight">\(T_0\)</span>. This will however not produce realistic dynamics as it does not allow fluctations in the temperature which are present e.g in the canonical ensemble. In the NVT ensemble we expect that on average we sample at the <span class="math notranslate nohighlight">\(T_0\)</span> but the instantenous temperature <span class="math notranslate nohighlight">\(T\)</span> should vary. (See derivation p.141 in Frenkel &amp; Smit).</p>
 <div class="math notranslate nohighlight" id="equation-simple-rescaling">
-<span class="eqno">(5.11)<a class="headerlink" href="#equation-simple-rescaling" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.17)<a class="headerlink" href="#equation-simple-rescaling" title="Permalink to this equation">¶</a></span>\[
   v_i = \sqrt{\frac{T_0}{T}} v_i
 \]</div>
 </div>
 <div class="section" id="berendsen-thermostat">
-<h2><span class="section-number">5.5.2. </span>Berendsen thermostat<a class="headerlink" href="#berendsen-thermostat" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.5.2. </span>Berendsen thermostat<a class="headerlink" href="#berendsen-thermostat" title="Permalink to this headline">¶</a></h3>
 <p>An improvement of the rescaling algorithm for temperature control is the Berendsen thermostat. Sometimes, also called proportional thermostat.  The Berendsen thermostat tries to correct the deviations of the instantenous temperature <span class="math notranslate nohighlight">\(T\)</span> from our target temperature <span class="math notranslate nohighlight">\(T_0\)</span> by
 multiplying the velocities by a factor <span class="math notranslate nohighlight">\(\lambda\)</span> in order to move the system
 dynamics towards the one corresponding to <span class="math notranslate nohighlight">\( T_0\)</span>. This method does therefore allow temperature fluctuations.</p>
 <p>In the Berendsen thermostat we set the rate of change of the temperature to</p>
 <div class="math notranslate nohighlight" id="equation-berendsen">
-<span class="eqno">(5.12)<a class="headerlink" href="#equation-berendsen" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.18)<a class="headerlink" href="#equation-berendsen" title="Permalink to this equation">¶</a></span>\[
 \frac{dT(t)}{dt}= \frac{1}{\tau} (T_0 -T)
 \]</div>
 <p>the coupling parameter thus is:</p>
 <div class="math notranslate nohighlight" id="equation-berendsenlambda">
-<span class="eqno">(5.13)<a class="headerlink" href="#equation-berendsenlambda" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.19)<a class="headerlink" href="#equation-berendsenlambda" title="Permalink to this equation">¶</a></span>\[
 \lambda^2 = 1 + \frac{dt}{\tau}  * (\frac{T_0}{T} -1)
 \]</div>
 <p>This thermostat however still does not sample the canonical ensemble and therefore should <strong>not</strong> be used in production simulations. The Berendsen thermostat samples the isokinetic ensemble. In particular this can lead to the so called flying ice cube effect, where high frequency modes such as vibrations are all drained into low frequency modes such as translation. While the kinetic energy is conserved this violates the equipartition of energy and is clearly an algorithmic artefact.</p>
 <p>Standard MD simulation programs such as Gromacs use a modification of this thermostat called the Bussi-Donadio-Parrinello thermostat (v-rescale in Gromacs). Here, the velocities are not rescaled to match the target temperature but the velocities are scaled to a kinetic energy that is stochastically chosen from the kinetic energy distribution dictated by the canonical ensemble.</p>
 </div>
 <div class="section" id="andersen-thermostat">
-<h2><span class="section-number">5.5.3. </span>Andersen thermostat<a class="headerlink" href="#andersen-thermostat" title="Permalink to this headline">¶</a></h2>
-<p>An alternative approach to control temperature is to mimic collisions with a heat bath. This can be easily implemented by picking random atoms and drawing a new velocity from the Maxwell-Boltzman temperature at the target temperature <a class="reference internal" href="#maxwellboltzman"><span class="std std-numref">Fig. 5.3</span></a>. In between collisions the dynamics is according to NVE but due to the collisions samples from the canonical ensemble.</p>
+<h3><span class="section-number">5.1.5.3. </span>Andersen thermostat<a class="headerlink" href="#andersen-thermostat" title="Permalink to this headline">¶</a></h3>
+<p>An alternative approach to control temperature is to mimic collisions with a heat bath. This can be easily implemented by picking random atoms and drawing a new velocity from the Maxwell-Boltzman temperature at the target temperature <a class="reference internal" href="#maxwellboltzman"><span class="std std-numref">Fig. 5.5</span></a>. In between collisions the dynamics is according to NVE but due to the collisions samples from the canonical ensemble.</p>
 <p>The strength of coupling to the heat bath is determined by <span class="math notranslate nohighlight">\(\nu\)</span> which has a similar function to <span class="math notranslate nohighlight">\(\tau\)</span> in the Berendsen thermostat. While the Andersen thermostat samples the <span class="math notranslate nohighlight">\(NVT\)</span> ensemble rigorously it will clearly disturb the natural dynamics of the system due to the abrupt nature of the collisions.</p>
 <div class="figure align-default" id="maxwellboltzman">
 <img alt="../_images/maxwellboltzmann.png" src="../_images/maxwellboltzmann.png" />
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Maxwell Boltzmann distribution for three different temperatures. Figure CC by SA <a class="reference external" href="https://www.khanacademy.org/science/physics/thermodynamics/temp-kinetic-theory-ideal-gas-law/a/what-is-the-maxwell-boltzmann-distribution">Khan Academy</a></span><a class="headerlink" href="#maxwellboltzman" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Maxwell Boltzmann distribution for three different temperatures. Figure CC by SA <a class="reference external" href="https://www.khanacademy.org/science/physics/thermodynamics/temp-kinetic-theory-ideal-gas-law/a/what-is-the-maxwell-boltzmann-distribution">Khan Academy</a></span><a class="headerlink" href="#maxwellboltzman" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="nose-hoover-thermostat">
-<h2><span class="section-number">5.5.4. </span>Nose-Hoover thermostat<a class="headerlink" href="#nose-hoover-thermostat" title="Permalink to this headline">¶</a></h2>
+<h3><span class="section-number">5.1.5.4. </span>Nose-Hoover thermostat<a class="headerlink" href="#nose-hoover-thermostat" title="Permalink to this headline">¶</a></h3>
 <p>Another popular thermostat is the Nose-Hoover thermostat. Here, an extended Lagrangian formalism is used, i.e no random velocities are used. Instead one uses a friction factor to control particle velocities. This dimensionless factor belongs to a an additional degree of freedom which has mass <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p>The new equations of motions are</p>
 <div class="math notranslate nohighlight" id="equation-nosehoover">
-<span class="eqno">(5.14)<a class="headerlink" href="#equation-nosehoover" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.20)<a class="headerlink" href="#equation-nosehoover" title="Permalink to this equation">¶</a></span>\[
 \frac{\text{d}v(t)}{\text{d}t} = \frac{\mathrm{F}(t)}{m} - \zeta \mathrm{v}(t)
 \]</div>
 <p>with <span class="math notranslate nohighlight">\(\zeta\)</span> the thermodynamic friction coefficient as</p>
 <div class="math notranslate nohighlight" id="equation-nosehooverfriction">
-<span class="eqno">(5.15)<a class="headerlink" href="#equation-nosehooverfriction" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.21)<a class="headerlink" href="#equation-nosehooverfriction" title="Permalink to this equation">¶</a></span>\[
 \frac{\mathrm{d} \zeta(t)}{\mathrm{d} t}=\frac{1}{Q}\left[\sum m \mathbf{v}(t)^{2}-(N_{DOF}+1) k_{B} T\right]
 \]</div>
 <p><span class="math notranslate nohighlight">\(Q\)</span> has dimension of <span class="math notranslate nohighlight">\(\text{energy} \times (time)^2\)</span> and controls the temperature fluctation.</p>
@@ -798,21 +935,21 @@ dynamics towards the one corresponding to <span class="math notranslate nohighli
 </div>
 </div>
 <div class="section" id="initialization">
-<h1><span class="section-number">5.6. </span>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">5.1.6. </span>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h2>
 <p>In order to run a sucessful simulation to sample a property of interest it is important to start with a correct structure.</p>
 <p>After having obtained an initial geometry of the system we want to simulate the question remains on how to initialize our system to avoid lengthy equilibration.
 Simply setting the velocity of each particle to <span class="math notranslate nohighlight">\(0\)</span> as we did in the last exercise clearly is not very realistic and will not converge easily to our target temperature.</p>
 <p>As running a molecular dynamics simulation is equivalent to computationally sampling from a thermodynamic ensemble it is clearly more appropriate to start with a configuration that has close resemblance to a configuration derived from the ensemble we want to simulate in e.g at fixed number of particles <span class="math notranslate nohighlight">\(N\)</span>, fixed volume <span class="math notranslate nohighlight">\(V\)</span> and finite temperature <span class="math notranslate nohighlight">\(T_0\)</span>.  This means that the velocities of the particles should resemble the distribution of velocities at the target temperature to be a realistic structure from that ensemble.</p>
-<p>We know that in equilibrium the distribution of velocities is the Maxwell Boltzmann distribution <a class="reference internal" href="#maxwellboltzman"><span class="std std-numref">Fig. 5.3</span></a>.</p>
+<p>We know that in equilibrium the distribution of velocities is the Maxwell Boltzmann distribution <a class="reference internal" href="#maxwellboltzman"><span class="std std-numref">Fig. 5.5</span></a>.</p>
 <p>To initialize our MD simulation, we therefore choose random velocities from a gaussian distribution with <span class="math notranslate nohighlight">\(\mu=0\)</span> and variance corresponding to the target temperature in order to emulate the Maxwell Boltzmann distribution. These starting velocites will quickly be randomized and our thermostat will take care of ensuring that we simulate in the target ensemble (if simulating in <span class="math notranslate nohighlight">\(NVT\)</span> or <span class="math notranslate nohighlight">\(NpT\)</span>).</p>
 <p>From, the equipartition theorem we know that each quadratic degree of freedom <span class="math notranslate nohighlight">\(&lt;\vec{v_x}&gt;\)</span>, <span class="math notranslate nohighlight">\(&lt;\vec{v_y}&gt;\)</span>, <span class="math notranslate nohighlight">\(&lt;\vec{v_z}&gt;\)</span> will contribute <span class="math notranslate nohighlight">\(\frac{1}{2} K_B T\)</span> to the kinetic energy which we can use to set the variance of the velocity distribution, where the following equality holds:</p>
 <div class="math notranslate nohighlight" id="equation-equipart-x">
-<span class="eqno">(5.16)<a class="headerlink" href="#equation-equipart-x" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.22)<a class="headerlink" href="#equation-equipart-x" title="Permalink to this equation">¶</a></span>\[
  E_{kin,x} = \frac{1}{2} K_B T =   \frac{1}{2} m v_x^2
 \]</div>
 </div>
 <div class="section" id="pair-radial-distribution-functions-g-r">
-<h1><span class="section-number">5.7. </span>Pair Radial Distribution Functions <span class="math notranslate nohighlight">\(g(r)\)</span><a class="headerlink" href="#pair-radial-distribution-functions-g-r" title="Permalink to this headline">¶</a></h1>
+<h2><span class="section-number">5.1.7. </span>Pair Radial Distribution Functions <span class="math notranslate nohighlight">\(g(r)\)</span><a class="headerlink" href="#pair-radial-distribution-functions-g-r" title="Permalink to this headline">¶</a></h2>
 <p>Radial distribution (Pair correlation) functions are of fundamental
 importance in thermodynamics, since macroscopic thermodynamic properties
 can usually be calculated directly from <span class="math notranslate nohighlight">\(g(r)\)</span>. In short, they simply
@@ -828,7 +965,7 @@ of finding molecule 1 in volume element <span class="math notranslate nohighligh
 <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span>, <span class="math notranslate nohighlight">\(\ldots\)</span>, and molecule N in volume element
 <span class="math notranslate nohighlight">\(\mathrm{d}\mathbf{r}_N\)</span> at <span class="math notranslate nohighlight">\(\mathbf{r}_N\)</span> is given by:</p>
 <div class="math notranslate nohighlight" id="equation-probability-all">
-<span class="eqno">(5.17)<a class="headerlink" href="#equation-probability-all" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.23)<a class="headerlink" href="#equation-probability-all" title="Permalink to this equation">¶</a></span>\[
 P(N)\mathrm{d}\mathbf{r}_1 \ldots \mathrm{d}\mathbf{r}_N
  = \frac{1}{Z_c(N,V,T)}e^{-\frac{U_N}{k_BT}}\mathrm{d}\mathbf{r}_1 \ldots \mathrm{d}\mathbf{r}_N,
  \]</div>
@@ -836,7 +973,7 @@ P(N)\mathrm{d}\mathbf{r}_1 \ldots \mathrm{d}\mathbf{r}_N
 to the interaction between particles and <span class="math notranslate nohighlight">\(Z_c(N,V,T)\)</span> is the
 configurational integral,</p>
 <div class="math notranslate nohighlight" id="equation-configurational-integral">
-<span class="eqno">(5.18)<a class="headerlink" href="#equation-configurational-integral" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.24)<a class="headerlink" href="#equation-configurational-integral" title="Permalink to this equation">¶</a></span>\[
 Z_c(N, V, T) = \int{\ldots}\int{e^{-\frac{U_N}{k_BT}}\mathrm{d}\mathbf{r}_1\ldots \mathrm{d}\mathbf{r}_N},
 \]</div>
 <p>taken over all possible combinations of atomic particle positions.
@@ -844,7 +981,7 @@ Generally the total number of particles is massive enough such that
 <span class="math notranslate nohighlight">\(P(N)\)</span> is not particularly useful. It is more informative to consider
 the relative position of two molecules irrespective of the location of
 other molecules in the system. Integrating equation
-<a class="reference internal" href="#equation-probability-all">(5.17)</a>
+<a class="reference internal" href="#equation-probability-all">(5.23)</a>
 over all coordinates except those
 pertaining to the two molecules of interest, one obtains the definition
 of the second-order disitribution function
@@ -853,7 +990,7 @@ finding molecule 1 in volume element <span class="math notranslate nohighlight">
 <span class="math notranslate nohighlight">\(\mathbf{r}_1\)</span> and molecule 2 in volume element <span class="math notranslate nohighlight">\(\mathrm{d}\mathbf{r}_2\)</span>
 at <span class="math notranslate nohighlight">\(\mathbf{r}_2\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-pair-probability">
-<span class="eqno">(5.19)<a class="headerlink" href="#equation-pair-probability" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.25)<a class="headerlink" href="#equation-pair-probability" title="Permalink to this equation">¶</a></span>\[
  p^{(2)}_{ij}(\mathbf{r}_1, \mathbf{r}_2) = N_i(N_j - \delta_{ij}) \frac{1}{Z_c (N, V, T)}\int{\ldots}\int{e^{-\frac{U_N}{k_BT}}}
 \mathrm{d}\mathbf{r}_3\ldots \mathrm{d}\mathbf{r}_N,
 \]</div>
@@ -870,13 +1007,13 @@ on the distance between centres of masses
 <span class="math notranslate nohighlight">\(N_i(N_j - \delta_{ij}) / V^2\)</span>. This suggests defining the pair radial
 distribution function, <span class="math notranslate nohighlight">\(g^{(2)}_{ij}(r)\)</span> by:</p>
 <div class="math notranslate nohighlight" id="equation-pair-radial">
-<span class="eqno">(5.20)<a class="headerlink" href="#equation-pair-radial" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.26)<a class="headerlink" href="#equation-pair-radial" title="Permalink to this equation">¶</a></span>\[
 g^{(2)}_{ij}(r) = \frac{p^{(2)}_{ij}(r) V^2}{(N_i N_J)},
 \]</div>
 <p>which
 approaches <span class="math notranslate nohighlight">\(1 - \delta_{ij}/N_j\)</span> in the above limit. Combining equations
-<a class="reference internal" href="#equation-pair-probability">(5.19)</a> and
-<a class="reference internal" href="#equation-pair-radial">(5.20)</a> gives:</p>
+<a class="reference internal" href="#equation-pair-probability">(5.25)</a> and
+<a class="reference internal" href="#equation-pair-radial">(5.26)</a> gives:</p>
 <div class="math notranslate nohighlight">
 \[
 g^{(2)}_{ij}(r) = V^2\left(1 - \frac{\delta_{ij}}{N_j}\right)\frac{1}{Z_c (N, V, T)}\int{\ldots}\int{e^{\frac{-U_N}{k_BT}}}\mathrm{d}\mathbf{r}_3\ldots \mathrm{d}\mathbf{r}_N,
@@ -890,16 +1027,17 @@ of particles (among the remaining <span class="math notranslate nohighlight">\(N
 <span class="math notranslate nohighlight">\(\mathrm{d}r\)</span> around the position <span class="math notranslate nohighlight">\(r\)</span>. These particles can then be
 formally counted as:</p>
 <div class="math notranslate nohighlight" id="equation-counting-particles">
-<span class="eqno">(5.21)<a class="headerlink" href="#equation-counting-particles" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.27)<a class="headerlink" href="#equation-counting-particles" title="Permalink to this equation">¶</a></span>\[
 \mathrm{d}n(r) = \left&lt;\sum_{i \neq 0}\delta (r - r_i)\right&gt; \mathrm{d}r
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(\langle\dots\rangle\)</span> denotes the ensemble average, yielding:</p>
 <div class="math notranslate nohighlight" id="equation-ensemble-average-md">
-<span class="eqno">(5.22)<a class="headerlink" href="#equation-ensemble-average-md" title="Permalink to this equation">¶</a></span>\[
+<span class="eqno">(5.28)<a class="headerlink" href="#equation-ensemble-average-md" title="Permalink to this equation">¶</a></span>\[
 g(r) = \frac{1}{\rho}\left&lt;\sum_{i \neq 0}\delta(r - r_i)\right&gt; = V\frac{N-1}{N}\left&lt;\delta(r - r_1)\right&gt;
 \]</div>
 <p>where the second equality requires the equivalence of particles
 <span class="math notranslate nohighlight">\(1,\dots, N - 1\)</span>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -937,7 +1075,7 @@ g(r) = \frac{1}{\rho}\left&lt;\sum_{i \neq 0}\delta(r - r_i)\right&gt; = V\frac{
     <a class='right-next' id="next-link" href="Exercise.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.8. </span>ToyMD</p>
+        <p class="prev-next-title"><span class="section-number">5.2. </span>ToyMD</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
