@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.3. Protein Modelling" href="proteinmodelling.html" />
+    <link rel="next" title="6.2. Protein Modelling" href="proteinmodelling.html" />
     <link rel="prev" title="6. Properties from Molecular Dynamics" href="MDMC_ex6.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -242,17 +242,17 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="proteinmodelling.html">
-     6.3. Protein Modelling
+     6.2. Protein Modelling
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="TRP_Cage_OpenMM_colab.html">
-     6.4. Practical: TRP Cage using OpenMM
+     6.3. Practical: TRP Cage using OpenMM
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="hydrogenbonds.html">
-     6.5. TrpCage Analysis
+     6.4. TrpCage Analysis
     </a>
    </li>
   </ul>
@@ -298,9 +298,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Ex6/theory.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/Ex6/theory.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -334,6 +334,28 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        <a class="jupyterhub-button" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex6/theory.ipynb&branch=main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex6/theory.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -344,72 +366,53 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   6.1. Theory
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solvent-models-in-molecular-dynamics">
+   6.1.1. Solvent Models in Molecular Dynamics
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solvent-models-in-molecular-dynamics">
-     6.1.1. Solvent Models in Molecular Dynamics
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicit-solvent">
+     6.1.1.1. Explicit Solvent
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#explicit-solvent">
-       6.1.1.1. Explicit Solvent
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#implicit-solvent">
-       6.1.1.2. Implicit Solvent
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sasa-solvent-accessible-surface-area-models">
-         6.1.1.2.1. SASA: Solvent-accessible surface area models
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#pb-poisson-boltzmann">
-         6.1.1.2.2. PB: Poisson-Boltzmann
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#gb-the-generalised-born-equation">
-         6.1.1.2.3. GB: The Generalised Born equation
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#properties-from-md">
-     6.1.2. Properties from MD
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implicit-solvent">
+     6.1.1.2. Implicit Solvent
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#rmsd">
-       6.1.2.1. RMSD
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sasa-solvent-accessible-surface-area-models">
+       6.1.1.2.1. SASA: Solvent-accessible surface area models
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pressure-and-the-virial-theorem">
-       6.1.2.2. Pressure and the virial theorem
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pb-poisson-boltzmann">
+       6.1.1.2.2. PB: Poisson-Boltzmann
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gb-the-generalised-born-equation">
+       6.1.1.2.3. GB: The Generalised Born equation
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercises">
-   6.2. Exercises
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-from-md">
+   6.1.2. Properties from MD
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#theory-solvent-models-in-molecular-dynamics">
-     6.2.1. Theory - Solvent Models in Molecular Dynamics
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rmsd">
+     6.1.2.1. RMSD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pressure-and-the-virial-theorem">
+     6.1.2.2. Pressure and the virial theorem
     </a>
    </li>
   </ul>
@@ -434,72 +437,53 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   6.1. Theory
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#solvent-models-in-molecular-dynamics">
+   6.1.1. Solvent Models in Molecular Dynamics
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#solvent-models-in-molecular-dynamics">
-     6.1.1. Solvent Models in Molecular Dynamics
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#explicit-solvent">
+     6.1.1.1. Explicit Solvent
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#explicit-solvent">
-       6.1.1.1. Explicit Solvent
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#implicit-solvent">
-       6.1.1.2. Implicit Solvent
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#sasa-solvent-accessible-surface-area-models">
-         6.1.1.2.1. SASA: Solvent-accessible surface area models
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#pb-poisson-boltzmann">
-         6.1.1.2.2. PB: Poisson-Boltzmann
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#gb-the-generalised-born-equation">
-         6.1.1.2.3. GB: The Generalised Born equation
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#properties-from-md">
-     6.1.2. Properties from MD
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implicit-solvent">
+     6.1.1.2. Implicit Solvent
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#rmsd">
-       6.1.2.1. RMSD
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#sasa-solvent-accessible-surface-area-models">
+       6.1.1.2.1. SASA: Solvent-accessible surface area models
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#pressure-and-the-virial-theorem">
-       6.1.2.2. Pressure and the virial theorem
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#pb-poisson-boltzmann">
+       6.1.1.2.2. PB: Poisson-Boltzmann
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gb-the-generalised-born-equation">
+       6.1.1.2.3. GB: The Generalised Born equation
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exercises">
-   6.2. Exercises
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#properties-from-md">
+   6.1.2. Properties from MD
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#theory-solvent-models-in-molecular-dynamics">
-     6.2.1. Theory - Solvent Models in Molecular Dynamics
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rmsd">
+     6.1.2.1. RMSD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pressure-and-the-virial-theorem">
+     6.1.2.2. Pressure and the virial theorem
     </a>
    </li>
   </ul>
@@ -635,6 +619,10 @@ assumption that the potential is small which yields:</p>
 <p>with <span class="math notranslate nohighlight">\(z_i\)</span> the valence of the ion, <span class="math notranslate nohighlight">\(q\)</span> is the charge of a proton and
 <span class="math notranslate nohighlight">\(\rho_\text{ext}(\mathbf{r})\)</span> is an effective density from solute and
 solvent.</p>
+<div class="exercise admonition" id="bex1">
+<p class="admonition-title">Bonus Exercise 1</p>
+<p>Derive <a class="reference internal" href="#equation-eqpb2">(6.6)</a> from <a class="reference internal" href="#equation-eqpb1">(6.3)</a> by passing via the exponential form of the Poisson-Boltzmann equation <a class="reference internal" href="#equation-conc">(6.5)</a>.    Give an appropriate expression for the equilibrium charge density  <span class="math notranslate nohighlight">\(\rho_\text{ext}(\mathbf{r})\)</span> in the Poisson-Boltzmann approach.</p>
+</div>
 </div>
 <div class="section" id="gb-the-generalised-born-equation">
 <h4><span class="section-number">6.1.1.2.3. </span>GB: The Generalised Born equation<a class="headerlink" href="#gb-the-generalised-born-equation" title="Permalink to this headline">¶</a></h4>
@@ -662,6 +650,23 @@ terms:</p>
  q_i q_j}{\left(r_{ij}^2 +\alpha_i \alpha_j e^{-\frac{r_{ij}^2}{4\alpha_i \alpha_j}} \right)^{\frac{1}{2}} }.
  \end{aligned}
  \]</div>
+<div class="exercise admonition" id="ex1">
+<p class="admonition-title">Exercise 1</p>
+<p>How may the solvent environment (especially in the case of a polar
+solvent, such as dimethylformamide (DMF), and a polar
+hydrogen-bonding solvent, such as water) influence the properties
+(conformation, reactivity) of the solute? Which solvent do you
+expect to be more difficult to mimick by an implicit model, DMF or
+water?</p>
+</div>
+<div class="exercise admonition" id="ex2">
+<p class="admonition-title">Exercise 2</p>
+<p>In the context of the previous questions, explain possible advantages and pitfalls of using an implicit solvent compared to an explicit treatment.</p>
+</div>
+<div class="exercise admonition" id="ex3">
+<p class="admonition-title">Exercise 3</p>
+<p>A protein has the tendency to fold much quicker in implicit than in explicit solvent. Why is this? What are possible issues?</p>
+</div>
 </div>
 </div>
 </div>
@@ -735,38 +740,17 @@ pressure is simply:</p>
 P = \frac{1}{V} \left[Nk_BT - \frac{1}{3k_BT}\sum_{i=1}^N \sum_{j=i+1}^N r_{ij} f_{ij} \right].
 \end{aligned}
 \]</div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="exercises">
-<h1><span class="section-number">6.2. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="theory-solvent-models-in-molecular-dynamics">
-<h2><span class="section-number">6.2.1. </span>Theory - Solvent Models in Molecular Dynamics<a class="headerlink" href="#theory-solvent-models-in-molecular-dynamics" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Derive <a class="reference internal" href="#equation-eqpb2">(6.6)</a> from
-<a class="reference internal" href="#equation-eqpb1">(6.3)</a> by
-passing via the exponential form of the Poisson-Boltzmann equation
-<a class="reference internal" href="#equation-conc">(6.5)</a>.
-Give an appropriate expression for the equilibrium charge density
-<span class="math notranslate nohighlight">\(\rho_\text{ext}(\mathbf{r})\)</span> in the Poisson-Boltzmann approach.</p></li>
-<li><p>How may the solvent environment (especially in the case of a polar
-solvent, such as dimethylformamide (DMF), and a polar
-hydrogen-bonding solvent, such as water) influence the properties
-(conformation, reactivity) of the solute? Which solvent do you
-expect to be more difficult to mimick by an implicit model, DMF or
-water?</p></li>
-<li><p>In the context of the previous questions, explain possible
-advantages and pitfalls of using an implicit solvent compared to an
-explicit treatment.</p></li>
-<li><p><strong>Bonus:</strong> How expensive is the computation of the pressure in
+<div class="exercise admonition" id="bex2">
+<p class="admonition-title">Bonus Exercise 2</p>
+<p>How expensive is the computation of the pressure in
 <a class="reference internal" href="#equation-pressure">(6.13)</a>, via the virial, in an MD and an MC
-algorithm, respectively?</p></li>
-<li><p><strong>Bonus:</strong> Derive the ideal gas part of the virial in
-<a class="reference internal" href="#equation-virial">(6.12)</a>.</p></li>
-<li><p>A protein has the tendency to fold much quicker in
-implicit than in explicit solvent. Why is this? What are possible
-issues?</p></li>
-</ol>
+algorithm, respectively?</p>
+</div>
+<div class="exercise admonition" id="bex3">
+<p class="admonition-title">Bonus Exercise 3</p>
+<p>Derive the ideal gas part of the virial in <a class="reference internal" href="#equation-virial">(6.12)</a>.</p>
+</div>
+</div>
 </div>
 </div>
 
@@ -779,16 +763,16 @@ issues?</p></li>
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "compchem"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "compchem",
             path: "./Ex6"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'compchem'</script>
 
               </div>
               
@@ -805,7 +789,7 @@ issues?</p></li>
     <a class='right-next' id="next-link" href="proteinmodelling.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.3. </span>Protein Modelling</p>
+        <p class="prev-next-title"><span class="section-number">6.2. </span>Protein Modelling</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
