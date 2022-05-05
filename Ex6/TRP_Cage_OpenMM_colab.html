@@ -553,23 +553,21 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>⏬ Downloading https://github.com/jaimergp/miniforge/releases/latest/download/Mambaforge-colab-Linux-x86_64.sh...
-📦 Installing...
-📌 Adjusting configuration...
-🩹 Patching environment...
-⏲ Done in 0:00:33
-🔁 Restarting kernel...
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uncomment on google colab </span>
 
 <span class="c1">#!conda install openmm ambertools=20 &amp;&gt; /dev/null  </span>
+<span class="c1">#!pip install py3Dmol</span>
 <span class="c1"># The last part simply makes the command silent. Remove &amp;&gt; /dev/null  if there are problems</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">py3Dmol</span>
 </pre></div>
 </div>
 </div>
@@ -609,86 +607,9 @@ Calculate the correct number of steps for the simulations to run 50 ps of heatin
 </div>
 </div>
 </div>
-<div class="section" id="looking-at-the-starting-structure">
-<h3><span class="section-number">6.4.2.1. </span>Looking at the starting structure<a class="headerlink" href="#looking-at-the-starting-structure" title="Permalink to this headline">¶</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show starting structure here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="exercise admonition" id="ex2">
-<p class="admonition-title">Exercise 2</p>
-<p>Include an image of the starting structure in your report. Are there any residues which  would contribute to the instability of the starting structure in its current conformation, why?</p>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>tleap -f leap.in
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-I: Adding /usr/local/dat/leap/prep to search path.
--I: Adding /usr/local/dat/leap/lib to search path.
--I: Adding /usr/local/dat/leap/parm to search path.
--I: Adding /usr/local/dat/leap/cmd to search path.
--f: Source leap.in.
-
-Welcome to LEaP!
-(no leaprc in search path)
-Sourcing: ./leap.in
------ Source: /usr/local/dat/leap/cmd/leaprc.protein.ff19SB
------ Source of /usr/local/dat/leap/cmd/leaprc.protein.ff19SB done
-Log file: ./leap.log
-Loading parameters: /usr/local/dat/leap/parm/parm19.dat
-Reading title:
-PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA + ff19SB
-Loading parameters: /usr/local/dat/leap/parm/frcmod.ff19SB
-Reading force field modification type file (frcmod)
-Reading title:
-ff19SB AA-specific backbone CMAPs for protein 07/25/2019
-Loading library: /usr/local/dat/leap/lib/amino19.lib
-Loading library: /usr/local/dat/leap/lib/aminoct12.lib
-Loading library: /usr/local/dat/leap/lib/aminont12.lib
-Using ArgH and AspGluO modified Bondi2 radii
-Writing pdb file: trp_cage_linear.pdb
-
-/usr/local/bin/teLeap: Warning!
- Converting N-terminal residue name to PDB format: NASN -&gt; ASN
-
-/usr/local/bin/teLeap: Warning!
- Converting C-terminal residue name to PDB format: CSER -&gt; SER
-Checking Unit.
-
-/usr/local/bin/teLeap: Warning!
-The unperturbed charge of the unit (1.000000) is not zero.
-
-/usr/local/bin/teLeap: Note.
-Ignoring the warning from Unit Checking.
-
-Building topology.
-Building atom parameters.
-Building bond parameters.
-Building angle parameters.
-Building proper torsion parameters.
-Building improper torsion parameters.
- total 63 improper torsions applied
-Building H-Bond parameters.
-Incorporating Non-Bonded adjustments.
-Not Marking per-residue atom chain types.
-Marking per-residue atom chain types.
-  (Residues lacking connect0/connect1 - 
-   these don&#39;t have chain types marked:
-
-	res	total affected
-
-	CSER	1
-	NASN	1
-  )
- (no restraints)
-
-&gt; ^C
 </pre></div>
 </div>
 </div>
@@ -796,6 +717,66 @@ Next we see terms, that align with the functional form of the AMBER forcefield:<
 <img alt="" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/7c7949ed189c2add713405eb21fe5adcbda09ca0" />
 <img alt="" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/2d244cd7f2e174af73dfc1e4dd0b37083115b690" /></p>
 <p>Again, we can look at the contents of the parameter file <code class="docutils literal notranslate"><span class="pre">!cat</span> <span class="pre">trp_cage.prmtop</span></code> and we see that it does not contain the coordinates anymore in contrast to the pdb file.</p>
+<div class="section" id="looking-at-the-starting-structure">
+<h3><span class="section-number">6.4.2.1. </span>Looking at the starting structure<a class="headerlink" href="#looking-at-the-starting-structure" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># show starting structure here</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;trp_cage_linear.pdb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ifile</span><span class="p">:</span>
+    <span class="n">system</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ifile</span><span class="p">])</span>
+
+<span class="n">view</span> <span class="o">=</span> <span class="n">py3Dmol</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">addModelsAsFrames</span><span class="p">(</span><span class="n">system</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="n">setStyle</span><span class="p">({</span><span class="s1">&#39;model&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;stick&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;spectrum&#39;</span><span class="p">}})</span>
+<span class="n">view</span><span class="o">.</span><span class="n">zoomTo</span><span class="p">()</span>
+<span class="n">view</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div id="3dmolviewer_1651750336480033"  style="position: relative; width: 400px; height: 300px">
+        <p id="3dmolwarning_1651750336480033" style="background-color:#ffcccc;color:black">You appear to be running in JupyterLab (or JavaScript failed to load for some other reason).  You need to install the 3dmol extension: <br>
+        <tt>jupyter labextension install jupyterlab_3dmol</tt></p>
+        </div>
+<script>
+
+var loadScriptAsync = function(uri){
+  return new Promise((resolve, reject) => {
+    var tag = document.createElement('script');
+    tag.src = uri;
+    tag.async = true;
+    tag.onload = () => {
+      resolve();
+    };
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+});
+};
+
+if(typeof $3Dmolpromise === 'undefined') {
+$3Dmolpromise = null;
+  $3Dmolpromise = loadScriptAsync('https://3dmol.org/build/3Dmol.js');
+}
+
+var viewer_1651750336480033 = null;
+var warn = document.getElementById("3dmolwarning_1651750336480033");
+if(warn) {
+    warn.parentNode.removeChild(warn);
+}
+$3Dmolpromise.then(function() {
+viewer_1651750336480033 = $3Dmol.createViewer($("#3dmolviewer_1651750336480033"),{backgroundColor:"white"});
+viewer_1651750336480033.zoomTo();
+	viewer_1651750336480033.addModelsAsFrames("ATOM      1  N   ASN     1       3.326   1.548  -0.000  1.00  0.00\nATOM      2  H1  ASN     1       4.046   0.840  -0.000  1.00  0.00\nATOM      3  H2  ASN     1       2.823   1.500  -0.875  1.00  0.00\nATOM      4  H3  ASN     1       2.823   1.500   0.875  1.00  0.00\nATOM      5  CA  ASN     1       3.970   2.846  -0.000  1.00  0.00\nATOM      6  HA  ASN     1       3.672   3.400  -0.890  1.00  0.00\nATOM      7  CB  ASN     1       3.577   3.654   1.232  1.00  0.00\nATOM      8  HB2 ASN     1       2.497   3.801   1.241  1.00  0.00\nATOM      9  HB3 ASN     1       3.877   3.116   2.131  1.00  0.00\nATOM     10  CG  ASN     1       4.254   5.017   1.232  1.00  0.00\nATOM     11  OD1 ASN     1       5.005   5.340   0.315  1.00  0.00\nATOM     12  ND2 ASN     1       3.985   5.818   2.266  1.00  0.00\nATOM     13 HD21 ASN     1       4.408   6.734   2.315  1.00  0.00\nATOM     14 HD22 ASN     1       3.360   5.504   2.994  1.00  0.00\nATOM     15  C   ASN     1       5.486   2.705  -0.000  1.00  0.00\nATOM     16  O   ASN     1       6.009   1.593  -0.000  1.00  0.00\nATOM     17  N   LEU     2       6.191   3.839  -0.000  1.00  0.00\nATOM     18  H   LEU     2       5.715   4.730  -0.000  1.00  0.00\nATOM     19  CA  LEU     2       7.640   3.839  -0.000  1.00  0.00\nATOM     20  HA  LEU     2       8.004   3.325   0.890  1.00  0.00\nATOM     21  CB  LEU     2       8.189   3.127  -1.232  1.00  0.00\nATOM     22  HB2 LEU     2       7.841   2.094  -1.241  1.00  0.00\nATOM     23  HB3 LEU     2       7.841   3.636  -2.131  1.00  0.00\nATOM     24  CG  LEU     2       9.713   3.149  -1.195  1.00  0.00\nATOM     25  HG  LEU     2      10.062   4.181  -1.186  1.00  0.00\nATOM     26  CD1 LEU     2      10.201   2.437   0.063  1.00  0.00\nATOM     27 HD11 LEU     2       9.853   1.404   0.055  1.00  0.00\nATOM     28 HD12 LEU     2      11.291   2.452   0.090  1.00  0.00\nATOM     29 HD13 LEU     2       9.809   2.945   0.944  1.00  0.00\nATOM     30  CD2 LEU     2      10.262   2.438  -2.427  1.00  0.00\nATOM     31 HD21 LEU     2       9.914   2.946  -3.326  1.00  0.00\nATOM     32 HD22 LEU     2      11.352   2.453  -2.400  1.00  0.00\nATOM     33 HD23 LEU     2       9.914   1.405  -2.436  1.00  0.00\nATOM     34  C   LEU     2       8.188   5.259  -0.000  1.00  0.00\nATOM     35  O   LEU     2       7.425   6.222   0.000  1.00  0.00\nATOM     36  N   TYR     3       9.517   5.386  -0.000  1.00  0.00\nATOM     37  H   TYR     3      10.103   4.564  -0.000  1.00  0.00\nATOM     38  CA  TYR     3      10.161   6.684   0.000  1.00  0.00\nATOM     39  HA  TYR     3       9.863   7.239  -0.890  1.00  0.00\nATOM     40  CB  TYR     3       9.768   7.492   1.232  1.00  0.00\nATOM     41  HB2 TYR     3       8.688   7.640   1.241  1.00  0.00\nATOM     42  HB3 TYR     3      10.068   6.954   2.131  1.00  0.00\nATOM     43  CG  TYR     3      10.458   8.835   1.195  1.00  0.00\nATOM     44  CD1 TYR     3      10.251   9.757   2.227  1.00  0.00\nATOM     45  HD1 TYR     3       9.591   9.507   3.058  1.00  0.00\nATOM     46  CE1 TYR     3      10.891  11.002   2.193  1.00  0.00\nATOM     47  HE1 TYR     3      10.730  11.720   2.997  1.00  0.00\nATOM     48  CZ  TYR     3      11.738  11.324   1.126  1.00  0.00\nATOM     49  OH  TYR     3      12.360  12.533   1.092  1.00  0.00\nATOM     50  HH  TYR     3      12.147  13.086   1.848  1.00  0.00\nATOM     51  CE2 TYR     3      11.946  10.401   0.094  1.00  0.00\nATOM     52  HE2 TYR     3      12.606  10.652  -0.737  1.00  0.00\nATOM     53  CD2 TYR     3      11.306   9.157   0.128  1.00  0.00\nATOM     54  HD2 TYR     3      11.467   8.439  -0.676  1.00  0.00\nATOM     55  C   TYR     3      11.677   6.544  -0.000  1.00  0.00\nATOM     56  O   TYR     3      12.200   5.432  -0.000  1.00  0.00\nATOM     57  N   ILE     4      12.382   7.677  -0.000  1.00  0.00\nATOM     58  H   ILE     4      11.906   8.568   0.000  1.00  0.00\nATOM     59  CA  ILE     4      13.831   7.677  -0.000  1.00  0.00\nATOM     60  HA  ILE     4      14.195   7.163   0.890  1.00  0.00\nATOM     61  CB  ILE     4      14.339   6.958  -1.245  1.00  0.00\nATOM     62  HB  ILE     4      13.976   5.931  -1.246  1.00  0.00\nATOM     63  CG2 ILE     4      13.831   7.677  -2.490  1.00  0.00\nATOM     64 HG21 ILE     4      14.194   8.705  -2.491  1.00  0.00\nATOM     65 HG22 ILE     4      14.194   7.164  -3.381  1.00  0.00\nATOM     66 HG23 ILE     4      12.741   7.677  -2.491  1.00  0.00\nATOM     67  CG1 ILE     4      15.864   6.958  -1.245  1.00  0.00\nATOM     68 HG12 ILE     4      16.228   7.986  -1.245  1.00  0.00\nATOM     69 HG13 ILE     4      16.228   6.445  -0.355  1.00  0.00\nATOM     70  CD1 ILE     4      16.373   6.239  -2.490  1.00  0.00\nATOM     71 HD11 ILE     4      16.010   6.753  -3.381  1.00  0.00\nATOM     72 HD12 ILE     4      17.463   6.239  -2.491  1.00  0.00\nATOM     73 HD13 ILE     4      16.010   5.212  -2.491  1.00  0.00\nATOM     74  C   ILE     4      14.379   9.097  -0.000  1.00  0.00\nATOM     75  O   ILE     4      13.616  10.060   0.000  1.00  0.00\nATOM     76  N   GLN     5      15.708   9.225  -0.000  1.00  0.00\nATOM     77  H   GLN     5      16.294   8.403  -0.000  1.00  0.00\nATOM     78  CA  GLN     5      16.352  10.523   0.000  1.00  0.00\nATOM     79  HA  GLN     5      16.054  11.077  -0.890  1.00  0.00\nATOM     80  CB  GLN     5      15.959  11.331   1.232  1.00  0.00\nATOM     81  HB2 GLN     5      14.879  11.478   1.241  1.00  0.00\nATOM     82  HB3 GLN     5      16.260  10.793   2.131  1.00  0.00\nATOM     83  CG  GLN     5      16.656  12.687   1.195  1.00  0.00\nATOM     84  HG2 GLN     5      17.736  12.540   1.186  1.00  0.00\nATOM     85  HG3 GLN     5      16.356  13.226   0.296  1.00  0.00\nATOM     86  CD  GLN     5      16.289  13.526   2.410  1.00  0.00\nATOM     87  OE1 GLN     5      15.521  13.086   3.263  1.00  0.00\nATOM     88  NE2 GLN     5      16.841  14.739   2.488  1.00  0.00\nATOM     89 HE21 GLN     5      16.630  15.336   3.275  1.00  0.00\nATOM     90 HE22 GLN     5      17.466  15.053   1.760  1.00  0.00\nATOM     91  C   GLN     5      17.868  10.382  -0.000  1.00  0.00\nATOM     92  O   GLN     5      18.391   9.270  -0.000  1.00  0.00\nATOM     93  N   TRP     6      18.573  11.516  -0.000  1.00  0.00\nATOM     94  H   TRP     6      18.097  12.407   0.000  1.00  0.00\nATOM     95  CA  TRP     6      20.022  11.516  -0.000  1.00  0.00\nATOM     96  HA  TRP     6      20.386  11.002   0.890  1.00  0.00\nATOM     97  CB  TRP     6      20.571  10.804  -1.232  1.00  0.00\nATOM     98  HB2 TRP     6      20.223   9.772  -1.241  1.00  0.00\nATOM     99  HB3 TRP     6      20.223  11.313  -2.131  1.00  0.00\nATOM    100  CG  TRP     6      22.078  10.753  -1.321  1.00  0.00\nATOM    101  CD1 TRP     6      22.809  10.192  -2.293  1.00  0.00\nATOM    102  HD1 TRP     6      22.316   9.706  -3.135  1.00  0.00\nATOM    103  NE1 TRP     6      24.183  10.390  -1.950  1.00  0.00\nATOM    104  HE1 TRP     6      24.975  10.076  -2.493  1.00  0.00\nATOM    105  CE2 TRP     6      24.249  11.044  -0.817  1.00  0.00\nATOM    106  CZ2 TRP     6      25.395  11.447  -0.120  1.00  0.00\nATOM    107  HZ2 TRP     6      26.384  11.217  -0.517  1.00  0.00\nATOM    108  CH2 TRP     6      25.175  12.133   1.069  1.00  0.00\nATOM    109  HH2 TRP     6      26.021  12.477   1.664  1.00  0.00\nATOM    110  CZ3 TRP     6      23.922  12.385   1.505  1.00  0.00\nATOM    111  HZ3 TRP     6      23.769  12.924   2.440  1.00  0.00\nATOM    112  CE3 TRP     6      22.783  11.969   0.786  1.00  0.00\nATOM    113  HE3 TRP     6      21.787  12.190   1.168  1.00  0.00\nATOM    114  CD2 TRP     6      23.005  11.278  -0.412  1.00  0.00\nATOM    115  C   TRP     6      20.570  12.936  -0.000  1.00  0.00\nATOM    116  O   TRP     6      19.807  13.899   0.000  1.00  0.00\nATOM    117  N   LEU     7      21.899  13.064  -0.000  1.00  0.00\nATOM    118  H   LEU     7      22.485  12.241  -0.000  1.00  0.00\nATOM    119  CA  LEU     7      22.543  14.362   0.000  1.00  0.00\nATOM    120  HA  LEU     7      22.245  14.916  -0.890  1.00  0.00\nATOM    121  CB  LEU     7      22.150  15.170   1.232  1.00  0.00\nATOM    122  HB2 LEU     7      21.070  15.317   1.241  1.00  0.00\nATOM    123  HB3 LEU     7      22.451  14.632   2.131  1.00  0.00\nATOM    124  CG  LEU     7      22.847  16.525   1.195  1.00  0.00\nATOM    125  HG  LEU     7      23.927  16.379   1.186  1.00  0.00\nATOM    126  CD1 LEU     7      22.426  17.279  -0.063  1.00  0.00\nATOM    127 HD11 LEU     7      21.346  17.426  -0.055  1.00  0.00\nATOM    128 HD12 LEU     7      22.925  18.248  -0.090  1.00  0.00\nATOM    129 HD13 LEU     7      22.707  16.701  -0.944  1.00  0.00\nATOM    130  CD2 LEU     7      22.454  17.333   2.427  1.00  0.00\nATOM    131 HD21 LEU     7      22.755  16.795   3.326  1.00  0.00\nATOM    132 HD22 LEU     7      22.952  18.303   2.400  1.00  0.00\nATOM    133 HD23 LEU     7      21.374  17.481   2.436  1.00  0.00\nATOM    134  C   LEU     7      24.059  14.221  -0.000  1.00  0.00\nATOM    135  O   LEU     7      24.582  13.109  -0.000  1.00  0.00\nATOM    136  N   LYS     8      24.764  15.354  -0.000  1.00  0.00\nATOM    137  H   LYS     8      24.288  16.245   0.000  1.00  0.00\nATOM    138  CA  LYS     8      26.213  15.354  -0.000  1.00  0.00\nATOM    139  HA  LYS     8      26.577  14.841   0.890  1.00  0.00\nATOM    140  CB  LYS     8      26.762  14.643  -1.232  1.00  0.00\nATOM    141  HB2 LYS     8      26.414  13.610  -1.241  1.00  0.00\nATOM    142  HB3 LYS     8      26.414  15.151  -2.131  1.00  0.00\nATOM    143  CG  LYS     8      28.286  14.665  -1.195  1.00  0.00\nATOM    144  HG2 LYS     8      28.635  15.697  -1.186  1.00  0.00\nATOM    145  HG3 LYS     8      28.635  14.156  -0.296  1.00  0.00\nATOM    146  CD  LYS     8      28.835  13.953  -2.427  1.00  0.00\nATOM    147  HD2 LYS     8      28.487  12.920  -2.436  1.00  0.00\nATOM    148  HD3 LYS     8      28.487  14.462  -3.326  1.00  0.00\nATOM    149  CE  LYS     8      30.360  13.975  -2.389  1.00  0.00\nATOM    150  HE2 LYS     8      30.709  15.008  -2.380  1.00  0.00\nATOM    151  HE3 LYS     8      30.709  13.466  -1.491  1.00  0.00\nATOM    152  NZ  LYS     8      30.889  13.289  -3.577  1.00  0.00\nATOM    153  HZ1 LYS     8      30.566  13.761  -4.410  1.00  0.00\nATOM    154  HZ2 LYS     8      31.899  13.304  -3.552  1.00  0.00\nATOM    155  HZ3 LYS     8      30.566  12.332  -3.585  1.00  0.00\nATOM    156  C   LYS     8      26.761  16.774   0.000  1.00  0.00\nATOM    157  O   LYS     8      25.998  17.737   0.000  1.00  0.00\nATOM    158  N   ASP     9      28.090  16.902  -0.000  1.00  0.00\nATOM    159  H   ASP     9      28.676  16.080  -0.000  1.00  0.00\nATOM    160  CA  ASP     9      28.734  18.200   0.000  1.00  0.00\nATOM    161  HA  ASP     9      28.436  18.754  -0.890  1.00  0.00\nATOM    162  CB  ASP     9      28.341  19.008   1.232  1.00  0.00\nATOM    163  HB2 ASP     9      27.261  19.155   1.241  1.00  0.00\nATOM    164  HB3 ASP     9      28.642  18.470   2.131  1.00  0.00\nATOM    165  CG  ASP     9      29.039  20.366   1.195  1.00  0.00\nATOM    166  OD1 ASP     9      28.433  21.309   0.620  1.00  0.00\nATOM    167  OD2 ASP     9      30.172  20.446   1.741  1.00  0.00\nATOM    168  C   ASP     9      30.250  18.060  -0.000  1.00  0.00\nATOM    169  O   ASP     9      30.773  16.948  -0.000  1.00  0.00\nATOM    170  N   GLY    10      30.955  19.193  -0.000  1.00  0.00\nATOM    171  H   GLY    10      30.479  20.084   0.000  1.00  0.00\nATOM    172  CA  GLY    10      32.404  19.193  -0.000  1.00  0.00\nATOM    173  HA2 GLY    10      32.768  18.679   0.890  1.00  0.00\nATOM    174  HA3 GLY    10      32.768  18.679  -0.890  1.00  0.00\nATOM    175  C   GLY    10      32.935  20.619   0.000  1.00  0.00\nATOM    176  O   GLY    10      32.159  21.573   0.000  1.00  0.00\nATOM    177  N   GLY    11      34.262  20.764  -0.000  1.00  0.00\nATOM    178  H   GLY    11      34.858  19.949  -0.000  1.00  0.00\nATOM    179  CA  GLY    11      34.890  22.069   0.000  1.00  0.00\nATOM    180  HA2 GLY    11      34.585  22.620  -0.890  1.00  0.00\nATOM    181  HA3 GLY    11      34.585  22.620   0.890  1.00  0.00\nATOM    182  C   GLY    11      36.406  21.929  -0.000  1.00  0.00\nATOM    183  O   GLY    11      36.929  20.817  -0.000  1.00  0.00\nATOM    184  N   PRO    12      37.111  23.062  -0.000  1.00  0.00\nATOM    185  CD  PRO    12      36.467  24.370   0.000  1.00  0.00\nATOM    186  HD2 PRO    12      36.160  24.625   1.014  1.00  0.00\nATOM    187  HD3 PRO    12      35.592  24.345  -0.649  1.00  0.00\nATOM    188  CG  PRO    12      37.540  25.280  -0.522  1.00  0.00\nATOM    189  HG2 PRO    12      37.496  26.226   0.016  1.00  0.00\nATOM    190  HG3 PRO    12      37.390  25.460  -1.586  1.00  0.00\nATOM    191  CB  PRO    12      38.847  24.566  -0.276  1.00  0.00\nATOM    192  HB2 PRO    12      39.344  25.013   0.586  1.00  0.00\nATOM    193  HB3 PRO    12      39.484  24.668  -1.155  1.00  0.00\nATOM    194  CA  PRO    12      38.562  23.062  -0.000  1.00  0.00\nATOM    195  HA  PRO    12      38.960  22.567  -0.886  1.00  0.00\nATOM    196  C   PRO    12      39.109  22.384   1.248  1.00  0.00\nATOM    197  O   PRO    12      38.346  21.870   2.064  1.00  0.00\nATOM    198  N   SER    13      40.435  22.384   1.396  1.00  0.00\nATOM    199  H   SER    13      41.021  22.820   0.698  1.00  0.00\nATOM    200  CA  SER    13      41.078  21.772   2.541  1.00  0.00\nATOM    201  HA  SER    13      40.731  22.254   3.455  1.00  0.00\nATOM    202  CB  SER    13      40.753  20.284   2.622  1.00  0.00\nATOM    203  HB2 SER    13      39.676  20.151   2.716  1.00  0.00\nATOM    204  HB3 SER    13      41.103  19.785   1.718  1.00  0.00\nATOM    205  OG  SER    13      41.404  19.715   3.762  1.00  0.00\nATOM    206  HG  SER    13      41.199  18.779   3.813  1.00  0.00\nATOM    207  C   SER    13      42.591  21.914   2.461  1.00  0.00\nATOM    208  O   SER    13      43.114  22.490   1.510  1.00  0.00\nATOM    209  N   SER    14      43.295  21.386   3.465  1.00  0.00\nATOM    210  H   SER    14      42.820  20.921   4.226  1.00  0.00\nATOM    211  CA  SER    14      44.742  21.455   3.505  1.00  0.00\nATOM    212  HA  SER    14      45.155  20.955   2.629  1.00  0.00\nATOM    213  CB  SER    14      45.223  22.902   3.512  1.00  0.00\nATOM    214  HB2 SER    14      44.875  23.405   2.610  1.00  0.00\nATOM    215  HB3 SER    14      44.825  23.413   4.389  1.00  0.00\nATOM    216  OG  SER    14      46.652  22.930   3.552  1.00  0.00\nATOM    217  HG  SER    14      46.954  23.841   3.557  1.00  0.00\nATOM    218  C   SER    14      45.289  20.777   4.753  1.00  0.00\nATOM    219  O   SER    14      44.526  20.263   5.569  1.00  0.00\nATOM    220  N   GLY    15      46.616  20.777   4.901  1.00  0.00\nATOM    221  H   GLY    15      47.201  21.213   4.203  1.00  0.00\nATOM    222  CA  GLY    15      47.258  20.164   6.046  1.00  0.00\nATOM    223  HA2 GLY    15      46.911  20.647   6.960  1.00  0.00\nATOM    224  HA3 GLY    15      47.009  19.104   6.079  1.00  0.00\nATOM    225  C   GLY    15      48.770  20.316   5.950  1.00  0.00\nATOM    226  O   GLY    15      49.279  20.894   4.993  1.00  0.00\nATOM    227  N   ARG    16      49.488  19.792   6.947  1.00  0.00\nATOM    228  H   ARG    16      49.023  19.326   7.713  1.00  0.00\nATOM    229  CA  ARG    16      50.934  19.870   6.972  1.00  0.00\nATOM    230  HA  ARG    16      51.341  19.373   6.091  1.00  0.00\nATOM    231  CB  ARG    16      51.406  21.321   6.973  1.00  0.00\nATOM    232  HB2 ARG    16      51.045  21.821   6.074  1.00  0.00\nATOM    233  HB3 ARG    16      51.015  21.830   7.853  1.00  0.00\nATOM    234  CG  ARG    16      52.930  21.359   6.999  1.00  0.00\nATOM    235  HG2 ARG    16      53.291  20.859   7.898  1.00  0.00\nATOM    236  HG3 ARG    16      53.322  20.851   6.118  1.00  0.00\nATOM    237  CD  ARG    16      53.402  22.809   7.000  1.00  0.00\nATOM    238  HD2 ARG    16      53.041  23.310   6.102  1.00  0.00\nATOM    239  HD3 ARG    16      53.011  23.319   7.881  1.00  0.00\nATOM    240  NE  ARG    16      54.880  22.886   7.025  1.00  0.00\nATOM    241  HE  ARG    16      55.407  22.025   7.039  1.00  0.00\nATOM    242  CZ  ARG    16      55.545  24.038   7.031  1.00  0.00\nATOM    243  NH1 ARG    16      54.921  25.213   7.015  1.00  0.00\nATOM    244 HH11 ARG    16      53.912  25.245   6.997  1.00  0.00\nATOM    245 HH12 ARG    16      55.460  26.067   7.020  1.00  0.00\nATOM    246  NH2 ARG    16      56.874  23.991   7.055  1.00  0.00\nATOM    247 HH21 ARG    16      57.345  23.098   7.067  1.00  0.00\nATOM    248 HH22 ARG    16      57.406  24.850   7.060  1.00  0.00\nATOM    249  C   ARG    16      51.498  19.197   8.214  1.00  0.00\nATOM    250  O   ARG    16      50.747  18.679   9.038  1.00  0.00\nATOM    251  N   PRO    17      52.826  19.205   8.348  1.00  0.00\nATOM    252  CD  PRO    17      53.697  19.826   7.357  1.00  0.00\nATOM    253  HD2 PRO    17      53.727  20.903   7.523  1.00  0.00\nATOM    254  HD3 PRO    17      53.312  19.624   6.358  1.00  0.00\nATOM    255  CG  PRO    17      55.022  19.167   7.604  1.00  0.00\nATOM    256  HG2 PRO    17      55.813  19.907   7.485  1.00  0.00\nATOM    257  HG3 PRO    17      55.173  18.356   6.892  1.00  0.00\nATOM    258  CB  PRO    17      54.967  18.641   9.018  1.00  0.00\nATOM    259  HB2 PRO    17      55.543  19.299   9.669  1.00  0.00\nATOM    260  HB3 PRO    17      55.396  17.639   9.045  1.00  0.00\nATOM    261  CA  PRO    17      53.486  18.596   9.488  1.00  0.00\nATOM    262  HA  PRO    17      53.275  17.528   9.547  1.00  0.00\nATOM    263  C   PRO    17      53.063  19.268  10.787  1.00  0.00\nATOM    264  O   PRO    17      52.214  20.157  10.782  1.00  0.00\nATOM    265  N   PRO    18      53.658  18.839  11.903  1.00  0.00\nATOM    266  CD  PRO    18      54.662  17.782  11.884  1.00  0.00\nATOM    267  HD2 PRO    18      55.626  18.202  11.595  1.00  0.00\nATOM    268  HD3 PRO    18      54.370  17.016  11.166  1.00  0.00\nATOM    269  CG  PRO    18      54.654  17.276  13.296  1.00  0.00\nATOM    270  HG2 PRO    18      55.676  17.043  13.595  1.00  0.00\nATOM    271  HG3 PRO    18      54.041  16.378  13.366  1.00  0.00\nATOM    272  CB  PRO    18      54.074  18.391  14.134  1.00  0.00\nATOM    273  HB2 PRO    18      54.880  18.896  14.666  1.00  0.00\nATOM    274  HB3 PRO    18      53.372  17.970  14.854  1.00  0.00\nATOM    275  CA  PRO    18      53.342  19.399  13.204  1.00  0.00\nATOM    276  HA  PRO    18      52.291  19.252  13.456  1.00  0.00\nATOM    277  C   PRO    18      53.672  20.884  13.255  1.00  0.00\nATOM    278  O   PRO    18      54.085  21.466  12.254  1.00  0.00\nATOM    279  N   PRO    19      53.489  21.497  14.427  1.00  0.00\nATOM    280  CD  PRO    19      52.998  20.785  15.600  1.00  0.00\nATOM    281  HD2 PRO    19      53.822  20.247  16.071  1.00  0.00\nATOM    282  HD3 PRO    19      52.227  20.075  15.300  1.00  0.00\nATOM    283  CG  PRO    19      52.458  21.884  16.467  1.00  0.00\nATOM    284  HG2 PRO    19      52.690  21.662  17.508  1.00  0.00\nATOM    285  HG3 PRO    19      51.378  21.958  16.344  1.00  0.00\nATOM    286  CB  PRO    19      53.141  23.150  16.007  1.00  0.00\nATOM    287  HB2 PRO    19      53.921  23.416  16.721  1.00  0.00\nATOM    288  HB3 PRO    19      52.408  23.954  15.954  1.00  0.00\nATOM    289  CA  PRO    19      53.768  22.910  14.604  1.00  0.00\nATOM    290  HA  PRO    19      53.150  23.523  13.948  1.00  0.00\nATOM    291  C   PRO    19      55.237  23.214  14.348  1.00  0.00\nATOM    292  O   PRO    19      56.002  22.327  13.975  1.00  0.00\nATOM    293  N   SER    20      55.631  24.473  14.549  1.00  0.00\nATOM    294  H   SER    20      54.965  25.168  14.856  1.00  0.00\nATOM    295  CA  SER    20      57.003  24.889  14.340  1.00  0.00\nATOM    296  HA  SER    20      57.660  24.320  14.998  1.00  0.00\nATOM    297  CB  SER    20      57.434  24.652  12.897  1.00  0.00\nATOM    298  HB2 SER    20      57.352  23.591  12.662  1.00  0.00\nATOM    299  HB3 SER    20      56.791  25.223  12.226  1.00  0.00\nATOM    300  OG  SER    20      58.790  25.074  12.729  1.00  0.00\nATOM    301  HG  SER    20      59.062  24.925  11.821  1.00  0.00\nATOM    302  C   SER    20      57.178  26.371  14.641  1.00  0.00\nATOM    303  O   SER    20      56.222  27.050  15.008  1.00  0.00\nATOM    304  OXT SER    20      58.278  26.906  14.519  1.00  0.00\nTER   \nEND   \n");
+	viewer_1651750336480033.setStyle({"model": -1},{"stick": {"color": "spectrum"}});
+	viewer_1651750336480033.zoomTo();
+viewer_1651750336480033.render();
+});
+</script></div></div>
+</div>
+<div class="exercise admonition" id="ex2">
+<p class="admonition-title">Exercise 2</p>
+<p>Include an image of the starting structure in your report. Are there any residues which  would contribute to the instability of the starting structure in its current conformation, why?</p>
+</div>
 </div>
 </div>
 <div class="section" id="simulating-the-system">
@@ -811,10 +792,10 @@ Next we see terms, that align with the functional form of the AMBER forcefield:<
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenMM Imports</span>
 <span class="kn">import</span> <span class="nn">simtk.openmm</span> <span class="k">as</span> <span class="nn">mm</span>
 <span class="kn">import</span> <span class="nn">simtk.openmm.app</span> <span class="k">as</span> <span class="nn">app</span>
-
+<span class="kn">from</span> <span class="nn">simtk.openmm.app.dcdreporter</span> <span class="kn">import</span> <span class="n">DCDReporter</span>
 <span class="c1"># ParmEd Imports</span>
 <span class="kn">from</span> <span class="nn">parmed</span> <span class="kn">import</span> <span class="n">load_file</span><span class="p">,</span> <span class="n">unit</span> <span class="k">as</span> <span class="n">u</span>
-<span class="kn">from</span> <span class="nn">parmed.openmm</span> <span class="kn">import</span> <span class="n">StateDataReporter</span><span class="p">,</span> <span class="n">DCDReporter</span>
+<span class="kn">from</span> <span class="nn">parmed.openmm</span> <span class="kn">import</span> <span class="n">StateDataReporter</span>
 
 <span class="c1"># System modules</span>
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -933,12 +914,6 @@ This particular invocation will perform at most 500 iterations.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Minimizing energy
--3093.022096958216 kJ/mol
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="heating-phase">
@@ -956,7 +931,7 @@ Amber NetCDF format.</p>
 <span class="n">sim</span><span class="o">.</span><span class="n">reporters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">StateDataReporter</span><span class="p">(</span><span class="s1">&#39;heating.csv&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">potentialEnergy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="n">kineticEnergy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
  <span class="p">)</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">reporters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-         <span class="n">DCDReporter</span><span class="p">(</span><span class="s1">&#39;trp_cage_heating.dcd&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="n">crds</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+         <span class="n">DCDReporter</span><span class="p">(</span><span class="s1">&#39;trp_cage_heating.dcd&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 <span class="p">)</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
@@ -965,11 +940,6 @@ Amber NetCDF format.</p>
 
 <span class="n">state</span> <span class="o">=</span> <span class="n">sim</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">getState</span><span class="p">(</span><span class="n">getPositions</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">minimized_and_heated</span><span class="o">=</span><span class="n">state</span><span class="o">.</span><span class="n">getPositions</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Heating phase
 </pre></div>
 </div>
 </div>
@@ -999,8 +969,6 @@ Amber NetCDF format.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/TRP_Cage_OpenMM_colab_30_0.svg" src="../_images/TRP_Cage_OpenMM_colab_30_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1014,8 +982,6 @@ Amber NetCDF format.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/TRP_Cage_OpenMM_colab_31_0.svg" src="../_images/TRP_Cage_OpenMM_colab_31_0.svg" /></div>
 </div>
 </div>
 </div>
@@ -1048,17 +1014,12 @@ Amber NetCDF format.</p>
                                <span class="n">kineticEnergy</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">temperature</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="p">)</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">reporters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
-        <span class="n">DCDReporter</span><span class="p">(</span><span class="s1">&#39;trp_cage_gb.dcd&#39;</span><span class="p">,</span> <span class="mi">50000</span><span class="p">,</span> <span class="n">crds</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">DCDReporter</span><span class="p">(</span><span class="s1">&#39;trp_cage_gb.dcd&#39;</span><span class="p">,</span> <span class="mi">50000</span><span class="p">)</span>
 <span class="p">)</span>
 
 <span class="c1"># Run dynamics</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Running dynamics&#39;</span><span class="p">)</span>
 <span class="n">sim</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># change this to run 20 ns of simulation</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running dynamics
 </pre></div>
 </div>
 </div>
@@ -1081,19 +1042,11 @@ Amber NetCDF format.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/TRP_Cage_OpenMM_colab_35_0.svg" src="../_images/TRP_Cage_OpenMM_colab_35_0.svg" /></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Average temperature&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">])</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> +- </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Temperature (K)&#39;</span><span class="p">])</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> &quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average temperature
-83.891 +- 55.240 
 </pre></div>
 </div>
 </div>
@@ -1110,8 +1063,6 @@ Amber NetCDF format.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/TRP_Cage_OpenMM_colab_37_0.svg" src="../_images/TRP_Cage_OpenMM_colab_37_0.svg" /></div>
 </div>
 </div>
 <div class="section" id="save-trajectory-for-later-processing">
@@ -1126,14 +1077,7 @@ Amber NetCDF format.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Upload</span>
-<span class="n">response</span> <span class="o">=</span> <span class="o">!</span>curl -F <span class="s2">&quot;file=@archive.zip&quot;</span> https://file.io
-
-<span class="k">try</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;use this code on noto in the analysis notebook: &quot;</span><span class="p">,</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="mi">6</span><span class="p">])[</span><span class="s1">&#39;key&#39;</span><span class="p">])</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Something went wrong, check the name of the file and check the response&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>curl --upload-file archive.zip https://transfer.sh
 </pre></div>
 </div>
 </div>
