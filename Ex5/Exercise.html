@@ -769,6 +769,29 @@ For this, you need to rename the <code class="docutils literal notranslate"><spa
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code for plotting the instantaneous temperatures for several runs using different $\tau$ values.</span>
+
+<span class="c1"># Read temperatures</span>
+<span class="n">temps_tau_50</span> <span class="o">=</span> <span class="n">read_temperatures</span><span class="p">(</span><span class="n">logfile_path</span> <span class="o">=</span> <span class="s1">&#39;./ToyMD/carbon-dioxide/logfile_tau_50_dt_0.001&#39;</span><span class="p">)</span> <span class="c1"># modify logfile_path with the path to your files!</span>
+<span class="n">temps_tau_0p05</span> <span class="o">=</span> <span class="n">read_temperatures</span><span class="p">(</span><span class="n">logfile_path</span> <span class="o">=</span> <span class="s1">&#39;./ToyMD/carbon-dioxide/logfile_tau_0.05_dt_0.001&#39;</span><span class="p">)</span> <span class="c1"># modify logfile_path</span>
+<span class="n">temps_tau_0p001</span> <span class="o">=</span> <span class="n">read_temperatures</span><span class="p">(</span><span class="n">logfile_path</span> <span class="o">=</span> <span class="s1">&#39;./ToyMD/carbon-dioxide/logfile_tau_0.001_dt_0.001&#39;</span><span class="p">)</span> <span class="c1"># modify logfile_path</span>
+ 
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps_tau_50</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau$ = 50&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps_tau_0p05</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\tau$ = 0.05&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps_tau_0p001</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\tau$ = 0.001&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Timestep&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;T (K)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Temperature variation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
