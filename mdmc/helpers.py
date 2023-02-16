@@ -105,13 +105,14 @@ def show_trajectory(structures):
         play = ipywidgets.Play(
             value=0,
             min=0,
-            max=n_frames,
+            max=n_frames-1,
             step=1,
             description="Press play",
             disabled=False,
             show_repeat=False
         )
-        slider = ipywidgets.IntSlider()
+        slider = ipywidgets.IntSlider(min=0,
+            max=n_frames-1)
         ipywidgets.jslink((play, 'value'), (slider, 'value'))
         ui = ipywidgets.HBox([play, slider])
 
