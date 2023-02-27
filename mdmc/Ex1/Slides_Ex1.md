@@ -43,7 +43,7 @@ The following resources will be used to access and complete the exercises (more 
     - Turn in reports
     - Ask questions on the forum
 - [Exercise website: **https://lcbc-epfl.github.io/mdmc-public/**](https://lcbc-epfl.github.io/mdmc-public/intro.html)
-    - Access juptyer notebooks on Noto
+    - Access jupyter notebooks on Noto
     - Access to public github repository to raise issues for fixes/improvements to the exercises
     - Read theory and questions
 - [Noto](https://noto.epfl.ch/)
