@@ -49,32 +49,32 @@ Simulations tutorial provided by the University of Amsterdam.
 
 ## Practical information
 
-### Time Table Spring Semester 2022
-The course will be **Tue 11:15-1:00pm** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118) (Access via the tower that goes up where the computer room is), Exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
+### Time Table Spring Semester 2023
+The course will be **Tue 11h15-13h00** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118). You can access this room via the elevator tower just outside the exercise room. Exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
 
 
 | date            | type     | description                                               |            |
 |-----------------|----------|-----------------------------------------------------------|------------|
-| 22.2. Tue       | course   | intro & Chapter 1 (From QM to MM)                         | UR         |
-| 1.3. Tue        | course   | Chapter 2 (Statistical Mechanics)                         | UR         |
-| 8.3. Tue        | exercise | Monte Carlo                                               | assistants |
-| 15.3. Tue       | course   | Chapter 3 (Monte Carlo Simulations)                       | UR         |
-| 22.3. Tue       | exercise | Harmonic oscillator                                       | assistants |
-| 29.3. Tue       | course   | Chapter 4 (MD Simulations 1)                              | UR         |
-| 5.4. Tue        | exercise | Lennard Jones gas Monte Carlo                             | assistants |
-| 12.4. Tue       | course   | Chapter 5 (MD Simulations 2)                              | UR         |
-| 19.4. Tue       |          | Easter break                                              |            |
-| 26.4. Tue       | exercise | Molecular Dynamics 1                                      | assistants |
-| 3.5. Tue        | exercise | Molecular Dynamics 2                                      | assistants |
-| 10.5. Tue       | exercise | Protein folding                                           | assistants |
-| 17.5. Tue       |          | Oral Exam                                                 |            |
-| 24.5. Tue       |          | Oral Exam                                                 |            |
-| 31.5. Tue       |          | Oral Exam                                                 |            |
+| 21.2. Tue       |  course  | Intro & Chapter 1 (From QM to MM)                         |     UR     |
+| 28.2. Tue       | exercise | Monte Carlo - Estimating Pi                               | assistants |
+| 07.3. Tue       |  course  | Chapter 2 (Statistical Mechanics)                         |     UR     |
+| 14.3. Tue       | exercise | Harmonic Oscillator                                       | assistants |
+| 21.3. Tue       |  course  | Chapter 3 (Monte Carlo Simulations)                       |     UR     |
+| 28.3. Tue       | exercise | Lennard Jones gas Monte Carlo                             | assistants |
+| 04.4. Tue       |  course  | Chapter 4 (MD Simulations 1)                              |     UR     |
+| 11.4. Tue       |          | EasterBreak                                               |            |
+| 18.4. Tue       |  course  | Chapter 5 (MD Simulations 2)                              |     UR     |
+| 25.4. Tue       | exercise | Molecular Dynamics 1                                      | assistants |
+| 02.5. Tue       |  course  | Addditional MD Lecture                                    |     UR     |
+| 09.5. Tue       | exercise | Molecular Dynamics 2                                      | assistants |
+| 16.5. Tue       | exercise | Protein folding                                           | assistants |
+| 23.5. Tue       |  course  | Q&A Session                                               | assistants |
+| 30.5. Tue       |   exam   | Written Exam                                              |            |
 
 ### Grading and attendance 
 
 Please note that your attendance to the exercises is *mandatory*, during
-the entire 2 hours of the sessions. All the exercises can be finished
+your 1:1 interview (see below) and strongly encouraged otherwise. All the exercises can be finished
 within these 2 hours, and the assistants will be with you to answer any
 questions that you may have. Every set of excercises will be accompanied
 by a written report.
