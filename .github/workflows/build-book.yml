@@ -25,7 +25,7 @@ jobs:
         pip install -r requirements.txt
     - name: convert md to slides
       run: |
-        docker run -v $(pwd):/data --user $(id -u):$(id -g) pandoc/latex:2.9 sh -c 'while read f; do pandoc -t beamer /data/mdmc/Exercises/"$f" -H /data/.publish/template.tex -o "/data/mdmc/Exercises/${f%}.pdf"; done< mdmc/slides.txt'
+        docker run -v $(pwd):/data --user $(id -u):$(id -g) pandoc/latex:2.9 sh -c 'while read f; do pandoc -t beamer /data/mdmc/"$f" -H /data/.publish/template.tex -o "/data/mdmc/${f%}.pdf"; done< mdmc/slides.txt'
 
     # Build the book
     - name: Build the book
@@ -33,7 +33,7 @@ jobs:
         jupyter-book build mdmc
     - name: Move slides to publish dir
       run: | 
-        while read f; do mv "./mdmc/Exercises/${f%}.pdf" "./mdmc/_build/html/Exercises/${f%}.pdf"; done< ./mdmc/slides.txt
+        while read f; do mv "./mdmc/${f%}.pdf" "./mdmc/_build/html/${f%}.pdf"; done< ./mdmc/slides.txt
     - name: Copy pdb files
       run: |
           cp mdmc/Ex6/*.pdb mdmc/_build/html/Ex6/
