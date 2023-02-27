@@ -85,9 +85,10 @@ Today we'll be building a tool to estimate the value of $\pi$ through a random s
 
 # Questions ?
 
-Questions outside on the exercises (or the theory) outside exercise hours or problems with the reports? You can always contact us  
+Questions on the exercises (or the theory) outside exercise hours or problems with the reports? You can always contact us  
 
 - [**Moodle Forum**](https://moodle.epfl.ch/mod/forum/view.php?id=1193419), preferred way of communication since everyone can see the questions (and answer!)
 - Email us, always better to include multiple of us to get an answer faster (at least always include Andrea and Sophie)
     - andrea.levy@epfl.ch
     - sophia.johnson@epfl.ch
+- At least one of us will always try to be present during lectures, feel free to ask us questions before/after the lecture or during the break!
