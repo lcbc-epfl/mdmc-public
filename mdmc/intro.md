@@ -50,7 +50,7 @@ Simulations tutorial provided by the University of Amsterdam.
 ## Practical information
 
 ### Time Table Spring Semester 2023
-The course will be **Tue 11h15-13h00** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118) (Access via the tower that goes up where the computer room is), Exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
+The course will be **Tue 11h15-13h00** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118). You can access this room via the elevator tower just outside the exercise room. Exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
 
 
 | date            | type     | description                                               |            |
