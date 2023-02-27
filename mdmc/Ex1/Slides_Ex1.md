@@ -30,6 +30,7 @@ output: beamer_presentation
 # Resource Platforms
 
 The following resources will be used to access and complete the exercises (more details later):
+
 - [Moodle page](https://moodle.epfl.ch/course/view.php?id=10441)
     - Access exercise notebook
     - Turn in reports
@@ -84,8 +85,9 @@ Today we'll be building a tool to estimate the value of $\pi$ through a random s
 
 # Questions ?
 
-Questions outside on the exercises (or the theory) outside exercise hours? You can always contact us via 
-- [**Moodle Forum**](https://moodle.epfl.ch/mod/forum/view.php?id=1193419), prefered way of communication since everyone can see the answers (and start a conversation!)
-- email us, always better to include multiple of us to get an answer faster (at least always include Andrea and Sophie)
+Questions outside on the exercises (or the theory) outside exercise hours or problems with the reports? You can always contact us  
+
+- [**Moodle Forum**](https://moodle.epfl.ch/mod/forum/view.php?id=1193419), preferred way of communication since everyone can see the questions (and answer!)
+- Email us, always better to include multiple of us to get an answer faster (at least always include Andrea and Sophie)
     - andrea.levy@epfl.ch
     - sophia.johnson@epfl.ch
