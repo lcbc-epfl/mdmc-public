@@ -2,15 +2,81 @@
 title: Exercise Session 1
 subtitle: MDMC Spring 2023
 date: February 28, 2023
-author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy" 
+author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
 output: beamer_presentation
 ---
 
-# Exercise 1 
-![]() 
-# Exercise 1 
-* 
-# Exercise 1
+# Exercise General Information
+- Practical exercises every other week in BCH 1113
+    - 2 hours to work on your own and with support from TAs
+- Report Submission
+    - `pdf` document answering the questions and relevant output
+    - Due date is usually the next exercise session (check Moodle!) 
+    - Detailed feedback via Moodle after the interview
+        - No grade
+        - Overall comment and detailed correction of the exercises
+- Interviews during next exercise session are about 10-15 minutes
+    - Test your understanding of the exercise
+    - Good occasion to discuss your doubts and questions
+    - We will release the schedule ahead of the session so you know when and with whom you will interview
 
-# Exercise 1 - Tips
+**Exercises contribute to 1/2 of final grade! We count 5 out of the 6 exercises for your exercise grade.**
+
+# Exercise structure
+## Introduction
+- Learning goals
+- Chapter in script
+- Resources
+
+## Theory section
+- Useful theory for the exercise
+- Theoretical exercises
+
+## Practical exercises
+- "Coding" exercises
+- Interpretation of results
+
+# Resource Platforms
+The following resources will be used to access and complete the exercises (more details later):
+- [Moodle page](https://moodle.epfl.ch/course/view.php?id=10441)
+    - Access exercise notebook
+    - Turn in reports
+    - Ask questions on the forum
+- [Exercise website: **https://lcbc-epfl.github.io/mdmc-public/**](https://lcbc-epfl.github.io/mdmc-public/intro.html)
+    - Access juptyer notebooks on Noto
+    - Access to public github repository to raise issues for fixes/improvements to the exercises
+    - Read theory and questions
+- [Noto](https://noto.epfl.ch/)
+    - Run and edit code blocks
+    - Please note, for the most recent updates to the exercises you must access noto from the exercise website directly
+
+# Computer environment
+- We will use a virtual environment that you can directly launch from the [exercise website](https://lcbc-epfl.github.io/mdmc-public/intro.html)
+- Click the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/) **Make sure to access noto this way each time you begin the exercise to ensure you have the latest version!**
+		![](/data/mdmc/img_slides/Ex1/notebooks.png)
+- On [noto.epfl.ch](https://noto.epfl.ch/) your work will be saved on your EPFL storage
+- Make sure to always activate (top right) the `Computational Chemistry` kernel
+		![](/data/mdmc/img_slides/Ex1/kernel.png)
+
+# Jupyter notebooks
+- `.iynb` files organized in cells
+	- Markdown (text)
+	- Code 
+
+- Run a code cell by pressing `Play` button (or `Ctrl`+`Enter`)
+![](/data/mdmc/img_slides/Ex1/jn_1.png) \
+
+# Jupyter notebooks
+- `.iynb` files organized in cells
+	- Markdown (text)
+	- Code 
+
+- Run a code cell by pressing :arrow_forward: (or `Ctrl`+`Enter`)
+![](/data/mdmc/img_slides/Ex1/jn_2.png) \
+
+# Exercise 1 - Intro & Tips
+Today we'll be building a tool to estimate the value of pi through a random sampling method (akin to Monte Carlo methods). The focus of the exercise is to get a better sense of how we can implement random sampling for numerical integration.
+
 **Tips!**
+- There is a small portion linking quantum ideas to classical mechanics. Please let us know if you need additional support regarding the notation/formalisms here.
+- Places where you need to modify the code blocks should be noted with comments in the code "## Begin code to modify ##"
