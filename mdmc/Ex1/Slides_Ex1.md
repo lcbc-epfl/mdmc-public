@@ -55,6 +55,7 @@ The following resources will be used to access and complete the exercises (more 
 - On [noto.epfl.ch](https://noto.epfl.ch/) your work will be saved on your EPFL storage
 - Make sure to always activate (top right) the `Computational Chemistry` kernel
 		![](/data/mdmc/img_slides/Ex1/kernel.png)
+- Please activate 3rd party permission on your EPFL Google Account using [go.epfl.ch/GoogleColabPermissions](https://go.epfl.ch/GoogleColabPermissions)
 
 # Jupyter notebooks
 
