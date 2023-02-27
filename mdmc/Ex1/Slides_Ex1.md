@@ -20,23 +20,15 @@ output: beamer_presentation
     - Good occasion to discuss your doubts and questions
     - We will release the schedule ahead of the session so you know when and with whom you will interview
 
-**Exercises contribute to 1/2 of final grade! We count 5 out of the 6 exercises for your exercise grade.**
+**Exercises contribute to 1/2 of final grade! We count the best 5 out of the 6 reports for your exercise grade.**
 
 # Exercise structure
-## Introduction
-- Learning goals
-- Chapter in script
-- Resources
 
-## Theory section
-- Useful theory for the exercise
-- Theoretical exercises
+![](/data/mdmc/img_slides/Ex1/learning_goals.png) \
 
-## Practical exercises
-- "Coding" exercises
-- Interpretation of results
 
 # Resource Platforms
+
 The following resources will be used to access and complete the exercises (more details later):
 - [Moodle page](https://moodle.epfl.ch/course/view.php?id=10441)
     - Access exercise notebook
@@ -51,14 +43,20 @@ The following resources will be used to access and complete the exercises (more 
     - Please note, for the most recent updates to the exercises you must access noto from the exercise website directly
 
 # Computer environment
+
 - We will use a virtual environment that you can directly launch from the [exercise website](https://lcbc-epfl.github.io/mdmc-public/intro.html)
-- Click the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/) **Make sure to access noto this way each time you begin the exercise to ensure you have the latest version!**
+- Click the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/) 
+- **Make sure to access noto this way each time you begin the exercise to ensure you have the latest version!**
 		![](/data/mdmc/img_slides/Ex1/notebooks.png)
+
+# Computer environment
+
 - On [noto.epfl.ch](https://noto.epfl.ch/) your work will be saved on your EPFL storage
 - Make sure to always activate (top right) the `Computational Chemistry` kernel
 		![](/data/mdmc/img_slides/Ex1/kernel.png)
 
 # Jupyter notebooks
+
 - `.iynb` files organized in cells
 	- Markdown (text)
 	- Code 
@@ -75,8 +73,19 @@ The following resources will be used to access and complete the exercises (more 
 ![](/data/mdmc/img_slides/Ex1/jn_2.png) \
 
 # Exercise 1 - Intro & Tips
-Today we'll be building a tool to estimate the value of pi through a random sampling method (akin to Monte Carlo methods). The focus of the exercise is to get a better sense of how we can implement random sampling for numerical integration.
+
+Today we'll be building a tool to estimate the value of $\pi$ through a random sampling method (akin to Monte Carlo methods). The focus of the exercise is to get a better sense of how we can implement random sampling for numerical integration.
 
 **Tips!**
+
 - There is a small portion linking quantum ideas to classical mechanics. Please let us know if you need additional support regarding the notation/formalisms here.
-- Places where you need to modify the code blocks should be noted with comments in the code "## Begin code to modify ##"
+- It may be a good idea to start from the practical part, to get familiar with the environment and ask us questions
+- Places where you need to modify the code blocks should be noted with comments in the code *## Begin code to modify ##*
+
+# Questions ?
+
+Questions outside on the exercises (or the theory) outside exercise hours? You can always contact us via 
+- [**Moodle Forum**](https://moodle.epfl.ch/mod/forum/view.php?id=1193419), prefered way of communication since everyone can see the answers (and start a conversation!)
+- email us, always better to include multiple of us to get an answer faster (at least always include Andrea and Sophie)
+    - andrea.levy@epfl.ch
+    - sophia.johnson@epfl.ch
