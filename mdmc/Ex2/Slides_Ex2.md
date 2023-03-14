@@ -1,5 +1,5 @@
 ---
-title: Exercise Session 1
+title: Exercise Session 2
 subtitle: MDMC Spring 2023
 date: March 14, 2023
 author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
