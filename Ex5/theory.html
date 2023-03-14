@@ -1,59 +1,49 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>5.1. Theory &#8212; Molecular Dynamics and Monte Carlo</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -63,87 +53,56 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Ex5/theory';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="5.2. ToyMD" href="Exercise.html" />
     <link rel="prev" title="5. Classical Molecular Dynamics (MD) Simulations" href="MDMC_ex5.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
-        
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../intro.html">
-  
-  
-  
-  
-  
-    <p class="title logo__title">Molecular Dynamics and Monte Carlo</p>
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      
+      <h1 class="site-logo" id="site-title">Molecular Dynamics and Monte Carlo</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -152,283 +111,603 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Exercises
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_ex1.html">1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
-
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">1.3. Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">1.4. Appendix: Random and Pseudo-random Numbers</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">2. Statistical Thermodynamics and the Boltzmann Distribution</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">2.1. Statistical Thermodynamics and the Boltzmann Distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">2.2. Boltzmann Distribution Harmonic Oscillator</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">3. Monte Carlo Simulations and the Photon Gas</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">3.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">3.2. The Photon Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">3.3. The Lennard-Jones Potential</a></li>
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">4. Introduction to Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">4.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">4.2. MD simulation from scratch</a></li>
-
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_ex5.html">5. Classical Molecular Dynamics (MD) Simulations</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Exercise.html">5.2. ToyMD</a></li>
-
-</ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">6. Properties from Molecular Dynamics</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">6.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">6.2. Protein Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">6.3. Practical: TRP Cage using OpenMM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/hydrogenbonds.html">6.4. TrpCage Analysis</a></li>
-</ul>
-</li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex1/MDMC_ex1.html">
+   1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex1/Ex1_Theory.html">
+     1.1. From Quantum to Classical Mechanics: The Example of Forces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex1/MonteCarloPI.html">
+     1.3. Monte Carlo
+     <span class="math notranslate nohighlight">
+      \(\pi\)
+     </span>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex1/prng.html">
+     1.4. Appendix: Random and Pseudo-random Numbers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex2/MDMC_ex2.html">
+   2. Statistical Thermodynamics and the Boltzmann Distribution
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex2/Ex2_Theory.html">
+     2.1. Statistical Thermodynamics and the Boltzmann Distribution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex2/Boltzmann.html">
+     2.2. Boltzmann Distribution Harmonic Oscillator
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex3/MDMC_ex3.html">
+   3. Monte Carlo Simulations and the Photon Gas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex3/Ex3_Theory.html">
+     3.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex3/PhotonGas.html">
+     3.2. The Photon Gas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex3/LJ_NVT.html">
+     3.3. The Lennard-Jones Potential
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex4/MDMC_ex4.html">
+   4. Introduction to Molecular Dynamics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex4/Theory.html">
+     4.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex4/Exercise.html">
+     4.2. MD simulation from scratch
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="MDMC_ex5.html">
+   5. Classical Molecular Dynamics (MD) Simulations
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     5.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Exercise.html">
+     5.2. ToyMD
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../Ex6/MDMC_ex6.html">
+   6. Properties from Molecular Dynamics
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/theory.html">
+     6.1. Theory
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/proteinmodelling.html">
+     6.2. Protein Modelling
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">
+     6.3. Practical: TRP Cage using OpenMM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../Ex6/hydrogenbonds.html">
+     6.4. TrpCage Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
+    <div id="rtd-footer-container"></div>
+</div>
 
 
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
+          
 
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
 
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
   
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
     </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/lcbc-epfl/mdmc-public" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx5/theory.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../_sources/Ex5/theory.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
+    <div class="header-article__right">
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/lcbc-epfl/mdmc-public"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Theory</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-molecular-dynamics">5.1.1. Classical Molecular Dynamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-approximation-basic-features">5.1.2. Classical Approximation: Basic Features</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intramolecular-interactions">5.1.2.1. Intramolecular Interactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-stretching">5.1.2.1.1. Bond Stretching</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-angle-bending">5.1.2.2. Bond Angle Bending</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-torsions">5.1.2.3. Bond Torsions</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intermolecular-interactions">5.1.3. Intermolecular Interactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatics">5.1.3.1. Electrostatics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#london-dispersion-forces">5.1.3.2. London Dispersion Forces</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excluded-volume-repulsion">5.1.3.3. Excluded Volume Repulsion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lennard-jones-potential">5.1.3.4. Lennard-Jones Potential</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atomic-force-field">5.1.4. The Atomic Force Field</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-field-parameterisation-and-transferability">5.1.4.1. Force Field Parameterisation and Transferability</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-specific-ensembles">5.1.5. Sampling specific ensembles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-rescaling">5.1.5.1. Velocity rescaling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berendsen-thermostat">5.1.5.2. Berendsen thermostat</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#andersen-thermostat">5.1.5.3. Andersen thermostat</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nose-hoover-thermostat">5.1.5.4. Nose-Hoover thermostat</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization">5.1.6. Initialization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pair-radial-distribution-functions-g-r">5.1.7. Pair Radial Distribution Functions <span class="math notranslate nohighlight">\(g(r)\)</span></a></li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx5/theory.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Ex5/theory.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-molecular-dynamics">
+   5.1.1. Classical Molecular Dynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-approximation-basic-features">
+   5.1.2. Classical Approximation: Basic Features
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intramolecular-interactions">
+     5.1.2.1. Intramolecular Interactions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bond-stretching">
+       5.1.2.1.1. Bond Stretching
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-angle-bending">
+     5.1.2.2. Bond Angle Bending
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-torsions">
+     5.1.2.3. Bond Torsions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intermolecular-interactions">
+   5.1.3. Intermolecular Interactions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electrostatics">
+     5.1.3.1. Electrostatics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#london-dispersion-forces">
+     5.1.3.2. London Dispersion Forces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excluded-volume-repulsion">
+     5.1.3.3. Excluded Volume Repulsion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lennard-jones-potential">
+     5.1.3.4. Lennard-Jones Potential
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-atomic-force-field">
+   5.1.4. The Atomic Force Field
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#force-field-parameterisation-and-transferability">
+     5.1.4.1. Force Field Parameterisation and Transferability
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling-specific-ensembles">
+   5.1.5. Sampling specific ensembles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#velocity-rescaling">
+     5.1.5.1. Velocity rescaling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#berendsen-thermostat">
+     5.1.5.2. Berendsen thermostat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#andersen-thermostat">
+     5.1.5.3. Andersen thermostat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nose-hoover-thermostat">
+     5.1.5.4. Nose-Hoover thermostat
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#initialization">
+   5.1.6. Initialization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pair-radial-distribution-functions-g-r">
+   5.1.7. Pair Radial Distribution Functions
+   <span class="math notranslate nohighlight">
+    \(g(r)\)
+   </span>
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Theory</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-molecular-dynamics">
+   5.1.1. Classical Molecular Dynamics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-approximation-basic-features">
+   5.1.2. Classical Approximation: Basic Features
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intramolecular-interactions">
+     5.1.2.1. Intramolecular Interactions
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bond-stretching">
+       5.1.2.1.1. Bond Stretching
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-angle-bending">
+     5.1.2.2. Bond Angle Bending
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bond-torsions">
+     5.1.2.3. Bond Torsions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#intermolecular-interactions">
+   5.1.3. Intermolecular Interactions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#electrostatics">
+     5.1.3.1. Electrostatics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#london-dispersion-forces">
+     5.1.3.2. London Dispersion Forces
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#excluded-volume-repulsion">
+     5.1.3.3. Excluded Volume Repulsion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lennard-jones-potential">
+     5.1.3.4. Lennard-Jones Potential
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-atomic-force-field">
+   5.1.4. The Atomic Force Field
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#force-field-parameterisation-and-transferability">
+     5.1.4.1. Force Field Parameterisation and Transferability
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling-specific-ensembles">
+   5.1.5. Sampling specific ensembles
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#velocity-rescaling">
+     5.1.5.1. Velocity rescaling
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#berendsen-thermostat">
+     5.1.5.2. Berendsen thermostat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#andersen-thermostat">
+     5.1.5.3. Andersen thermostat
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nose-hoover-thermostat">
+     5.1.5.4. Nose-Hoover thermostat
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#initialization">
+   5.1.6. Initialization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pair-radial-distribution-functions-g-r">
+   5.1.7. Pair Radial Distribution Functions
+   <span class="math notranslate nohighlight">
+    \(g(r)\)
+   </span>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="theory">
-<h1><span class="section-number">5.1. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this heading">#</a></h1>
+<h1><span class="section-number">5.1. </span>Theory<a class="headerlink" href="#theory" title="Permalink to this headline">#</a></h1>
 <section id="classical-molecular-dynamics">
-<h2><span class="section-number">5.1.1. </span>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1.1. </span>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this headline">#</a></h2>
 <p>The extensive computational demand of electronic structure elucidation
 implies that an exact (fully quantum mechanical) description and
 time-propagation of even modestly sized molecular systems is in practice
@@ -451,7 +730,7 @@ approximation of the quantum-mechanical potential energy surface due to
 the electronic and nuclear potential, as a function of nuclear position.
 Such classical force fields typically work well under the following
 assumptions:</p>
-<ol class="arabic simple">
+<ol class="simple">
 <li><p>The Born-Oppenheimer approximation is valid.</p></li>
 <li><p>The electronic structure is not of interest.</p></li>
 <li><p>The temperature is modest.</p></li>
@@ -460,7 +739,7 @@ assumptions:</p>
 </ol>
 </section>
 <section id="classical-approximation-basic-features">
-<h2><span class="section-number">5.1.2. </span>Classical Approximation: Basic Features<a class="headerlink" href="#classical-approximation-basic-features" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1.2. </span>Classical Approximation: Basic Features<a class="headerlink" href="#classical-approximation-basic-features" title="Permalink to this headline">#</a></h2>
 <p>In the classical approximation, one describes positions and momenta of
 all the atomic nuclei:</p>
 <div class="math notranslate nohighlight" id="equation-momenta-of-nuclei">
@@ -513,7 +792,7 @@ typically include bond stretching, bond angle bending and bond torsional
 modes, while intermolecular interactions include dispersion and
 coulombic potentials. These are discussed in more detail below.</p>
 <section id="intramolecular-interactions">
-<h3><span class="section-number">5.1.2.1. </span>Intramolecular Interactions<a class="headerlink" href="#intramolecular-interactions" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.2.1. </span>Intramolecular Interactions<a class="headerlink" href="#intramolecular-interactions" title="Permalink to this headline">#</a></h3>
 <p>Intramolecular interactions occur through bonds between atoms, the three
 most well known being bond stretching (vibration), bond angle bending
 and bond torsional modes. These are illustrated in <a class="reference internal" href="#intramolecular"><span class="std std-numref">Fig. 5.1</span></a></p>
@@ -523,7 +802,7 @@ and bond torsional modes. These are illustrated in <a class="reference internal"
 </figcaption>
 </figure>
 <section id="bond-stretching">
-<h4><span class="section-number">5.1.2.1.1. </span>Bond Stretching<a class="headerlink" href="#bond-stretching" title="Permalink to this heading">#</a></h4>
+<h4><span class="section-number">5.1.2.1.1. </span>Bond Stretching<a class="headerlink" href="#bond-stretching" title="Permalink to this headline">#</a></h4>
 <p>An accurate description of bond stretching that well-describes the
 intramolecular behaviour is the empirical Morse potential:</p>
 <div class="math notranslate nohighlight" id="equation-bond-streching">
@@ -553,7 +832,7 @@ of both the Morse potential and the corresponding harmonic approximation.</p>
 </section>
 </section>
 <section id="bond-angle-bending">
-<h3><span class="section-number">5.1.2.2. </span>Bond Angle Bending<a class="headerlink" href="#bond-angle-bending" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.2.2. </span>Bond Angle Bending<a class="headerlink" href="#bond-angle-bending" title="Permalink to this headline">#</a></h3>
 <p>This term accounts for deviations from the preferred hybridisation
 geometry (e.g sp<span class="math notranslate nohighlight">\(^3\)</span>). Again, a common form is the second-order Taylor
 expansion about the energy minimum:</p>
@@ -565,7 +844,7 @@ V_A(\theta) = b(\theta-\theta_0)^2,
 and <span class="math notranslate nohighlight">\(\theta_0\)</span> is the equilibrium bond angle.</p>
 </section>
 <section id="bond-torsions">
-<h3><span class="section-number">5.1.2.3. </span>Bond Torsions<a class="headerlink" href="#bond-torsions" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.2.3. </span>Bond Torsions<a class="headerlink" href="#bond-torsions" title="Permalink to this headline">#</a></h3>
 <p>These interactions occur among four atoms and account for rotational
 energies along bonds. Unlike the previous terms, torsional modes are
 “soft” such that energies are often not so high as to only allow small
@@ -587,7 +866,7 @@ in <a class="reference internal" href="#dihedral"><span class="std std-numref">F
 </section>
 </section>
 <section id="intermolecular-interactions">
-<h2><span class="section-number">5.1.3. </span>Intermolecular Interactions<a class="headerlink" href="#intermolecular-interactions" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1.3. </span>Intermolecular Interactions<a class="headerlink" href="#intermolecular-interactions" title="Permalink to this headline">#</a></h2>
 <p>Intermolecular interactions apply to any atoms that are not bonded,
 either within the same molecule or between different molecules.</p>
 <p>These interactions are described using a pairwise decomposition of the
@@ -609,7 +888,7 @@ effective pair potential is given by:</p>
 \mathbf{V}(\{\mathbf{r}^N\}) = \sum_{i=1}^N \mathbf{v}_1(\mathbf{r}_i) + \sum_{i=1}\sum_{j=i+1} \mathbf{v}_{eff}(\mathbf{r}_{ij}).
 \]</div>
 <section id="electrostatics">
-<h3><span class="section-number">5.1.3.1. </span>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.3.1. </span>Electrostatics<a class="headerlink" href="#electrostatics" title="Permalink to this headline">#</a></h3>
 <p>Interactions between charges (partial or formal) are modeled using
 Coulomb’s law:</p>
 <div class="math notranslate nohighlight" id="equation-coulomb">
@@ -621,7 +900,7 @@ Coulomb’s law:</p>
 while <span class="math notranslate nohighlight">\(\epsilon_0\)</span> denotes the free space permittivity.</p>
 </section>
 <section id="london-dispersion-forces">
-<h3><span class="section-number">5.1.3.2. </span>London Dispersion Forces<a class="headerlink" href="#london-dispersion-forces" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.3.2. </span>London Dispersion Forces<a class="headerlink" href="#london-dispersion-forces" title="Permalink to this headline">#</a></h3>
 <p>Correlations between instantaneous electron densities surrounding two
 atoms gives rise to an attractive potential:</p>
 <div class="math notranslate nohighlight">
@@ -639,7 +918,7 @@ dispersion and Coulombic forces can be seen in <a class="reference internal" hre
 </figure>
 </section>
 <section id="excluded-volume-repulsion">
-<h3><span class="section-number">5.1.3.3. </span>Excluded Volume Repulsion<a class="headerlink" href="#excluded-volume-repulsion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.3.3. </span>Excluded Volume Repulsion<a class="headerlink" href="#excluded-volume-repulsion" title="Permalink to this headline">#</a></h3>
 <p>When two atoms approach and their electron densities overlap, they
 experience a steep increase in energy and a corresponding strong
 repulsion. This occurs due to the Pauli principle: two electrons are
@@ -659,7 +938,7 @@ convenient to compute:</p>
 <p>where <span class="math notranslate nohighlight">\(m\)</span> is greater than 6.</p>
 </section>
 <section id="lennard-jones-potential">
-<h3><span class="section-number">5.1.3.4. </span>Lennard-Jones Potential<a class="headerlink" href="#lennard-jones-potential" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.3.4. </span>Lennard-Jones Potential<a class="headerlink" href="#lennard-jones-potential" title="Permalink to this headline">#</a></h3>
 <p>An effective method to model both the excluded volume and London
 dispersion forces is to combine them into a single expression, which
 Lennard-Jones proposed in the following pairwise interaction:</p>
@@ -673,7 +952,7 @@ square the attractive <span class="math notranslate nohighlight">\(\mathbf{r}_{i
 </section>
 </section>
 <section id="the-atomic-force-field">
-<span id="minimalff"></span><h2><span class="section-number">5.1.4. </span>The Atomic Force Field<a class="headerlink" href="#the-atomic-force-field" title="Permalink to this heading">#</a></h2>
+<span id="minimalff"></span><h2><span class="section-number">5.1.4. </span>The Atomic Force Field<a class="headerlink" href="#the-atomic-force-field" title="Permalink to this headline">#</a></h2>
 <p>A bare-minimum force field can now be constructed as a simple addition
 of individual contributions to the approximation of the potential energy
 surface:</p>
@@ -687,7 +966,7 @@ surface:</p>
  \end{gathered}
  \end{split}\]</div>
 <section id="force-field-parameterisation-and-transferability">
-<h3><span class="section-number">5.1.4.1. </span>Force Field Parameterisation and Transferability<a class="headerlink" href="#force-field-parameterisation-and-transferability" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.4.1. </span>Force Field Parameterisation and Transferability<a class="headerlink" href="#force-field-parameterisation-and-transferability" title="Permalink to this headline">#</a></h3>
 <p>The minimal force field in section
 <a class="reference internal" href="#minimalff"><span class="std std-numref">Section 5.1.4</span></a> contains a
 large number of parameters:</p>
@@ -712,11 +991,11 @@ as a result, the majority of force fields are semi-empirical.</p>
 </section>
 </section>
 <section id="sampling-specific-ensembles">
-<h2><span class="section-number">5.1.5. </span>Sampling specific ensembles<a class="headerlink" href="#sampling-specific-ensembles" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1.5. </span>Sampling specific ensembles<a class="headerlink" href="#sampling-specific-ensembles" title="Permalink to this headline">#</a></h2>
 <p>When running a Molecular dynamics simulation, we often want to sample from a specific ensemble. In a standard MD run as implemented in the toy example in Exercise 4 we sample in the microcanonical ensemble - <span class="math notranslate nohighlight">\(NVE\)</span>.  <span class="math notranslate nohighlight">\(N\)</span> is constant as we do not add or remove particles during the simulation, <span class="math notranslate nohighlight">\(V\)</span> is constant as the size of the box does not change, and <span class="math notranslate nohighlight">\(E\)</span> is constant as we use an integrator that conserves energy. In the NVE ensemble we will get the truly correct dynamics of the system. If we want to compare our simulation to experimental values then we however need to use either the canonical ensemble - <span class="math notranslate nohighlight">\(NVT\)</span> or the isothermal-isobaric ensemble <span class="math notranslate nohighlight">\(NpT\)</span>.</p>
 <p>In order to run in the NVT ensemble, we can use our NVE simulation code, and adjust the total energy such that the average temperature is equal to the one we want to simulate it. We can adjust the total energy easily by changing the momenta. The routine of doing this is called <strong>thermostat</strong> or <strong>barostat</strong> for the pressure.</p>
 <section id="velocity-rescaling">
-<h3><span class="section-number">5.1.5.1. </span>Velocity rescaling<a class="headerlink" href="#velocity-rescaling" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.5.1. </span>Velocity rescaling<a class="headerlink" href="#velocity-rescaling" title="Permalink to this headline">#</a></h3>
 <p>Clearly the simplest form of a thermostat is to rescale all velocities after each update so that their distribution matches the target temperature <span class="math notranslate nohighlight">\(T_0\)</span>. This will however not produce realistic dynamics as it does not allow fluctations in the temperature which are present e.g in the canonical ensemble. In the NVT ensemble we expect that on average we sample at the <span class="math notranslate nohighlight">\(T_0\)</span> but the instantenous temperature <span class="math notranslate nohighlight">\(T\)</span> should vary. (See derivation p.141 in Frenkel &amp; Smit).</p>
 <div class="math notranslate nohighlight" id="equation-simple-rescaling">
 <span class="eqno">(5.17)<a class="headerlink" href="#equation-simple-rescaling" title="Permalink to this equation">#</a></span>\[
@@ -724,7 +1003,7 @@ as a result, the majority of force fields are semi-empirical.</p>
 \]</div>
 </section>
 <section id="berendsen-thermostat">
-<h3><span class="section-number">5.1.5.2. </span>Berendsen thermostat<a class="headerlink" href="#berendsen-thermostat" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.5.2. </span>Berendsen thermostat<a class="headerlink" href="#berendsen-thermostat" title="Permalink to this headline">#</a></h3>
 <p>An improvement of the rescaling algorithm for temperature control is the Berendsen thermostat. Sometimes, also called proportional thermostat.  The Berendsen thermostat tries to correct the deviations of the instantenous temperature <span class="math notranslate nohighlight">\(T\)</span> from our target temperature <span class="math notranslate nohighlight">\(T_0\)</span> by
 multiplying the velocities by a factor <span class="math notranslate nohighlight">\(\lambda\)</span> in order to move the system
 dynamics towards the one corresponding to <span class="math notranslate nohighlight">\( T_0\)</span>. This method does therefore allow temperature fluctuations.</p>
@@ -742,7 +1021,7 @@ dynamics towards the one corresponding to <span class="math notranslate nohighli
 <p>Standard MD simulation programs such as Gromacs use a modification of this thermostat called the Bussi-Donadio-Parrinello thermostat (v-rescale in Gromacs). Here, the velocities are not rescaled to match the target temperature but the velocities are scaled to a kinetic energy that is stochastically chosen from the kinetic energy distribution dictated by the canonical ensemble.</p>
 </section>
 <section id="andersen-thermostat">
-<h3><span class="section-number">5.1.5.3. </span>Andersen thermostat<a class="headerlink" href="#andersen-thermostat" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.5.3. </span>Andersen thermostat<a class="headerlink" href="#andersen-thermostat" title="Permalink to this headline">#</a></h3>
 <p>An alternative approach to control temperature is to mimic collisions with a heat bath. This can be easily implemented by picking random atoms and drawing a new velocity from the Maxwell-Boltzman temperature at the target temperature <a class="reference internal" href="#maxwellboltzman"><span class="std std-numref">Fig. 5.5</span></a>. In between collisions the dynamics is according to NVE but due to the collisions samples from the canonical ensemble.</p>
 <p>The strength of coupling to the heat bath is determined by <span class="math notranslate nohighlight">\(\nu\)</span> which has a similar function to <span class="math notranslate nohighlight">\(\tau\)</span> in the Berendsen thermostat. While the Andersen thermostat samples the <span class="math notranslate nohighlight">\(NVT\)</span> ensemble rigorously it will clearly disturb the natural dynamics of the system due to the abrupt nature of the collisions.</p>
 <figure class="align-default" id="maxwellboltzman">
@@ -753,7 +1032,7 @@ dynamics towards the one corresponding to <span class="math notranslate nohighli
 </figure>
 </section>
 <section id="nose-hoover-thermostat">
-<h3><span class="section-number">5.1.5.4. </span>Nose-Hoover thermostat<a class="headerlink" href="#nose-hoover-thermostat" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">5.1.5.4. </span>Nose-Hoover thermostat<a class="headerlink" href="#nose-hoover-thermostat" title="Permalink to this headline">#</a></h3>
 <p>Another popular thermostat is the Nose-Hoover thermostat. Here, an extended Lagrangian formalism is used, i.e no random velocities are used. Instead one uses a friction factor to control particle velocities. This dimensionless factor belongs to a an additional degree of freedom which has mass <span class="math notranslate nohighlight">\(Q\)</span>.</p>
 <p>The new equations of motions are</p>
 <div class="math notranslate nohighlight" id="equation-nosehoover">
@@ -771,7 +1050,7 @@ dynamics towards the one corresponding to <span class="math notranslate nohighli
 </section>
 </section>
 <section id="initialization">
-<h2><span class="section-number">5.1.6. </span>Initialization<a class="headerlink" href="#initialization" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1.6. </span>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">#</a></h2>
 <p>In order to run a sucessful simulation to sample a property of interest it is important to start with a correct structure.</p>
 <p>After having obtained an initial geometry of the system we want to simulate the question remains on how to initialize our system to avoid lengthy equilibration.
 Simply setting the velocity of each particle to <span class="math notranslate nohighlight">\(0\)</span> as we did in the last exercise clearly is not very realistic and will not converge easily to our target temperature.</p>
@@ -785,7 +1064,7 @@ Simply setting the velocity of each particle to <span class="math notranslate no
 \]</div>
 </section>
 <section id="pair-radial-distribution-functions-g-r">
-<h2><span class="section-number">5.1.7. </span>Pair Radial Distribution Functions <span class="math notranslate nohighlight">\(g(r)\)</span><a class="headerlink" href="#pair-radial-distribution-functions-g-r" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">5.1.7. </span>Pair Radial Distribution Functions <span class="math notranslate nohighlight">\(g(r)\)</span><a class="headerlink" href="#pair-radial-distribution-functions-g-r" title="Permalink to this headline">#</a></h2>
 <p>Radial distribution (Pair correlation) functions are of fundamental
 importance in thermodynamics, since macroscopic thermodynamic properties
 can usually be calculated directly from <span class="math notranslate nohighlight">\(g(r)\)</span>. In short, they simply
@@ -888,7 +1167,7 @@ g(r) = \frac{1}{\rho}\left&lt;\sum_{i \neq 0}\delta(r - r_i)\right&gt; = V\frac{
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./Ex5"
         },
         predefinedOutput: true
@@ -896,128 +1175,53 @@ g(r) = \frac{1}{\rho}\left&lt;\sum_{i \neq 0}\delta(r - r_i)\right&gt; = V\frac{
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="MDMC_ex5.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Classical Molecular Dynamics (MD) Simulations</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="MDMC_ex5.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Classical Molecular Dynamics (MD) Simulations</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="Exercise.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="Exercise.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">5.2. </span>ToyMD</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-molecular-dynamics">5.1.1. Classical Molecular Dynamics</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classical-approximation-basic-features">5.1.2. Classical Approximation: Basic Features</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intramolecular-interactions">5.1.2.1. Intramolecular Interactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-stretching">5.1.2.1.1. Bond Stretching</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-angle-bending">5.1.2.2. Bond Angle Bending</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bond-torsions">5.1.2.3. Bond Torsions</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#intermolecular-interactions">5.1.3. Intermolecular Interactions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatics">5.1.3.1. Electrostatics</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#london-dispersion-forces">5.1.3.2. London Dispersion Forces</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excluded-volume-repulsion">5.1.3.3. Excluded Volume Repulsion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lennard-jones-potential">5.1.3.4. Lennard-Jones Potential</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atomic-force-field">5.1.4. The Atomic Force Field</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#force-field-parameterisation-and-transferability">5.1.4.1. Force Field Parameterisation and Transferability</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sampling-specific-ensembles">5.1.5. Sampling specific ensembles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocity-rescaling">5.1.5.1. Velocity rescaling</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#berendsen-thermostat">5.1.5.2. Berendsen thermostat</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#andersen-thermostat">5.1.5.3. Andersen thermostat</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nose-hoover-thermostat">5.1.5.4. Nose-Hoover thermostat</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialization">5.1.6. Initialization</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pair-radial-distribution-functions-g-r">5.1.7. Pair Radial Distribution Functions <span class="math notranslate nohighlight">\(g(r)\)</span></a></li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2022.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div></div>
-          </footer>
-        
-
-      </main>
+            </footer>
+        </div>
     </div>
-  </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
+  
+    <div class="extra_footer">
+      <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
+</div> <div class="col-6 d-flex" style="justify-content:center"> <ul style="list-style:none"> <li> <a href="https://github.com/lcbc-epfl/mdmc-public">GitHub </a> </li> </li> <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>--> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license. (Except where indicated otherwise) </div>
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>
