@@ -39,10 +39,10 @@ Today we'll be building a tool to compute the probability distribution of the en
   - Microstate 
   - Partition function and why its utility
   - Boltzmann distribution
+- The practical part is about computing the Boltzmann distribution of a fictious harmonic oscillator
 
 # Exercise 2 - Intro & Tips
 
-- The practical part is about computing the Boltzmann distribution of a fictious harmonic oscillator
 - Modify the code below to translate into code concepts from statistical mechanics
 
 ![](/data/mdmc/img_slides/Ex2/code_block.png) \
