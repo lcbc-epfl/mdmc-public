@@ -17,6 +17,12 @@ output: beamer_presentation
   
 **Exercises contribute to 1/2 of final grade! We count the best 5 out of the 6 reports for your exercise grade.**
 
+# Notebooks reminder
+
+- Always access the notebooks via  the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/) 
+- **Make sure to access noto this way each time you begin the exercise to ensure you have the latest version!**
+		![](/data/mdmc/img_slides/Ex1/notebooks.png)
+        
 # Exercise structure
 
 ![](/data/mdmc/img_slides/Ex2/learning_goals.png) \
@@ -27,7 +33,8 @@ Today we'll be building a tool to compute the probability distribution of the en
 
 **Tips!**
 
-- The theoretical part is about statistical thermodynamics. Be sure to know what we mean by
+- The theoretical part is about statistical thermodynamics.  \
+  Be sure to know what we mean by
   - Thermodynamic ensembles
   - Microstate 
   - Partition function and why its utility
@@ -35,14 +42,14 @@ Today we'll be building a tool to compute the probability distribution of the en
 
 # Exercise 2 - Intro & Tips
 
-- In the practical part you will build a computer program to compute the Boltzmann distribution of a fictious harmonic oscillator
-- You will be asked to modify the code below modifying given functions to translate into code concepts from statistical mechanics
+- The practical part is about computing the Boltzmann distribution of a fictious harmonic oscillator
+- Modify the code below to translate into code concepts from statistical mechanics
 
 ![](/data/mdmc/img_slides/Ex2/code_block.png) \
 
 
 # Exercise 2 - Intro & Tips
 
-- Don't forget about Exercise 8! 
+- Remember there is also Exercise 8 (often skipped in previous years!)
 
 ![](/data/mdmc/img_slides/Ex2/code_ex8.png) \
