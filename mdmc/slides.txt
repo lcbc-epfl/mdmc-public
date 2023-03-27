@@ -1,2 +1,3 @@
 Ex1/Slides_Ex1.md
 Ex2/Slides_Ex2.md
+Ex3/Slides_Ex3.md
