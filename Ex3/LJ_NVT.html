@@ -525,12 +525,13 @@ values.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Necessary imports</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">nglview</span> <span class="k">as</span> <span class="nn">nv</span>
+<span class="kn">import</span> <span class="nn">MDAnalysis</span> <span class="k">as</span> <span class="nn">md</span>
 <span class="kn">import</span> <span class="nn">pytraj</span> <span class="k">as</span> <span class="nn">pt</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">helpers</span>
+<span class="kn">from</span> <span class="nn">helpers</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -549,9 +550,12 @@ values.</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Write Coordinates to trajectory file &quot;&quot;&quot;</span>
     <span class="n">nPart</span><span class="o">=</span><span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s1">&#39;.pdb&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">xyz</span><span class="p">:</span>
+        <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;MODEL</span>
+<span class="s1">&#39;)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nPart</span><span class="p">):</span>
-            <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ATOM    </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">3</span><span class="si">}</span><span class="s2">  Ar      X   1      </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  0.00  0.00          AR</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;END</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ATOM    </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">3</span><span class="si">}</span><span class="s2">  Ar      X   1      </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  0.00  0.00          Ar</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;ENDMDL</span>
+<span class="s1">&#39;)</span>
 
             
 </pre></div>
@@ -763,12 +767,8 @@ MC Step 900  Energy -580.30091
 <p>Executing the code below you can visualize the MC trajectory for the particles</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;trajectory.pdb&#39;</span><span class="p">)</span>
-<span class="n">view</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">show_pytraj</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
-<span class="n">view</span><span class="o">.</span><span class="n">clear_representations</span><span class="p">()</span>
-<span class="n">view</span><span class="o">.</span><span class="n">add_representation</span><span class="p">(</span><span class="s1">&#39;spacefill&#39;</span><span class="p">,</span><span class="n">radiusSize</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">radiusScale</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-<span class="c1"># view.add_distance(atom_pair=[[0,1]], color=&#39;black&#39;, labelColor=&#39;black&#39;) # you can use this to plot the distance between a pair of selected atoms </span>
-<span class="n">view</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;trajectory.pdb&#39;</span><span class="p">)</span>
+<span class="n">show_trajectory</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">only_spheres</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
