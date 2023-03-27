@@ -19,21 +19,21 @@ How did you feel during the process of completing, turning in, interviewing, and
         
 # Exercise Structure
 
-Learning goals
-- Understand importance sampling
-- Learn importance of detailed balance
-- Apply the Metropolis Monte Carlo algorithm to calculate properties of a model gas  
+- Learning goals
+  - Understand importance sampling
+  - Learn importance of detailed balance
+  - Apply the Metropolis Monte Carlo algorithm to calculate properties of a model gas  
 
-Chapter in script
-- Chapter 3 - Monte Carlo Simulations  
+- Chapter in script
+  - Chapter 3 - Monte Carlo Simulations  
 
-Resources
-- Understanding Molecular Simulation, Frenkel & Smit, 2nd Edition - Chapter 3 & Chapter 5 (extra)
-- Computer Simulation of Liquids, Allen & Tildesley, 2nd Edition - Chapter 4
+- Resources
+  - Understanding Molecular Simulation, Frenkel & Smit, 2nd Edition - Chapter 3 & Chapter 5 (extra)
+  - Computer Simulation of Liquids, Allen & Tildesley, 2nd Edition - Chapter 4
 
 # Exercise 3 - Intro & Tips
 
-Today we'll be writing and executing Monte Carlo code which employ the Metropolis algorithm for making moves/steps. 
+Today we'll be writing and executing Monte Carlo code. 
 
 **Tips!**
 
@@ -44,7 +44,7 @@ Today we'll be writing and executing Monte Carlo code which employ the Metropoli
   - transition or Markov matrix
   - detailed balance
   - Metropolis algorithm
-- In the practical part we will edit and/or execute MC code for two systems: 
+- In the practical part we will run MC code for two systems: 
   - A photon gas in which the energy states are quantized meaning we can calculate the ensemble average of state occupancy analytically
   - A gas in which we test different ensembles (NVT vs NPT) and use the Lennard-Jones potential to describe pairwise interactions
 
