@@ -550,12 +550,10 @@ values.</p>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Write Coordinates to trajectory file &quot;&quot;&quot;</span>
     <span class="n">nPart</span><span class="o">=</span><span class="n">coords</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s1">&#39;.pdb&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">xyz</span><span class="p">:</span>
-        <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;MODEL</span>
-<span class="s1">&#39;)</span>
+        <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;MODEL</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nPart</span><span class="p">):</span>
             <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ATOM    </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">:</span><span class="s2">3</span><span class="si">}</span><span class="s2">  Ar      X   1      </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">coords</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2"> 3.3f</span><span class="si">}</span><span class="s2">  0.00  0.00          Ar</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;ENDMDL</span>
-<span class="s1">&#39;)</span>
+        <span class="n">xyz</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;ENDMDL</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 
             
 </pre></div>
@@ -768,7 +766,7 @@ MC Step 900  Energy -580.30091
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;trajectory.pdb&#39;</span><span class="p">)</span>
-<span class="n">show_trajectory</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">only_spheres</span><span class="o">=</span><span class="n">TRUE</span><span class="p">)</span>
+<span class="n">show_trajectory</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">only_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
