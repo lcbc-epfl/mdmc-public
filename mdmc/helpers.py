@@ -57,7 +57,7 @@ def parse_structure(struc, ts):
 
 import warnings
     
-def return_viewer(structure=None, step=0, cartoon="Hide", sidechains="Show", waters="show", customsel=None, customstyle=None):
+def return_viewer(structure=None, step=0, cartoon="Hide", sidechains="Show", only_spheres=False, waters="show", customsel=None, customstyle=None):
     colorschemes=["GreenCarbon", "CyanCarbon", "BlueCarbon", "WhiteCarbon"]
     structures_to_show = []
     try:
@@ -73,10 +73,14 @@ def return_viewer(structure=None, step=0, cartoon="Hide", sidechains="Show", wat
     for i,struc in enumerate(structures_to_show):
         viewer.addModel(struc)
         style_dict = {}
-        if cartoon=="Show":
-            style_dict['cartoon']={"colorscheme":colorschemes[i]}
-        if sidechains=="Show":
-            style_dict["stick"]={"colorscheme": colorschemes[i], "radius": 0.3}
+        if not only_spheres:
+            if cartoon=="Show":
+                style_dict['cartoon']={"colorscheme":colorschemes[i]}
+            if sidechains=="Show":
+                style_dict["stick"]={"colorscheme": colorschemes[i], "radius": 0.3}
+        else:
+            style_dict["sphere"] = {"radius":0.3}
+            
         viewer.getModel(i).setStyle(style_dict)
     if customsel!=None:
         customsel = ast.literal_eval(customsel)
@@ -88,7 +92,7 @@ def return_viewer(structure=None, step=0, cartoon="Hide", sidechains="Show", wat
     viewer.zoomTo()
     viewer.show()
 
-def show_trajectory(structures):
+def show_trajectory(structures, only_spheres=False):
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         tab_nest = ipywidgets.Tab()
@@ -143,7 +147,7 @@ def show_trajectory(structures):
 
 
         settings_box = ipywidgets.GridBox(items, layout=ipywidgets.Layout(grid_template_columns="70px auto 100px auto"))
-        out = ipywidgets.interactive_output(return_viewer, {'step': slider, 'structure': ipywidgets.fixed(structures), 'cartoon':cartoon, 'sidechains':sidechains})
+        out = ipywidgets.interactive_output(return_viewer, {'step': slider, 'structure': ipywidgets.fixed(structures), 'cartoon':cartoon, 'sidechains':sidechains, "only_spheres":ipywidgets.fixed(only_spheres)})
 
         viewer_box = ipywidgets.VBox([ui, out])
 
