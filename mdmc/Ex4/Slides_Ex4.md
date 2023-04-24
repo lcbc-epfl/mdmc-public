@@ -30,8 +30,6 @@ output: beamer_presentation
 
 Today we will provide you a simple Molecular Dynamics (**Toy MD**) code in python and you will extend it to run a MD simulation.
 
-**Tips!**
-
 - The theoretical part introduces you to MD  \
   Be sure to understand what we mean by:
   - ergodicity
@@ -47,6 +45,7 @@ Tip: quickly go through the theoretical part for now, focusing on understanding 
 # Exercise 4 - ToyMD structure
 
 `ToyMD` code structure:
+
 - main code (propagation of MD steps) in `toy_md.py` script
 - additional code for specific tasks, i.e. `toy_forces.py`
 - parameters for the system in separate files (`carbon-dioxide` folder)
@@ -57,8 +56,11 @@ Tip: quickly go through the theoretical part for now, focusing on understanding 
 # Exercise 4 - Run ToyMD
 
 `ToyMD` is a python script, which can be run 
+
 1. via terminal
 2. via jupyter notebook
 
-in both cases, you will execute a bash command, passing files as arguments to the `toy_md.py` scriot with the following structure (paths may change):
+(see instructions in the exercise). In both cases, you will execute a bash command, passing files as arguments to the `toy_md.py` scriot with the following structure (paths may change):
+
+
 `python3 toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
