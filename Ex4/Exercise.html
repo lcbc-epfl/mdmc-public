@@ -418,7 +418,17 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="md-simulation-from-scratch">
 <h1><span class="section-number">4.2. </span>MD simulation from scratch<a class="headerlink" href="#md-simulation-from-scratch" title="Permalink to this headline">¶</a></h1>
-<p>Click <a class="reference external" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flcbc-epfl%2Fmdmc-public&amp;urlpath=lab%2Ftree%2Fmdmc-public%2Fmdmc%2FEx4%2FToyMD%2Ftoy_md.py&amp;branch=main">this  link</a> to open the files for this exercise on noto.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> code provided is a minimalistic python program to run MD simulations.
+By clicking <a class="reference external" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flcbc-epfl%2Fmdmc-public&amp;urlpath=lab%2Ftree%2Fmdmc-public%2Fmdmc%2FEx4%2FToyMD%2Ftoy_md.py&amp;branch=main">this  link</a> you can open the files for this exercise on noto.</p>
+<p>The main program is <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> takes care of the MD propagation and runs different sub-programs for differrent calculations needed for a MD simulations. For example, <code class="docutils literal notranslate"><span class="pre">toy_md_params.py</span></code> takes care of reading the parameters from the <code class="docutils literal notranslate"><span class="pre">params.txt</span></code> file, or <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> calculates bonded and non-bonded forces.</p>
+<p>For this exercise, we will focus of the main program <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code>, implementing a propagation algorithm, and <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code>, implementing PBCs.
+Take some time to familarize with the program structure in the <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> folder. In that folder, you will also find a <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder, containing parameters for a toy system: a box of <code class="docutils literal notranslate"><span class="pre">216</span></code> carbon dioxide molecules. At the end of the exercise, you will be able to run a MD simulation of the system.</p>
+<div class="exercise admonition" id="ex4">
+<p class="admonition-title">Exercise 3</p>
+<p>How does an MD program work? Describe schematically what are the main steps to perform a molecular dynamics simulation. Point out the main
+differences between your scheme and Monte Carlo methods.</p>
+</div>
+<p>In this exercise, you will implement a propagation algorithm and PBCs. Unfortunately, you will be able to verify your implementations are correct only when you will have modified both pieces of code needed (Ex4 and Ex6). However, you will find tips and suggestions as comments in the python codes to help you.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -475,13 +485,56 @@ div.admonition {
      </style></div></div>
 </div>
 <div class="exercise admonition" id="ex3">
-<p class="admonition-title">Exercise 3</p>
-<p>Implement the velocity verlet algorithm in the Toy MD program.</p>
+<p class="admonition-title">Exercise 4</p>
+<p>Implement the velocity verlet algorithm in the Toy MD program (<code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code>).</p>
 </div>
-<p>To test whether your implementation works you can run a short MD run of a box of CO2 molecules by opening the terminal, navigating to the <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder using <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">carbon-dioxide</span></code> and then running this command.</p>
+<div class="exercise admonition" id="ex6">
+<p class="admonition-title">Exercise 5</p>
+<p>Why are most MD and MC simulations based on periodic systems? Explain the main purpose of periodic boundary conditions in these schemes.</p>
+</div>
+<div class="exercise admonition" id="ex5">
+<p class="admonition-title">Exercise 6</p>
+<p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).</p>
+</div>
+<p>With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
+</div><p>To test whether your implementation works you can run a short MD run of a box of a toy system consisting in CO2 molecules.</p>
+<p>You can run the <code class="docutils literal notranslate"><span class="pre">Toy</span> <span class="pre">MD</span></code> code in two ways:</p>
+<ol>
+<li><p>via teminal:</p>
+<ul>
+<li><p>open a new terminal</p></li>
+<li><p>navigate to the <code class="docutils literal notranslate"><span class="pre">ToyMD/carbon-dioxide</span></code> folder</p></li>
+<li><p>run the <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> script via the following bash command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>!python3 ../toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>via jupyter notebook:</p>
+<ul class="simple">
+<li><p>you can run bash scripts in jupyter notebook cells if you add a <code class="docutils literal notranslate"><span class="pre">!</span></code> at the beginning of the command</p></li>
+<li><p>in this case, you will not move to the <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder, so you will need to correctly specify all the paths relative to the current one, where the notebook is located. You can know what is the current folder by running the next cell, using the <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (<code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">working</span> <span class="pre">directory</span></code>) bash command</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Note</strong>: if you run the code without any modification, you will get a <code class="docutils literal notranslate"><span class="pre">ZeroDivisionError:</span> <span class="pre">float</span> <span class="pre">division</span> <span class="pre">by</span> <span class="pre">zero</span></code> error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>python<span class="w"> </span>../toy_md.py<span class="w"> </span>-c<span class="w"> </span>co2.pdb<span class="w"> </span>-p<span class="w"> </span>params.txt<span class="w"> </span>-ff<span class="w"> </span>force_field.txt<span class="w"> </span>-o<span class="w"> </span>traj.pdb<span class="w"> </span>-w<span class="w"> </span>co2-output.pdb
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pwd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/mdmc/mdmc/Ex4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you choose option 2, add a bash command to run toy_md.py in this cell</span>
+<span class="c1"># start cell with a ! symbol</span>
 </pre></div>
 </div>
 </div>
@@ -504,29 +557,16 @@ Step:     8 Epot   -710.875 Ekin     61.903 Etot   -648.973 T    7.66 lambda 1.0
 Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.00
 </pre></div>
 </div>
-<div class="exercise admonition" id="ex4">
-<p class="admonition-title">Exercise 4</p>
-<p>How does an MD program work? Describe schematically how one
-performs a molecular dynamics simulation. Point out the main
-differences between your scheme and Monte Carlo methods.</p>
-</div>
-<div class="exercise admonition" id="ex5">
-<p class="admonition-title">Exercise 5</p>
-<p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).
-With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
-</div>
-<div class="exercise admonition" id="ex6">
-<p class="admonition-title">Exercise 6</p>
-<p>Why are most MD and MC simulations based on periodic systems? Explain the main purpose of periodic boundary conditions in these schemes.</p>
-</div>
 <div class="exercise admonition" id="bex">
-<p class="admonition-title">Bonus Exercise 1</p>
+<p class="admonition-title">Bonus Exercise 7</p>
 <p>What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with and without periodic boundary conditions?</p>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="visualize-trajectory">
 <h1><span class="section-number">4.3. </span>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Permalink to this headline">¶</a></h1>
-<p>using the cells below you can visualize the trajectory generated in the terminal. You first need to finish and run the code before you can look at the trajectory.</p>
+<p>Once your code is ready, running it will produce some output files. In particular, <code class="docutils literal notranslate"><span class="pre">traj.pdb</span></code> will contain the trajectory of your toy system.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">params.txt</span></code> file contains the parameters for the MD run. Among them, <code class="docutils literal notranslate"><span class="pre">number-of-steps</span></code> will indicate the number of integration time steps to be performed and <code class="docutils literal notranslate"><span class="pre">output-frequency</span></code> will indicate how ofter to store coordinates in the output file. Of course, what you will see in the viewer depends on how long the MD simulation is and how often you saved the coordinates.</p>
+<p>Using the cells below you can visualize the trajectory generated. You first need to finish and run the code before you can look at the trajectory.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis</span>
@@ -536,7 +576,7 @@ With a box size of <code class="docutils literal notranslate"><span class="pre">
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s2">&quot;../Ex5/ToyMD/carbon-dioxide/traj.pdb&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s2">&quot;./ToyMD/carbon-dioxide/traj.pdb&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -549,8 +589,12 @@ With a box size of <code class="docutils literal notranslate"><span class="pre">
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "60d7b6abc81b48d9b8705eb01ee2cc14", "version_major": 2, "version_minor": 0}
+{"model_id": "580e19650d89471f980e40ea67c143d7", "version_major": 2, "version_minor": 0}
 </script></div>
+</div>
+<div class="exercise admonition" id="id1">
+<p class="admonition-title">Bonus Exercise 8</p>
+<p>What do you observe during the trajectory? Try to relate what you see with the parameters set for the simulation (i.e. simulation length, time step, temperature).</p>
 </div>
 </div>
 
