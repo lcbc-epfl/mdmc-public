@@ -688,7 +688,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Uncomment on google colab </span>
 
-<span class="c1">#!conda install openmm ambertools=20 &amp;&gt; /dev/null  </span>
+<span class="c1">#!conda install openmm ambertools=22 &amp;&gt; /dev/null  </span>
 <span class="c1">#!pip install py3Dmol</span>
 <span class="c1"># The last part simply makes the command silent. Remove &amp;&gt; /dev/null  if there are problems</span>
 </pre></div>
@@ -920,9 +920,11 @@ viewer_1651750336480033.render();
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># OpenMM Imports</span>
-<span class="kn">import</span> <span class="nn">simtk.openmm</span> <span class="k">as</span> <span class="nn">mm</span>
-<span class="kn">import</span> <span class="nn">simtk.openmm.app</span> <span class="k">as</span> <span class="nn">app</span>
-<span class="kn">from</span> <span class="nn">simtk.openmm.app.dcdreporter</span> <span class="kn">import</span> <span class="n">DCDReporter</span>
+<span class="kn">from</span> <span class="nn">openmm.app</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">openmm</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">openmm.app.dcdreporter</span> <span class="kn">import</span> <span class="n">DCDReporter</span>
+
 <span class="c1"># ParmEd Imports</span>
 <span class="kn">from</span> <span class="nn">parmed</span> <span class="kn">import</span> <span class="n">load_file</span><span class="p">,</span> <span class="n">unit</span> <span class="k">as</span> <span class="n">u</span>
 <span class="kn">from</span> <span class="nn">parmed.openmm</span> <span class="kn">import</span> <span class="n">StateDataReporter</span>
