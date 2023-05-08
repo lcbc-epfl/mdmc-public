@@ -624,69 +624,16 @@ title="Print to PDF"
 <p>Access the NVE version of the code on Moodle and unzip in the Ex5 folder in your noto repository.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
 <span class="kn">import</span> <span class="nn">helpers</span>
 <span class="kn">from</span> <span class="nn">helpers</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
-    .admonition, div.admonition{margin: 0em auto;
-    padding: 0 .6rem .8rem;
-    overflow: hidden;
-    page-break-inside: avoid;
-    border-left: .2rem solid;
-    border-left-color: rgba(var(--pst-color-admonition-default),1);
-    border-bottom-color: rgba(var(--pst-color-admonition-default),1);
-    border-right-color: rgba(var(--pst-color-admonition-default),1);
-    border-top-color: rgba(var(--pst-color-admonition-default),1);
-    border-radius: .2rem;
-    box-shadow: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1);
-    transition: color .25s,background-color .25s,border-color .25s;}
-.exercise {
-    border-color: #b51f1f !important;
-}
-     div.admonition, div.topic, blockquote {
-    clear: left;
-}
-
-div.admonition {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.admonition {
-    border-radius: .4em;
-    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
-}
-
-.admonition>.title, div.admonition>.title {
-    position: relative;
-  margin-top:-10px;
-  margin-left:-0.7em;
-    padding: .4rem .6rem .4rem .6rem;
-    font-weight: 700;
-    }
-
-.exercise>.title {
-    background-color: #e6e6e6 !important;
-    color: #212121 !important;
-}
-     </style></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">MDAnalysis</span>
+<span class="kn">from</span> <span class="nn">MDAnalysis.analysis</span> <span class="kn">import</span> <span class="n">rdf</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">distance</span>
 </pre></div>
 </div>
 </div>
@@ -743,27 +690,9 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 <p>Here you can visualize the trajectory to see if your simulation is running correctly. A quick visualization often highlights if the parameters/simulation are correct.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADJUST THE PATHS AS NECESSARY TO MATCH THE NAME OF YOUR FOLDERS</span>
-<span class="n">traj</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;./ToyMD/carbon-dioxide/traj.pdb&#39;</span><span class="p">)</span>
+<span class="n">traj</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;./ToyMD/carbon-dioxide/co2-traj.pdb&#39;</span><span class="p">)</span>
 <span class="n">show_trajectory</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "6661883865f149b19b4cbb0f5da42ee2", "version_major": 2, "version_minor": 0}
-</script></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">distance</span>
 </pre></div>
 </div>
 </div>
@@ -794,7 +723,7 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">carbon_oxygen1_dist</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;C-O1&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">carbon_oxygen2_dist</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;C-O2&quot;</span><span class="p">)</span>
@@ -819,73 +748,27 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 <p>We can use the <code class="docutils literal notranslate"><span class="pre">MDAnalysis</span></code> library to compute the radial distribution function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">carbons</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">select_atoms</span><span class="p">(</span><span class="s2">&quot;name O1&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">oxygens</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">select_atoms</span><span class="p">(</span><span class="s2">&quot;name O1&quot;</span> <span class="ow">or</span> <span class="s2">&quot;name 02&quot;</span><span class="p">)</span>
+<span class="n">carbons</span> <span class="o">=</span> <span class="n">traj</span><span class="o">.</span><span class="n">select_atoms</span><span class="p">(</span><span class="s2">&quot;name C&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis.analysis</span> <span class="k">as</span> <span class="nn">analysis</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rdf</span> <span class="o">=</span> <span class="n">analysis</span><span class="o">.</span><span class="n">rdf</span><span class="o">.</span><span class="n">InterRDF</span><span class="p">(</span><span class="n">carbons</span><span class="p">,</span> <span class="n">carbons</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rdf</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">rdf</span><span class="o">.</span><span class="n">InterRDF</span><span class="p">(</span><span class="n">carbons</span><span class="p">,</span> <span class="n">oxygens</span><span class="p">)</span>
 <span class="n">rdf</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/CompChem/psi4conda-1.5/lib/python3.8/site-packages/MDAnalysis/analysis/base.py:438: UserWarning: Reader has no dt information, set to 1.0 ps
-  self.times[i] = ts.time
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;MDAnalysis.analysis.rdf.InterRDF at 0x7f913a4c96d0&gt;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">bins</span><span class="p">,</span> <span class="n">rdf</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">rdf</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f913a497c70&gt;]
-</pre></div>
-</div>
-<img alt="../_images/Exercise_22_1.png" src="../_images/Exercise_22_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># below the old RDF we used with a protein water system. </span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select residues using :RES@atomname e.g :WAT@O, :SER@CA</span>
-<span class="c1"># select residue ids using :1-2@</span>
-<span class="n">rdf_data</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">rdf</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">solvent_mask</span><span class="o">=</span><span class="s1">&#39;:WAT@O&#39;</span><span class="p">,</span> <span class="n">bin_spacing</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">maximum</span><span class="o">=</span><span class="mf">10.0</span><span class="p">,</span> <span class="n">solute_mask</span><span class="o">=</span><span class="s1">&#39;MODIFY HERE&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf_data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rdf_data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;r ( $\AA$ )&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;g(r)&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;RDF&#39;</span><span class="p">)</span>
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fix</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">bins</span><span class="p">,</span> <span class="n">rdf</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">rdf</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;distance r (angstrom)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;radial probability density g(r)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;RDF Oxygen atoms to Carbon atoms&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -893,7 +776,60 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 </div>
 <div class="exercise admonition" id="bex1">
 <p class="admonition-title">Bonus Exercise 1</p>
-<p>How would the radial distribution function look like for a heterogenous selection?  You can modify the below code and use a different solute mask (e.g :1&#64;CA) to look at the RDF of water at the N terminus of the protein.</p>
+<p>How would the radial distribution function look like for a heterogenous selection? Below is the code for plotting the RDF of solvent vs different amino acids in a solvated protein (GB1) system. Based on the plot you generate, discuss the difference in solvation patterns around the phenylalanine (F) amino acid sites and around the aspartate (D) amino acid sites. Why do you think these differences exist? Take a look on the PDB Data Bank site to view the relative positions of these amino acids: <a href="https://www.rcsb.org/3d-view/2J52">3D GB1</a></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj_gb1</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;./ToyMD/carbon-dioxide/gb1.pdb&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#selection of different groups of atoms to compare</span>
+<span class="c1">#select the solvent atoms </span>
+<span class="n">solvent</span> <span class="o">=</span> <span class="n">traj_gb1</span><span class="o">.</span><span class="n">select_atoms</span><span class="p">(</span><span class="s2">&quot;resname WAT&quot;</span><span class="p">)</span>
+<span class="c1">#selects the atoms which run along the protein sequence (nitrogen, alpha-carbon, carbon)</span>
+<span class="n">solute_backbone</span> <span class="o">=</span> <span class="n">traj_gb1</span><span class="o">.</span><span class="n">select_atoms</span><span class="p">(</span><span class="s2">&quot;backbone&quot;</span><span class="p">)</span>
+<span class="c1">#select the atoms which comprise the specific amino acids</span>
+<span class="n">solute_PHE</span> <span class="o">=</span> <span class="n">traj_gb1</span><span class="o">.</span><span class="n">select_atoms</span><span class="p">(</span><span class="s2">&quot;resname PHE&quot;</span><span class="p">)</span>
+<span class="n">solute_ASP</span> <span class="o">=</span> <span class="n">traj_gb1</span><span class="o">.</span><span class="n">select_atoms</span><span class="p">(</span><span class="s2">&quot;resname ASP&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rdf0</span> <span class="o">=</span>  <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">rdf</span><span class="o">.</span><span class="n">InterRDF</span><span class="p">(</span><span class="n">solvent</span><span class="p">,</span> <span class="n">solute_backbone</span><span class="p">)</span>
+<span class="n">rdf0</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">rdf1</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">rdf</span><span class="o">.</span><span class="n">InterRDF</span><span class="p">(</span><span class="n">solvent</span><span class="p">,</span> <span class="n">solute_PHE</span><span class="p">)</span>
+<span class="n">rdf1</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+<span class="n">rdf2</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">analysis</span><span class="o">.</span><span class="n">rdf</span><span class="o">.</span><span class="n">InterRDF</span><span class="p">(</span><span class="n">solvent</span><span class="p">,</span> <span class="n">solute_ASP</span><span class="p">)</span>
+<span class="n">rdf2</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fix</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf0</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">bins</span><span class="p">,</span> <span class="n">rdf0</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">rdf</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Backbone&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf1</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">bins</span><span class="p">,</span> <span class="n">rdf1</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">rdf</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;PHE&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">rdf2</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">bins</span><span class="p">,</span> <span class="n">rdf2</span><span class="o">.</span><span class="n">results</span><span class="o">.</span><span class="n">rdf</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;ASP&quot;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;distance r ($\AA$)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;radial probability density g(r)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;RDF Solvent to Different Amino Acid Groups&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 </section>
@@ -966,16 +902,16 @@ For this, you need to rename the <code class="docutils literal notranslate"><spa
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "compchem"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "compchem",
+            kernelName: "python3",
             path: "./Ex5"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'compchem'</script>
+    <script>kernelName = 'python3'</script>
 
               </div>
               
