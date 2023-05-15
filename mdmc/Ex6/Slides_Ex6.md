@@ -37,7 +37,7 @@ output: beamer_presentation
 
 - This phase will install and import all necessary modules to run this exercise, be sure to run this at the beginning (it will take few minutes)
 
-![](/data/mdmc/img_slides/Ex6/clab_setup.png) \
+![](/data/mdmc/img_slides/Ex6/colab_setup.png) \
 
 
 # Exercise 6 - Learning Goals
