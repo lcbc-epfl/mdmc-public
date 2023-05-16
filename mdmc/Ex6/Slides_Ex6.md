@@ -6,13 +6,13 @@ author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikola
 output: beamer_presentation
 ---
 
-# Exercise 6
+# Reminders
 
 - Last exercise session - optional report (only best 5 out of 6 graded)
 
 - No interview for report of Ex6
 
-- Extended deadline for this report: #### via Moodle
+- **Extended deadline** for this report: July 1st
 
 - Even if you decide to not doing the report, read the theory and the exercise! Important knowledge to better understand MD (possibly useful for the exam!)
 
@@ -21,11 +21,11 @@ output: beamer_presentation
   - Written exam on Tuesay May 30th in lecure classroom
 
 
-# Reminders
+# Exercise 6 - Reminders
 
-- This exercise should be run on Google Colab and not on Noto! (free access to GPUs)
+- The first part of the exercise should be run on **GoogleColab** and not on Noto! (free access to GPUs)
 
-- Access Google Colab via the usual rocket button
+- Access GoogleColab via the usual rocket button
 
 - Change the runtime to use a GPU ( Runtime > Change Runtyle type > select GPU)
 
@@ -37,7 +37,7 @@ output: beamer_presentation
 
 - This phase will install and import all necessary modules to run this exercise, be sure to run this at the beginning (it will take few minutes)
 
-![](/data/mdmc/img_slides/Ex6/colab_setup.png) \
+![](/data/mdmc/img_slides/Ex6/colab_setup.png){width=70%} \
 
 
 # Exercise 6 - Learning Goals
@@ -54,7 +54,7 @@ Today you will perform a MD simulation of a Trp-cahe miniprotein
 
 - You will replicate the work of [Simmerling et. al. in 2002](https://pubs.acs.org/doi/10.1021/ja0273851)
 
-![](/data/mdmc/img_slides/Ex6/trp-cage_study.png) \
+![](/data/mdmc/img_slides/Ex6/trp-cage_study.png){width=90%} \
 
 # Exercise 6 - Analysis
 
