@@ -92,7 +92,7 @@ motif.
 
 <div style="height: 400px; width: 100%; position: relative;" class='viewer_3Dmoljs' data-href='alpha_helix.pdb' data-backgroundcolor='0xffffff' ddata-select1='chain:A' data-style1='cartoon' data-select2='chain:A' data-style2='cartoon;stick'></div> <div style="height: 400px; width: 100%; position: relative;" class='viewer_3Dmoljs' data-href='beta_sheet.pdb' data-backgroundcolor='0xffffff' data-select1='chain:A' data-style1='cartoon' data-select2='chain:A' data-style2='cartoon;stick'></div>       
 
-```{figure} ../images/protein-structures.png
+```{figure} ../images/protein-structures2.png
 ---
 height: 1px
 name: polypeptide-structures
