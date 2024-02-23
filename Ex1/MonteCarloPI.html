@@ -118,7 +118,7 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="MDMC_ex1.html">
+  <a class="reference internal" href="MDMC_Ex1.html">
    1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
@@ -529,6 +529,50 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+    .admonition, div.admonition{margin: 0em auto;
+    padding: 0 .6rem .8rem;
+    overflow: hidden;
+    page-break-inside: avoid;
+    border-left: .2rem solid;
+    border-left-color: rgba(var(--pst-color-admonition-default),1);
+    border-bottom-color: rgba(var(--pst-color-admonition-default),1);
+    border-right-color: rgba(var(--pst-color-admonition-default),1);
+    border-top-color: rgba(var(--pst-color-admonition-default),1);
+    border-radius: .2rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1);
+    transition: color .25s,background-color .25s,border-color .25s;}
+.exercise {
+    border-color: #b51f1f !important;
+}
+     div.admonition, div.topic, blockquote {
+    clear: left;
+}
+
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.admonition {
+    border-radius: .4em;
+    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
+}
+
+.admonition>.title, div.admonition>.title {
+    position: relative;
+  margin-top:-10px;
+  margin-left:-0.7em;
+    padding: .4rem .6rem .4rem .6rem;
+    font-weight: 700;
+    }
+
+.exercise>.title {
+    background-color: #e6e6e6 !important;
+    color: #212121 !important;
+}
+     </style></div></div>
 </div>
 <p>Modify the following piece of code to implement a numerical estimation of <span class="math notranslate nohighlight">\(\pi\)</span> via a Monte Carlo approach. Note that you only need to modify the code in the section explicitly highlighted).</p>
 <p>You will need to generate demo points using random extractions. There are different ways to do so, one possibility is to use the <code class="docutils literal notranslate"><span class="pre">uniform</span></code> function of the <code class="docutils literal notranslate"><span class="pre">random</span></code> package that we have imported. Refer to the package documentation to understand how this function works, and how to obtain the desired outcome with it.</p>
@@ -571,7 +615,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Try to run a single test of your code with few trials (<code class="docutils literal notranslate"><span class="pre">n=100</span></code>). You should get a square plot with points inside the circle in orange and points outside the circle in blue.</p>
+<p>Try to run a single test of your code with few trials (<code class="docutils literal notranslate"><span class="pre">n=100</span></code>). You should get a square plot with points inside the circle in blue and points outside the circle in orange.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">estimatePI</span><span class="p">(</span><span class="n">n_trials</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -579,7 +623,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ex4">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 4</p>
 <p>Perform the <span class="math notranslate nohighlight">\(\pi\)</span> estimation for 1000, 100000 and 1000000 trials. Take a screenshot of these estimations and include them in your report (e.g of the python plots). What happens to the accuracy of the <span class="math notranslate nohighlight">\(\pi\)</span> estimation when going from 1000 to 1000000 trials and why?</p>
 </div>
@@ -593,17 +637,17 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ex5">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 5</p>
 <p>What happens to the estimation of <span class="math notranslate nohighlight">\(\pi\)</span> when the circle origin is changed? Why?</p>
 </div>
-<div class="exercise admonition" id="ex6">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 6</p>
 <p>What happens to the accuracy of the estimation when you increase the square size, or decrease the circle size? Is there an optimal ratio between the square side (<span class="math notranslate nohighlight">\(l\)</span>) and the circle diameter (<span class="math notranslate nohighlight">\(d\)</span>)?</p>
 </div>
-<div class="exercise admonition" id="ex7">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 7</p>
-<p>In our code we set the random seed (<code class="docutils literal notranslate"><span class="pre">r.seed()</span></code>) once in the first cell, but then it is unchanged. It means that the first time you run the MC code, the random number set as seed was used for the extraction, but then the later extractions do not start from that seed anymore. What happens if you use the same seed for the pseudo random number generator (PRNG) each time you start the MC code? And what would happen if you would use the same seed for each random number extraction? You can read up more details in <a class="reference internal" href="prng.html"><span class="doc">Appendix: Random and Pseudo-random Numbers</span></a>.
+<p>In our code we set the random seed (<code class="docutils literal notranslate"><span class="pre">r.seed()</span></code>) once in the first cell, but then it is unchanged. It means that the first time you run the MC code, the random number set as seed was used for the extraction, but then the later extractions do not start from that seed anymore. What happens if you use the same seed for the pseudo random number generator (PRNG) each time you start the MC code? And what would happen if you would use the same seed for each random number extraction? You can read up more details in <a class="reference external" href="https://lcbc-epfl.github.io/mdmc-public/Ex1/prng.html">Appendix: Random and Pseudo-random Numbers</a>.
 <em>Hint</em>: To get an idea, you can either edit the MC code, or you can also write a piece of code to check how the numbers generated depend on the seed set.</p>
 </div>
 </section>
@@ -617,16 +661,16 @@ title="Print to PDF"
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "compchem"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "compchem",
             path: "./Ex1"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'compchem'</script>
 
               </div>
               
