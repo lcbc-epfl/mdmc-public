@@ -1,4 +1,4 @@
-# Exercise MDMC_ex1
+# Exercise 1
 
 Student:  Firstname Lastname    Sciper: 000000
 
