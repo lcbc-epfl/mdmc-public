@@ -10,7 +10,7 @@ def extract_exercises(exercise_folders, output_file, Ex_name):
     # Initialize a list to store extracted cells
     extracted_cells = []
     
-    extracted_cells.append(f"# Exercise {Ex_name.replace("Ex","")}")
+    extracted_cells.append(f"# Exercise {Ex_name.replace('Ex','')}")
     extracted_cells.append(f'Student:  Firstname Lastname    Sciper: 000000')
     extracted_cells.append(""":::{admonition} Please use this template to submit your answers. \n
 If you had to modify code from the notebook, please include the modified code in your submission either as screenshot or in a \n
@@ -68,6 +68,8 @@ Note, that references to other parts of the documents aren't resolved in this te
 \\usepackage{xcolor}
 \\usepackage{mdframed}
 \\usepackage{listings}
+\\usepackage{graphicx}
+\\usepackage{hyperref}
 \\definecolor{codegreen}{rgb}{0,0.6,0}
 \\definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \\definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -152,5 +154,3 @@ os.system("mkdir -p templates")
 
 for output_file in output_files:
     os.system(f"mv {output_file} templates/")
-
-
