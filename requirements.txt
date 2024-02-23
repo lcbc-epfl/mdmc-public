@@ -4,3 +4,5 @@ numpy
 ghp-import
 pandas
 pandoc
+pypandoc
+nbformat
