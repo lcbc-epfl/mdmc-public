@@ -1,14 +1,21 @@
 ---
 title: Exercise Session 1
-subtitle: MDMC Spring 2023
-date: February 28, 2023
-author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
+subtitle: MDMC Spring 2024
+date: February 27, 2023
+author: "Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy, Vladislav Slama"
 output: beamer_presentation
 ---
 
 # Exercise General Information
 - Practical exercises every other week in BCH 1113
     - 2 hours to work on your own and with support from TAs
+- Reports
+    - For each exercise, you need to write a report answering all the questions
+    - We provide you templates (google doc/overleaf) for answering the questions
+    
+![](/data/mdmc/img_slides/Ex1/screenshot-template.png) \
+    
+# Exercise General Information    
 - Report Submission
     - `pdf` document answering the questions and relevant output
     - Due date is usually the next exercise session (check Moodle!) 
@@ -82,7 +89,8 @@ Today we'll be building a tool to estimate the value of $\pi$ through a random s
 
 - There is a small portion linking quantum ideas to classical mechanics. Please let us know if you need additional support regarding the notation/formalisms here.
 - It may be a good idea to start from the practical part, to get familiar with the environment and ask us questions
-- Places where you need to modify the code blocks should be noted with comments in the code *## Begin code to modify ##*
+- Places where you need to modify the code blocks should be noted with comments in the code \\
+*## Begin code to modify ##*
 
 # Questions ?
 
