@@ -10,8 +10,8 @@ output: beamer_presentation
 - Practical exercises every other week in BCH 1113
     - 2 hours to work on your own and with support from TAs
 - Reports
-    - For each exercise, you need to write a report answering all the questions
-    - We provide you templates (google doc/overleaf) for answering the questions
+    - For each exercise, report answering the questions
+    - We provide you templates (google doc/overleaf)
     
 ![](/data/mdmc/img_slides/Ex1/screenshot-template.png) \
     
@@ -89,7 +89,7 @@ Today we'll be building a tool to estimate the value of $\pi$ through a random s
 
 - There is a small portion linking quantum ideas to classical mechanics. Please let us know if you need additional support regarding the notation/formalisms here.
 - It may be a good idea to start from the practical part, to get familiar with the environment and ask us questions
-- Places where you need to modify the code blocks should be noted with comments in the code \\
+- Places where you need to modify the code blocks should be noted with comments in the code with something like
 *## Begin code to modify ##*
 
 # Questions ?
