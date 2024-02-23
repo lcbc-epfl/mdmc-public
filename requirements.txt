@@ -2,7 +2,7 @@ jupyter-book==0.13
 matplotlib
 numpy
 ghp-import
-pandas
 pandoc
-pypandoc
+pypandoc-binary
 nbformat
+mystmd
