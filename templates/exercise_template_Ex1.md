@@ -19,3 +19,10 @@ You only need to include the code cells that you modified.
 Note, that references to other parts of the documents aren't resolved in this template and will show as `??`. Check the text of the exercises on website for the reference
 
 :::
+
+:::{admonition} Exercise 1
+:class: exercise
+Prove the Hellmann-Feynman theorem 
+:::
+
+Your answer here
