@@ -4,10 +4,10 @@ parts:
 - caption: Exercises
   numbered: true
   chapters:
-  - file: Ex1/MDMC_ex1
+  - file: Ex1/MDMC_ex1.ipynb
     sections:
-    - file: Ex1/Ex1_Theory
-    - file: Ex1/MonteCarloPI
+    - file: Ex1/Ex1_Theory.ipynb
+    - file: Ex1/MonteCarloPI.ipynb
     - file: Ex1/prng
   - file: Ex2/MDMC_ex2
     sections:
