@@ -135,7 +135,7 @@ for part in parsed_yaml['parts']:
         
         if 'sections' not in chapter.keys():
             continue
-        key = chapter['file'].split('/')[1]
+        key = chapter['file'].split('/')[0]
         file_paths[key] = []
         for section in chapter['sections']:
             if section['file'].endswith(".ipynb"):
