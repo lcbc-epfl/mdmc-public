@@ -36,7 +36,7 @@ jobs:
         jupyter-book build mdmc
     - name: Move templates to publish dir
       run: |
-        mv templates mcmc/_build/html
+        mv templates mdmc/_build/html
     - name: Move slides to publish dir
       run: | 
         while read f; do mv "./mdmc/${f%}.pdf" "./mdmc/_build/html/${f%}.pdf"; done< ./mdmc/slides.txt
