@@ -13,24 +13,24 @@ parts:
     sections:
     - file: Ex2/Ex2_Theory.ipynb
     - file: Ex2/Boltzmann.ipynb
-  - file: Ex3/MDMC_ex3
+  - file: Ex3/MDMC_ex3.ipynb
     sections:
-    - file: Ex3/Ex3_Theory
-    - file: Ex3/PhotonGas
-    - file: Ex3/LJ_NVT
-  - file: Ex4/MDMC_ex4
+    - file: Ex3/Ex3_Theory.ipynb
+    - file: Ex3/PhotonGas.ipynb
+    - file: Ex3/LJ_NVT.ipynb
+  - file: Ex4/MDMC_ex4.ipynb
     sections:
     - file: Ex4/Theory.ipynb
     # - file: Ex4/Exercise4Questions
-    - file: Ex4/Exercise
-  - file: Ex5/MDMC_ex5
+    - file: Ex4/Exercise.ipynb
+  - file: Ex5/MDMC_ex5.ipynb
     sections:
-    - file: Ex5/theory
-    - file: Ex5/Exercise
-  - file: Ex6/MDMC_ex6
+    - file: Ex5/theory.md
+    - file: Ex5/Exercise.ipynb
+  - file: Ex6/MDMC_ex6.ipynb
     sections:
-    - file: Ex6/theory
-    - file: Ex6/proteinmodelling
-    - file: Ex6/TRP_Cage_OpenMM_colab
-    - file: Ex6/hydrogenbonds
+    - file: Ex6/theory.ipynb
+    - file: Ex6/proteinmodelling.md
+    - file: Ex6/TRP_Cage_OpenMM_colab.ipynb
+    - file: Ex6/hydrogenbonds.ipynb
     # - file: Ex6/questions
