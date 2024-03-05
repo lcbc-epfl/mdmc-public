@@ -9,10 +9,10 @@ parts:
     - file: Ex1/Ex1_Theory.ipynb
     - file: Ex1/MonteCarloPI.ipynb
     - file: Ex1/prng
-  - file: Ex2/MDMC_ex2
+  - file: Ex2/MDMC_ex2.ipynb
     sections:
-    - file: Ex2/Ex2_Theory
-    - file: Ex2/Boltzmann
+    - file: Ex2/Ex2_Theory.ipynb
+    - file: Ex2/Boltzmann.ipynb
   - file: Ex3/MDMC_ex3
     sections:
     - file: Ex3/Ex3_Theory
