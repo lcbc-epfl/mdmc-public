@@ -61,9 +61,9 @@ Your answer here
 :class: exercise
  Modify the code below to calculate the occupancy of each state within the harmonic oscillator system.
 Present the entire code file within your report and comment upon the main features using `#`.
-Consider different (**reduced**) temperatures, 0.5, 1, 2 and 3, and energy levels set to 10 (recall $\epsilon = 1$).
-You will implement different `StateOccupancy()` functions, correspondng to different degeneracies. Note that in the $(s + N)$ degeneracy, $s$ is
-    the index of the energy level, and its degeneracy is $(s + N)$, where $N$ assumes values $0,1,2$ in this Exercise.
+Consider different (**reduced**) temperatures, 0.5, 1, 2 and 3, and energy levels set up to 10 (recall $\epsilon =$ integer values ).
+You will implement different `StateOccupancy()` functions, correspondng to different degeneracies. Note that in the degeneracy cases like $s+1$, $s$ is
+    the index of the energy level, and its degeneracy is $(s + X)$, where $X$ assumes given values in this Exercise.
 :::
 
 Your answer here
