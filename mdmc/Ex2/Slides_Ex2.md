@@ -31,15 +31,19 @@ output: beamer_presentation
 
 Today we'll be building a tool to compute the probability distribution of the energy of a system using Boltzmann statistics. The focus of the exercise is to refresh your notions of statistical mechanics, which is the foundation for all simulation techniques we'll see during the course.
 
-**Tips!**
-
 - The theoretical part is about statistical thermodynamics.  \
   Be sure to know what we mean by
   - Thermodynamic ensembles
   - Microstate 
-  - Partition function and why its utility
+  - Partition function and why its useful
   - Boltzmann distribution
-- The practical part is about computing the Boltzmann distribution of a fictitious harmonic oscillator
+ 
+# Exercise 2 - Intro & Tips
+- The practical part is about computing the Boltzmann distribution of a fictitious harmonic oscillator.  \
+  For simplicity
+  - Boltzmann constant = 1
+  - Beta = 1/T
+  - Energies represented as integer values 
 
 # Exercise 2 - Intro & Tips
 
