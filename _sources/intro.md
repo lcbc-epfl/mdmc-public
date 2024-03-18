@@ -50,7 +50,7 @@ Simulations tutorial provided by the University of Amsterdam.
 ## Practical information
 
 ### Time Table Spring Semester 2024
-The course will be **Tue 11h15-13h00** (Lectures in [BCH3303](https://plan.epfl.ch/?room==BCH%203303), exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
+The course will be **Tue 11h15-13h00** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118), exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
 
 
 | date            | type     | description                                               |            |
