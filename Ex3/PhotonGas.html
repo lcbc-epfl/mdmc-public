@@ -564,16 +564,23 @@ photon gas can be calculated analytically. Deriving the total energy of
 an idealised photon gas from quantum mechanics we know that <span class="math notranslate nohighlight">\(U\)</span> can be
 written as the sum of the harmonic oscillation energies:</p>
 <div class="math notranslate nohighlight" id="equation-total-energy-photongas">
-<span class="eqno">(3.15)<a class="headerlink" href="#equation-total-energy-photongas" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-total-energy-photongas" title="Permalink to this equation">#</a></span>\[
 \begin{aligned}
 U= \sum_{j=1}^{N} n_j w_j \hbar = \sum_{j=1}^{N} n_j \epsilon_j,
 \end{aligned}
 \]</div>
 <p>where <span class="math notranslate nohighlight">\(w_j\)</span>  and <span class="math notranslate nohighlight">\(\epsilon_j\)</span> are the oscilator frequency and energy of state <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(n_j\)</span> is the occupancy of
 state <span class="math notranslate nohighlight">\(j\)</span> (<span class="math notranslate nohighlight">\(n_j \in 0,1,2,\cdots, \infty\)</span>), and <span class="math notranslate nohighlight">\(N\)</span> is the total number of
-photons. In this exercise, you are
+states. In this exercise, you are
 going to compute the ensemble average of the occupancy
 <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span>.</p>
+<p>For simplicity, we will assume that all the frequencies are the same, i.e. <span class="math notranslate nohighlight">\(\epsilon_j = \epsilon\)</span> for every <span class="math notranslate nohighlight">\(j\)</span> and hence the energy expression simplifies to</p>
+<div class="math notranslate nohighlight" id="equation-total-energy-photongas">
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-total-energy-photongas" title="Permalink to this equation">#</a></span>\[
+\begin{aligned}
+U= \epsilon \sum_{j=1}^{N} n_j .
+\end{aligned}
+\]</div>
 <p>The scheme you will employ is as follows:</p>
 <ol>
 <li><p>Start with an arbitrary <span class="math notranslate nohighlight">\(n_j\)</span>.</p></li>
@@ -591,6 +598,7 @@ respectively.</p>
 <li><p>Update averages regardless of acceptance or rejection.</p></li>
 <li><p>Iterate from 2).</p></li>
 </ol>
+<p><strong>Note</strong> that in the code we will measure the energy in units of <span class="math notranslate nohighlight">\(\hbar w\)</span>. This means that when you calculate the energy, you will only need to enumerate the number of photons with each frequency since the the Boltzmann’s factor is given by <span class="math notranslate nohighlight">\(e^{-\beta(U(n)-U(o))}\)</span>.</p>
 </section>
 <section id="implementing-a-metropolis-monte-carlo-algorithm">
 <h2><span class="section-number">3.2.2. </span>Implementing a Metropolis Monte Carlo Algorithm<a class="headerlink" href="#implementing-a-metropolis-monte-carlo-algorithm" title="Permalink to this headline">#</a></h2>
@@ -739,16 +747,16 @@ Plot your calculated values versus those from the analytical solution and includ
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "compchem"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "compchem",
             path: "./Ex3"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'compchem'</script>
 
               </div>
               
