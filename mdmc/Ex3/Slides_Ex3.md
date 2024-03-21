@@ -1,5 +1,5 @@
 ---
-title: Exercise Session 2
+title: Exercise Session 3
 subtitle: MDMC Spring 2024
 date: March 26, 2024
 author: "Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy, Vladislav Slama"
@@ -60,10 +60,8 @@ Today we'll be writing and executing Monte Carlo code.
 
 # Exercises 3 & 4 - Additional Notes
 
-Due to the Easter Break, report 3 won't be due until at 9am on Tuesday April 25th when we hold the session for Exercise 4
+Due to the Easter Break, report 3 won't be due until Tuesday April 16th when we hold the session for Exercise 4
 
 
 ![](/data/mdmc/img_slides/Ex3/april_mdmc.png) \
 
-
-![](/data/mdmc/img_slides/Ex3/april_mdmc.png) \
