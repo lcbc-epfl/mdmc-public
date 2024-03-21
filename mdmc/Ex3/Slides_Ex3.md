@@ -48,15 +48,8 @@ Today we'll be writing and executing Monte Carlo code.
 # Exercise 3 - Intro & Tips
 
 - LJ Potential
-  - Lots of helper functions to import and functions to define
+  - Lots of helper functions to import and functions to define. You don't need to modify anything there but it is good to have a look to understand what those functions do!
   - While there is quite a bit of code to execute, the goal is to see how we incorporate the system ensemble and its interactions when generating sample configurations for MC moves
-
-# Exercise 3 & 4 - Additional Notes
-
-- LJ Potential
-  - Lots of helper functions to import and functions to define
-  - While there is quite a bit of code to execute, the goal is to see how we incorporate the system ensemble and its interactions when generating sample configurations for MC moves
-
 
 # Exercises 3 & 4 - Additional Notes
 
