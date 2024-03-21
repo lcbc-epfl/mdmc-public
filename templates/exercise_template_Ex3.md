@@ -82,7 +82,7 @@ Your answer here
 
 :::{admonition} Exercise 9
 :class: exercise
-The program produces a trajectory. Loot at and explain the behaviour of the system for frame over time for $\rho$ 0.85
+The program produces a trajectory. Look at it and explain the behavior of the system over time for $\rho$ 0.85
 :::
 
 Your answer here
@@ -91,9 +91,9 @@ Your answer here
 :class: exercise
 Instead of performing a trial move in which only one particle is displaced, one can do a trial move in which more particles are
  displaced simultaneously. You can find below a modified version of the code, where for each step `nParticlesMove` are displaced. 
-From the given code, explain how a trial move is now performed and what changes with respect to the previos case. 
+From the given code, explain how a trial move is now performed and what changes with respect to the previous case. 
     
-*Hint*: It can be helpful can perfrom different tests, e.g. using `nParticlesMove = nPart` or, for example, `nParticlesMove = nPart/2`. Describe the changes you see in the energies and the trajectories in this new version of the code. 
+*Hint*: It can be helpful to perform different tests, e.g. using `nParticlesMove = nPart` or, for example, `nParticlesMove = nPart/2`. Describe the changes you see in the energies and the trajectories in this new version of the code. 
 :::
 
 Your answer here
