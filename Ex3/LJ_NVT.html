@@ -665,6 +665,50 @@ values.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+    .admonition, div.admonition{margin: 0em auto;
+    padding: 0 .6rem .8rem;
+    overflow: hidden;
+    page-break-inside: avoid;
+    border-left: .2rem solid;
+    border-left-color: rgba(var(--pst-color-admonition-default),1);
+    border-bottom-color: rgba(var(--pst-color-admonition-default),1);
+    border-right-color: rgba(var(--pst-color-admonition-default),1);
+    border-top-color: rgba(var(--pst-color-admonition-default),1);
+    border-radius: .2rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1);
+    transition: color .25s,background-color .25s,border-color .25s;}
+.exercise {
+    border-color: #b51f1f !important;
+}
+     div.admonition, div.topic, blockquote {
+    clear: left;
+}
+
+div.admonition {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.admonition {
+    border-radius: .4em;
+    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
+}
+
+.admonition>.title, div.admonition>.title {
+    position: relative;
+  margin-top:-10px;
+  margin-left:-0.7em;
+    padding: .4rem .6rem .4rem .6rem;
+    font-weight: 700;
+    }
+
+.exercise>.title {
+    background-color: #e6e6e6 !important;
+    color: #212121 !important;
+}
+     </style></div></div>
 </div>
 <div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
@@ -841,7 +885,6 @@ values.</p>
 
 <span class="n">nSteps</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>     <span class="c1">#Total simulation time (in integration steps)</span>
 <span class="n">printFreq</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c1">#Printing frequency</span>
-        
 </pre></div>
 </div>
 </div>
@@ -873,20 +916,6 @@ values.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MC Step  0  Energy -101.19402
-MC Step 100  Energy -148.72077
-MC Step 200  Energy -233.14759
-MC Step 300  Energy -329.36184
-MC Step 400  Energy -340.59937
-MC Step 500  Energy -340.51989
-MC Step 600  Energy -505.45106
-MC Step 700  Energy -526.61477
-MC Step 800  Energy -551.59536
-MC Step 900  Energy -580.30091
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 <section id="visualization-of-the-results">
@@ -900,25 +929,80 @@ MC Step 900  Energy -580.30091
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ex6">
-<p class="admonition-title">Exercise 7</p>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 8</p>
 <p>Perform a simulation at <span class="math notranslate nohighlight">\(T = 2.0\)</span> and <span class="math notranslate nohighlight">\(\rho \in [0.05, 0.5, 2, 10.0]\)</span>. What do you observe?</p>
 </div>
-<div class="exercise admonition" id="ex7">
-<p class="admonition-title">Exercise 8</p>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 9</p>
 <p>The program produces a trajectory. Loot at and explain the behaviour of the system for frame over time for <span class="math notranslate nohighlight">\(\rho\)</span> 0.85</p>
 </div>
-<div class="exercise admonition" id="ex8">
-<p class="admonition-title">Exercise 9</p>
-<p>Instead of performing a trial move in which only one particle is displaced, one can do a trial move in which all particles are
-displaced. What do you expect will happen to the maximum displacements of these moves for a fixed acceptance rate of all displacements (for example 50%)?</p>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 10</p>
+<p>Instead of performing a trial move in which only one particle is displaced, one can do a trial move in which more particles are
+displaced simultaneously. You can find below a modified version of the code, where for each step <code class="docutils literal notranslate"><span class="pre">nParticlesMove</span></code> are displaced.
+From the given code, explain how a trial move is now performed and what changes with respect to the previos case.</p>
+<p><em>Hint</em>: It can be helpful can perfrom different tests, e.g. using <code class="docutils literal notranslate"><span class="pre">nParticlesMove</span> <span class="pre">=</span> <span class="pre">nPart</span></code> or, for example, <code class="docutils literal notranslate"><span class="pre">nParticlesMove</span> <span class="pre">=</span> <span class="pre">nPart/2</span></code>. Describe the changes you see in the energies and the trajectories in this new version of the code.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Set configuration parameters</span>
+<span class="n">nPart</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>        <span class="c1"># Number of particles</span>
+<span class="n">density</span> <span class="o">=</span> <span class="mf">0.85</span><span class="p">;</span>    <span class="c1"># Density of particles</span>
+       
+<span class="c1">#Set simulation parameters</span>
+<span class="n">Temp</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">;</span>         <span class="c1"># Simulation temperature</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">Temp</span><span class="p">;</span>    <span class="c1"># Inverse temperature</span>
+<span class="n">maxDr</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span>        <span class="c1"># Maximal displacement</span>
+
+<span class="n">nSteps</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>     <span class="c1">#Total simulation time (in integration steps)</span>
+<span class="n">printFreq</span> <span class="o">=</span> <span class="mi">100</span>   <span class="c1">#Printing frequency</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nParticlesMove</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nPart</span><span class="o">/</span><span class="mf">1.0</span><span class="p">)</span> <span class="c1"># Number of particles moved simultaneously</span>
+
+<span class="c1"># Remove trajectory file</span>
+<span class="n">remove_file</span><span class="p">(</span><span class="s1">&#39;trajectory.pdb&#39;</span><span class="p">)</span>
+
+<span class="c1"># Set initial configuration</span>
+<span class="n">coords</span><span class="p">,</span> <span class="n">L</span> <span class="o">=</span> <span class="n">placeParticlesOnGrid</span><span class="p">(</span><span class="n">nPart</span><span class="p">,</span><span class="n">density</span><span class="p">)</span><span class="c1">#</span>
+        
+<span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nSteps</span><span class="p">):</span>
+    <span class="n">TrialCoords</span> <span class="o">=</span> <span class="n">coords</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">step</span><span class="o">%</span><span class="k">printFreq</span>==0:     
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;MC Step </span><span class="si">{</span><span class="n">step</span><span class="si">:</span><span class="s2">2</span><span class="si">}</span><span class="s2">  Energy </span><span class="si">{</span><span class="n">LJ_Energy</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="n">L</span><span class="p">)</span><span class="si">:</span><span class="s2">10.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">printXYZ</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;trajectory&#39;</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">nPart</span><span class="p">,</span><span class="n">nParticlesMove</span><span class="p">):</span> <span class="c1"># the particles to move are extracted randomly between all the particles </span>
+                                                        <span class="c1"># np.random.randint(low, high, N) returns N random integers from low to high</span>
+        <span class="n">rTrial</span> <span class="o">=</span> <span class="n">TrialCoords</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">maxDr</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">rTrial</span> <span class="o">=</span> <span class="n">putParticlesInBox</span><span class="p">(</span><span class="n">rTrial</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
+        <span class="n">TrialCoords</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">rTrial</span>
+        
+    <span class="n">deltaE</span> <span class="o">=</span> <span class="n">LJ_Energy</span><span class="p">(</span><span class="n">TrialCoords</span><span class="p">,</span><span class="n">L</span><span class="p">)</span> <span class="o">-</span> <span class="n">LJ_Energy</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span><span class="n">L</span><span class="p">)</span> 
+    <span class="k">if</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">deltaE</span><span class="p">)):</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">TrialCoords</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">traj</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;trajectory.pdb&#39;</span><span class="p">)</span>
+<span class="n">show_trajectory</span><span class="p">(</span><span class="n">traj</span><span class="p">,</span> <span class="n">only_spheres</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="main-code-npt-ensemble">
 <h3><span class="section-number">3.3.1.4. </span>Main Code NPT Ensemble<a class="headerlink" href="#main-code-npt-ensemble" title="Permalink to this headline">#</a></h3>
 <p>These are the modifcations to run in the NPT ensemble</p>
-<div class="exercise admonition" id="bex3">
-<p class="admonition-title">Exercise 10 - Bonus</p>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 11 - Bonus</p>
 <p>The code to sample the NPT ensemble is provided below. What needs to be changed in the code to sample from the isothermic-isobaric ensemble (NpT) instead of the microcanonical ensemble (NVT)?</p>
 </div>
 <div class="cell docutils container">
@@ -1001,30 +1085,6 @@ displaced. What do you expect will happen to the maximum displacements of these 
         <span class="n">avgL</span><span class="o">+=</span><span class="n">L</span>
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Average Box Size </span><span class="si">{</span><span class="n">avgL</span><span class="o">/</span><span class="n">sampleCounter</span><span class="si">:</span><span class="s2">3.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MC Step  0  Energy -107.17941
-Average Box Size 4.900
-MC Step 100  Energy -138.38271
-Average Box Size 4.900
-MC Step 200  Energy -165.94861
-Average Box Size 4.900
-MC Step 300  Energy -298.44862
-Average Box Size 4.900
-MC Step 400  Energy -305.89813
-Average Box Size 4.900
-MC Step 500  Energy -313.93907
-Average Box Size 4.900
-MC Step 600  Energy -314.25791
-Average Box Size 4.900
-MC Step 700  Energy -328.15041
-Average Box Size 4.900
-MC Step 800  Energy -421.19435
-Average Box Size 4.900
-MC Step 900  Energy -455.50053
-Average Box Size 4.900
 </pre></div>
 </div>
 </div>
