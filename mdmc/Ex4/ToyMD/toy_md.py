@@ -2,7 +2,7 @@
 
 
 """
- Minimalistic MD program to run NVT dynamics 
+ Minimalistic MD program
 
  Original version David van der Spoel. 
  Modifcations by Simon Duerr

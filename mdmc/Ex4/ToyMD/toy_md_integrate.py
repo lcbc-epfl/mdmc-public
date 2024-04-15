@@ -29,8 +29,8 @@ def put_in_box(box, resnr, coords):
                     coords[k][m] += box[m]
     
 
-def compute_lambda_T(T, T_reference, time_step, tau_T):
-    if (T == 0 or tau_T == 0):
-        return 1
-    return math.sqrt(1 + (time_step/tau_T)*(T_reference/T - 1))
+#def compute_lambda_T(T, T_reference, time_step, tau_T):
+ #   if (T == 0 or tau_T == 0):
+ #       return 1
+ #   return math.sqrt(1 + (time_step/tau_T)*(T_reference/T - 1))
 
