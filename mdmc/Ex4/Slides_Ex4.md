@@ -1,23 +1,22 @@
 ---
 title: Exercise Session 4
-subtitle: MDMC Spring 2023
-date: April 25, 2023
-author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
+subtitle: MDMC Spring 2024
+date: April 16, 2024
+author: "Vladislav Slama, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
 output: beamer_presentation
 ---
 
-# Notebooks Reminder
+# Reports Reminder
 
-- Always access the notebooks via  the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/) 
-- **Make sure to access noto this way each time you begin the exercise to ensure you have the latest version!**
-		![](/data/mdmc/img_slides/Ex1/notebooks.png)
+- We encourage you to work together, but the content in your report should be original
+- If you use an image or wording from an external source please cite it correctly 
         
-# Exercise Structure
+# Exercise 4 Structure
 
 - Learning goals
     - Derive a time evolution integrator (e.g. Verlet)
     - Understand importance of periodic boundary conditions 
-    - Run a molecular dynamics simulation for a small molecule ($CO_2$) in $NVE$ ensemble
+    - Run a molecular dynamics simulation for a small molecule ($CO_2$) 
     
 - Chapter in script
   - Chapter 4 - Molecular Dynamics Simulations  
@@ -38,9 +37,9 @@ Today we will provide you a simple Molecular Dynamics (**Toy MD**) code in pytho
   - periodic boundary conditions
 - In the practical part you will implement:
   - Velocity verlet algorithm
-  - Periodic boundary conditions (PBS)
+  - Periodic boundary conditions (PBC)
   
-Tip: quickly go through the theoretical part for now, focusing on understanding the algorithms in order to be able to implement them in the second part (leave the theoretical derivations for later)
+N.B.: Question 8 is no longer a bonus question in case you worked on Ex4 earlier this semester
 
 # Exercise 4 - ToyMD structure
 
@@ -60,7 +59,9 @@ Tip: quickly go through the theoretical part for now, focusing on understanding 
 1. via terminal
 2. via jupyter notebook
 
-(see instructions in the exercise). In both cases, you will execute a bash command, passing files as arguments to the `toy_md.py` scriot with the following structure (paths may change):
+(see instructions in the exercise). In both cases, you will execute a bash command, passing files as arguments to the `toy_md.py` script with the following structure (paths may change):
 
 
 `python3 toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
+
+If you'd like to re-run the code with different parameters, please delete the previous `traj.pdb` file or rename it
