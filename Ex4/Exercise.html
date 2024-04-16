@@ -552,7 +552,7 @@ By clicking <a class="reference external" href="https://noto.epfl.ch/hub/user-re
 <p>The main program is <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> takes care of the MD propagation and runs different sub-programs for differrent calculations needed for a MD simulations. For example, <code class="docutils literal notranslate"><span class="pre">toy_md_params.py</span></code> takes care of reading the parameters from the <code class="docutils literal notranslate"><span class="pre">params.txt</span></code> file, or <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> calculates bonded and non-bonded forces.</p>
 <p>For this exercise, we will focus of the main program <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code>, implementing a propagation algorithm, and <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code>, implementing PBCs.
 Take some time to familarize with the program structure in the <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> folder. In that folder, you will also find a <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder, containing parameters for a toy system: a box of <code class="docutils literal notranslate"><span class="pre">216</span></code> carbon dioxide molecules. At the end of the exercise, you will be able to run a MD simulation of the system.</p>
-<div class="exercise admonition" id="ex4">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 3</p>
 <p>How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps) what are the main steps to perform a molecular dynamics simulation from start to finish. Point out the main
 differences between your scheme and Monte Carlo methods.</p>
@@ -613,20 +613,20 @@ div.admonition {
 }
      </style></div></div>
 </div>
-<div class="exercise admonition" id="ex3">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 4</p>
 <p>Implement the velocity verlet algorithm in the Toy MD program (<code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code>).</p>
 </div>
-<div class="exercise admonition" id="ex6">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 5</p>
 <p>Why are most MD and MC simulations based on periodic systems? Explain the main purpose of periodic boundary conditions in these schemes.</p>
 </div>
-<div class="exercise admonition" id="ex5">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 6</p>
 <p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).</p>
-</div>
 <p>With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
-</div><p>To test whether your implementation works you can run a short MD run of a box of a toy system consisting in CO2 molecules.</p>
+</div>
+<p>To test whether your implementation works you can run a short MD run of a box of a toy system consisting in CO2 molecules.</p>
 <p>You can run the <code class="docutils literal notranslate"><span class="pre">Toy</span> <span class="pre">MD</span></code> code in two ways:</p>
 <ol>
 <li><p>via teminal:</p>
@@ -686,8 +686,8 @@ Step:     8 Epot   -710.875 Ekin     61.903 Etot   -648.973 T    7.66 lambda 1.0
 Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.00
 </pre></div>
 </div>
-<div class="exercise admonition" id="bex">
-<p class="admonition-title">Bonus Exercise 7</p>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 7 - Bonus</p>
 <p>What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with and without periodic boundary conditions?</p>
 </div>
 </section>
@@ -721,9 +721,9 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
 {"model_id": "580e19650d89471f980e40ea67c143d7", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
-<div class="exercise admonition" id="id1">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 8</p>
-<p>What do you observe during the trajectory? Try to relate what you see with the parameters set for the simulation (i.e. simulation length, time step, temperature). Explain the changes, if any, you observe in the simulation if you change one or two of those parameters (note: you will need to delete your traj.pdb file before running the simulation with new parameters).</p>
+<p>What do you observe during the trajectory? Try to relate what you see with the parameters set for the simulation (i.e. simulation length, time step, temperature). Explain the changes, if any, you observe in the simulation if you change one or two of those parameters (note: you will need to delete your traj.pdb</p>
 </div>
 </section>
 

@@ -48,6 +48,66 @@ You only need to include the code cells that you modified.
 
 Note, that references to other parts of the documents aren't resolved in this template and will show as \texttt{??}. Check the text of the exercises on website for the reference
 \end{mdframed}
+
+\begin{mdframed}
+\textbf{Exercise 1}\\
+Derive the form of $\mathbf{r}(t + \Delta t)$ in the velocity-Verlet
+(\ref{velocity-verlet}). \textbf{Hint}: solve equation  (\ref{step1}) for  $\mathbf{r}(t - \Delta t)$, and use equations (\ref{step2}) and  (\ref{step3}).
+\end{mdframed}
+
+Your answer here
+
+\begin{mdframed}
+\textbf{Exercise 2}\\
+Derive the form of $\mathbf{v}(t + \Delta t)$ in the velocity-Verlet  (\ref{velocity-verlet}). \textbf{Hint}: recast equations  (\ref{step1}) and (\ref{step2}) to a  timestep $\Delta t$ in the future, and use the result obtained  above.
+\end{mdframed}
+
+Your answer here
+
+\begin{mdframed}
+\textbf{Exercise 3}\\
+How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps) what are the main steps to perform a molecular dynamics simulation from start to finish. Point out the main
+differences between your scheme and Monte Carlo methods.
+\end{mdframed}
+
+Your answer here
+
+\begin{mdframed}
+\textbf{Exercise 4}\\
+Implement the velocity verlet algorithm in the Toy MD program (\texttt{toy\_md.py}).
+\end{mdframed}
+
+Your answer here
+
+\begin{mdframed}
+\textbf{Exercise 5}\\
+Why are most MD and MC simulations based on periodic systems? Explain the main purpose of periodic boundary conditions in these schemes.
+\end{mdframed}
+
+Your answer here
+
+\begin{mdframed}
+\textbf{Exercise 6}\\
+Describe a possible implementation of periodic boundary conditions and provide an implementation in \texttt{toy\_md\_forces.py} to compute the distance of two particles taking into account the perodic boundary conditions in the \texttt{distance\_PBC} function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).
+
+With a box size of \texttt{[2,2,2]} and three points the elementwise distances between point \texttt{[0.5,0.5,0.5]} should be the same to the points \texttt{[-0.5,-0.5,-0.5]} and \texttt{[1.5,1.5,1.5]}. The distance should be \texttt{[1,1,1]}.
+\end{mdframed}
+
+Your answer here
+
+\begin{mdframed}
+\textbf{Exercise 7 - Bonus}\\
+What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum $p$ and angular momentum $L$ are conserved when running with and without periodic boundary conditions?
+\end{mdframed}
+
+Your answer here
+
+\begin{mdframed}
+\textbf{Exercise 8}\\
+What do you observe during the trajectory? Try to relate what you see with the parameters set for the simulation (i.e. simulation length, time step, temperature). Explain the changes, if any, you observe in the simulation if you change one or two of those parameters (note: you will need to delete your traj.pdb
+\end{mdframed}
+
+Your answer here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%  acronyms & glossary  %%%%%%%%%%%%%
 
