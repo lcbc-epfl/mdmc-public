@@ -1,5 +1,5 @@
 ---
-title: Exercise Session 4
+title: Exercise Session 5
 subtitle: MDMC Spring 2024
 date: April 30, 2024
 author: "Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy, Vladislav Slama"
@@ -10,9 +10,9 @@ output: beamer_presentation
 
 - Always access the notebooks via  the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/)
 
-- Google Colab: For Ex 6, you need activate 3rd party permission on your EPFL Google Account. To be able to do that, it is necessary to activate 3rd party permission on your EPFL Google Account at this link https://go.epfl.ch/GoogleColabPermissions.
+- Google Colab: For Ex 6, you need to activate 3rd party permission on your EPFL Google Account. To be able to do that, it is necessary to activate 3rd party permission on your EPFL Google Account at this link https://go.epfl.ch/GoogleColabPermissions.
 Since the activation can take some time, it is important that you do it well in advance to the last exercise session to be able to run exercise 6 on May 14th!
-To test you got access, simply try to log in to colab.research.google.com with your EPFL account after ~24h you asked for the permission.
+To test if you got access, simply try to log in to colab.research.google.com with your EPFL account after ~24h you asked for permission.
 
 # Reminders
 
@@ -27,9 +27,9 @@ To test you got access, simply try to log in to colab.research.google.com with y
 
 # Exercise 5 - Intro
 
-Today we will re-provide you a simple Molecular Dynamics (**Toy MD**) code in python and you will edit it to run a MD simulation in the NVT ensemble.
+Today we will re-provide you a simple Molecular Dynamics (**Toy MD**) code in Python and you will edit it to run an MD simulation in the NVT ensemble.
 
-- The theoretical part discusses the practical of relatistic MD systems:
+- The theoretical part discusses the practical of relativistic MD systems:
   - describing potential energy via force fields
   - sampling NVT (canonical) ensemble using thermostats
   - understanding pair radial distribution functions
@@ -42,7 +42,7 @@ Today we will re-provide you a simple Molecular Dynamics (**Toy MD**) code in py
 # Exercise 5 - Tips
 Tips:
 
-- Download and unzip ToyMD directory from moodle: to make sure nobody starts with a buggy version of the code, we provide the correct vesion you should have from Ex4. Follow the instructions at the beginning of the Ex5 notebook to use that code!
+- Download and unzip ToyMD directory from Moodle: to make sure nobody starts with a buggy version of the code, we provide the correct version you should have from Ex4. Follow the instructions at the beginning of the Ex5 notebook to use that code!
 
 # Exercise 5 - ToyMD structure
 
@@ -57,12 +57,12 @@ Tips:
 
 # Exercise 5 - Run ToyMD
 
-`ToyMD` is a python script, which can be run
+`ToyMD` is a Python script, which can be run
 
 1. via terminal
 2. via jupyter notebook
 
-Recall that you can execute a bash command, passing files as arguments to the `toy_md.py` scriot with the following structure (paths may change):
+Recall that you can execute a bash command, passing files as arguments to the `toy_md.py` script with the following structure (paths may change):
 
 `python3 toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
 
