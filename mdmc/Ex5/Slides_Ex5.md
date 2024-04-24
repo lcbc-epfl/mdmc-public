@@ -1,8 +1,8 @@
 ---
-title: Exercise Session 5
-subtitle: MDMC Spring 2023
-date: May 9, 2023
-author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
+title: Exercise Session 4
+subtitle: MDMC Spring 2024
+date: April 30, 2024
+author: "Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy, Vladislav Slama"
 output: beamer_presentation
 ---
 
@@ -10,12 +10,16 @@ output: beamer_presentation
 
 - Always access the notebooks via  the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/)
 
-- Google Colab: For Ex 6, you need activate 3rd party permission on your EPFL Google Account. Since the activation can take some time, it is important to do it well in advance to May 16th. More information on moodle announcement from 08.05.2023.
+- Google Colab: For Ex 6, you need activate 3rd party permission on your EPFL Google Account. To be able to do that, it is necessary to activate 3rd party permission on your EPFL Google Account at this link https://go.epfl.ch/GoogleColabPermissions.
+Since the activation can take some time, it is important that you do it well in advance to the last exercise session to be able to run exercise 6 on May 14th!
+To test you got access, simply try to log in to colab.research.google.com with your EPFL account after ~24h you asked for the permission.
+
+# Reminders
 
 - Important Dates:
-  - Due date for Ex 5 will be next Tuesday May 16th
-  - Q&A Session on Tuesday May 23rd in lecture classroom
-  - Written exam on Tuesay May 30th in lecure classroom
+  - Due date for Ex 5 will be Tuesday May 14th
+  - Q&A Session on Tuesday May 21rd in lecture classroom
+  - Written exam on Tuesay May 28th in lecure classroom
 
 # Exercise 5 Learning Goals
 
@@ -38,9 +42,7 @@ Today we will re-provide you a simple Molecular Dynamics (**Toy MD**) code in py
 # Exercise 5 - Tips
 Tips:
 
-- download and unzip ToyMD directory from moodle
-- talk through code ideas with others, ask questions
-- use terminal in noto
+- Download and unzip ToyMD directory from moodle: to make sure nobody starts with a buggy version of the code, we provide the correct vesion you should have from Ex4. Follow the instructions at the beginning of the Ex5 notebook to use that code!
 
 # Exercise 5 - ToyMD structure
 
@@ -64,7 +66,12 @@ Recall that you can execute a bash command, passing files as arguments to the `t
 
 `python3 toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
 
+or, alternatively, you can run the same bash command from code cells, starting with an exclamation mark (the cell will be interpreted as a bash command to execute):
+
+`! ./toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
+
+
 # Exercise 5 - Thermostats
 
 Let's look deeper into different thermostats
-[Simon's Explanation of Thermostats](https://moodle.epfl.ch/course/view.php?id=10441#section-12)
+[Simon's Explanation of Thermostats](https://moodle.epfl.ch/mod/resource/view.php?id=1206724)
