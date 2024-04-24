@@ -621,7 +621,31 @@ title="Print to PDF"
 <h1><span class="section-number">5.2. </span>ToyMD<a class="headerlink" href="#toymd" title="Permalink to this headline">#</a></h1>
 <section id="how-to-run-the-exercises">
 <h2><span class="section-number">5.2.1. </span>How to run the exercises<a class="headerlink" href="#how-to-run-the-exercises" title="Permalink to this headline">#</a></h2>
-<p>Access the NVE version of the code on Moodle and unzip in the Ex5 folder in your noto repository.</p>
+<p>We provide the correct version of the code from last week, feel free to use it for this exercise to be sure to start from a correct code, which you will further modify in this exercise.</p>
+<p><strong>How to access the corrected version of the code:</strong></p>
+<ol class="simple">
+<li><p>Access the NVE version of the code on Moodle (“ToyMD Code from last week” file)</p></li>
+<li><p>Download the zip file</p></li>
+<li><p>Upload it on the Noto repository (Ex5 folder)</p></li>
+<li><p>Unzip the file with the following command:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>unzip<span class="w"> </span>ToyMD.zip
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Adapt permissions to be able to run the code</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">700</span><span class="w"> </span>./ToyMD
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -644,15 +668,15 @@ title="Print to PDF"
 <h1><span class="section-number">5.3. </span>Exercises<a class="headerlink" href="#exercises" title="Permalink to this headline">#</a></h1>
 <section id="md-initialization-and-temperature">
 <h2><span class="section-number">5.3.1. </span>MD Initialization and Temperature<a class="headerlink" href="#md-initialization-and-temperature" title="Permalink to this headline">#</a></h2>
-<div class="exercise admonition" id="ex1">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 1</p>
 <p>Implement the initialization described in the Theory section in our ToyMD code in <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> in the section <code class="docutils literal notranslate"><span class="pre">##INITIALIZATION</span> <span class="pre">HERE##</span></code>. For this you should pick random velocities using <code class="docutils literal notranslate"><span class="pre">r.random.standard_normal((dim1,dim2))</span></code> which will produce random numbers between <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code>. You need to shift this random gaussian distribution appropriately and then multiply it such that the width of the velocity distribution matches the kinetic energy at the target temperature. Use the variables <code class="docutils literal notranslate"><span class="pre">masses[i]</span></code> for the mass of particle <code class="docutils literal notranslate"><span class="pre">i</span></code> and Boltzmanns constant <code class="docutils literal notranslate"><span class="pre">0.00831415</span></code>. Remember that for each degree of freedom (e.g velocity in x direction) <a class="reference internal" href="theory.html#equation-equipart-x">(5.22)</a> holds.</p>
 </div>
-<div class="exercise admonition" id="ex2">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 2</p>
 <p>Implement the Berendsen thermostat in the <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> and <code class="docutils literal notranslate"><span class="pre">toy_md_integrate.py</span></code> (change the <code class="docutils literal notranslate"><span class="pre">compute_lambda_T</span></code> function) files.</p>
 </div>
-<div class="exercise admonition" id="ex3">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 3</p>
 <p>A better thermostat is the Andersen thermostat. It can be implemented as follows. Describe what problems this thermostat will present to us e.g for sampling of diffusion coefficients. What advantage does this thermostat have compared to the Berendsen thermostat?</p>
 </div>
@@ -662,6 +686,7 @@ title="Print to PDF"
         <span class="n">sd</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">0.00831415</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">md_params</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">])</span><span class="o">/</span><span class="n">masses</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>  <span class="c1"># Velocity distribution at target temperature</span>
         <span class="n">velocities</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">sd</span> <span class="c1"># set new random velocities</span>
 </pre></div>
+</div>
 </div>
 </section>
 <section id="force-field">
@@ -676,14 +701,20 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 
 </pre></div>
 </div>
-<p>The simulation is run using</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>path/to/toy_md.py -c co2.pdb -p params.txt -f force_field.txt -o co2-traj.pdb -w co2-final.pdb
+<p>The simulation is run using the following command.
+Make sure to correctly adapt the path to the <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> code and the input files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>path/to/toy_md.py<span class="w"> </span>-c<span class="w"> </span>path/to/co2.pdb<span class="w"> </span>-p<span class="w"> </span>path/to/params.txt<span class="w"> </span>-f<span class="w"> </span>path/to/force_field.txt<span class="w"> </span>-o<span class="w"> </span>path/to/co2-traj.pdb<span class="w"> </span>-w<span class="w"> </span>path/to/co2-final.pdb
 </pre></div>
 </div>
+</div>
+</div>
 <p>where <code class="docutils literal notranslate"><span class="pre">co2-traj.pdb</span></code> is a trajectory written each <code class="docutils literal notranslate"><span class="pre">output-frequency</span></code> steps and <code class="docutils literal notranslate"><span class="pre">co2-final.pdb</span></code> is the final geometry after the simulation has run the specified number of steps.</p>
-<div class="exercise admonition" id="ex4">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 4</p>
-<p>Visualize the trajectory and visualize the distance of a C-O bond. Explain the flucations that you observe. What does the average value correspond to?</p>
+<p>Visualize the trajectory and visualize the distance of a C-O bond using the code cells below.
+Explain the fluctuations that you observe. What does the average value correspond to?</p>
 </div>
 <section id="visualization-of-the-trajectory">
 <h3><span class="section-number">5.3.2.1. </span>Visualization of the trajectory<a class="headerlink" href="#visualization-of-the-trajectory" title="Permalink to this headline">#</a></h3>
@@ -691,7 +722,7 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ADJUST THE PATHS AS NECESSARY TO MATCH THE NAME OF YOUR FOLDERS</span>
-<span class="n">traj</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;./ToyMD/carbon-dioxide/co2-traj.pdb&#39;</span><span class="p">)</span>
+<span class="n">traj</span> <span class="o">=</span> <span class="n">MDAnalysis</span><span class="o">.</span><span class="n">Universe</span><span class="p">(</span><span class="s1">&#39;./path/to/co2-traj.pdb&#39;</span><span class="p">)</span>
 <span class="n">show_trajectory</span><span class="p">(</span><span class="n">traj</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -727,7 +758,7 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">carbon_oxygen1_dist</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;C-O1&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">carbon_oxygen2_dist</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;C-O2&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">forcefield</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;distance from forcefield&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">forcefield</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;distance from forcefield&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;timestep&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;distance ($\AA$)&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distance&#39;</span><span class="p">)</span>
@@ -738,7 +769,7 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="ex5">
+<div class="exercise admonition">
 <p class="admonition-title">Exercise 5</p>
 <p>Visualize the radial distribution function of this system using below code. What do you observe?</p>
 </div>
@@ -774,8 +805,8 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 </div>
 </div>
 </div>
-<div class="exercise admonition" id="bex1">
-<p class="admonition-title">Bonus Exercise 1</p>
+<div class="exercise admonition">
+<p class="admonition-title">Bonus Exercise 6</p>
 <p>How would the radial distribution function look like for a heterogenous selection? Below is the code for plotting the RDF of solvent vs different amino acids in a solvated protein (GB1) system. Based on the plot you generate, discuss the difference in solvation patterns around the phenylalanine (F) amino acid sites and around the aspartate (D) amino acid sites. Why do you think these differences exist? Take a look on the PDB Data Bank site to view the relative positions of these amino acids: <a href="https://www.rcsb.org/3d-view/2J52">3D GB1</a></p>
 </div>
 <div class="cell docutils container">
@@ -835,8 +866,8 @@ Investigate the <code class="docutils literal notranslate"><span class="pre">for
 </section>
 <section id="timestep-and-coupling">
 <h2><span class="section-number">5.3.3. </span>Timestep and coupling<a class="headerlink" href="#timestep-and-coupling" title="Permalink to this headline">#</a></h2>
-<div class="exercise admonition" id="ex6">
-<p class="admonition-title">Exercise 6</p>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 7</p>
 <p>Test the influence of the coupling parameter <span class="math notranslate nohighlight">\(\tau\)</span> and timestep <span class="math notranslate nohighlight">\(dt\)</span>.
 Test the combinations of:</p>
 <ul class="simple">
@@ -844,9 +875,27 @@ Test the combinations of:</p>
 <li><p>large <span class="math notranslate nohighlight">\(dt\)</span> and small <span class="math notranslate nohighlight">\(\tau\)</span></p></li>
 <li><p>very large <span class="math notranslate nohighlight">\(dt\)</span> and <span class="math notranslate nohighlight">\(\tau\)</span></p></li>
 </ul>
-</div>
+<p>For some of these settings the system may explode (you can see that because really high energies and temperatures are reached and the simulation gets stuck). If this is the case, you will not be able to complete the simulation, but you can just restart the notebook and use new parameters. <strong>In your report, even for those parameters add a comment and explain the behaviour you observe</strong>.</p>
 <p><strong>Hint</strong>: To check the influence of the coupling parameter <span class="math notranslate nohighlight">\(\tau\)</span>, you can plot the instantaneous temperatures for several runs using different <span class="math notranslate nohighlight">\(\tau\)</span> values.<br />
 For this, you need to rename the <code class="docutils literal notranslate"><span class="pre">logfile</span></code> produced after running <code class="docutils literal notranslate"><span class="pre">toy_md</span></code> (to avoid overwritting it with the next run). You can do this by executing this command on the terminal: <code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">&lt;path_to_logfile&gt;/logfile</span> <span class="pre">&lt;path_to_logfile&gt;/logfile_tau_&lt;value_of_tau&gt;</span></code>. To then read the temperatures from each <code class="docutils literal notranslate"><span class="pre">logfile</span></code>, you can use the function <code class="docutils literal notranslate"><span class="pre">read_temperatures</span></code> shown below.</p>
+<p>Note that the code cell for plotting already suggests you a possible set of values of <span class="math notranslate nohighlight">\(\tau\)</span> and <span class="math notranslate nohighlight">\(dt\)</span>, adapt the values of the parameters and plot different/more curves.</p>
+</div>
+<p>The simulation is run using the following command (for this test, you can run a shorter simulation, i.e. decreasing the number of steps).
+Make sure to correctly adapt the path to the <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> code and the input files.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>path/to/toy_md.py<span class="w"> </span>-c<span class="w"> </span>path/to/co2.pdb<span class="w"> </span>-p<span class="w"> </span>path/to/params.txt<span class="w"> </span>-f<span class="w"> </span>path/to/force_field.txt<span class="w"> </span>-o<span class="w"> </span>path/to/co2-traj.pdb<span class="w"> </span>-w<span class="w"> </span>path/to/co2-final.pdb
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cp<span class="w"> </span>path/to/logfile<span class="w"> </span>path/to/logfile_tau_&lt;value_of_tau&gt;_dt_&lt;value_of_dt&gt;
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">read_temperatures</span><span class="p">(</span>
@@ -861,7 +910,8 @@ For this, you need to rename the <code class="docutils literal notranslate"><spa
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">logfile_path</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">logfile</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-    <span class="n">temps</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">logfile</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span>
+
+    <span class="n">temps</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">9</span><span class="p">])</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">logfile</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Step:&#39;</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">temps</span>
 </pre></div>
 </div>
@@ -872,15 +922,14 @@ For this, you need to rename the <code class="docutils literal notranslate"><spa
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code for plotting the instantaneous temperatures for several runs using different $\tau$ values.</span>
 
 <span class="c1"># Read temperatures</span>
-<span class="n">temps_tau_50</span> <span class="o">=</span> <span class="n">read_temperatures</span><span class="p">(</span><span class="n">logfile_path</span> <span class="o">=</span> <span class="s1">&#39;./ToyMD/carbon-dioxide/logfile_tau_50_dt_0.001&#39;</span><span class="p">)</span> <span class="c1"># modify logfile_path with the path to your files!</span>
-<span class="n">temps_tau_0p05</span> <span class="o">=</span> <span class="n">read_temperatures</span><span class="p">(</span><span class="n">logfile_path</span> <span class="o">=</span> <span class="s1">&#39;./ToyMD/carbon-dioxide/logfile_tau_0.05_dt_0.001&#39;</span><span class="p">)</span> <span class="c1"># modify logfile_path</span>
-<span class="n">temps_tau_0p001</span> <span class="o">=</span> <span class="n">read_temperatures</span><span class="p">(</span><span class="n">logfile_path</span> <span class="o">=</span> <span class="s1">&#39;./ToyMD/carbon-dioxide/logfile_tau_0.001_dt_0.001&#39;</span><span class="p">)</span> <span class="c1"># modify logfile_path</span>
- 
+<span class="n">temps_1</span> <span class="o">=</span> <span class="n">read_temperatures</span><span class="p">(</span><span class="n">logfile_path</span> <span class="o">=</span> <span class="s1">&#39;./ToyMD/carbon-dioxide/logfile_tau_0.5_dt0.001&#39;</span><span class="p">)</span> <span class="c1"># modify logfile_path with the path to your files!</span>
+<span class="c1"># Add here similar lines for reading log files from simualtions with different parameters</span>
+
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps_tau_50</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau$ = 50&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps_tau_0p05</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\tau$ = 0.05&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps_tau_0p001</span><span class="p">,</span> <span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\tau$ = 0.001&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temps_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\tau$ = 0.5, dt = 0.001&#39;</span><span class="p">)</span>
+<span class="c1"># Add here similar lines for reading log files from simualtions with different parameters</span>
+
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;Simulation step&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;T (K)&quot;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Temperature variation&#39;</span><span class="p">)</span>
@@ -902,16 +951,16 @@ For this, you need to rename the <code class="docutils literal notranslate"><spa
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "compchem"
         },
         kernelOptions: {
-            kernelName: "python3",
+            kernelName: "compchem",
             path: "./Ex5"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
+    <script>kernelName = 'compchem'</script>
 
               </div>
               
