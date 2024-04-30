@@ -10,16 +10,17 @@ output: beamer_presentation
 
 - Always access the notebooks via  the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/)
 
-- Google Colab: For Ex 6, you need to activate 3rd party permission on your EPFL Google Account. To be able to do that, it is necessary to activate 3rd party permission on your EPFL Google Account at this link [https://go.epfl.ch/GoogleColabPermissions](https://go.epfl.ch/GoogleColabPermissions).
-Since the activation can take some time, it is important that you do it well in advance to the last exercise session to be able to run exercise 6 on May 14th!
-To test if you got access, simply try to log in to [colab.research.google.com](colab.research.google.com) with your EPFL account after ~24h you asked for permission.
-
-# Reminders
-
 - Important Dates:
   - Due date for Ex 5 will be Tuesday May 14th
   - Q&A Session on Tuesday May 21rd in lecture classroom
   - Written exam on Tuesday May 28th in lecture classroom
+
+# Reminders
+
+**Google Colab**: For Ex 6, we will use GoogleColab instead of Noto
+- Activate 3rd party permission on your EPFL Google Account at this link [https://go.epfl.ch/GoogleColabPermissions](https://go.epfl.ch/GoogleColabPermissions). Since the activation can take some time, it is important that you do it well in advance to the last exercise session to be able to run exercise 6 on May 14th!
+- Add yourself to the GoogleColab user group at this link [https://groups.epfl.ch/#/home/S29748]
+- To test if you got access, simply try to log in to [colab.research.google.com](colab.research.google.com) with your EPFL account after ~24h you asked for permission.
 
 # Exercise 5 Learning Goals
 
