@@ -18,8 +18,9 @@ output: beamer_presentation
 # Reminders
 
 **Google Colab**: For Ex 6, we will use GoogleColab instead of Noto
+
 - Activate 3rd party permission on your EPFL Google Account at this link [https://go.epfl.ch/GoogleColabPermissions](https://go.epfl.ch/GoogleColabPermissions). Since the activation can take some time, it is important that you do it well in advance to the last exercise session to be able to run exercise 6 on May 14th!
-- Add yourself to the GoogleColab user group at this link [https://groups.epfl.ch/#/home/S29748]
+- Add yourself to the GoogleColab user group at this link [https://groups.epfl.ch/#/home/S29748](https://groups.epfl.ch/#/home/S29748)
 - To test if you got access, simply try to log in to [colab.research.google.com](colab.research.google.com) with your EPFL account after ~24h you asked for permission.
 
 # Exercise 5 Learning Goals
