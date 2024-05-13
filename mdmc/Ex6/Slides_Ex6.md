@@ -1,24 +1,24 @@
 ---
 title: Exercise Session 6
-subtitle: MDMC Spring 2023
-date: May 16, 2023
-author: "Lorenzo Agosta, Virginia Carnevali, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
+subtitle: MDMC Spring 2024
+date: May 14, 2024
+author: "Vladislav Slama, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
 output: beamer_presentation
 ---
 
 # Reminders
 
-- Last exercise session - optional report (only best 5 out of 6 graded)
+- Today is the *final* exercise session - optional report (only best 5 out of 6 graded)
 
 - No interview for report of Ex6
 
-- **Extended deadline** for this report: July 1st
+- **Extended deadline** for this report: Sunday June 30th at 23h59
 
-- Even if you decide to not doing the report, read the theory and the exercise! Important knowledge to better understand MD (possibly useful for the exam!)
+- Even if you decide to not do the report, read the theory and the exercise! Important knowledge to better understand MD (possibly useful for the exam!)
 
 - Important Dates:
-  - Q&A Session on Tuesday May 23rd in lecture classroom -- send us your questions in advance!
-  - Written exam on Tuesay May 30th in lecure classroom
+  - Q&A Session on Tuesday May 21st in lecture classroom -- send us your questions on moodle in advance!
+  - Written exam on Tuesay May 28th in lecure classroom
 
 
 # Exercise 6 - Reminders
@@ -60,7 +60,7 @@ Today you will perform a MD simulation of a Trp-cahe miniprotein
 
 The analysis of the MD you generate will be performed on Noto 
 
-- Uplad the `archive.zip` generated on GoogleColab
+- Upload the `archive.zip` generated on GoogleColab
 
 - You will look at different properties during the simulation, comparing to the experimental structure (PDB 1L2Y)
 
