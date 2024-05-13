@@ -644,7 +644,7 @@ for any successful MD simulation (idem for MC).</p>
 <p>The sheer number of water molecules surrounding a protein will
 considerably increase the computational cost of a simulation, since the
 simulation box has to be chosen reasonably big in order for the solvent
-to properly mimick the properties of a bulk system and to prevent
+to properly mimic the properties of a bulk system and to prevent
 interaction between the periodic images of the solute. Solvent molecules
 have to be treated like the rest of the system (be it by a force field
 or <em>first principles</em> methods), and are therefore referred to as an
@@ -730,8 +730,8 @@ equilibrium:</p>
 <span class="eqno">(6.5)<a class="headerlink" href="#equation-conc" title="Permalink to this equation">#</a></span>\[
 c_i(\mathbf{r}) = c_i^{\infty} \cdot \text{exp}\left(-\frac{U_i(\mathbf{r})}{k_B T}\right)
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(c_i^{\infty}\)</span> represents the concentration of the ion <span class="math notranslate nohighlight">\(i\)</span>, of
-electrostatic energy <span class="math notranslate nohighlight">\(U_i(\mathbf{r})\)</span>, at a distance of infinity from
+<p>where <span class="math notranslate nohighlight">\(c_i^{\infty}\)</span> represents the concentration of the ion <span class="math notranslate nohighlight">\(i\)</span> (of
+electrostatic energy <span class="math notranslate nohighlight">\(U_i(\mathbf{r})\)</span>) at a distance of infinity from
 the solute (bulk concentration). <span class="math notranslate nohighlight">\(k_B\)</span> is the Boltzmann constant and <span class="math notranslate nohighlight">\(T\)</span>
 the temperature.</p>
 <p>Considering <a class="reference internal" href="#equation-conc">(6.5)</a>
@@ -750,7 +750,7 @@ assumption that the potential is small which yields:</p>
 <span class="math notranslate nohighlight">\(\rho_\text{ext}(\mathbf{r})\)</span> is an effective density from solute and
 solvent.</p>
 <div class="exercise admonition" id="bex1">
-<p class="admonition-title">Bonus Exercise 1</p>
+<p class="admonition-title">Exercise 1 - Bonus</p>
 <p>Derive <a class="reference internal" href="#equation-eqpb2">(6.6)</a> from <a class="reference internal" href="#equation-eqpb1">(6.3)</a> by passing via the exponential form of the Poisson-Boltzmann equation <a class="reference internal" href="#equation-conc">(6.5)</a>.    Give an appropriate expression for the equilibrium charge density  <span class="math notranslate nohighlight">\(\rho_\text{ext}(\mathbf{r})\)</span> in the Poisson-Boltzmann approach.</p>
 </div>
 </section>
@@ -781,20 +781,20 @@ terms:</p>
  \end{aligned}
  \]</div>
 <div class="exercise admonition" id="ex1">
-<p class="admonition-title">Exercise 1</p>
+<p class="admonition-title">Exercise 2</p>
 <p>How may the solvent environment (especially in the case of a polar
 solvent, such as dimethylformamide (DMF), and a polar
 hydrogen-bonding solvent, such as water) influence the properties
 (conformation, reactivity) of the solute? Which solvent do you
-expect to be more difficult to mimick by an implicit model, DMF or
+expect to be more difficult to mimic by an implicit model, DMF or
 water?</p>
 </div>
 <div class="exercise admonition" id="ex2">
-<p class="admonition-title">Exercise 2</p>
+<p class="admonition-title">Exercise 3</p>
 <p>In the context of the previous questions, explain possible advantages and pitfalls of using an implicit solvent compared to an explicit treatment.</p>
 </div>
 <div class="exercise admonition" id="ex3">
-<p class="admonition-title">Exercise 3</p>
+<p class="admonition-title">Exercise 4</p>
 <p>A protein has the tendency to fold much quicker in implicit than in explicit solvent. Why is this? What are possible issues?</p>
 </div>
 </section>
@@ -871,13 +871,13 @@ P = \frac{1}{V} \left[Nk_BT - \frac{1}{3k_BT}\sum_{i=1}^N \sum_{j=i+1}^N r_{ij} 
 \end{aligned}
 \]</div>
 <div class="exercise admonition" id="bex2">
-<p class="admonition-title">Bonus Exercise 2</p>
+<p class="admonition-title">Exercise 5 - Bonus</p>
 <p>How expensive is the computation of the pressure in
 <a class="reference internal" href="#equation-pressure">(6.13)</a>, via the virial, in an MD and an MC
 algorithm, respectively?</p>
 </div>
 <div class="exercise admonition" id="bex3">
-<p class="admonition-title">Bonus Exercise 3</p>
+<p class="admonition-title">Exercise 6 - Bonus</p>
 <p>Derive the ideal gas part of the virial in <a class="reference internal" href="#equation-virial">(6.12)</a>.</p>
 </div>
 </section>

@@ -588,7 +588,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="trpcage-analysis">
 <h1><span class="section-number">6.4. </span>TrpCage Analysis<a class="headerlink" href="#trpcage-analysis" title="Permalink to this headline">#</a></h1>
-<p>First we need to download the files from colab:</p>
+<p>Please run this in noto. Upload the zip file from colab into the noto directory space by selecting the folder icon on the left your screen while in noto and then selecting the up arrow (for upload) from the top menu. Then upload your archive.zip file that you generated in the previous exercise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -646,21 +646,6 @@ div.admonition {
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MDAnalysis</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copy url from colab</span>
-<span class="o">!</span>curl<span class="w"> </span>-o<span class="w"> </span>archive.zip<span class="w"> </span>https://transfer.sh/pTGaWX/archive.zip
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># unzip</span>
 <span class="o">!</span>unzip<span class="w"> </span>-o<span class="w"> </span>archive.zip
 </pre></div>
@@ -704,7 +689,7 @@ div.admonition {
 </script></div>
 </div>
 <div class="exercise admonition" id="ex6">
-<p class="admonition-title">Exercise 6</p>
+<p class="admonition-title">Exercise 9</p>
 <p>What type of structure is the folded Trp-cage miniprotein? List the main components contributing to this structure, including the residues which are responsible for their formation.</p>
 </div>
 <p>We will also load an experimental NMR structure from an experimental NMR ensemble.</p>
@@ -850,7 +835,7 @@ The new kid on the block of structural biology. Works very well especially for l
 </div>
 </div>
 <div class="exercise admonition" id="ex7">
-<p class="admonition-title">Exercise 7</p>
+<p class="admonition-title">Exercise 10</p>
 <p>Explain the RMSD and RMSF plots.  Does the trajectory reach the same conformation as the experimental structure?
 Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a use case for the other metric.</p>
 </div>
@@ -935,11 +920,11 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </div>
 <div class="exercise admonition" id="ex8">
-<p class="admonition-title">Exercise 8</p>
+<p class="admonition-title">Exercise 11</p>
 <p>Include the hbond graph in your report, and explain the observed trend with reference to the structural components of the Trp-cage miniprotein ?</p>
 </div>
 <div class="exercise admonition" id="ex9">
-<p class="admonition-title">Exercise 9</p>
+<p class="admonition-title">Exercise 12</p>
 <p>Perform the Q1 and Q2 analysis explained below and provide the graph of the number of contacts. Can you infer at which interval (in nanoseconds) the secondary structure forms?</p>
 </div>
 <p>Here we calculate a Q1 vs Q2 plot, where Q1 refers to fraction of native contacts along a trajectory with reference to the first frame, and Q2 represents the fraction of native contacts with reference to the last.</p>
@@ -1019,15 +1004,15 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </div>
 <div class="exercise admonition" id="ex10">
-<p class="admonition-title">Exercise 10</p>
+<p class="admonition-title">Exercise 13</p>
 <p>Why is it useful to constrain bond lengths for larger MD simulations (typically with the SHAKE algorithm)? Which bonds would you typically constrain in such a scenario, and why?</p>
 </div>
 <div class="exercise admonition" id="bex4">
-<p class="admonition-title">Bonus exercise 4</p>
+<p class="admonition-title">Exercise 14 - Bonus</p>
 <p>Which properties do you need to take into account in order to select an appropriate timestep for your MD simulation? Are there any other reasons you might wish to reduce or increase this timestep?</p>
 </div>
 <div class="exercise admonition" id="bex5">
-<p class="admonition-title">Bonus exercise 5</p>
+<p class="admonition-title">Exercise 15 - Bonus</p>
 <p>Is it better to sample 2 x 10 ns from the same starting structure or 1 x 20 ns in order to explore conformational space efficiently?</p>
 </div>
 </section>

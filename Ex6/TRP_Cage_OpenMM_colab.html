@@ -703,7 +703,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="exercise admonition" id="ex4">
-<p class="admonition-title">Exercise 4</p>
+<p class="admonition-title">Exercise 7</p>
 <p>Follow the instructions in this file and run the folding simulation.
 Calculate the correct number of steps for the simulations to run 50 ps of heating and 20 ns of dynamics and report those numbers in your report. These sections are marked in the following with <code class="docutils literal notranslate"><span class="pre">#CHANGE</span> <span class="pre">HERE</span></code>.</p>
 </div>
@@ -904,7 +904,7 @@ viewer_1651750336480033.render();
 </script></div></div>
 </div>
 <div class="exercise admonition" id="ex5">
-<p class="admonition-title">Exercise 5</p>
+<p class="admonition-title">Exercise 8</p>
 <p>Include an image of the starting structure in your report. Are there any residues which  would contribute to the instability of the starting structure in its current conformation, why?</p>
 </div>
 </section>
@@ -1199,17 +1199,10 @@ Amber NetCDF format.</p>
 </section>
 <section id="save-trajectory-for-later-processing">
 <h2><span class="section-number">6.3.5. </span>Save trajectory for later processing<a class="headerlink" href="#save-trajectory-for-later-processing" title="Permalink to this headline">#</a></h2>
-<p>Now we zip the files and upload the files to a filesharing provider to download them again on noto.</p>
+<p>Now we zip the files. Once the archive.zip file appears in the folder to the left of your colab space (select the folder icon if hidden), then download the achieve.zip file using the three dot menu. You will upload this zip file in noto for the next section of the exercise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>zip<span class="w"> </span>archive.zip<span class="w"> </span>trp_cage*<span class="w"> </span>production.csv<span class="w"> </span>heating.csv
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>curl<span class="w"> </span>--upload-file<span class="w"> </span>archive.zip<span class="w"> </span>https://transfer.sh
 </pre></div>
 </div>
 </div>
