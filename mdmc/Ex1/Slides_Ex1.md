@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 1
-subtitle: MDMC Spring 2024
-date: February 27, 2023
-author: "Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy, Vladislav Slama"
+subtitle: MDMC Spring 2025
+date: February 25, 2025
+author: "Salomé Guilbert, Qihao Zhang"
 output: beamer_presentation
 ---
 
@@ -25,8 +25,9 @@ output: beamer_presentation
 - Interviews during next exercise session are about 10-15 minutes
     - Test your understanding of the exercise
     - Good occasion to discuss your doubts and questions
-    - We will release the schedule ahead of the session so you know when and with whom you will interview
-
+    - We will release the schedule ahead of the session so you know when and with whom you will interview - you need to email us to reschedule if you can't make it to your allocated time
+    - If you don't come to your interview and don't notify us to reschdule, **your grade for that report will be 0
+**
 **Exercises contribute to 1/2 of final grade! We count the best 5 out of the 6 reports for your exercise grade.**
 
 # Exercise structure
@@ -97,7 +98,7 @@ Today we'll be building a tool to estimate the value of $\pi$ through a random s
 Questions on the exercises (or the theory) outside exercise hours or problems with the reports? You can always contact us  
 
 - [**Moodle Forum**](https://moodle.epfl.ch/mod/forum/view.php?id=1193419), preferred way of communication since everyone can see the questions (and answer!)
-- Email us, always better to include multiple of us to get an answer faster (at least always include Andrea and Sophie)
-    - andrea.levy@epfl.ch
-    - sophia.johnson@epfl.ch
+- Email us, always better to include multiple of us to get an answer faster (at least always include Salomé, Qihao, and soon Thibault and Evan)
+    - salome.guilbert@epfl.ch
+    - qihao.zhang@epfl.ch
 - At least one of us will always try to be present during lectures, feel free to ask us questions before/after the lecture or during the break!
