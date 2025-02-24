@@ -93,6 +93,16 @@ Today we'll be building a tool to estimate the value of $\pi$ through a random s
 - Places where you need to modify the code blocks should be noted with comments in the code with something like
 *## Begin code to modify ##*
 
+# Using Noto
+
+What you should do if Noto doesn't work:
+- Most importantly, **do not be a deadline fighter! Do it earlier!**
+- Check whether you're working with the correct environment and import the modules correctly
+- Try a different browser (Chrome, Firefox recommended)
+- Refreshing the page after deleting the browser cache
+- Conclude what you have done and what the problem is in detail (don't just mention 'it didn't work') and write to us TAs as soon as possible
+- Contact noto support: noto-support@groupes.epfl.ch
+
 # Questions ?
 
 Questions on the exercises (or the theory) outside exercise hours or problems with the reports? You can always contact us  
