@@ -49,27 +49,27 @@ Simulations tutorial provided by the University of Amsterdam.
 
 ## Practical information
 
-### Time Table Spring Semester 2024
+### Time Table Spring Semester 2025
 The course will be **Tue 11h15-13h00** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118), exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
 
 
 | date            | type     | description                                               |            |
 |-----------------|----------|-----------------------------------------------------------|------------|
-| 20.2. Tue       |  course  | Intro & Chapter 1 (From QM to MM)                         |     UR     |
-| 27.2. Tue       | exercise | Ex 1 - Monte Carlo Estimation of Pi                       | assistants |
-| 05.3. Tue       |  course  | Chapter 2 (Statistical Mechanics)                         |     UR     |
-| 12.3. Tue       | exercise | Ex 2 - Harmonic Oscillator                                | assistants |
-| 19.3. Tue       |  course  | Chapter 3 (Monte Carlo Simulations)                       |     UR     |
-| 26.3. Tue       | exercise | Ex 3 - LJ gas Monte Carlo                                 | assistants |
-| 02.4. Tue       |          | Easter Break                                              |            |
-| 09.4. Tue       |  course  | Chapter 4 (MD Simulations 1)                              |     UR     |
-| 16.4. Tue       | exercise | Ex 4 - Molecular Dynamics                                 | assistants |
-| 23.4. Tue       |  course  | Chapter 5 (MD Simulations 2)                              |     UR     |
-| 30.4. Tue       | exercise | Ex 5 - Molecular Dynamics                                 | assistants |
-| 07.5. Tue       |  course  | Chapter 6 (MD Simulations 3)                              |     UR     |
-| 14.5. Tue       | exercise | Ex 6 - Protein folding                                    | assistants |
-| 21.5. Tue       |  course  | Q&A Session                                               | assistants |
-| 28.5. Tue       |   exam   | Written Exam                                              |            |
+| 18.2. Tue       |  course  | Intro & Chapter 1 (From QM to MM)                         |     UR     |
+| 25.2. Tue       | exercise | Ex 1 - Monte Carlo Estimation of Pi                       | assistants |
+| 04.3. Tue       |  course  | Chapter 2 (Statistical Mechanics)                         |     UR     |
+| 11.3. Tue       | exercise | Ex 2 - Harmonic Oscillator                                | assistants |
+| 18.3. Tue       |  course  | Chapter 3 (Monte Carlo Simulations)                       |     UR     |
+| 25.3. Tue       | exercise | Ex 3 - LJ gas Monte Carlo                                 | assistants |
+| 01.4. Tue       |  course  | Chapter 4 (MD Simulations 1)                              |     UR     |
+| 08.4. Tue       | exercise | Ex 4 - Molecular Dynamics                                 | assistants |
+| 15.4. Tue       |  course  | Chapter 5 (MD Simulations 2)                              |     UR     |
+| 22.4. Tue       |          | Easter Break                                              |            |
+| 29.4. Tue       | exercise | Ex 5 - Molecular Dynamics                                 | assistants |
+| 06.5. Tue       |  course  | Chapter 6 (MD Simulations 3)                              |     UR     |
+| 13.5. Tue       | exercise | Ex 6 - Protein folding                                    | assistants |
+| 20.5. Tue       |  course  | Q&A Session                                               | assistants |
+| 27.5. Tue       |   exam   | Written Exam                                              |            |
 
 ### Grading and attendance 
 
