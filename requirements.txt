@@ -1,4 +1,4 @@
-jupyter-book==0.13
+jupyter-book==1.0
 matplotlib
 numpy
 ghp-import
@@ -7,3 +7,4 @@ pypandoc-binary
 nbformat
 mystmd
 lxml[html_clean]
+sphinx>=5.0,<8.0
