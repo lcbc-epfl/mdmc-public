@@ -26,8 +26,8 @@ output: beamer_presentation
     - Test your understanding of the exercise
     - Good occasion to discuss your doubts and questions
     - We will release the schedule ahead of the session so you know when and with whom you will interview - you need to email us to reschedule if you can't make it to your allocated time
-    - If you don't come to your interview and don't notify us to reschdule, **your grade for that report will be 0**
-    - 
+    - If you don't come to your interview and don't notify us to reschedule, **your grade for that report will be 0**
+
 **Exercises contribute to 1/2 of final grade! We count the best 5 out of the 6 reports for your exercise grade.**
 
 # Exercise structure
