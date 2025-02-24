@@ -1,108 +1,173 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>2.1. Statistical Thermodynamics and the Boltzmann Distribution &#8212; Molecular Dynamics and Monte Carlo</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=3cd4d282" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Ex2/Ex2_Theory';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2.2. Boltzmann Distribution Harmonic Oscillator" href="Boltzmann.html" />
     <link rel="prev" title="2. Statistical Thermodynamics and the Boltzmann Distribution" href="MDMC_ex2.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
     
-    <div class="container-fluid" id="banner"></div>
-
     
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Molecular Dynamics and Monte Carlo</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Molecular Dynamics and Monte Carlo</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -111,494 +176,318 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Exercises
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Ex1/MDMC_Ex1.html">
-   1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex1/Ex1_Theory.html">
-     1.1. From Quantum to Classical Mechanics: The Example of Forces
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex1/MonteCarloPI.html">
-     1.3. Monte Carlo
-     <span class="math notranslate nohighlight">
-      \(\pi\)
-     </span>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex1/prng.html">
-     1.4. Appendix: Random and Pseudo-random Numbers
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="MDMC_ex2.html">
-   2. Statistical Thermodynamics and the Boltzmann Distribution
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     2.1. Statistical Thermodynamics and the Boltzmann Distribution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Boltzmann.html">
-     2.2. Boltzmann Distribution Harmonic Oscillator
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Ex3/MDMC_ex3.html">
-   3. Monte Carlo Simulations and the Photon Gas
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex3/Ex3_Theory.html">
-     3.1. Theory
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex3/PhotonGas.html">
-     3.2. The Photon Gas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex3/LJ_NVT.html">
-     3.3. The Lennard-Jones Potential
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Ex4/MDMC_ex4.html">
-   4. Introduction to Molecular Dynamics
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex4/Theory.html">
-     4.1. Theory
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex4/Exercise.html">
-     4.2. MD simulation from scratch
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Ex5/MDMC_ex5.html">
-   5. Classical Molecular Dynamics (MD) Simulations
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex5/theory.html">
-     5.1. Theory
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex5/Exercise.html">
-     5.2. ToyMD
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../Ex6/MDMC_ex6.html">
-   6. Properties from Molecular Dynamics
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/theory.html">
-     6.1. Theory
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/proteinmodelling.html">
-     6.2. Protein Modelling
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">
-     6.3. Practical: TRP Cage using OpenMM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../Ex6/hydrogenbonds.html">
-     6.4. TrpCage Analysis
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_Ex1.html">1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">1.3. Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">1.4. Appendix: Random and Pseudo-random Numbers</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_ex2.html">2. Statistical Thermodynamics and the Boltzmann Distribution</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.1. Statistical Thermodynamics and the Boltzmann Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Boltzmann.html">2.2. Boltzmann Distribution Harmonic Oscillator</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">3. Monte Carlo Simulations and the Photon Gas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">3.1. Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">3.2. The Photon Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">3.3. The Lennard-Jones Potential</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">4. Introduction to Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">4.1. Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">4.2. MD simulation from scratch</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">5. Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">5.1. Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">5.2. ToyMD</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">6. Properties from Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">6.1. Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">6.2. Protein Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage_OpenMM_colab.html">6.3. Practical: TRP Cage using OpenMM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/hydrogenbonds.html">6.4. TrpCage Analysis</a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A//github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex2/Ex2_Theory.ipynb&branch=main"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on JupyterHub"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_jupyterhub.svg">
-  </span>
-<span class="headerbtn__text-container">JupyterHub</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex2/Ex2_Theory.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_colab.png">
-  </span>
-<span class="headerbtn__text-container">Colab</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A//github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex2/Ex2_Theory.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on JupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="JupyterHub logo" src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/lcbc-epfl/mdmc-public/blob/main/mdmc/Ex2/Ex2_Theory.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/lcbc-epfl/mdmc-public" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx2/Ex2_Theory.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Ex2/Ex2_Theory.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/lcbc-epfl/mdmc-public"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/lcbc-epfl/mdmc-public/issues/new?title=Issue%20on%20page%20%2FEx2/Ex2_Theory.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/Ex2/Ex2_Theory.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </button>
-
-      </li>
+</div></div>
       
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
+    </div>
   
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
-    </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   2.1.1. Background
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#statistical-thermodynamics">
-     2.1.1.1. Statistical Thermodynamics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-canonical-ensemble-and-the-canonical-partition-function">
-     2.1.1.2. The Canonical Ensemble and the Canonical Partition Function
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-quantum-mechanical-partition-function-and-the-density-operator">
-     2.1.1.3. The Quantum Mechanical Partition Function and the Density Operator
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-isothermal-isobaric-ensemble">
-     2.1.1.4. The Isothermal-Isobaric ensemble
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#thermodynamic-quantities-as-derivatives-of-the-canonical-partition-function">
-     2.1.1.5. Thermodynamic Quantities as Derivatives of the Canonical Partition Function
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Statistical Thermodynamics and the Boltzmann Distribution</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#background">
-   2.1.1. Background
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#statistical-thermodynamics">
-     2.1.1.1. Statistical Thermodynamics
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-canonical-ensemble-and-the-canonical-partition-function">
-     2.1.1.2. The Canonical Ensemble and the Canonical Partition Function
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-quantum-mechanical-partition-function-and-the-density-operator">
-     2.1.1.3. The Quantum Mechanical Partition Function and the Density Operator
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-isothermal-isobaric-ensemble">
-     2.1.1.4. The Isothermal-Isobaric ensemble
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#thermodynamic-quantities-as-derivatives-of-the-canonical-partition-function">
-     2.1.1.5. Thermodynamic Quantities as Derivatives of the Canonical Partition Function
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Statistical Thermodynamics and the Boltzmann Distribution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.1.1. Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-thermodynamics">2.1.1.1. Statistical Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-canonical-ensemble-and-the-canonical-partition-function">2.1.1.2. The Canonical Ensemble and the Canonical Partition Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-quantum-mechanical-partition-function-and-the-density-operator">2.1.1.3. The Quantum Mechanical Partition Function and the Density Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-isothermal-isobaric-ensemble">2.1.1.4. The Isothermal-Isobaric ensemble</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-quantities-as-derivatives-of-the-canonical-partition-function">2.1.1.5. Thermodynamic Quantities as Derivatives of the Canonical Partition Function</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="statistical-thermodynamics-and-the-boltzmann-distribution">
-<h1><span class="section-number">2.1. </span>Statistical Thermodynamics and the Boltzmann Distribution<a class="headerlink" href="#statistical-thermodynamics-and-the-boltzmann-distribution" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.1. </span>Statistical Thermodynamics and the Boltzmann Distribution<a class="headerlink" href="#statistical-thermodynamics-and-the-boltzmann-distribution" title="Link to this heading">#</a></h1>
 <p>This set of exercises brings together the theory of statistical mechanics with a practical
 example, the harmonic oscillator. After a brief (re)introduction to statistical mechanics,
 you will write a code that computes the probability distribution of the energy of a system
 using Boltzmann statistics.</p>
 <section id="background">
-<h2><span class="section-number">2.1.1. </span>Background<a class="headerlink" href="#background" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.1.1. </span>Background<a class="headerlink" href="#background" title="Link to this heading">#</a></h2>
 <section id="statistical-thermodynamics">
-<h3><span class="section-number">2.1.1.1. </span>Statistical Thermodynamics<a class="headerlink" href="#statistical-thermodynamics" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.1.1. </span>Statistical Thermodynamics<a class="headerlink" href="#statistical-thermodynamics" title="Link to this heading">#</a></h3>
 <p>The average behaviour of a macroscopic system, the state of which is uncertain, can
 be studied using probability theory (statistical mechanics). However, such a probabilistic description cannot make thermodynamic properties accessible, unless a link between
 thermodynamic (free energy, pressure, entropy) and mechanical (position, momenta)
@@ -616,7 +505,7 @@ the system is described by the values of <span class="math notranslate nohighlig
 The point in phase space that characterises its current
 state identifies a point referred to as the <strong>representative point</strong>. The system <strong>i.e.</strong> its representative point will evolve within phase space according to its Hamiltonian:</p>
 <div class="math notranslate nohighlight" id="equation-hamiltonian-rp">
-<span class="eqno">(2.1)<a class="headerlink" href="#equation-hamiltonian-rp" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-hamiltonian-rp" title="Link to this equation">#</a></span>\[
 \begin{align}
 H = \sum_{i=1}^N \left[\frac{\mathbf{p}_i^2}{2m_i} + U\left(\mathbf{q}_1,\dots,\mathbf{q}_N\right) \right].
 \end{align}
@@ -624,7 +513,7 @@ H = \sum_{i=1}^N \left[\frac{\mathbf{p}_i^2}{2m_i} + U\left(\mathbf{q}_1,\dots,\
 <p>Note that in the classical limit, the Hamiltonian is not an operator, but a sum over kinetic and potential energy terms.
 The evolution of the system in phase space is governed by Hamilton’s equations of motion:</p>
 <div class="math notranslate nohighlight" id="equation-evo-in-p">
-<span class="eqno">(2.2)<a class="headerlink" href="#equation-evo-in-p" title="Permalink to this equation">#</a></span>\[\begin{split}  
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-evo-in-p" title="Link to this equation">#</a></span>\[\begin{split}  
 \begin{align}
 \frac{\mathrm{d}\mathbf{p}_i}{\mathrm{d}t} &amp;= -\frac{\partial{H}}{\partial{\mathbf{q}_i}}\\
 \frac{\mathrm{d}\mathbf{q}_i}{\mathrm{d}t} &amp;= \frac{\partial{H}}{\partial{\mathbf{p}_i}}.
@@ -634,7 +523,7 @@ The evolution of the system in phase space is governed by Hamilton’s equations
 Given a representative point, the evolution of the system in phase space is thus fully determined by Hamilton’s equations of motion.
 For an isolated system of constant particle number <span class="math notranslate nohighlight">\(N\)</span>, constant volume <span class="math notranslate nohighlight">\(V\)</span> and constant energy <span class="math notranslate nohighlight">\(E\)</span>, the trajectory of the system will lie on a hypersurface defined by:</p>
 <div class="math notranslate nohighlight" id="equation-nve-hypersurface">
-<span class="eqno">(2.3)<a class="headerlink" href="#equation-nve-hypersurface" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-nve-hypersurface" title="Link to this equation">#</a></span>\[  
 \begin{align}
 H = E = \text{const.}
 \end{align}
@@ -651,7 +540,7 @@ According to the fundamental postulate of statistical mechanics, since every mic
 the system is equally likely to be found in any of its microstates. In terms of the
 volume element in phase space, the probability to find the system in one of its microstates is:</p>
 <div class="math notranslate nohighlight" id="equation-p-microstate">
-<span class="eqno">(2.4)<a class="headerlink" href="#equation-p-microstate" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-p-microstate" title="Link to this equation">#</a></span>\[  
 \begin{align}
 P(E) = \frac{1}{|W(E)|}.
 \end{align}
@@ -659,7 +548,7 @@ P(E) = \frac{1}{|W(E)|}.
 <p>Based on <span class="math notranslate nohighlight">\(W(E)\)</span>, <strong>any</strong> thermodynamical property and observable
 is now accessible as a <strong>phase-space</strong> or <strong>ensemble average</strong>. For a microcanonical ensemble, the expectation value of an observable <span class="math notranslate nohighlight">\(O\)</span> is simply:</p>
 <div class="math notranslate nohighlight" id="equation-expectation-value-o">
-<span class="eqno">(2.5)<a class="headerlink" href="#equation-expectation-value-o" title="Permalink to this equation">#</a></span>\[ 
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-expectation-value-o" title="Link to this equation">#</a></span>\[ 
  \begin{align}
 \left&lt; O \right &gt; = \int_{\Gamma \in W(E)} \frac{1}{|W(E)|} O(\Gamma) \mathrm{d}\Gamma ,
 \end{align}
@@ -672,7 +561,7 @@ The above equation is nothing but the <strong>probability density</strong> of th
 been absent from the discussion so far. According to Boltzmann’s fundamental postulate of statistical thermodynamics, the entropy of a system is linked to the accessible volume <span class="math notranslate nohighlight">\(W(E)\)</span> in phase space,
 <strong>i.e.</strong> the entropy of a system in state <span class="math notranslate nohighlight">\(X(\Gamma)\)</span> is related to the volume accessible to <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-entropy">
-<span class="eqno">(2.6)<a class="headerlink" href="#equation-entropy" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-entropy" title="Link to this equation">#</a></span>\[  
 \begin{align}
 S = k_B \ln |W(E)|,
 \end{align}
@@ -684,13 +573,13 @@ thermodynamic properties <strong>e.g.</strong> of a protein are in practice
 impossible to predict (although the exact Hamiltonian of the system is of course known). The great value of the techniques taught in this course lies in them providing alternative approaches to calculate thermodynamical properties as ensemble averages, but without explicitly relying on <a class="reference internal" href="#equation-expectation-value-o">(2.5)</a>.</p>
 </section>
 <section id="the-canonical-ensemble-and-the-canonical-partition-function">
-<h3><span class="section-number">2.1.1.2. </span>The Canonical Ensemble and the Canonical Partition Function<a class="headerlink" href="#the-canonical-ensemble-and-the-canonical-partition-function" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.1.2. </span>The Canonical Ensemble and the Canonical Partition Function<a class="headerlink" href="#the-canonical-ensemble-and-the-canonical-partition-function" title="Link to this heading">#</a></h3>
 <p>The statistical concepts considered so far can be extended onto systems of constant particle number <span class="math notranslate nohighlight">\(N\)</span>, constant volume <span class="math notranslate nohighlight">\(V\)</span> and constant temperature <span class="math notranslate nohighlight">\(T\)</span>, rather than constant energy.
 The derivation of the properties of an <span class="math notranslate nohighlight">\(NVT\)</span>-ensemble starts from the microcanonical ensemble. The <span class="math notranslate nohighlight">\(NVT\)</span> system is considered to be in contact with a much larger <strong>thermal bath</strong>,
 the purpose of which it is to exchange energy with the <span class="math notranslate nohighlight">\(NVT\)</span>-subsystem such that the subsystem’s temperature remains constant, without the energy of the overall system (<strong>i.e.</strong> including the bath) changing due to its enormous size.
 An <span class="math notranslate nohighlight">\(NVT\)</span> system of particles is represented by the <strong>canonical ensemble</strong>. According to Boltzmann and Gibbs, the expectation value of an observable is again an ensemble average,</p>
 <div class="math notranslate nohighlight" id="equation-expectation-value">
-<span class="eqno">(2.7)<a class="headerlink" href="#equation-expectation-value" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-expectation-value" title="Link to this equation">#</a></span>\[  
 \begin{align}
 \left&lt; O \right &gt; = \int_\Gamma \frac{1}{Z} O(\Gamma) e^{- \beta E(\Gamma)} \mathrm{d}\Gamma
 \end{align}
@@ -700,7 +589,7 @@ An <span class="math notranslate nohighlight">\(NVT\)</span> system of particles
 the <strong>thermodynamic beta</strong>, <span class="math notranslate nohighlight">\(\beta = \frac{1}{k_B T}\)</span>. Again, the expression is a simple probability density function.
 It can be shown that for the above to be a valid normalised probability distribution, <span class="math notranslate nohighlight">\(Z(N,V,T)\)</span> must be of the form:</p>
 <div class="math notranslate nohighlight" id="equation-canonical-partitionfunction">
-<span class="eqno">(2.8)<a class="headerlink" href="#equation-canonical-partitionfunction" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-canonical-partitionfunction" title="Link to this equation">#</a></span>\[  
 \begin{align}
 Z(N,V,T) = \frac{1}{N!\ h^{mN}}\int_\Gamma e^{-\beta E(\Gamma)} \mathrm{d}\Gamma,
 \end{align}
@@ -712,7 +601,7 @@ The microstates do not share an equal probability as in the
 microcanonical ensemble, and the integral is over <strong>all</strong>  phase space rather than over a restricted region.
 According to the above definitions, the probability of observing a microstate <span class="math notranslate nohighlight">\(s\)</span> is given by its energetic weight:</p>
 <div class="math notranslate nohighlight" id="equation-probability-microstate-canonical">
-<span class="eqno">(2.9)<a class="headerlink" href="#equation-probability-microstate-canonical" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-probability-microstate-canonical" title="Link to this equation">#</a></span>\[  
 \begin{align}
 P(E_s) = \frac{1}{Z}g_s e^{-\beta E_s},
 \end{align}
@@ -721,14 +610,14 @@ P(E_s) = \frac{1}{Z}g_s e^{-\beta E_s},
 In general, the classical case does not hold and the microstates do not form a continuum, but are discrete and as such countable.
 Therefore, the integrals in <a class="reference internal" href="#equation-canonical-partitionfunction">(2.8)</a> and <a class="reference internal" href="#equation-probability-microstate-canonical">(2.9)</a> may be recast as sums:</p>
 <div class="math notranslate nohighlight" id="equation-recast-expectation-value">
-<span class="eqno">(2.10)<a class="headerlink" href="#equation-recast-expectation-value" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-recast-expectation-value" title="Link to this equation">#</a></span>\[  
 \begin{align}
 \left&lt; O \right &gt; = \sum_s \frac{1}{Z(T)}g_s O_s e^{- \beta E_s},
 \end{align}
 \]</div>
 <p>where the canonical partition function is now a sum over states:</p>
 <div class="math notranslate nohighlight" id="equation-canonical-sumofstates">
-<span class="eqno">(2.11)<a class="headerlink" href="#equation-canonical-sumofstates" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-canonical-sumofstates" title="Link to this equation">#</a></span>\[  
 \begin{align}
 Z(N,V,T) = \sum_i g_i e^{-\beta E_i}.
 \end{align}
@@ -745,12 +634,12 @@ Use the limit of the geometric series for <span class="math notranslate nohighli
 </div>
 </section>
 <section id="the-quantum-mechanical-partition-function-and-the-density-operator">
-<h3><span class="section-number">2.1.1.3. </span>The Quantum Mechanical Partition Function and the Density Operator<a class="headerlink" href="#the-quantum-mechanical-partition-function-and-the-density-operator" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.1.3. </span>The Quantum Mechanical Partition Function and the Density Operator<a class="headerlink" href="#the-quantum-mechanical-partition-function-and-the-density-operator" title="Link to this heading">#</a></h3>
 <p>This section briefly relates the concepts treated so far with the density matrix formalism introduced in the course `Introduction to Electronic Structure Methods’.
 The density operator (called the density matrix in position basis) is at the base of the quantum mechanical formulation of statistical mechanics,
 since it casts the problem into a basis-independent form. Recall that a density operator in <strong>state basis</strong></p>
 <div class="math notranslate nohighlight" id="equation-density-operator">
-<span class="eqno">(2.12)<a class="headerlink" href="#equation-density-operator" title="Permalink to this equation">#</a></span>\[\begin{split}  
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-density-operator" title="Link to this equation">#</a></span>\[\begin{split}  
 \begin{align}
 \hat{\rho} &amp;= \sum_i p_i \hat{\gamma}_i \\
 &amp;= \sum_i p_i \left| {\Psi_i} \right&gt; \left&lt; {\Psi_i} \right|
@@ -765,21 +654,21 @@ states if they are entangled. In this case, the Hilbert spaces of the respective
 of the <strong>partial trace</strong> over the other respective Hilbert space, incorporating statistical uncertainties.</p>
 <p>The <strong>canonical</strong> density matrix is defined as:</p>
 <div class="math notranslate nohighlight" id="equation-canonical-density-matrix">
-<span class="eqno">(2.13)<a class="headerlink" href="#equation-canonical-density-matrix" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-canonical-density-matrix" title="Link to this equation">#</a></span>\[  
 \begin{align}
 \hat{\rho} &amp;= \frac{1}{Z}e^{-\beta \mathrm{\hat{H}}},
 \end{align}
 \]</div>
 <p>and the <strong>canonical partition function</strong> is:</p>
 <div class="math notranslate nohighlight" id="equation-canonical-partition-function">
-<span class="eqno">(2.14)<a class="headerlink" href="#equation-canonical-partition-function" title="Permalink to this equation">#</a></span>\[ 
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-canonical-partition-function" title="Link to this equation">#</a></span>\[ 
  \begin{align}
 Z(N,V,T) &amp;= \text{Tr} \left(e^{-\beta \mathrm{\hat{H}}}\right).
 \end{align}
 \]</div>
 <p>In the eigenbasis <span class="math notranslate nohighlight">\(\left\{\ket{\Psi_s}\right\}\)</span> of <span class="math notranslate nohighlight">\(\mathrm{\hat{H}}\)</span> (a specific rather than a general case), one may write</p>
 <div class="math notranslate nohighlight" id="equation-canonical-density-matrix-recast">
-<span class="eqno">(2.15)<a class="headerlink" href="#equation-canonical-density-matrix-recast" title="Permalink to this equation">#</a></span>\[\begin{split} 
+<span class="eqno">(2.15)<a class="headerlink" href="#equation-canonical-density-matrix-recast" title="Link to this equation">#</a></span>\[\begin{split} 
 \begin{align}
 \hat{\rho} &amp;= \frac{1}{Z}\sum_s e^{-\beta \mathrm{\hat{H}}}\ket{\Psi_s}\bra{\Psi_s} \\
 &amp;= \frac{1}{Z} \sum_s \ket{\Psi_s}e^{-\beta E_s}\bra{\Psi_s}.
@@ -789,7 +678,7 @@ Z(N,V,T) &amp;= \text{Tr} \left(e^{-\beta \mathrm{\hat{H}}}\right).
 The above definitons are still unambiguous, since the trace is invariant under a change of basis.
 In the eigenbasis of the Hamiltonian (<strong>i.e.</strong> in the absence of coherence), the partition function becomes:</p>
 <div class="math notranslate nohighlight" id="equation-partition-function-eigenbasis">
-<span class="eqno">(2.16)<a class="headerlink" href="#equation-partition-function-eigenbasis" title="Permalink to this equation">#</a></span>\[ 
+<span class="eqno">(2.16)<a class="headerlink" href="#equation-partition-function-eigenbasis" title="Link to this equation">#</a></span>\[ 
  \begin{align}
 Z(N,V,T) &amp;= \sum_i e^{-\beta E_i},
 \end{align}
@@ -797,14 +686,14 @@ Z(N,V,T) &amp;= \sum_i e^{-\beta E_i},
 <p>which recovers the form of <a class="reference internal" href="#equation-canonical-sumofstates">(2.11)</a>, and <span class="math notranslate nohighlight">\(p_s = \frac{1}{Z} e^{-\beta E_s}\)</span>.</p>
 <p>Hence, given a system’s density matrix, all of its thermodynamic properties can be derived:</p>
 <div class="math notranslate nohighlight" id="equation-thermodynamic-properties">
-<span class="eqno">(2.17)<a class="headerlink" href="#equation-thermodynamic-properties" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.17)<a class="headerlink" href="#equation-thermodynamic-properties" title="Link to this equation">#</a></span>\[  
 \begin{align}
 \hat{\left&lt;\mathrm{O}\right&gt;} &amp;= \text{Tr}\left(\hat{\mathrm{O}}\hat{\rho}\right),
 \end{align}
 \]</div>
 <p>and, if <span class="math notranslate nohighlight">\(\left[\hat{\mathrm{H}},\hat{\mathrm{O}}\right] = 0\)</span>, then:</p>
 <div class="math notranslate nohighlight" id="equation-classical-probability">
-<span class="eqno">(2.18)<a class="headerlink" href="#equation-classical-probability" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.18)<a class="headerlink" href="#equation-classical-probability" title="Link to this equation">#</a></span>\[  
 \begin{align}
 \hat{\left&lt;\mathrm{O}\right&gt;} &amp;= \frac{1}{Z} \sum_s \mathrm{O}_s e^{-\beta E_s},
 \end{align}
@@ -822,18 +711,18 @@ Explain why the density operator and the expression for the expectation value of
 </div>
 </section>
 <section id="the-isothermal-isobaric-ensemble">
-<h3><span class="section-number">2.1.1.4. </span>The Isothermal-Isobaric ensemble<a class="headerlink" href="#the-isothermal-isobaric-ensemble" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.1.4. </span>The Isothermal-Isobaric ensemble<a class="headerlink" href="#the-isothermal-isobaric-ensemble" title="Link to this heading">#</a></h3>
 <p>The isothermal-isobaric or <span class="math notranslate nohighlight">\(NpT\)</span>-ensemble is of great practical relevance in chemistry. The isothermal-isobaric partition function is a weighted sum over canonical partition functions,
 where the definition of the weighting factor is ambiguous:</p>
 <div class="math notranslate nohighlight" id="equation-isothermal-isobaric-partitionfunction">
-<span class="eqno">(2.19)<a class="headerlink" href="#equation-isothermal-isobaric-partitionfunction" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.19)<a class="headerlink" href="#equation-isothermal-isobaric-partitionfunction" title="Link to this equation">#</a></span>\[  
 \begin{align}
 \Delta(N,p,T) = \int Z(N,V,T)e^{-\beta pV}\frac{N}{V}\mathrm{d}V,
 \end{align}
 \]</div>
 <p>or</p>
 <div class="math notranslate nohighlight" id="equation-isothermal-isobaric-partitionfunction-alt">
-<span class="eqno">(2.20)<a class="headerlink" href="#equation-isothermal-isobaric-partitionfunction-alt" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.20)<a class="headerlink" href="#equation-isothermal-isobaric-partitionfunction-alt" title="Link to this equation">#</a></span>\[  
 \begin{align}
 \Delta(N,p,T) = \int Z(N,V,T)e^{-\beta pV}\beta p~\mathrm{d}V.
 \end{align}
@@ -841,31 +730,31 @@ where the definition of the weighting factor is ambiguous:</p>
 <p>Both definitions become equal if <span class="math notranslate nohighlight">\(N \rightarrow \infty\)</span>, <span class="math notranslate nohighlight">\(V \rightarrow \infty\)</span> and <span class="math notranslate nohighlight">\(\frac{N}{V} = \text{const}\)</span>, the <strong>thermodynamic limit</strong>.</p>
 </section>
 <section id="thermodynamic-quantities-as-derivatives-of-the-canonical-partition-function">
-<h3><span class="section-number">2.1.1.5. </span>Thermodynamic Quantities as Derivatives of the Canonical Partition Function<a class="headerlink" href="#thermodynamic-quantities-as-derivatives-of-the-canonical-partition-function" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.1.1.5. </span>Thermodynamic Quantities as Derivatives of the Canonical Partition Function<a class="headerlink" href="#thermodynamic-quantities-as-derivatives-of-the-canonical-partition-function" title="Link to this heading">#</a></h3>
 <p>Thermodynamic properties can be directly derived from the partition function. In the canonical ensemble, the energy of the system is given by</p>
 <div class="math notranslate nohighlight" id="equation-energy-canonical">
-<span class="eqno">(2.21)<a class="headerlink" href="#equation-energy-canonical" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.21)<a class="headerlink" href="#equation-energy-canonical" title="Link to this equation">#</a></span>\[  
 \begin{align}
 E = -\frac{\partial}{\partial \beta} \ln Z,
 \end{align}
 \]</div>
 <p>whereas the Helmholtz free energy (<span class="math notranslate nohighlight">\(A \equiv U - TS\)</span>) is obtained from</p>
 <div class="math notranslate nohighlight" id="equation-helmholtz-canonical">
-<span class="eqno">(2.22)<a class="headerlink" href="#equation-helmholtz-canonical" title="Permalink to this equation">#</a></span>\[ 
+<span class="eqno">(2.22)<a class="headerlink" href="#equation-helmholtz-canonical" title="Link to this equation">#</a></span>\[ 
  \begin{align}
 A = -kT \ln Z,
 \end{align}
 \]</div>
 <p>and, finally, the entropy can be derived according to:</p>
 <div class="math notranslate nohighlight" id="equation-entropy-canonical">
-<span class="eqno">(2.23)<a class="headerlink" href="#equation-entropy-canonical" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.23)<a class="headerlink" href="#equation-entropy-canonical" title="Link to this equation">#</a></span>\[  
 \begin{align}
 S = k_B \frac{\partial}{\partial T}\left( T \ln Z\right).
 \end{align}
 \]</div>
 <p>The probability of finding a particle in a microstate <span class="math notranslate nohighlight">\(s\)</span> is given by the Boltzmann distribution:</p>
 <div class="math notranslate nohighlight" id="equation-boltzmann">
-<span class="eqno">(2.24)<a class="headerlink" href="#equation-boltzmann" title="Permalink to this equation">#</a></span>\[  
+<span class="eqno">(2.24)<a class="headerlink" href="#equation-boltzmann" title="Link to this equation">#</a></span>\[  
 \begin{align}
 P(E_s) = \frac{N_s}{N} = \frac{g_s e^{-\beta E_s}}{\sum_i g_i e^{-\beta E_i}} = \frac{1}{Z}g_s e^{-\beta E_s},
 \end{align}
@@ -882,7 +771,7 @@ P(E_s) = \frac{N_s}{N} = \frac{g_s e^{-\beta E_s}}{\sum_i g_i e^{-\beta E_i}} = 
 <figure class="align-default" id="harmonic-oscillator">
 <img alt="../_images/harmonic_oscillator.png" src="../_images/harmonic_oscillator.png" />
 <figcaption>
-<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Harmonic Oscillator with states <span class="math notranslate nohighlight">\(\Psi = \{\psi_0, \psi_1, \psi_2, \dots, \psi_N\}\)</span> and associated energies <span class="math notranslate nohighlight">\(E = \{\epsilon_0, \epsilon_1, \epsilon_2, \dots, \epsilon_N\}\)</span> CC by SA 3.0 <a class="reference external" href="https://commons.wikimedia.org/wiki/File:HarmOsziFunktionen.png">Leyo, Tomasz59</a>.</span><a class="headerlink" href="#harmonic-oscillator" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Harmonic Oscillator with states <span class="math notranslate nohighlight">\(\Psi = \{\psi_0, \psi_1, \psi_2, \dots, \psi_N\}\)</span> and associated energies <span class="math notranslate nohighlight">\(E = \{\epsilon_0, \epsilon_1, \epsilon_2, \dots, \epsilon_N\}\)</span> CC by SA 3.0 <a class="reference external" href="https://commons.wikimedia.org/wiki/File:HarmOsziFunktionen.png">Leyo, Tomasz59</a>.</span><a class="headerlink" href="#harmonic-oscillator" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -901,7 +790,7 @@ P(E_s) = \frac{N_s}{N} = \frac{g_s e^{-\beta E_s}}{\sum_i g_i e^{-\beta E_i}} = 
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./Ex2"
         },
         predefinedOutput: true
@@ -909,53 +798,107 @@ P(E_s) = \frac{N_s}{N} = \frac{g_s e^{-\beta E_s}}{\sum_i g_i e^{-\beta E_i}} = 
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="MDMC_ex2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Statistical Thermodynamics and the Boltzmann Distribution</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="MDMC_ex2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Statistical Thermodynamics and the Boltzmann Distribution</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="Boltzmann.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="Boltzmann.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title"><span class="section-number">2.2. </span>Boltzmann Distribution Harmonic Oscillator</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">2.1.1. Background</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-thermodynamics">2.1.1.1. Statistical Thermodynamics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-canonical-ensemble-and-the-canonical-partition-function">2.1.1.2. The Canonical Ensemble and the Canonical Partition Function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-quantum-mechanical-partition-function-and-the-density-operator">2.1.1.3. The Quantum Mechanical Partition Function and the Density Operator</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-isothermal-isobaric-ensemble">2.1.1.4. The Isothermal-Isobaric ensemble</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#thermodynamic-quantities-as-derivatives-of-the-canonical-partition-function">2.1.1.5. Thermodynamic Quantities as Derivatives of the Canonical Partition Function</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger<br/>
-  
-    <div class="extra_footer">
-      <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
-</div> <div class="col-6 d-flex" style="justify-content:center"> <ul style="list-style:none"> <li> <a href="https://github.com/lcbc-epfl/mdmc-public">GitHub </a> </li> </li> <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>--> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license. (Except where indicated otherwise) </div>
-    </div>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Simon Duerr, Sophie Johnson, Irea Mosquera, Andrea Levy,  Ursula Roethlisberger
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div class="container-lg mt-3 footer"> <div class="row"> <div class="col-xl-9 d-flex"> <div class="container"> <div class="row"> <div class="col-6 d-flex" style="justify-content:center"> <a href="https://lcbc.epfl.ch"> Laboratory of Computational Biochemistry and Chemistry</a></li>
+</div> <div class="col-6 d-flex" style="justify-content:center"> <ul style="list-style:none"> <li> <a href="https://github.com/lcbc-epfl/mdmc-public">GitHub </a> </li> </li> <!--<li> <a href="https://doi.org/10.5281/zenodo.0000000"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.00000000.svg" alt="DOI"></a> </li>--> </ul> </div> </div> </div> </div> <div class="col-xl-3"> <a href="https://epfl.ch"><img src="https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now" alt="EPFL Logo" style="padding:5px;height:33px;"></a> </div> </div> </div> <div class="row_footer my-3"> Dual licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution Share Alike 4.0 International</a> (CC BY SA 4.0) and MIT license. (Except where indicated otherwise) </div>
 </div>
+  </div>
+  
+</div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
