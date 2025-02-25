@@ -96,6 +96,7 @@ Today we'll be building a tool to estimate the value of $\pi$ through a random s
 # Using Noto
 
 What you should do if Noto doesn't work:
+
 - Most importantly, **do not be a deadline fighter! Do it earlier!**
 - Check whether you're working with the correct environment and import the modules correctly
 - Try a different browser (Chrome, Firefox recommended)
