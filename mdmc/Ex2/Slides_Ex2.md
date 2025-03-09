@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 2
-subtitle: MDMC Spring 2024
-date: March 12, 2024
-author: "Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy, Vladislav Slama"
+subtitle: MDMC Spring 2025
+date: March 11, 2025
+author: "Sophia Johnson, Andrea Levy, Salomé Guilbert, Qihao Zhang, Thibault Kläy"
 output: beamer_presentation
 ---
 
