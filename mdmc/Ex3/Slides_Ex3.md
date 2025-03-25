@@ -1,13 +1,15 @@
 ---
 title: Exercise Session 3
 subtitle: MDMC Spring 2024
-date: March 26, 2024
-author: "Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy, Vladislav Slama"
+date: March 25, 2025
+author: "Salomé Guilbert, Qihao Zhang, Thibault Kläy, Evan Vasey, Sophia Johnson, Andrea Levy"
 output: beamer_presentation
 ---
 
 # Exercise Check-In
 How did you feel during the process of completing, turning in, interviewing, and receiving the comments for Ex 1?
+
+Course feedback: Theoretical background assumed ; Theoretical concepts missing ?
   
 **Remember: Exercises contribute to 1/2 of final grade! We count the best 5 out of the 6 reports for your exercise grade.**
 
@@ -51,10 +53,4 @@ Today we'll be writing and executing Monte Carlo code.
   - Lots of helper functions to import and functions to define. You don't need to modify anything there but it is good to have a look to understand what those functions do!
   - While there is quite a bit of code to execute, the goal is to see how we incorporate the system ensemble and its interactions when generating sample configurations for MC moves
 
-# Exercises 3 & 4 - Additional Notes
-
-Due to the Easter Break, report 3 won't be due until Tuesday April 16th when we hold the session for Exercise 4
-
-
-![](/data/mdmc/img_slides/Ex3/april_mdmc.png) \
 
