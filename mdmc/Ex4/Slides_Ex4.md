@@ -65,3 +65,12 @@ N.B.: Question 8 is no longer a bonus question in case you worked on Ex4 earlier
 `python3 toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
 
 If you'd like to re-run the code with different parameters, please delete the previous `traj.pdb` file or rename it
+
+#Exercises 4 & 5 - Additional Notes
+
+Due to the Easter Break, report 4 won't be due until Tuesday April 29th when we hold the session for Exercise 5.
+
+- 15 April: Course
+- 18 - 27 April: Easter Break
+- 29 April: Exercise 5 (and due date Ex4 @ 11am)
+- 6 May: Course
