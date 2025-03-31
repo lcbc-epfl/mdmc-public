@@ -501,7 +501,7 @@ system is sampled. In practice, the <em>ergodic hypothesis</em>,</p>
 <span class="eqno">(4.1)<a class="headerlink" href="#equation-ergodic-hypothesis" title="Link to this equation">#</a></span>\[
 \begin{aligned}
 \left&lt; O \right&gt; = \int_\Gamma \frac{1}{Z}O(\Gamma)e^{-\beta \mathrm{H}(\Gamma)} \mathrm{d}\Gamma
-                 = \lim_{t \rightarrow \infty} \frac{1}{t} \int_0^\tau O(\tau) \mathrm{d}\tau,
+                 = \lim_{t \rightarrow \infty} \frac{1}{t} \int_0^t O(\tau) \mathrm{d}\tau,
 \end{aligned}
 \]</div>
 <p>is thus assumed - but not guaranteed - to hold.</p>
@@ -662,7 +662,7 @@ system (<span class="math notranslate nohighlight">\(\sum N_A\)</span> molecules
 of the simulation box is often too large to be representative.
 Computational modelling of molecular systems could therefore have an
 artificially imposed doping of surface effects which negatively impacts
-the calcuation of any bulk property of interest. To remedy this, surface
+the calculation of any bulk property of interest. To remedy this, surface
 effects can be disposed of for all system sizes if periodic boundary
 conditions (PBC) are imposed. In this regime, the simulation box is
 replicated through space to form an infinite lattice. When a molecule
