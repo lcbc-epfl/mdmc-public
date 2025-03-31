@@ -1,15 +1,16 @@
 ---
 title: Exercise Session 4
 subtitle: MDMC Spring 2024
-date: April 16, 2024
-author: "Vladislav Slama, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
+date: April 08, 2024
+author: "Salomé Guilbert, Qihao Zhang, Thibault Kläy, Evan Vasey, Sophia Johnson, Andrea Levy"
 output: beamer_presentation
 ---
 
 # Reports Reminder
 
 - We encourage you to work together, but the content in your report should be original
-- If you use an image or wording from an external source please cite it correctly 
+- If you use an image or wording from an external source please cite it correctly
+- Please upload the recognizable pictures with good enough quality
         
 # Exercise 4 Structure
 
@@ -38,8 +39,6 @@ Today we will provide you a simple Molecular Dynamics (**Toy MD**) code in pytho
 - In the practical part you will implement:
   - Velocity verlet algorithm
   - Periodic boundary conditions (PBC)
-  
-N.B.: Question 8 is no longer a bonus question in case you worked on Ex4 earlier this semester
 
 # Exercise 4 - ToyMD structure
 
@@ -66,7 +65,7 @@ N.B.: Question 8 is no longer a bonus question in case you worked on Ex4 earlier
 
 If you'd like to re-run the code with different parameters, please delete the previous `traj.pdb` file or rename it
 
-#Exercises 4 & 5 - Additional Notes
+# Exercises 4 & 5 - Additional Notes
 
 Due to the Easter Break, report 4 won't be due until Tuesday April 29th when we hold the session for Exercise 5.
 
