@@ -11,6 +11,7 @@ output: beamer_presentation
 - We encourage you to work together, but the content in your report should be original
 - If you use an image or wording from an external source please cite it correctly
 - Please upload the recognizable pictures with good enough quality
+- Whether we assume a lot of theoretical background，or that you are missing theoretical concepts for doing the exercises?
         
 # Exercise 4 Structure
 
