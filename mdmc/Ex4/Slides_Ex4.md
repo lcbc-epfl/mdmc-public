@@ -10,18 +10,19 @@ output: beamer_presentation
 
 - We encourage you to work together, but the content in your report should be original
 - If you use an image or wording from an external source please cite it correctly
-- Please upload the recognizable pictures with good enough quality
-- Whether we assume a lot of theoretical background, or that you are missing theoretical concepts for doing the exercises?
+- Please upload the recognizable pictures with good enough quality and a size large enough
+- theoretical background & concepts for illustrating the exercises
+- Mock exam will be provided
         
 # Exercise 4 Structure
 
-- Learning goals
+- Learning goals<!--  -->
     - Derive a time evolution integrator (e.g. Verlet)
     - Understand importance of periodic boundary conditions 
     - Run a molecular dynamics simulation for a small molecule ($CO_2$) 
     
 - Chapter in script
-  - Chapter 4 - Molecular Dynamics Simulations  
+  - Chapter 4 - Molecular Dynamics Simulations
 
 - Resources
   - Understanding Molecular Simulation, Frenkel & Smit, 2nd Edition - Chapter 3 & Chapter 5 (extra)
