@@ -70,7 +70,7 @@ Your answer here
 
 :::{admonition} Exercise 7 - Bonus
 :class: exercise
-At which values of $\beta$ does the error you obtain when ignoring rejected moves become more pronounced? Why?
+What happens at lower values of $\beta$ with respect to the rejected moves? Is the probability of accepting a move lower or higher, and why?
 :::
 
 Your answer here
