@@ -42,7 +42,6 @@ Your answer here
 :class: exercise
 
 A better thermostat is the Andersen thermostat. It can be implemented as follows. Describe what problems this thermostat will present to us e.g for sampling of diffusion coefficients. What advantage does this thermostat have compared to the Berendsen thermostat?
-</div>
 
 
 ``` python

@@ -546,7 +546,6 @@ document.write(`
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 3</p>
 <p>A better thermostat is the Andersen thermostat. It can be implemented as follows. Describe what problems this thermostat will present to us e.g for sampling of diffusion coefficients. What advantage does this thermostat have compared to the Berendsen thermostat?</p>
-</div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Andersen Thermostat</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">random</span><span class="p">()</span><span class="o">&lt;</span><span class="nb">float</span><span class="p">(</span><span class="n">md_params</span><span class="p">[</span><span class="s2">&quot;tau-T&quot;</span><span class="p">])</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="n">md_params</span><span class="p">[</span><span class="s1">&#39;time-step&#39;</span><span class="p">])):</span><span class="c1"># pick random particles according to nu</span>
