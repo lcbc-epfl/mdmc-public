@@ -51,7 +51,7 @@ Note, that references to other parts of the documents aren't resolved in this te
 
 \begin{mdframed}
 \textbf{Exercise 1}\\
-Implement the initialization described in the Theory section in our ToyMD code in \texttt{toy\_md.py} in the section \texttt{\#\#INITIALIZATION HERE\#\#}. For this you should pick random velocities using \texttt{r.random.standard\_normal((dim1,dim2))} which will produce random numbers between \texttt{0} and \texttt{1}. You need to shift this random gaussian distribution appropriately and then multiply it such that the width of the velocity distribution matches the kinetic energy at the target temperature. Use the variables \texttt{masses[i]} for the mass of particle \texttt{i} and Boltzmanns constant \texttt{0.00831415}. Remember that for each degree of freedom (e.g velocity in x direction) (\ref{equipart_x}) holds.
+Implement the initialization described in the Theory section in our ToyMD code in \texttt{toy\_md.py} in the section \texttt{\#\#INITIALIZATION HERE\#\#}. For this you should pick random velocities using \texttt{np.random.randn(dim1,dim2)} which will produce random numbers between \texttt{0} and \texttt{1}. You need to shift this random gaussian distribution appropriately and then multiply it such that the width of the velocity distribution matches the kinetic energy at the target temperature. Use the variables \texttt{masses[i]} for the mass of particle \texttt{i} and Boltzmanns constant \texttt{0.00831415}. Remember that for each degree of freedom (e.g velocity in x direction) (\ref{equipart_x}) holds.
 \end{mdframed}
 
 Your answer here

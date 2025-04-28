@@ -23,7 +23,7 @@ Note, that references to other parts of the documents aren't resolved in this te
 :::{admonition} Exercise 1
 :class: exercise
 
-Implement the initialization described in the Theory section in our ToyMD code in `toy_md.py` in the section `##INITIALIZATION HERE##`. For this you should pick random velocities using `r.random.standard_normal((dim1,dim2))` which will produce random numbers between `0` and `1`. You need to shift this random gaussian distribution appropriately and then multiply it such that the width of the velocity distribution matches the kinetic energy at the target temperature. Use the variables `masses[i]` for the mass of particle `i` and Boltzmanns constant `0.00831415`. Remember that for each degree of freedom (e.g velocity in x direction) {eq}`equipart_x` holds.
+Implement the initialization described in the Theory section in our ToyMD code in `toy_md.py` in the section `##INITIALIZATION HERE##`. For this you should pick random velocities using `np.random.randn(dim1,dim2)` which will produce random numbers between `0` and `1`. You need to shift this random gaussian distribution appropriately and then multiply it such that the width of the velocity distribution matches the kinetic energy at the target temperature. Use the variables `masses[i]` for the mass of particle `i` and Boltzmanns constant `0.00831415`. Remember that for each degree of freedom (e.g velocity in x direction) {eq}`equipart_x` holds.
 
 :::
 
