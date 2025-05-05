@@ -59,6 +59,7 @@ Your answer here
 :class: exercise
 
 Visualize the trajectory and visualize the distance of a C-O bond using the code cells below. 
+We will use the bond length of the force field as a reference. 
 Explain the fluctuations that you observe. What does the average value correspond to?
 
 :::
