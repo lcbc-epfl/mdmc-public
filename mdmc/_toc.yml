@@ -32,5 +32,4 @@ parts:
     - file: Ex6/theory.ipynb
     - file: Ex6/proteinmodelling.md
     - file: Ex6/TRP_Cage.ipynb
-    - file: Ex6/hydrogenbonds.ipynb
     # - file: Ex6/questions

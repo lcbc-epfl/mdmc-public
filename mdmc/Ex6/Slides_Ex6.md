@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 6
-subtitle: MDMC Spring 2024
-date: May 14, 2024
-author: "Vladislav Slama, Simon Dürr, Sophia Johnson, Nikolaos Lempesis, Andrea Levy"
+subtitle: MDMC Spring 2025
+date: May 13, 2025
+author: "Evan Vasey, Thibault Kläy, Qihao Zhang, Salomé Guilbert, Sophia Johnson, Andrea Levy"
 output: beamer_presentation
 ---
 
@@ -29,17 +29,13 @@ output: beamer_presentation
 
 - **Select** the correct kernel for this exercise `CH-351`
 
-![](/data/mdmc/img_slides/Ex6/gnoto.png)
+![](/data/mdmc/img_slides/Ex6/gnoto.png)\
 
-![](/data/mdmc/img_slides/Ex6/gnoto_kernel.png)\
+# Exercise 6 - Set up gnoto
 
-# Exercise 6 - Set up Google Colab
+- **Select** the correct kernel for this exercise `CH-351`
 
-- Uncomment the necessary cells and run the `install/import` commands (the first time you may see a warning about the notebook not being authored by Google -- Run anyway)
-
-- This phase will install and import all necessary modules to run this exercise, be sure to run this at the beginning (it will take few minutes)
-
-![](/data/mdmc/img_slides/Ex6/colab_setup.png){width=70%} \
+![](/data/mdmc/img_slides/Ex6/gnoto_kernel.png){width=70%} \
 
 
 # Exercise 6 - Learning Goals
@@ -60,9 +56,7 @@ Today you will perform a MD simulation of a Trp-cahe miniprotein
 
 # Exercise 6 - Analysis
 
-The analysis of the MD you generate will be performed on Noto 
-
-- Upload the `archive.zip` generated on GoogleColab
+The analysis of the MD trajectories:
 
 - You will look at different properties during the simulation, comparing to the experimental structure (PDB 1L2Y)
 
