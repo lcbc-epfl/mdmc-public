@@ -35,7 +35,7 @@ output: beamer_presentation
 
 - **Select** the correct kernel for this exercise `CH-351`
 
-![](/data/mdmc/img_slides/Ex6/gnoto_kernel.png){width=70%} \
+![](/data/mdmc/img_slides/Ex6/gnoto_kernel.png){width=50%} \
 
 
 # Exercise 6 - Learning Goals
