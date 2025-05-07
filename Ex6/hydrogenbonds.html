@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6.4. TrpCage Analysis &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>6.5. TrpCage Analysis &#8212; Molecular Dynamics and Monte Carlo</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Ex6/hydrogenbonds';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="6.3. Practical: TRP Cage using OpenMM" href="TRP_Cage_OpenMM_colab.html" />
+    <link rel="prev" title="6.3. Practical: TRP Cage using OpenMM" href="TRP_Cage.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -207,8 +207,9 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_ex6.html">6. Properties from Molecular Dynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="theory.html">6.1. Theory</a></li>
 <li class="toctree-l2"><a class="reference internal" href="proteinmodelling.html">6.2. Protein Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TRP_Cage_OpenMM_colab.html">6.3. Practical: TRP Cage using OpenMM</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.4. TrpCage Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TRP_Cage.html">6.3. Practical: TRP Cage using OpenMM</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">6.5. TrpCage Analysis</a></li>
 </ul>
 </details></li>
 </ul>
@@ -455,12 +456,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-load-the-trajectory-files">6.4.1. Lets load the trajectory files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#align-trajectory">6.4.2. Align trajectory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">6.4.3. Visualize trajectory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergence-of-secondary-structure">6.4.4. Emergence of secondary structure</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hbonds">6.4.4.1. Hbonds</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral">6.4.4.2. Dihedral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-load-the-trajectory-files">6.5.1. Lets load the trajectory files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#align-trajectory">6.5.2. Align trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">6.5.3. Visualize trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergence-of-secondary-structure">6.5.4. Emergence of secondary structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hbonds">6.5.4.1. Hbonds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral">6.5.4.2. Dihedral</a></li>
 </ul>
 </li>
 </ul>
@@ -475,7 +476,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="trpcage-analysis">
-<h1><span class="section-number">6.4. </span>TrpCage Analysis<a class="headerlink" href="#trpcage-analysis" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">6.5. </span>TrpCage Analysis<a class="headerlink" href="#trpcage-analysis" title="Link to this heading">#</a></h1>
 <p>Please run this in noto. Upload the zip file from colab into the noto directory space by selecting the folder icon on the left your screen while in noto and then selecting the up arrow (for upload) from the top menu. Then upload your archive.zip file that you generated in the previous exercise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -555,7 +556,7 @@ div.admonition {
 </div>
 </div>
 <section id="lets-load-the-trajectory-files">
-<h2><span class="section-number">6.4.1. </span>Lets load the trajectory files<a class="headerlink" href="#lets-load-the-trajectory-files" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.5.1. </span>Lets load the trajectory files<a class="headerlink" href="#lets-load-the-trajectory-files" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
@@ -593,7 +594,7 @@ The new kid on the block of structural biology. Works very well especially for l
 </div>
 </details></section>
 <section id="align-trajectory">
-<h2><span class="section-number">6.4.2. </span>Align trajectory<a class="headerlink" href="#align-trajectory" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.5.2. </span>Align trajectory<a class="headerlink" href="#align-trajectory" title="Link to this heading">#</a></h2>
 <p>Aligning a trajectory is an important step when analysing molecular dynamics simulations. We will choose a reference structure/frame and project each frame to the reference (e.g by minimizing RMSD to reference).</p>
 <p>In this case we align on the backbone nitrogen and carbon atoms.</p>
 <p>As a reference we use one structure from the experimental NMR ensemble (PDB <code class="docutils literal notranslate"><span class="pre">1l2y</span></code>).</p>
@@ -723,7 +724,7 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </section>
 <section id="visualize-trajectory">
-<h2><span class="section-number">6.4.3. </span>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.5.3. </span>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Link to this heading">#</a></h2>
 <p>Now let’s compare the trajectory to one of the structures from the NMR structural ensemble to see how our linear Trp cage folded.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -736,9 +737,9 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </section>
 <section id="emergence-of-secondary-structure">
-<h2><span class="section-number">6.4.4. </span>Emergence of secondary structure<a class="headerlink" href="#emergence-of-secondary-structure" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">6.5.4. </span>Emergence of secondary structure<a class="headerlink" href="#emergence-of-secondary-structure" title="Link to this heading">#</a></h2>
 <section id="hbonds">
-<h3><span class="section-number">6.4.4.1. </span>Hbonds<a class="headerlink" href="#hbonds" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.5.4.1. </span>Hbonds<a class="headerlink" href="#hbonds" title="Link to this heading">#</a></h3>
 <p>We know that hydrogen bonds are very important for the formation of secondary structure elements. Let’s count the number of hbonds per frame and bin them in 1 ns bins by taking the mean of 10 frames.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -851,7 +852,7 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
 </div>
 </section>
 <section id="dihedral">
-<h3><span class="section-number">6.4.4.2. </span>Dihedral<a class="headerlink" href="#dihedral" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">6.5.4.2. </span>Dihedral<a class="headerlink" href="#dihedral" title="Link to this heading">#</a></h3>
 <p>The central tryptophan in the Trp cage protein is located in the alpha helix. Here we track the dihedral angle along our simulation. When the protein forms ordered secondary structure elements we expect to see the dihedral only fluctuate a little.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -930,7 +931,7 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="TRP_Cage_OpenMM_colab.html"
+       href="TRP_Cage.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -954,12 +955,12 @@ Which metric is more useful for the problem at hand? <b>Bonus:</b>  Provide a us
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-load-the-trajectory-files">6.4.1. Lets load the trajectory files</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#align-trajectory">6.4.2. Align trajectory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">6.4.3. Visualize trajectory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergence-of-secondary-structure">6.4.4. Emergence of secondary structure</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hbonds">6.4.4.1. Hbonds</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral">6.4.4.2. Dihedral</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lets-load-the-trajectory-files">6.5.1. Lets load the trajectory files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#align-trajectory">6.5.2. Align trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">6.5.3. Visualize trajectory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#emergence-of-secondary-structure">6.5.4. Emergence of secondary structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hbonds">6.5.4.1. Hbonds</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dihedral">6.5.4.2. Dihedral</a></li>
 </ul>
 </li>
 </ul>
