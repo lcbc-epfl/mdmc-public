@@ -12,24 +12,26 @@ output: beamer_presentation
 
 - No interview for report of Ex6
 
-- **Extended deadline** for this report: Sunday June 30th at 23h59
+- **Extended deadline** for this report: Sunday June 29th at 23h59
 
 - Even if you decide to not do the report, read the theory and the exercise! Important knowledge to better understand MD (possibly useful for the exam!)
 
 - Important Dates:
-  - Q&A Session on Tuesday May 21st in lecture classroom -- send us your questions on moodle in advance!
-  - Written exam on Tuesay May 28th in lecure classroom
+  - Q&A Session on Tuesday May 20th in lecture classroom -- send us your questions on moodle in advance!
+  - Written exam on Tuesay May 27th in lecure classroom
 
 
 # Exercise 6 - Reminders
 
-- The first part of the exercise should be run on **GoogleColab** and not on Noto! (free access to GPUs)
+- **Note** This tutorial should be run on **gnoto** JupyterHub and not on noto JupyterHub.
 
-- Access GoogleColab via the usual rocket button
+- To this end, please use the following link instead of the usual rocket button: https://gnoto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A//github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex6/TRP_Cage.ipynb&branch=main
 
-- Change the runtime to use a GPU ( Runtime > Change Runtyle type > select GPU)
+- **Select** the correct kernel for this exercise `CH-351`
 
-![](/data/mdmc/img_slides/Ex6/googlecolab.png) \
+![](/data/mdmc/img_slides/Ex6/gnoto.png)
+
+![](/data/mdmc/img_slides/Ex6/gnoto_kernel.png)\
 
 # Exercise 6 - Set up Google Colab
 
