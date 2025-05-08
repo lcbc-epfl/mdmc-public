@@ -25,7 +25,7 @@ output: beamer_presentation
 
 - **Note** This tutorial should be run on **gnoto** JupyterHub and not on noto JupyterHub.
 
-- To this end, please use the following link instead of the usual rocket button: https://gnoto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A//github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex6/TRP_Cage.ipynb&branch=main
+- To this end, please use the following link instead of the usual rocket button:
 
 - **Select** the correct kernel for this exercise `CH-351`
 
