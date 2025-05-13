@@ -17,8 +17,18 @@ output: beamer_presentation
 - Even if you decide to not do the report, read the theory and the exercise! Important knowledge to better understand MD (possibly useful for the exam!)
 
 - Important Dates:
-  - Q&A Session on Tuesday May 20th in lecture classroom -- send us your questions on moodle in advance!
+  - Q&A Session and mock exam on Tuesday May 20th in lecture classroom -- send us your questions on moodle in advance!
   - Written exam on Tuesay May 27th in lecure classroom
+
+# Written exam - information
+
+- 1 page of summary notes will be permitted during the exam (1 A4 size paper, front and back)
+
+- Calculators will be permitted during the exam, but not necessary
+
+- No other electronic device allowed
+
+- We will provide paper to write your answers
 
 
 # Exercise 6 - Reminders
