@@ -55,16 +55,16 @@ Your answer here
 
 :::{admonition} Exercise 5 - Bonus
 :class: exercise
-How expensive is the computation of the pressure in
-   {eq}`pressure`, via the virial, in an MD and an MC
-    algorithm, respectively?
+Is the computation of the pressure in
+   {eq}`pressure`, via the virial, more expensive in an MD and an MC
+    algorithm? And why?
 :::
 
 Your answer here
 
 :::{admonition} Exercise 6 - Bonus
 :class: exercise
-Derive the ideal gas part of the virial in {eq}`virial`.
+Derive the ideal gas part of the virial in {eq}`virial` using {eq}`virial_alt`.
 :::
 
 Your answer here
