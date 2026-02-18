@@ -2,7 +2,7 @@ format: jb-book
 root: intro
 parts:
 - caption: Exercises
-  numbered: true
+  numbered: false
   chapters:
   - file: Ex1/MDMC_Ex1.ipynb
     sections:
