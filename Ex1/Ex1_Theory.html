@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1.1. From Quantum to Classical Mechanics: The Example of Forces &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>From Quantum to Classical Mechanics: The Example of Forces &#8212; Molecular Dynamics and Monte Carlo</title>
   
   
   
@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -50,20 +50,20 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Ex1/Ex1_Theory';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.3. Monte Carlo \(\pi\)" href="MonteCarloPI.html" />
-    <link rel="prev" title="1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations" href="MDMC_Ex1.html" />
+    <link rel="next" title="Monte Carlo \(\pi\)" href="MonteCarloPI.html" />
+    <link rel="prev" title="Basic Concepts of Molecular Dynamics and Monte Carlo Simulations" href="MDMC_Ex1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,46 +171,46 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Molecular Dynamics and Monte Carlo
+                    Introduction
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_Ex1.html">1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_Ex1.html">Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">From Quantum to Classical Mechanics: The Example of Forces</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="MonteCarloPI.html">1.3. Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="prng.html">1.4. Appendix: Random and Pseudo-random Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MonteCarloPI.html">Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="prng.html">Appendix: Random and Pseudo-random Numbers</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">2. Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">2.1. Statistical Thermodynamics and the Boltzmann Distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">2.2. Boltzmann Distribution Harmonic Oscillator</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">Statistical Thermodynamics and the Boltzmann Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">Boltzmann Distribution Harmonic Oscillator</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">3. Monte Carlo Simulations and the Photon Gas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">3.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">3.2. The Photon Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">3.3. The Lennard-Jones Potential</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">Monte Carlo Simulations and the Photon Gas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">The Photon Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">The Lennard-Jones Potential</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">4. Introduction to Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">4.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">4.2. MD simulation from scratch</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">5. Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">5.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">5.2. ToyMD</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">Introduction to Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">MD simulation from scratch</a></li>
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">6. Properties from Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">6.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">6.2. Protein Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage.html">6.3. Practical: TRP Cage using OpenMM</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">ToyMD</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">Properties from Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">Protein Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage.html">Practical: TRP Cage using OpenMM</a></li>
 
 </ul>
 </details></li>
@@ -458,9 +458,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-approaches-to-numerical-estimation">1.2. Statistical Approaches to Numerical Estimation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-estimation-of-pi">1.2.1. Numerical Estimation of <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">From Quantum to Classical Mechanics: The Example of Forces</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-approaches-to-numerical-estimation">Statistical Approaches to Numerical Estimation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-estimation-of-pi">Numerical Estimation of <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
 </ul>
 </li>
 </ul>
@@ -476,7 +476,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="from-quantum-to-classical-mechanics-the-example-of-forces">
-<h1><span class="section-number">1.1. </span>From Quantum to Classical Mechanics: The Example of Forces<a class="headerlink" href="#from-quantum-to-classical-mechanics-the-example-of-forces" title="Link to this heading">#</a></h1>
+<h1>From Quantum to Classical Mechanics: The Example of Forces<a class="headerlink" href="#from-quantum-to-classical-mechanics-the-example-of-forces" title="Link to this heading">#</a></h1>
 <p>Later in the course, you will learn that in <em>Molecular Dynamics</em>,
 thermodynamic properties of a system are determined by propagating it in
 time. This propagation is done by evaluating the forces acting on the
@@ -491,13 +491,13 @@ solving the time-independent Schrödinger equation.</p>
 <p>In classical mechanics, the forces acting on a system can be evaluated
 from:</p>
 <div class="math notranslate nohighlight" id="equation-forces">
-<span class="eqno">(1.1)<a class="headerlink" href="#equation-forces" title="Link to this equation">#</a></span>\[ F(\mathbf{q}) = -\nabla E(\mathbf{q}).
+<span class="eqno">(1)<a class="headerlink" href="#equation-forces" title="Link to this equation">#</a></span>\[ F(\mathbf{q}) = -\nabla E(\mathbf{q}).
 \]</div>
 <p>The link with the
 time-independent Schrödinger equation is based on the Hellmann-Feynman
 theorem:</p>
 <div class="math notranslate nohighlight" id="equation-hellmanfeynman">
-<span class="eqno">(1.2)<a class="headerlink" href="#equation-hellmanfeynman" title="Link to this equation">#</a></span>\[\begin{aligned}
+<span class="eqno">(2)<a class="headerlink" href="#equation-hellmanfeynman" title="Link to this equation">#</a></span>\[\begin{aligned}
 \frac{\mathrm{d}E}{\mathrm{d}\lambda} = \left&lt;{\Psi_\lambda \left| \frac{\mathrm{d}\hat{\mathrm{H}}(\lambda)}{\mathrm{d}\lambda} \right| \Psi_\lambda} \right&gt;,\end{aligned}\]</div>
 <p>where <span class="math notranslate nohighlight">\(\lambda\)</span> is some parameter on which the Hamiltonian, and thus the
 wavefunction, parametrically depends.</p>
@@ -511,7 +511,7 @@ approximation, the forces are easily evaluated from the Hellmann-Feynman
 theorem.</p>
 <p>The Hamiltonian reads:</p>
 <div class="math notranslate nohighlight" id="equation-hamiltonian">
-<span class="eqno">(1.3)<a class="headerlink" href="#equation-hamiltonian" title="Link to this equation">#</a></span>\[
+<span class="eqno">(3)<a class="headerlink" href="#equation-hamiltonian" title="Link to this equation">#</a></span>\[
 \begin{aligned}
 \mathrm{\hat{H}} = \mathrm{\hat{T}} + \mathrm{\hat{V}_{ee}} + \sum_{I=1}^M\sum_{i=1}^N \frac{Z_I}{\left|\mathbf{r}_i -\mathbf{R}_I\right|}
                   + \sum_{I=1}^M\sum_{J\ne I}^M \frac{Z_I Z_J}{\left|\mathbf{R}_I -\mathbf{R}_J \right|},
@@ -522,14 +522,14 @@ theorem.</p>
 interactions, and captial and lower case letters denote nuclear and electronic indices respectively. In cartesian coordinates, the forces
 acting on the x-component <span class="math notranslate nohighlight">\(\mathbf{X}_I\)</span> of nucleus <span class="math notranslate nohighlight">\(I\)</span> are:</p>
 <div class="math notranslate nohighlight" id="equation-forces-x">
-<span class="eqno">(1.4)<a class="headerlink" href="#equation-forces-x" title="Link to this equation">#</a></span>\[
+<span class="eqno">(4)<a class="headerlink" href="#equation-forces-x" title="Link to this equation">#</a></span>\[
 \begin{aligned}
 \mathbf{F}_{\mathbf{X}_I} = -\left&lt;{\Psi \left| \frac{\mathrm{d}\hat{\mathrm{H}}}{\mathrm{d}\mathbf{X}_I} \right| \Psi} \right&gt;.
 \end{aligned}
 \]</div>
-<p>Insertion into <a class="reference internal" href="#equation-hamiltonian">(1.3)</a> yields:</p>
+<p>Insertion into <a class="reference internal" href="#equation-hamiltonian">(3)</a> yields:</p>
 <div class="math notranslate nohighlight" id="equation-forces-x-hf">
-<span class="eqno">(1.5)<a class="headerlink" href="#equation-forces-x-hf" title="Link to this equation">#</a></span>\[ 
+<span class="eqno">(5)<a class="headerlink" href="#equation-forces-x-hf" title="Link to this equation">#</a></span>\[ 
 \begin{aligned}
 \mathbf{F}_{\mathbf{X}_I} = -Z_I \int \frac{\mathbf{x}-\mathbf{X}_I}{\left|\mathbf{r}-\mathbf{R}_I\right|^3}\rho(\mathbf{r}) \mathrm{d}\mathbf{r}
                           - \sum_{J \ne I}^M Z_I Z_J \frac{\mathbf{X}_J -\mathbf{X}_I}{\left| \mathbf{R}_J -\mathbf{R}_I \right|^3}.
@@ -545,7 +545,7 @@ density, but are fully parametrised instead.</p>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="statistical-approaches-to-numerical-estimation">
-<h1><span class="section-number">1.2. </span>Statistical Approaches to Numerical Estimation<a class="headerlink" href="#statistical-approaches-to-numerical-estimation" title="Link to this heading">#</a></h1>
+<h1>Statistical Approaches to Numerical Estimation<a class="headerlink" href="#statistical-approaches-to-numerical-estimation" title="Link to this heading">#</a></h1>
 <p>Monte Carlo (MC) methods are a broad class of computational algorithms
 which rely on repeated random sampling to obtain the distribution of an
 unknown, often probabilistic entity. They are particularly useful for
@@ -562,13 +562,13 @@ discussion of pseudo-random number generators (PRNGs) in <a class="reference ext
 <figure class="align-default" id="pi-estimation">
 <a class="reference internal image-reference" href="../_images/Pi_estimation.svg"><img alt="../_images/Pi_estimation.svg" src="../_images/Pi_estimation.svg" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Schematic representation of modifying the l/d ratio. This ratio in part determines the accuracy of the <span class="math notranslate nohighlight">\(\pi\)</span> estimation.</span><a class="headerlink" href="#pi-estimation" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Schematic representation of modifying the l/d ratio. This ratio in part determines the accuracy of the <span class="math notranslate nohighlight">\(\pi\)</span> estimation.</span><a class="headerlink" href="#pi-estimation" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="numerical-estimation-of-pi">
-<h2><span class="section-number">1.2.1. </span>Numerical Estimation of <span class="math notranslate nohighlight">\(\pi\)</span><a class="headerlink" href="#numerical-estimation-of-pi" title="Link to this heading">#</a></h2>
+<h2>Numerical Estimation of <span class="math notranslate nohighlight">\(\pi\)</span><a class="headerlink" href="#numerical-estimation-of-pi" title="Link to this heading">#</a></h2>
 <p>Consider a circle of diameter <span class="math notranslate nohighlight">\(d\)</span>, sitting at the centre of a square of
-length <span class="math notranslate nohighlight">\(l\)</span> as depicted in <a class="reference internal" href="#pi-estimation"><span class="std std-numref">Fig. 1.1</span></a>. If points (x,y) are randomly distributed
+length <span class="math notranslate nohighlight">\(l\)</span> as depicted in <a class="reference internal" href="#pi-estimation"><span class="std std-numref">Fig. 1</span></a>. If points (x,y) are randomly distributed
 within the square and those which fall within the circle versus the
 square are counted, numerical integration is effectively being performed
 <em>via</em> the MC method. The area ratio of the circle to the square thus
@@ -621,7 +621,7 @@ ratio).</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</p>
+        <p class="prev-next-title">Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</p>
       </div>
     </a>
     <a class="right-next"
@@ -629,7 +629,7 @@ ratio).</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.3. </span>Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></p>
+        <p class="prev-next-title">Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -649,9 +649,9 @@ ratio).</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-approaches-to-numerical-estimation">1.2. Statistical Approaches to Numerical Estimation</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-estimation-of-pi">1.2.1. Numerical Estimation of <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">From Quantum to Classical Mechanics: The Example of Forces</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#statistical-approaches-to-numerical-estimation">Statistical Approaches to Numerical Estimation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numerical-estimation-of-pi">Numerical Estimation of <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
 </ul>
 </li>
 </ul>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4.2. MD simulation from scratch &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>MD simulation from scratch &#8212; Molecular Dynamics and Monte Carlo</title>
   
   
   
@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -50,20 +50,20 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Ex4/Exercise';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="5. Classical Molecular Dynamics (MD) Simulations" href="../Ex5/MDMC_ex5.html" />
-    <link rel="prev" title="4.1. Theory" href="Theory.html" />
+    <link rel="next" title="Classical Molecular Dynamics (MD) Simulations" href="../Ex5/MDMC_ex5.html" />
+    <link rel="prev" title="Theory" href="Theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,46 +171,46 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Molecular Dynamics and Monte Carlo
+                    Introduction
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_Ex1.html">1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_Ex1.html">Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">From Quantum to Classical Mechanics: The Example of Forces</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">1.3. Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">1.4. Appendix: Random and Pseudo-random Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">Appendix: Random and Pseudo-random Numbers</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">2. Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">2.1. Statistical Thermodynamics and the Boltzmann Distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">2.2. Boltzmann Distribution Harmonic Oscillator</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">Statistical Thermodynamics and the Boltzmann Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">Boltzmann Distribution Harmonic Oscillator</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">3. Monte Carlo Simulations and the Photon Gas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">3.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">3.2. The Photon Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">3.3. The Lennard-Jones Potential</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">Monte Carlo Simulations and the Photon Gas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">The Photon Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">The Lennard-Jones Potential</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_ex4.html">4. Introduction to Molecular Dynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Theory.html">4.1. Theory</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">4.2. MD simulation from scratch</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">5. Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">5.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">5.2. ToyMD</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_ex4.html">Introduction to Molecular Dynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Theory.html">Theory</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">MD simulation from scratch</a></li>
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">6. Properties from Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">6.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">6.2. Protein Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage.html">6.3. Practical: TRP Cage using OpenMM</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">ToyMD</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">Properties from Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">Protein Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage.html">Practical: TRP Cage using OpenMM</a></li>
 
 </ul>
 </details></li>
@@ -458,8 +458,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.2. MD simulation from scratch</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">4.3. Visualize trajectory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">MD simulation from scratch</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">Visualize trajectory</a></li>
 </ul>
 
             </nav>
@@ -473,7 +473,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="md-simulation-from-scratch">
-<h1><span class="section-number">4.2. </span>MD simulation from scratch<a class="headerlink" href="#md-simulation-from-scratch" title="Link to this heading">#</a></h1>
+<h1>MD simulation from scratch<a class="headerlink" href="#md-simulation-from-scratch" title="Link to this heading">#</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> code provided is a minimalistic python program to run MD simulations.
 By clicking <a class="reference external" href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Flcbc-epfl%2Fmdmc-public&amp;amp;urlpath=lab%2Ftree%2Fmdmc-public%2Fmdmc%2FEx4%2FToyMD%2Ftoy_md.py&amp;amp;branch=main">this  link</a> you can open the files for this exercise on noto.</p>
 <p>The main program is <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> takes care of the MD propagation and runs different sub-programs for differrent calculations needed for a MD simulations. For example, <code class="docutils literal notranslate"><span class="pre">toy_md_params.py</span></code> takes care of reading the parameters from the <code class="docutils literal notranslate"><span class="pre">params.txt</span></code> file, or <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> calculates bonded and non-bonded forces.</p>
@@ -619,7 +619,7 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="visualize-trajectory">
-<h1><span class="section-number">4.3. </span>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Link to this heading">#</a></h1>
+<h1>Visualize trajectory<a class="headerlink" href="#visualize-trajectory" title="Link to this heading">#</a></h1>
 <p>Once your code is ready, running it will produce some output files. In particular, <code class="docutils literal notranslate"><span class="pre">traj.pdb</span></code> will contain the trajectory of your toy system.</p>
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">params.txt</span></code> file contains the parameters for the MD run. Among them, <code class="docutils literal notranslate"><span class="pre">number-of-steps</span></code> will indicate the number of integration time steps to be performed and <code class="docutils literal notranslate"><span class="pre">output-frequency</span></code> will indicate how ofter to store coordinates in the output file. Of course, what you will see in the viewer depends on how long the MD simulation is and how often you saved the coordinates.</p>
 <p>Using the cells below you can visualize the trajectory generated. You first need to finish and run the code before you can look at the trajectory.</p>
@@ -688,7 +688,7 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.1. </span>Theory</p>
+        <p class="prev-next-title">Theory</p>
       </div>
     </a>
     <a class="right-next"
@@ -696,7 +696,7 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Classical Molecular Dynamics (MD) Simulations</p>
+        <p class="prev-next-title">Classical Molecular Dynamics (MD) Simulations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -716,8 +716,8 @@ Step:     9 Epot   -795.046 Ekin    155.754 Etot   -639.292 T   19.27 lambda 1.0
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.2. MD simulation from scratch</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">4.3. Visualize trajectory</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">MD simulation from scratch</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#visualize-trajectory">Visualize trajectory</a></li>
 </ul>
 
   </nav></div>

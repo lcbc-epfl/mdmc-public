@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3.2. The Photon Gas &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>The Photon Gas &#8212; Molecular Dynamics and Monte Carlo</title>
   
   
   
@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -50,20 +50,20 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Ex3/PhotonGas';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="3.3. The Lennard-Jones Potential" href="LJ_NVT.html" />
-    <link rel="prev" title="3.1. Theory" href="Ex3_Theory.html" />
+    <link rel="next" title="The Lennard-Jones Potential" href="LJ_NVT.html" />
+    <link rel="prev" title="Theory" href="Ex3_Theory.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,46 +171,46 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Molecular Dynamics and Monte Carlo
+                    Introduction
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_Ex1.html">1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_Ex1.html">Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">From Quantum to Classical Mechanics: The Example of Forces</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">1.3. Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">1.4. Appendix: Random and Pseudo-random Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">Appendix: Random and Pseudo-random Numbers</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">2. Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">2.1. Statistical Thermodynamics and the Boltzmann Distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">2.2. Boltzmann Distribution Harmonic Oscillator</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">Statistical Thermodynamics and the Boltzmann Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">Boltzmann Distribution Harmonic Oscillator</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_ex3.html">3. Monte Carlo Simulations and the Photon Gas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="Ex3_Theory.html">3.1. Theory</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. The Photon Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="LJ_NVT.html">3.3. The Lennard-Jones Potential</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="MDMC_ex3.html">Monte Carlo Simulations and the Photon Gas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Ex3_Theory.html">Theory</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">The Photon Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="LJ_NVT.html">The Lennard-Jones Potential</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">4. Introduction to Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">4.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">4.2. MD simulation from scratch</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">5. Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">5.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">5.2. ToyMD</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">Introduction to Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">MD simulation from scratch</a></li>
 
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">6. Properties from Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">6.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">6.2. Protein Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage.html">6.3. Practical: TRP Cage using OpenMM</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">ToyMD</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex6/MDMC_ex6.html">Properties from Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/proteinmodelling.html">Protein Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex6/TRP_Cage.html">Practical: TRP Cage using OpenMM</a></li>
 
 </ul>
 </details></li>
@@ -458,8 +458,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm">3.2.1. Ensemble Averages from the Metropolis Monte Carlo Algorithm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-a-metropolis-monte-carlo-algorithm">3.2.2. Implementing a Metropolis Monte Carlo Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm">Ensemble Averages from the Metropolis Monte Carlo Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-a-metropolis-monte-carlo-algorithm">Implementing a Metropolis Monte Carlo Algorithm</a></li>
 </ul>
             </nav>
         </div>
@@ -472,62 +472,46 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="the-photon-gas">
-<h1><span class="section-number">3.2. </span>The Photon Gas<a class="headerlink" href="#the-photon-gas" title="Link to this heading">#</a></h1>
-<p>This exercise gives you an example of a Metropolis Monte Carlo algorithm, where you will apply this type of algorithm to calculate the state occupancy of a photon gas. The photon gas is a gas-like collection of photons, which has many of the same
-properties of a conventional gas such as pressure, temperature and
-entropy. The most common example of a photon gas in equilibrium is
-black-body radiation. Black-body radiation is an electromagnetic field
-constructed by a superposition of plane waves of different frequencies,
-with the caveat that a mode may only be excited in units of <span class="math notranslate nohighlight">\(\hbar w\)</span>.
-This fact leads to the concept of photons as quanta of the
-electromagnetic field, with the state of the field being specified by
-the occupancy <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span> of each of the modes or, in other
-words, by enumerating the number of photons with each frequency.</p>
+<h1>The Photon Gas<a class="headerlink" href="#the-photon-gas" title="Link to this heading">#</a></h1>
+<p>Note: This exercise was updates compared to previous years.</p>
+<p>This exercise gives you an example of a Metropolis Monte Carlo algorithm, where you will apply this type of algorithm to calculate the state occupancy of vibrational states of a <span class="math notranslate nohighlight">\(H_2\)</span> gas. In this exercise, we will approximate the vibrations with the harmanic oscillator. The resulting system is a set of harmonic oscillators in different energy levels.</p>
 <section id="ensemble-averages-from-the-metropolis-monte-carlo-algorithm">
-<h2><span class="section-number">3.2.1. </span>Ensemble Averages from the Metropolis Monte Carlo Algorithm<a class="headerlink" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm" title="Link to this heading">#</a></h2>
-<p>The ensemble average of the state occupancy <span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span> of a
-photon gas can be calculated analytically. Deriving the total energy of
-an idealised photon gas from quantum mechanics we know that <span class="math notranslate nohighlight">\(U\)</span> can be
-written as the sum of the harmonic oscillation energies:</p>
-<div class="math notranslate nohighlight" id="equation-total-energy-photongas">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-total-energy-photongas" title="Link to this equation">#</a></span>\[
-\begin{aligned}
-U= \sum_{j=1}^{N} n_j w_j \hbar = \sum_{j=1}^{N} n_j \epsilon_j,
-\end{aligned}
+<h2>Ensemble Averages from the Metropolis Monte Carlo Algorithm<a class="headerlink" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm" title="Link to this heading">#</a></h2>
+<p>The ensemble average of the state occupancy <span class="math notranslate nohighlight">\(\left&lt;N_i\right&gt;\)</span> of state <span class="math notranslate nohighlight">\(i\)</span> of an ensemble of harmonic oscillators can be calculated analytically. In the canonical ensemble, the ensemble average occupancy of state <span class="math notranslate nohighlight">\(i\)</span> is expressed as:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+    \langle N_i\rangle = P_i * N = \frac{e^{-E_i\beta}}{Z}N
+\end{align}
 \]</div>
-<p>where <span class="math notranslate nohighlight">\(w_j\)</span>  and <span class="math notranslate nohighlight">\(\epsilon_j\)</span> are the oscilator frequency and energy of state <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(n_j\)</span> is the occupancy of
-state <span class="math notranslate nohighlight">\(j\)</span> (<span class="math notranslate nohighlight">\(n_j \in 0,1,2,\cdots, \infty\)</span>), and <span class="math notranslate nohighlight">\(N\)</span> is the total number of
-states. In this exercise, you are
-going to compute the ensemble average of the occupancy
-<span class="math notranslate nohighlight">\(\left&lt;n_j\right&gt;\)</span>.</p>
-<p>For simplicity, we will assume that all the frequencies are the same, i.e. <span class="math notranslate nohighlight">\(\epsilon_j = \epsilon\)</span> for every <span class="math notranslate nohighlight">\(j\)</span> and hence the energy expression simplifies to</p>
-<div class="math notranslate nohighlight" id="equation-total-energy-photongas">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-total-energy-photongas" title="Link to this equation">#</a></span>\[
-\begin{aligned}
-U= \epsilon \sum_{j=1}^{N} n_j .
-\end{aligned}
+<p>where <span class="math notranslate nohighlight">\(Z\)</span> is the partition function of an ensemble of harmonic oscillators.</p>
+<p>We can express the energy of a set of <span class="math notranslate nohighlight">\(N\)</span> harmonic oscillators with the same frequency <span class="math notranslate nohighlight">\(\omega\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+    E_{\{N_i\}} = \sum_i^N N_i \hbar \omega (n_i+\frac12)
+\end{align}
 \]</div>
+<p>We will use this expression as part of the Metropolis Monte Carlo algorithm to obtain the state occupancy of our ensemble of harmoinic oscillators.</p>
 <p>The scheme you will employ is as follows:</p>
 <ol class="arabic">
-<li><p>Start with an arbitrary <span class="math notranslate nohighlight">\(n_j\)</span>.</p></li>
-<li><p>Decide to perform a trial move to randomly increase or decrease
-<span class="math notranslate nohighlight">\(n_j\)</span> by 1.</p></li>
+<li><p>Start with an arbitrary set of <span class="math notranslate nohighlight">\(\{N_i\}\)</span>, here we will start with all of them in the ground state.</p></li>
+<li><p>Decide to perform a trial move for one random harminic oscillator to randomly move it to a higher or lower energy level (we limit the move to <span class="math notranslate nohighlight">\(\pm 1\)</span> energy level).</p></li>
 <li><p>Accept the trial move with probability (i.e. perform a Metropolis Monte Carlo move):</p>
 <div class="math notranslate nohighlight">
 \[
     \begin{aligned}
-    P_{acc}(o \rightarrow n)= \min \left(1, e^{-\beta(U(n)-U(o))}\right),\end{aligned}
+    P_{acc}(o \rightarrow n)= \min \left(1, e^{-\beta(E(n)-E(o))}\right),\end{aligned}
     \]</div>
-<p>where <span class="math notranslate nohighlight">\(U(n)\)</span> and <span class="math notranslate nohighlight">\(U(o)\)</span> are the energies of the new and old states
-respectively.</p>
+<p>where <span class="math notranslate nohighlight">\(E(n)\)</span> and <span class="math notranslate nohighlight">\(E(o)\)</span> are the energies of the new and old ensemble of harmonic oscillators respectively.</p>
 </li>
 <li><p>Update averages regardless of acceptance or rejection.</p></li>
 <li><p>Iterate from 2).</p></li>
 </ol>
-<p><strong>Note</strong> that in the code we will measure the energy in units of <span class="math notranslate nohighlight">\(\hbar w\)</span>. This means that when you calculate the energy, you will only need to enumerate the number of photons with each frequency since the the Boltzmann’s factor is given by <span class="math notranslate nohighlight">\(e^{-\beta(U(n)-U(o))}\)</span>.</p>
+<p><strong>Note</strong> that you will need to find the value of <span class="math notranslate nohighlight">\(\hbar \omega\)</span> for a <span class="math notranslate nohighlight">\(H_2\)</span> gas.</p>
 </section>
 <section id="implementing-a-metropolis-monte-carlo-algorithm">
-<h2><span class="section-number">3.2.2. </span>Implementing a Metropolis Monte Carlo Algorithm<a class="headerlink" href="#implementing-a-metropolis-monte-carlo-algorithm" title="Link to this heading">#</a></h2>
+<h2>Implementing a Metropolis Monte Carlo Algorithm<a class="headerlink" href="#implementing-a-metropolis-monte-carlo-algorithm" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">random</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">r</span>
@@ -535,13 +519,13 @@ respectively.</p>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> 
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">widgets</span>
+<span class="c1">#from ipywidgets import interact, interactive, fixed, interact_manual</span>
+<span class="c1">#import ipywidgets as widgets</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;..&quot;</span><span class="p">)</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">helpers</span>
-<span class="n">helpers</span><span class="o">.</span><span class="n">set_style</span><span class="p">()</span>
+<span class="c1">#import helpers</span>
+<span class="c1">#helpers.set_style()</span>
 
 <span class="c1"># Random Seed</span>
 <span class="n">r</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
@@ -551,116 +535,202 @@ respectively.</p>
 </div>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 3</p>
-<p>Make modifications in the code, right after the commented section <code class="docutils literal notranslate"><span class="pre">MODIFICATION</span> <span class="pre">...</span> <span class="pre">END</span> <span class="pre">MODIFICATION</span></code>. Include the entire code within your report and comment upon the part that you wrote.</p>
-</div>
-<div class="exercise admonition">
-<p class="admonition-title">Exercise 4</p>
-<p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(n_j = 0\)</span>? Note that <span class="math notranslate nohighlight">\(n_j\)</span>  cannot be negative.</p>
+<p>To express the occupation of our ensemble of harmonic ascillators, we will use a list where each item is the number of particle in the corresponding level. For example occupancy[0]=10 means that there are 10 particles in the ground state (level 0)
+Create a function that calculates the energy of an occupancy list using the hints provided.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numberOfIterations</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">beta</span> <span class="o">=</span> <span class="mf">1.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">energy</span><span class="p">(</span><span class="n">occupancy</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">):</span>
+    <span class="c1"># Loop over the energy levels</span>
+    <span class="c1"># For each energy level, calculate the energy using the expression provided in the introduction (you will use hbaromega and n, the number of particles in that energy level)</span>
+    <span class="c1"># Add it to the total energy</span>
+    <span class="k">return</span> <span class="n">total_energy</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 4</p>
+<p>Make modifications in the code, right after the commented section <code class="docutils literal notranslate"><span class="pre">MODIFICATION</span> <span class="pre">...</span> <span class="pre">END</span> <span class="pre">MODIFICATION</span></code>. Include the entire code within your report and comment upon the part that you wrote.</p>
+</div>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 5</p>
+<p>How can this scheme retain detailed balance when <span class="math notranslate nohighlight">\(N_i = 0\)</span>? Note that <span class="math notranslate nohighlight">\(N_i\)</span>  cannot be negative.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># This function is given to you and we will use to randomly pick a level from a list of all levels available.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">select_level</span><span class="p">(</span><span class="n">occupancy</span><span class="p">):</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">occupancy</span><span class="p">)</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">cumulative_occupancy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">occupancy</span><span class="p">)</span>
+    <span class="n">level</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">cumulative_occupancy</span> <span class="o">&gt;=</span> <span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">level</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Input the correct values here, for a di-hydrogen gas at room temperature.</span>
+<span class="n">numberOfIterations</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">T</span> <span class="o">=</span> <span class="c1"># FILL IN K</span>
+<span class="n">omega</span> <span class="o">=</span> <span class="c1"># FILL IN cm-1</span>
+<span class="n">levels</span><span class="o">=</span><span class="mi">100</span>
+<span class="n">n</span><span class="o">=</span><span class="mi">40</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">calculateOccupancy</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="c1"># Constants</span>
+<span class="n">kb</span><span class="o">=</span><span class="mf">1.4</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">23</span>
+<span class="n">hbar</span> <span class="o">=</span> <span class="mf">1.05</span><span class="o">*</span><span class="mi">10</span><span class="o">**-</span><span class="mi">34</span>
 
-    <span class="n">trialnj</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">currentnj</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">njsum</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">numStatesVisited</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">estimatedOccupancy</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">beta</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">kb</span><span class="o">*</span><span class="n">T</span><span class="p">)</span>
+<span class="n">hbaromega</span> <span class="o">=</span> <span class="n">hbar</span><span class="o">*</span><span class="n">omega</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">10</span> <span class="c1"># We convert cm-1 to SI units by multiplying by the speed of ligth in cm/s</span>
 
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;  MODIFICATION</span>
-<span class="sd">    Metropolis algorithm implementation to calculate &lt;n_j&gt;</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculateOccupancy</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">,</span><span class="n">numberOfIterations</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+
+    <span class="c1"># We create an occupancy vector to keep track of how many particles are in each level.</span>
+    <span class="n">occupancy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">level</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">levels</span><span class="p">):</span>
+        <span class="n">occupancy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="c1"># We put all the particles in the ground state</span>
+    <span class="n">occupancy</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+
+    <span class="c1"># This occupancy_sum array is there to collect the statistics of the occupation</span>
+    <span class="n">occupancy_sum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">occupancy</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">numberOfIterations</span><span class="p">):</span>
+        <span class="c1"># Create new_occupancy, which is a copy of the current occupancy, to store the new occupancy after performing a trial move.</span>
+        <span class="n">new_occupancy</span> <span class="o">=</span> <span class="n">occupancy</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="c1"># We select from which level to move a particle</span>
+        <span class="n">initial_level</span> <span class="o">=</span> <span class="n">select_level</span><span class="p">(</span><span class="n">occupancy</span><span class="p">)</span>
+
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;  MODIFICATION</span>
+<span class="sd">    Metropolis algorithm implementation to calculate {N_i}</span>
 <span class="sd">    Tasks:</span>
-<span class="sd">    1) Loop from int i = 0 to numberOfiterations</span>
-<span class="sd">    2) Call r.randint(0,1) to perform a trial move to randomly increase</span>
-<span class="sd">        or decrease trialnj by 1.</span>
+<span class="sd">    1) Loop from int i = 0 to numberOfiterations (this was done above)</span>
+<span class="sd">    2) Randomy select from which level (initial_level) to move a particle by using the select_level function provided to you. (this was done above)</span>
+<span class="sd">    (modifications start here)</span>
+<span class="sd">    3) Call r.randint(0,1) to perform a trial move to move the particle from a higher or lower level (final_level = initial_level +/- 1). </span>
 <span class="sd">        Note: randint(0,1) returns random integers from 0 to 1 (i.e. 0 OR 1)</span>
 <span class="sd">               but you need to extract -1 OR 1</span>
 <span class="sd">        Hint:   what happens to the extraction if you multiply r.randint(0,1)*A, where A is an integer?</span>
 <span class="sd">                what happens to the extraction if you sum r.randint(0,1)+B, where B is an integer (positive or negative)?</span>
 <span class="sd">                The above hints shall suggest how to obtain the desired numbers from the extraction of 0 or 1</span>
-<span class="sd">    3) Test if trialnj &lt; 0, if it is, force it to be 0</span>
-<span class="sd">    4) Accept the trial move with probability defined in the Theory section</span>
-<span class="sd">        Note: Accepting the trial move means updating current sample (currentnj)</span>
-<span class="sd">        with the new move (trialnj);</span>
-<span class="sd">    5) sum currentnj and increase numStatesVisited by 1</span>
-<span class="sd">    6) compute estimatedOccupancy after numberOfiterations iterations</span>
-<span class="sd">    </span>
+<span class="sd">    4) Test if final_level &lt; 0, if it is, force it to be 0</span>
+<span class="sd">    5) Test if final_level &gt; levels-1, if it is, force it to be levels-1: by adding these lines:</span>
+<span class="sd">            if final_level &gt; levels-1:</span>
+<span class="sd">                final_level = levels-1</span>
+<span class="sd">    5) Update the initial_level and final_level of new_occupancy so that the number of particles in initial_level is decreased by 1, </span>
+<span class="sd">        and the number of particles in final_level is increased by 1.</span>
+<span class="sd">    5) Accept the trial move with probability defined in the Theory section</span>
+<span class="sd">        Note: Accepting the trial move means updating the occupancy (old_occupancy).</span>
+<span class="sd">        with the new occupancy (new_occupancy);</span>
+<span class="sd">    6) sum occupancy to occupancy_sum to kkeep track of the statistics</span>
+<span class="sd">    7) Average the occupancy_sum by the number of iterations to compute the average occupancy after numberOfiterations iterations</span>
+
 <span class="sd">    END MODIFICATION</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># INSERT YOUR CODE HERE </span>
 
-    <span class="c1"># Loop from int i = 0 to numberOfiterations</span>
+        <span class="c1"># Call r.randint(0,1) to perform a trial move to move the particle from a higher or lower level</span>
 
-    <span class="c1"># Randomly decrease or increase trialnj</span>
+        <span class="c1"># check that the level to move the particle to is allowed by our problem</span>
 
-    <span class="c1">#if trialnj is &lt;0, set to 0</span>
+        <span class="k">if</span> <span class="n">final_level</span> <span class="o">&gt;</span> <span class="n">levels</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">final_level</span> <span class="o">=</span> <span class="n">levels</span><span class="o">-</span><span class="mi">1</span>
 
-    <span class="c1"># Accept move if probability is high</span>
+        <span class="c1"># update the occupancy the inital and final level</span>
 
-    <span class="c1"># sum currentnj and increase numStatesVisited</span>
+        <span class="c1"># check the Metropolis acceptance criterion</span>
+        
+        <span class="c1"># sum occupancy</span>
 
-    <span class="c1"># compute estimatedOccupancy </span>
-    <span class="n">estimatedOccupancy</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># modify</span>
-    
-    <span class="k">return</span> <span class="n">estimatedOccupancy</span>
+    <span class="c1"># average sum_occupancy by number of iterations</span>
+
+    <span class="k">return</span> <span class="n">avg_occupancy</span>
 
 <span class="c1"># perform a single calculation</span>
-<span class="n">estimatedOccupancy</span> <span class="o">=</span> <span class="n">calculateOccupancy</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="n">beta</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="exercise admonition">
-<p class="admonition-title">Exercise 5</p>
-<p>Using your code, plot the photon-distribution (average occupation number as a function of <span class="math notranslate nohighlight">\(\beta\epsilon\in[0.1,2]\)</span>). Iterate over the values of <span class="math notranslate nohighlight">\(\beta\epsilon\)</span> to obtain the “calculatedOccupancy” for each <span class="math notranslate nohighlight">\(\beta\epsilon\)</span>.
-Assume that the initial <span class="math notranslate nohighlight">\(n_j =1\)</span> and <span class="math notranslate nohighlight">\(\epsilon_j=\epsilon\)</span> and recalculate the analytical solution with the same <span class="math notranslate nohighlight">\(\beta\epsilon\)</span> values using the expression:
-$<span class="math notranslate nohighlight">\(\left&lt; N \right&gt; = \frac{1}{e^{\beta\epsilon}-1}\)</span>$
-Plot your calculated values versus those from the analytical solution (two curves in the same plot) and include your curve in your report.</p>
-<p>What is the influence of the number of MC iterations on the estimated result vs the analytical one? Why?</p>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate an array of betas from 0.1 to 2 </span>
-<span class="n">betas</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="c1"># generate y values for function using the beta values</span>
-<span class="n">analytical_y</span><span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">betas</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this line iterates over all betas that we want to use </span>
-<span class="n">estimated_y</span><span class="o">=</span><span class="p">[</span><span class="n">calculateOccupancy</span><span class="p">(</span><span class="n">beta</span><span class="o">=</span><span class="n">b</span><span class="p">)</span> <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">betas</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">betas</span><span class="p">,</span><span class="n">analytical_y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;analytical&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">betas</span><span class="p">,</span><span class="n">estimated_y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;estimated&#39;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;beta&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Occupancy&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">estimatedOccupancy</span> <span class="o">=</span> <span class="n">calculateOccupancy</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">,</span><span class="n">numberOfIterations</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 6 - Bonus</p>
-<p>Modify the program in such a way that the averages are updated only after an accepted trial move. Why does ignoring rejected moves lead to erroneous results? <em>Hint</em>: define <span class="math notranslate nohighlight">\(P'(o \rightarrow o)\)</span> (<em>i.e</em>  the probability that you stay in the old configuration) and recall that the transition probability <span class="math notranslate nohighlight">\(P'\)</span> is normalised.</p>
+<p>Bonus: Why do we add these lines in our code:
+if final_level &gt; levels-1:
+final_level = levels-1
+How is this realted to the number of levels?</p>
 </div>
 <div class="exercise admonition">
-<p class="admonition-title">Exercise 7 - Bonus</p>
-<p>What happens at lower values of <span class="math notranslate nohighlight">\(\beta\)</span> with respect to the rejected moves? Is the probability of accepting a move lower or higher, and why?</p>
+<p class="admonition-title">Exercise 7</p>
+<p>Using your code, plot the average occupancy.
+Do it for two different temperatures and comment on your observations.
+Calculate the anyltical solution with the expression in the theory above and the partition function for a harmonic oscillator.</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+    Z = \frac{e^{\frac12 \beta \hbar \omega}}{e^{\beta \hbar \omega}-1}
+\end{align}
+\]</div>
+<p>Plot your calculated values versus those from the analytical solution (two curves in the same plot) and include your curve in your report (you will include 2 plts, one for each temperature chosen).</p>
+<p>Now, do the same process with 3 or more values for numberOfIterations.
+What is the influence of the number of MC iterations on the estimated result vs the analytical one? Why? Justify in words and include supporting plots.</p>
+<p>Note: this question requires more time, you need to clearly justify your statements.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define the 2 temperatures</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="c1"># FILL IN K</span>
+<span class="n">T2</span> <span class="o">=</span> <span class="c1">#FILL IN K</span>
+<span class="n">beta_1</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">kb</span><span class="o">*</span><span class="n">T1</span><span class="p">)</span>
+<span class="n">beta_2</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="n">kb</span><span class="o">*</span><span class="n">T2</span><span class="p">)</span>
+<span class="n">numerOfIterations</span><span class="o">=</span> <span class="c1"># fill here with different values to study the influence of this variable on the results.</span>
+
+<span class="c1"># run the Metropolis algorithm for each T</span>
+<span class="n">estimatedOccupancy_1</span> <span class="o">=</span> <span class="n">calculateOccupancy</span><span class="p">(</span><span class="n">beta_1</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">,</span><span class="n">numberOfIterations</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">estimatedOccupancy_2</span> <span class="o">=</span> <span class="n">calculateOccupancy</span><span class="p">(</span><span class="n">beta_2</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">,</span><span class="n">numberOfIterations</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+
+<span class="c1"># analytical function</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_analytic_occupancy</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span><span class="n">n</span><span class="p">):</span>
+    <span class="c1"># calculate the partition function Z</span>
+    <span class="n">Z</span> <span class="o">=</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="n">beta</span><span class="o">*</span><span class="n">hbaromega</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">beta</span><span class="o">*</span><span class="n">hbaromega</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># calculate the occupancy of each level using the expression provided in the introduction and append it to a list</span>
+    <span class="n">analytic_occupancy</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">levels</span><span class="p">):</span>
+        <span class="n">analytic_occupancy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">hbaromega</span><span class="o">*</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="n">beta</span><span class="p">)</span><span class="o">/</span><span class="n">Z</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">analytic_occupancy</span>
+
+<span class="c1"># Calculate analytical occupancy for each T</span>
+<span class="n">analytical_occupancy_1</span><span class="o">=</span><span class="n">calculate_analytic_occupancy</span><span class="p">(</span><span class="n">beta_1</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+<span class="n">analytical_occupancy_2</span><span class="o">=</span><span class="n">calculate_analytic_occupancy</span><span class="p">(</span><span class="n">beta_2</span><span class="p">,</span><span class="n">hbaromega</span><span class="p">,</span><span class="n">levels</span><span class="p">,</span><span class="n">n</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">levels</span><span class="p">),</span> <span class="n">analytical_occupancy_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;analytical T1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">levels</span><span class="p">),</span> <span class="n">estimatedOccupancy_1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;estimated T1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">levels</span><span class="p">),</span> <span class="n">analytical_occupancy_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;analytical T2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">levels</span><span class="p">),</span> <span class="n">estimatedOccupancy_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;estimated T2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Level&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Occupancy&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 8</p>
+<p>Why does ignoring rejected moves lead to erroneous results? <em>Hint</em>: define <span class="math notranslate nohighlight">\(P'(o \rightarrow o)\)</span> (<em>i.e</em>  the probability that you stay in the old configuration) and recall that the transition probability <span class="math notranslate nohighlight">\(P'\)</span> is normalised.</p>
+</div>
+<div class="exercise admonition">
+<p class="admonition-title">Exercise 9 - Bonus</p>
+<p>Based on your comprehension of the exercise, what do you think is the influence of the number of partciples?</p>
 </div>
 </section>
 </section>
@@ -701,7 +771,7 @@ Plot your calculated values versus those from the analytical solution (two curve
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3.1. </span>Theory</p>
+        <p class="prev-next-title">Theory</p>
       </div>
     </a>
     <a class="right-next"
@@ -709,7 +779,7 @@ Plot your calculated values versus those from the analytical solution (two curve
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.3. </span>The Lennard-Jones Potential</p>
+        <p class="prev-next-title">The Lennard-Jones Potential</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -729,8 +799,8 @@ Plot your calculated values versus those from the analytical solution (two curve
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm">3.2.1. Ensemble Averages from the Metropolis Monte Carlo Algorithm</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-a-metropolis-monte-carlo-algorithm">3.2.2. Implementing a Metropolis Monte Carlo Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensemble-averages-from-the-metropolis-monte-carlo-algorithm">Ensemble Averages from the Metropolis Monte Carlo Algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementing-a-metropolis-monte-carlo-algorithm">Implementing a Metropolis Monte Carlo Algorithm</a></li>
 </ul>
   </nav></div>
 

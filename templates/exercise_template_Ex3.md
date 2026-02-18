@@ -37,40 +37,68 @@ Your answer here
 
 :::{admonition} Exercise 3
 :class: exercise
-Make modifications in the code, right after the commented section `MODIFICATION ... END MODIFICATION`. Include the entire code within your report and comment upon the part that you wrote.
+To express the occupation of our ensemble of harmonic ascillators, we will use a list where each item is the number of particle in the corresponding level. For example occupancy[0]=10 means that there are 10 particles in the ground state (level 0)
+Create a function that calculates the energy of an occupancy list using the hints provided.
 :::
 
 Your answer here
 
 :::{admonition} Exercise 4
 :class: exercise
-How can this scheme retain detailed balance when $n_j = 0$? Note that $n_j$  cannot be negative.
+Make modifications in the code, right after the commented section `MODIFICATION ... END MODIFICATION`. Include the entire code within your report and comment upon the part that you wrote.
 :::
 
 Your answer here
 
 :::{admonition} Exercise 5
 :class: exercise
-Using your code, plot the photon-distribution (average occupation number as a function of $\beta\epsilon\in[0.1,2]$). Iterate over the values of $\beta\epsilon$ to obtain the "calculatedOccupancy" for each $\beta\epsilon$.
-Assume that the initial $n_j =1$ and $\epsilon_j=\epsilon$ and recalculate the analytical solution with the same $\beta\epsilon$ values using the expression:
-    $$\left< N \right> = \frac{1}{e^{\beta\epsilon}-1}$$
-Plot your calculated values versus those from the analytical solution (two curves in the same plot) and include your curve in your report.
-
-What is the influence of the number of MC iterations on the estimated result vs the analytical one? Why?
+How can this scheme retain detailed balance when $N_i = 0$? Note that $N_i$  cannot be negative.
 :::
 
 Your answer here
 
 :::{admonition} Exercise 6 - Bonus
 :class: exercise
-Modify the program in such a way that the averages are updated only after an accepted trial move. Why does ignoring rejected moves lead to erroneous results? *Hint*: define $P'(o \rightarrow o)$ (*i.e*  the probability that you stay in the old configuration) and recall that the transition probability $P'$ is normalised.
+Bonus: Why do we add these lines in our code:
+        if final_level > levels-1:
+            final_level = levels-1
+How is this realted to the number of levels?
 :::
 
 Your answer here
 
-:::{admonition} Exercise 7 - Bonus
+:::{admonition} Exercise 7
 :class: exercise
-What happens at lower values of $\beta$ with respect to the rejected moves? Is the probability of accepting a move lower or higher, and why?
+Using your code, plot the average occupancy. 
+Do it for two different temperatures and comment on your observations.
+Calculate the anyltical solution with the expression in the theory above and the partition function for a harmonic oscillator.
+
+$$
+\begin{align}
+    Z = \frac{e^{\frac12 \beta \hbar \omega}}{e^{\beta \hbar \omega}-1}
+\end{align}
+$$
+
+Plot your calculated values versus those from the analytical solution (two curves in the same plot) and include your curve in your report (you will include 2 plts, one for each temperature chosen).
+
+Now, do the same process with 3 or more values for numberOfIterations.
+What is the influence of the number of MC iterations on the estimated result vs the analytical one? Why? Justify in words and include supporting plots.
+
+Note: this question requires more time, you need to clearly justify your statements.
+:::
+
+Your answer here
+
+:::{admonition} Exercise 8
+:class: exercise
+ Why does ignoring rejected moves lead to erroneous results? *Hint*: define $P'(o \rightarrow o)$ (*i.e*  the probability that you stay in the old configuration) and recall that the transition probability $P'$ is normalised.
+:::
+
+Your answer here
+
+:::{admonition} Exercise 9 - Bonus
+:class: exercise
+Based on your comprehension of the exercise, what do you think is the influence of the number of partciples?
 :::
 
 Your answer here

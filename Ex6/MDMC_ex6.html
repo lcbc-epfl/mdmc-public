@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Properties from Molecular Dynamics &#8212; Molecular Dynamics and Monte Carlo</title>
+    <title>Properties from Molecular Dynamics &#8212; Molecular Dynamics and Monte Carlo</title>
   
   
   
@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
@@ -50,20 +50,20 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"TeX": {"Macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"ket": ["\\lvert #1 \\rangle", 1], "bra": ["\\langle #1 \\lvert", 1], "Ket": ["\\lvert #1 \\rangle", 1], "Bra": ["\\langle #1 \\lvert", 1], "braket": ["\\langle #1 \\lvert #2 \\rangle", 2], "hop": "\\hat{\\mathcal{H}}", "unit": "\\mathbbm{1}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Ex6/MDMC_ex6';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.1. Theory" href="theory.html" />
-    <link rel="prev" title="5.2. ToyMD" href="../Ex5/Exercise.html" />
+    <link rel="next" title="Theory" href="theory.html" />
+    <link rel="prev" title="ToyMD" href="../Ex5/Exercise.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,46 +171,46 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Molecular Dynamics and Monte Carlo
+                    Introduction
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercises</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_Ex1.html">1. Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">1.1. From Quantum to Classical Mechanics: The Example of Forces</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex1/MDMC_Ex1.html">Basic Concepts of Molecular Dynamics and Monte Carlo Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/Ex1_Theory.html">From Quantum to Classical Mechanics: The Example of Forces</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">1.3. Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">1.4. Appendix: Random and Pseudo-random Numbers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/MonteCarloPI.html">Monte Carlo <span class="math notranslate nohighlight">\(\pi\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex1/prng.html">Appendix: Random and Pseudo-random Numbers</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">2. Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">2.1. Statistical Thermodynamics and the Boltzmann Distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">2.2. Boltzmann Distribution Harmonic Oscillator</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex2/MDMC_ex2.html">Statistical Thermodynamics and the Boltzmann Distribution</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Ex2_Theory.html">Statistical Thermodynamics and the Boltzmann Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex2/Boltzmann.html">Boltzmann Distribution Harmonic Oscillator</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">3. Monte Carlo Simulations and the Photon Gas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">3.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">3.2. The Photon Gas</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">3.3. The Lennard-Jones Potential</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex3/MDMC_ex3.html">Monte Carlo Simulations and the Photon Gas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/Ex3_Theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/PhotonGas.html">The Photon Gas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex3/LJ_NVT.html">The Lennard-Jones Potential</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">4. Introduction to Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">4.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">4.2. MD simulation from scratch</a></li>
-
-</ul>
-</details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">5. Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">5.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">5.2. ToyMD</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex4/MDMC_ex4.html">Introduction to Molecular Dynamics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex4/Exercise.html">MD simulation from scratch</a></li>
 
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Properties from Molecular Dynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="theory.html">6.1. Theory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="proteinmodelling.html">6.2. Protein Modelling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TRP_Cage.html">6.3. Practical: TRP Cage using OpenMM</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Ex5/MDMC_ex5.html">Classical Molecular Dynamics (MD) Simulations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Ex5/Exercise.html">ToyMD</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Properties from Molecular Dynamics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="theory.html">Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="proteinmodelling.html">Protein Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TRP_Cage.html">Practical: TRP Cage using OpenMM</a></li>
 
 </ul>
 </details></li>
@@ -461,7 +461,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="properties-from-molecular-dynamics">
-<h1><span class="section-number">6. </span>Properties from Molecular Dynamics<a class="headerlink" href="#properties-from-molecular-dynamics" title="Link to this heading">#</a></h1>
+<h1>Properties from Molecular Dynamics<a class="headerlink" href="#properties-from-molecular-dynamics" title="Link to this heading">#</a></h1>
 <p><strong>Note</strong> This tutorial should be run on gnoto JupyterHub and not on noto JupyterHub. This is because we will use GPU-accelerated techniques to speed up the simulations.</p>
 <p>To this end, please use the following link instead of the usual rocket button: <a href="https://gnoto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex6/TRP_Cage.ipynb&branch=main">gnoto</a></p>
 <p><strong>Select</strong> the correct kernel for this exercise CH-351</p>
@@ -550,7 +550,7 @@ will analyse the folding of the Trp-cage miniprotein.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.2. </span>ToyMD</p>
+        <p class="prev-next-title">ToyMD</p>
       </div>
     </a>
     <a class="right-next"
@@ -558,7 +558,7 @@ will analyse the folding of the Trp-cage miniprotein.</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.1. </span>Theory</p>
+        <p class="prev-next-title">Theory</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
