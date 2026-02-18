@@ -22,7 +22,7 @@ Although a reaction may be predicted to be endothermic based on quantum
 chemical calculations at 0 K, the entropic term of the transformation
 may still favour the reaction to be exergonic. The reaction will thus be
 spontaneous at finite temperature (*cf.* the solvation of certain salts
-in water, where the solute cools down due to an positive reaction
+in water, where the solute cools down due to a positive reaction
 enthalpy, but the process is spontaneous due to a considerable rise in
 entropy).
 
@@ -49,27 +49,27 @@ Simulations tutorial provided by the University of Amsterdam.
 
 ## Practical information
 
-### Time Table Spring Semester 2025
+### Time Table Spring Semester 2026
 The course will be **Tue 11h15-13h00** (Lectures in [BCH3118](https://plan.epfl.ch/?room==BCH%203118), exercises in [BCH1113](https://plan.epfl.ch/?room==BCH%201113)). 
 
 
 | date            | type     | description                                               |            |
 |-----------------|----------|-----------------------------------------------------------|------------|
-| 18.2. Tue       |  course  | Intro & Chapter 1 (From QM to MM)                         |     UR     |
-| 25.2. Tue       | exercise | Ex 1 - Monte Carlo Estimation of Pi                       | assistants |
-| 04.3. Tue       |  course  | Chapter 2 (Statistical Mechanics)                         |     UR     |
-| 11.3. Tue       | exercise | Ex 2 - Harmonic Oscillator                                | assistants |
-| 18.3. Tue       |  course  | Chapter 3 (Monte Carlo Simulations)                       |     UR     |
-| 25.3. Tue       | exercise | Ex 3 - LJ gas Monte Carlo                                 | assistants |
-| 01.4. Tue       |  course  | Chapter 4 (MD Simulations 1)                              |     UR     |
-| 08.4. Tue       | exercise | Ex 4 - Molecular Dynamics                                 | assistants |
-| 15.4. Tue       |  course  | Chapter 5 (MD Simulations 2)                              |     UR     |
-| 22.4. Tue       |          | Easter Break                                              |            |
-| 29.4. Tue       | exercise | Ex 5 - Molecular Dynamics                                 | assistants |
-| 06.5. Tue       |  course  | Chapter 6 (MD Simulations 3)                              |     UR     |
-| 13.5. Tue       | exercise | Ex 6 - Protein folding                                    | assistants |
-| 20.5. Tue       |  course  | Q&A Session                                               | assistants |
-| 27.5. Tue       |   exam   | Written Exam                                              |            |
+| 17.2. Tue       |  course  | Intro & Chapter 1 (From QM to MM)                         |     UR     |
+| 24.2. Tue       | exercise | Ex 1 - Monte Carlo Estimation of Pi                       | assistants |
+| 03.3. Tue       |  course  | Chapter 2 (Statistical Mechanics)                         |     UR     |
+| 10.3. Tue       | exercise | Ex 2 - Harmonic Oscillator                                | assistants |
+| 17.3. Tue       |  course  | Chapter 3 (Monte Carlo Simulations)                       |     UR     |
+| 24.3. Tue       | exercise | Ex 3 - LJ gas Monte Carlo                                 | assistants |
+| 31.3. Tue       |  course  | Chapter 4 (MD Simulations 1)                              |     UR     |
+| 07.4. Tue       |          | Easter Break                                              |            |
+| 14.4. Tue       | exercise | Ex 4 - Molecular Dynamics                                 | assistants |
+| 21.4. Tue       |  course  | Chapter 5 (MD Simulations 2)                              |     UR     |
+| 28.4. Tue       | exercise | Ex 5 - Molecular Dynamics                                 | assistants |
+| 05.5. Tue       |  course  | Chapter 6 (MD Simulations 3)                              |     UR     |
+| 12.5. Tue       | exercise | Ex 6 - Protein folding                                    | assistants |
+| 19.5. Tue       |  course  | Q&A Session                                               | assistants |
+| 26.5. Tue       |   exam   | Written Exam                                              |            |
 
 ### Grading and attendance 
 
@@ -86,7 +86,7 @@ been handed in as an electronic copy at the beginning of the session (as a pdf).
 answers to these questions will be graded and, together with the written
 report, contribute 1/2 to your overall grade. Please note that the last
 session will be an exception, as the grading will be based on the
-written report only. All reports need to be handed in two weeks after
+written report only. All reports need to be handed in one week after
 the respective session except for the last record which is as noted on moodle. 
 
 All reports are handed in via [moodle.epfl.ch](https://moodle.epfl.ch).
@@ -121,12 +121,12 @@ the next weeks.
 
 You can use a virtual environment in this course that you can directly launch from the exercise website. 
 
-Simply click the rocket button on the top right of the code files and choose either `JupyterHub` to launch `noto.epfl.ch` or Colab if you want to launch Google Colab. 
+Simply click the rocket button on the top right of the code files and choose either `JupyterHub` to launch `noto.epfl.ch`. 
 ![open](./images/openinteractive.png)
 
 On noto.epfl.ch your work will be saved on your EPFL storage. 
 
-To submit your code download the `.ipynb` file from noto or Colab. 
+To submit your code download the `.ipynb` file from noto. 
 
 On noto you right click on the file to download.
 ![download](./images/downloadipynb.png)

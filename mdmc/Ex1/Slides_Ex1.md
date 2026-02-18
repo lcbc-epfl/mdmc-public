@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 1
-subtitle: MDMC Spring 2025
-date: February 25, 2025
-author: "Salomé Guilbert, Qihao Zhang"
+subtitle: MDMC Spring 2026
+date: February 24, 2026
+author: "Thibault Kläy, Amina Menhour, Alice Piantavigna, Evan Vasey, Qihao Zhang"
 output: beamer_presentation
 ---
 
@@ -18,7 +18,7 @@ output: beamer_presentation
 # Exercise General Information    
 - Report Submission
     - `pdf` document answering the questions and relevant output
-    - Due date is usually the next exercise session (check Moodle!) 
+    - Due date is usually of one week, till the next lecture (check Moodle!) 
     - Detailed feedback via Moodle after the interview
         - No grade
         - Overall comment and detailed correction of the exercises
@@ -63,11 +63,10 @@ The following resources will be used to access and complete the exercises (more 
 - On [noto.epfl.ch](https://noto.epfl.ch/) your work will be saved on your EPFL storage
 - Make sure to always activate (top right) the `Computational Chemistry` kernel
 		![](/data/mdmc/img_slides/Ex1/kernel.png)
-- Please activate 3rd party permission on your EPFL Google Account using [go.epfl.ch/GoogleColabPermissions](https://go.epfl.ch/GoogleColabPermissions)
 
 # Jupyter notebooks
 
-- `.iynb` files organized in cells
+- `.ipynb` files organized in cells
 	- Markdown (text)
 	- Code 
 
@@ -75,7 +74,7 @@ The following resources will be used to access and complete the exercises (more 
 ![](/data/mdmc/img_slides/Ex1/jn_1.png) \
 
 # Jupyter notebooks
-- `.iynb` files organized in cells
+- `.ipynb` files organized in cells
 	- Markdown (text)
 	- Code 
 
@@ -109,7 +108,10 @@ What you should do if Noto doesn't work:
 Questions on the exercises (or the theory) outside exercise hours or problems with the reports? You can always contact us  
 
 - [**Moodle Forum**](https://moodle.epfl.ch/mod/forum/view.php?id=1193419), preferred way of communication since everyone can see the questions (and answer!)
-- Email us, always better to include multiple of us to get an answer faster (at least always include Salomé, Qihao, and soon Thibault and Evan)
-    - salome.guilbert@epfl.ch
+- Email us, always better to include multiple of us to get an answer faster (at least always include all TAs)
+    - thibault.klay@epfl.ch
+    - amina.menhour@epfl.ch
+    - alice.piantavigna@epfl.ch
+    - evan.vasey@epfl.ch
     - qihao.zhang@epfl.ch
 - At least one of us will always try to be present during lectures, feel free to ask us questions before/after the lecture or during the break!
