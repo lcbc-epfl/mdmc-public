@@ -35,7 +35,7 @@ repository:
 launch_buttons:
   notebook_interface        : jupyterlab
   jupyterhub_url: "https://noto.epfl.ch"
-  colab_url: "https://colab.research.google.com"
+  colab_url: "" #https://colab.research.google.com
   binderhub_url:  ""
 html:
   use_issues_button: true
