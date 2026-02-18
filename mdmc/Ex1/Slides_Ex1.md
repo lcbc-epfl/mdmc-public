@@ -25,8 +25,8 @@ output: beamer_presentation
 - Interviews during next exercise session are about 10-15 minutes
     - Test your understanding of the exercise
     - Good occasion to discuss your doubts and questions
-    - We will release the schedule ahead of the session so you know when and with whom you will interview - you need to email us to reschedule if you can't make it to your allocated time
-    - If you don't come to your interview and don't notify us to reschedule, **your grade for that report will be 0**
+    - We will release the schedule ahead of the session so you know when and with whom you will interview - you need to email us to reschedule if you can't make it to your allocated time 
+    - If you don't come to your interview and don't have a proper justification (medical certificate), **your grade for that report will be 0**
 
 **Exercises contribute to 1/2 of final grade! We count the best 5 out of the 6 reports for your exercise grade.**
 
@@ -78,7 +78,7 @@ The following resources will be used to access and complete the exercises (more 
 	- Markdown (text)
 	- Code 
 
-- Run a code cell by pressing :arrow_forward: (or `Ctrl`+`Enter`)
+- Run a code cell by pressing `Play` button (or `Ctrl`+`Enter`)
 ![](/data/mdmc/img_slides/Ex1/jn_2.png) \
 
 # Exercise 1 - Intro & Tips
@@ -108,7 +108,7 @@ What you should do if Noto doesn't work:
 Questions on the exercises (or the theory) outside exercise hours or problems with the reports? You can always contact us  
 
 - [**Moodle Forum**](https://moodle.epfl.ch/mod/forum/view.php?id=1193419), preferred way of communication since everyone can see the questions (and answer!)
-- Email us, always better to include multiple of us to get an answer faster (at least always include all TAs)
+- Email us, always better to include multiple of us to get an answer faster
     - thibault.klay@epfl.ch
     - amina.menhour@epfl.ch
     - alice.piantavigna@epfl.ch
