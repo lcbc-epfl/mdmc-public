@@ -42,7 +42,7 @@ Your answer here
 
 :::{admonition} Exercise 3 - Bonus
 :class: exercise
-Show from {eq}`density_operator` and {eq}`canonical_density_matrix` that the $p_i$ are indeed equal to $\frac{1}{Z}e^{-\beta E_i}$ for pure states, given that there exists a common eigenbasis $\left\{\ket{\Psi_i}\right\}$ to the total Hamiltonian and explain the origin of this restriction.
+Show from {eq}`density_operator` and {eq}`canonical_density_matrix` that the $p_i$ are indeed equal to $\frac{1}{Z}e^{-\beta E_i}$ for mixed states, given that there exists a common eigenbasis $\left\{\ket{\Psi_i}\right\}$ between the total Hamiltonian and {eq}`density_operator` and explain the origin of this restriction.
 Explain why the density operator and the expression for the expectation value of an observable assume a general form ({eq}`canonical_density_matrix` and {eq}`thermodynamic_properties`), rather than being defined directly in terms of {eq}`canonical_density_matrix_recast` and {eq}`classical_probability`.
 (You may link your answer to the assumptions made in the previous question).
 :::
