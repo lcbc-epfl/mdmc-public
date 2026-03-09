@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 2
 subtitle: MDMC Spring 2025
-date: March 11, 2025
-author: "Sophia Johnson, Andrea Levy, Salomé Guilbert, Qihao Zhang, Thibault Kläy"
+date: March 10, 2026
+author: "Thibault Kläy, Amina Menhour, Alice Piantavigna, Evan Vasey, Qihao Zhang"
 output: beamer_presentation
 ---
 
@@ -35,7 +35,7 @@ Today we'll be building a tool to compute the probability distribution of the en
   Be sure to know what we mean by
   - Thermodynamic ensembles
   - Microstate 
-  - Partition function and why its useful
+  - Partition function and why it's useful
   - Boltzmann distribution
  
 # Exercise 2 - Intro & Tips
