@@ -62,7 +62,7 @@ Your answer here
 Bonus: Why do we add these lines in our code:
         if final_level > levels-1:
             final_level = levels-1
-How is this realted to the number of levels?
+How is this related to the number of levels?
 :::
 
 Your answer here
