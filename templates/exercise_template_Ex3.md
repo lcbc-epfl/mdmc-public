@@ -52,7 +52,7 @@ Your answer here
 
 :::{admonition} Exercise 5
 :class: exercise
-How can this scheme retain detailed balance when $N_i = 0$? Note that $N_i$  cannot be negative.
+How can this scheme retain detailed balance when moving a particle from $i = 0$? Note that the energy level $i$  cannot be negative in the harmonic oscillator.
 :::
 
 Your answer here
