@@ -37,12 +37,12 @@ Today we'll be writing and executing Monte Carlo code.
   - detailed balance
   - Metropolis algorithm
 - In the practical part we will run MC code for two systems: 
-  - A photon gas in which the energy states are quantized meaning we can calculate the ensemble average of state occupancy analytically
+  - The vibrational states of an H2 gas in which the energy states are represented by a harmonic oscillators meaning we can calculate the analytical partition function
   - A gas in which we test different ensembles (NVT vs NPT) and use the Lennard-Jones potential to describe pairwise interactions
 
 # Exercise 3 - Intro & Tips
 
-- Photon Gas
+- Photon Gas (H$_2$ gas)
   - You'll need to write a loop of code to define the *estimatedOccupancy* function (read the hints and ask questions)
   - NB: *randint(0,1)* function will generate either 0 or 1. However, in our loop we need either 1 or -1
   - Recall that beta is the inverse of the product of the Boltzmann constant and simulation temperature. Varying beta is a way of varying simulation *T*
