@@ -1,7 +1,7 @@
 ---
 title: Exercise Session 3
-subtitle: MDMC Spring 2024
-date: March 25, 2025
+subtitle: MDMC Spring 2026
+date: March 24, 2026
 author: "Salomé Guilbert, Qihao Zhang, Thibault Kläy, Evan Vasey, Sophia Johnson, Andrea Levy"
 output: beamer_presentation
 ---
