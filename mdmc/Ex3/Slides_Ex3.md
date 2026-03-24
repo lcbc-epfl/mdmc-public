@@ -37,7 +37,7 @@ Today we'll be writing and executing Monte Carlo code.
   - detailed balance
   - Metropolis algorithm
 - In the practical part we will run MC code for two systems: 
-  - The vibrational states of an H2 gas in which the energy states are represented by a harmonic oscillators meaning we can calculate the analytical partition function
+  - The vibrational states of an H2 gas in which the vibrational states are represented by an ensemble of harmonic oscillators meaning we can calculate the analytical canonical partition function
   - A gas in which we test different ensembles (NVT vs NPT) and use the Lennard-Jones potential to describe pairwise interactions
 
 # Exercise 3 - Intro & Tips
