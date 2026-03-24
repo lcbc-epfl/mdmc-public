@@ -43,9 +43,9 @@ Today we'll be writing and executing Monte Carlo code.
 # Exercise 3 - Intro & Tips
 
 - Photon Gas (H2 gas)
-  - You'll need to write a loop of code to define the *estimatedOccupancy* function (read the hints and ask questions)
+  - Representation of the occupation of vibrational states of H2 gas with an ensemble of Harmonic oscillators c.f. spectroscopy
+  - You'll need to write a loop of code to define the *calculateOccupancy* function (read the hints and ask questions)
   - NB: *randint(0,1)* function will generate either 0 or 1. However, in our loop we need either 1 or -1
-  - Recall that beta is the inverse of the product of the Boltzmann constant and simulation temperature. Varying beta is a way of varying simulation *T*
 
 # Exercise 3 - Intro & Tips
 
