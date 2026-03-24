@@ -91,7 +91,7 @@ Your answer here
 
 :::{admonition} Exercise 8
 :class: exercise
- Why does ignoring rejected moves lead to erroneous results? *Hint*: define $P(o \rightarrow o)$ (*i.e*  the probability that you stay in the old configuration) and recall that probabilities are normalised and think about what it means in terms of the transition matrix $P_{ij} = P(i \rightarrow j)$.
+ Why does ignoring rejected moves lead to erroneous results? *Hint*: define $P(o \rightarrow o)$ (*i.e*  the probability that you stay in the old configuration) and recall that probabilities are normalised and think about what it means in terms of the transition matrix $P_{ij} = P(i \rightarrow j)$. It might be helpful to think of a simpler example e.g. a cat on a ladder.
 :::
 
 Your answer here
