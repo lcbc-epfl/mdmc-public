@@ -642,7 +642,7 @@ div.admonition {
     <span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
     
     <span class="k">for</span> <span class="n">part</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nPart</span><span class="p">):</span>
-        <span class="n">coords</span><span class="p">[</span><span class="n">part</span><span class="p">]</span><span class="o">=</span><span class="n">index</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">])</span><span class="o">*</span><span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">nCube</span><span class="p">)</span>
+        <span class="n">coords</span><span class="p">[</span><span class="n">part</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">index</span><span class="o">+</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]))</span><span class="o">*</span><span class="p">(</span><span class="n">L</span><span class="o">/</span><span class="n">nCube</span><span class="p">)</span>
         <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+=</span><span class="mi">1</span>
         <span class="k">if</span> <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="n">nCube</span><span class="p">:</span>
             <span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span>
@@ -783,7 +783,7 @@ div.admonition {
         
         <span class="n">deltaE</span> <span class="o">=</span> <span class="n">deltaE</span> <span class="o">+</span> <span class="n">eNew</span><span class="o">-</span><span class="n">eOld</span>
         
-        <span class="k">return</span> <span class="n">deltaE</span><span class="o">*</span><span class="mi">4</span>
+    <span class="k">return</span> <span class="n">deltaE</span><span class="o">*</span><span class="mi">4</span>
 </pre></div>
 </div>
 </div>
