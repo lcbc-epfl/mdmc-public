@@ -39,7 +39,7 @@ Today we will provide you a simple Molecular Dynamics (**Toy MD**) code in pytho
   - MD propagation algorithm
   - periodic boundary conditions
 - In the practical part you will implement:
-  - Velocity verlet algorithm
+  - Velocity-Verlet algorithm
   - Periodic boundary conditions (PBC)
 
 # Exercise 4 - ToyMD structure
