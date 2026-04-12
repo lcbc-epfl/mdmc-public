@@ -473,7 +473,7 @@ not - poses one of the fundamental problems of statistical mechanics.
 Unfortunately, there exists no complete proof of an <em>ergodic theorem</em>
 applied to thermodynamic ensembles. However, it can be shown that, if
 the only constants of motion of the system are constant functions over
-phase space (<em>i.e.</em> constants independent of coordinates and momenta),
+phase space (<em>i.e.</em> independent of coordinates and momenta),
 then the ensemble and time averages are identical for
 <span class="math notranslate nohighlight">\(t \rightarrow \infty\)</span>. Since a more general ergodic theorem has not
 been proven yet, a system is usually considered ergodic as long as <em>all</em>
@@ -538,8 +538,7 @@ molecular dynamics</em> (MD).</p>
 </section>
 <section id="time-evolution">
 <h2>Time Evolution<a class="headerlink" href="#time-evolution" title="Link to this heading">#</a></h2>
-<p>Given the potential for atomic interaction in section
-<code class="xref std std-numref docutils literal notranslate"><span class="pre">minimalFF</span></code>, the force
+<p>Given the potential <span class="math notranslate nohighlight">\(V\)</span> for atomic interaction, the force
 acting upon the <span class="math notranslate nohighlight">\(i\)</span>th atom is determined by the gradient with respect to
 atomic displacements:</p>
 <div class="math notranslate nohighlight" id="equation-force-on-i">
@@ -558,8 +557,8 @@ atomic positions in time, using some time step <span class="math notranslate noh
 \end{split}\]</div>
 <section id="the-position-verlet-algorithm">
 <h3>The Position-Verlet Algorithm<a class="headerlink" href="#the-position-verlet-algorithm" title="Link to this heading">#</a></h3>
-<p>The potential energy
-<span class="math notranslate nohighlight">\(U \left( \mathbf{r_1}, \dots, \mathbf{r_N} \right)\)</span> is a function of
+<p>The potential
+<span class="math notranslate nohighlight">\(V \left( \mathbf{r_1}, \dots, \mathbf{r_N} \right)\)</span> is a function of
 the positions (3N) of all atoms in the system. Due to the complicated
 nature of this function and the large number of atoms typically modeled
 in classical systems, there is no analytical solution to the equations
@@ -617,11 +616,11 @@ velocity-Verlet:</p>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 1</p>
 <p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{r}(t + \Delta t)\)</span> in the velocity-Verlet
-<a class="reference internal" href="#equation-velocity-verlet">(58)</a> using only equations  <a class="reference internal" href="#equation-step1">(57)</a> and <a class="reference internal" href="#equation-step2">(56)</a>.</p>
+<a class="reference internal" href="#equation-velocity-verlet">(58)</a> using only equations  <a class="reference internal" href="#equation-step2">(56)</a> and <a class="reference internal" href="#equation-step1">(57)</a>.</p>
 </div>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 2</p>
-<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet  <a class="reference internal" href="#equation-velocity-verlet">(58)</a>, starting from equation <a class="reference internal" href="#equation-step1">(57)</a> with a timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future. Make use of and equation <a class="reference internal" href="#equation-step2">(56)</a> to derive the final expression.</p>
+<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet  <a class="reference internal" href="#equation-velocity-verlet">(58)</a>, starting from equation <a class="reference internal" href="#equation-step1">(57)</a>. Make use of equation <a class="reference internal" href="#equation-step2">(56)</a> to derive the final expression.</p>
 </div>
 </section>
 </section>
@@ -649,8 +648,7 @@ replicated through space to form an infinite lattice. When a molecule
 moves during simulation its periodic images move with the exact same
 displacement, thus, if a molecule leaves the central box, one of its
 images will enter through the opposite face. This is illustrated in
-Figure <a class="reference internal" href="#pbc"><span class="std std-numref">Fig. 3</span></a> there
-are no walls at the boundary of the central box and the system has no
+Figure <a class="reference internal" href="#pbc"><span class="std std-numref">Fig. 3</span></a> with no walls at the boundary of the central box and the system has no
 surface.</p>
 <figure class="align-default" id="pbc">
 <a class="reference internal image-reference" href="../_images/pbc.svg"><img alt="../_images/pbc.svg" src="../_images/pbc.svg" style="height: 400px;" /></a>

@@ -23,14 +23,14 @@ Note, that references to other parts of the documents aren't resolved in this te
 :::{admonition} Exercise 1
 :class: exercise
 Derive the form of $\mathbf{r}(t + \Delta t)$ in the velocity-Verlet
-    {eq}`velocity-verlet` using only equations  {eq}`step1` and {eq}`step2`.
+    {eq}`velocity-verlet` using only equations  {eq}`step2` and {eq}`step1`.
 :::
 
 Your answer here
 
 :::{admonition} Exercise 2
 :class: exercise
-Derive the form of $\mathbf{v}(t + \Delta t)$ in the velocity-Verlet  {eq}`velocity-verlet`, starting from equation {eq}`step1` with a timestep $\Delta t$ in the future. Make use of and equation {eq}`step2` to derive the final expression.   
+Derive the form of $\mathbf{v}(t + \Delta t)$ in the velocity-Verlet  {eq}`velocity-verlet`, starting from equation {eq}`step1`. Make use of equation {eq}`step2` to derive the final expression.   
 :::
 
 Your answer here
