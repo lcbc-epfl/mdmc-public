@@ -575,9 +575,7 @@ accelerations can be approximated by a Taylor series expansion:</p>
 \mathbf{a}(t + \Delta t) &amp;= \mathbf{a}(t) + \mathbf{b}(t)\Delta t + \dots,
 \end{aligned}
 \end{split}\]</div>
-<p>where <span class="math notranslate nohighlight">\(\dots\)</span> denotes higher order derivatives of <span class="math notranslate nohighlight">\(\mathbf{r}(t)\)</span>. One
-can then propagate the position function forwards and backwards in time,
-yielding:</p>
+<p>where <span class="math notranslate nohighlight">\(\dots\)</span> denotes higher order derivatives of <span class="math notranslate nohighlight">\(\mathbf{r}(t)\)</span>. Taking into account time-reversibility of the integrator and only taking into account the second-order Taylor expansion yields:</p>
 <div class="math notranslate nohighlight" id="equation-step3">
 <span class="eqno">(55)<a class="headerlink" href="#equation-step3" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
@@ -619,11 +617,11 @@ velocity-Verlet:</p>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 1</p>
 <p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{r}(t + \Delta t)\)</span> in the velocity-Verlet
-<a class="reference internal" href="#equation-velocity-verlet">(58)</a>. <strong>Hint</strong>: solve equation  <a class="reference internal" href="#equation-step1">(57)</a> for  <span class="math notranslate nohighlight">\(\mathbf{r}(t - \Delta t)\)</span>, and use equations <a class="reference internal" href="#equation-step2">(56)</a> and  <a class="reference internal" href="#equation-step3">(55)</a>.</p>
+<a class="reference internal" href="#equation-velocity-verlet">(58)</a> using only equations  <a class="reference internal" href="#equation-step1">(57)</a> and <a class="reference internal" href="#equation-step2">(56)</a>.</p>
 </div>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 2</p>
-<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet  <a class="reference internal" href="#equation-velocity-verlet">(58)</a>. <strong>Hint</strong>: recast equations  <a class="reference internal" href="#equation-step1">(57)</a> and <a class="reference internal" href="#equation-step2">(56)</a> to a  timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future, and use the result obtained  above.</p>
+<p>Derive the form of <span class="math notranslate nohighlight">\(\mathbf{v}(t + \Delta t)\)</span> in the velocity-Verlet  <a class="reference internal" href="#equation-velocity-verlet">(58)</a>, starting from equation <a class="reference internal" href="#equation-step1">(57)</a> with a timestep <span class="math notranslate nohighlight">\(\Delta t\)</span> in the future. Make use of and equation <a class="reference internal" href="#equation-step2">(56)</a> to derive the final expression.</p>
 </div>
 </section>
 </section>

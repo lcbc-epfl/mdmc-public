@@ -23,14 +23,14 @@ Note, that references to other parts of the documents aren't resolved in this te
 :::{admonition} Exercise 1
 :class: exercise
 Derive the form of $\mathbf{r}(t + \Delta t)$ in the velocity-Verlet
-    {eq}`velocity-verlet`. **Hint**: solve equation  {eq}`step1` for  $\mathbf{r}(t - \Delta t)$, and use equations {eq}`step2` and  {eq}`step3`.
+    {eq}`velocity-verlet` using only equations  {eq}`step1` and {eq}`step2`.
 :::
 
 Your answer here
 
 :::{admonition} Exercise 2
 :class: exercise
-Derive the form of $\mathbf{v}(t + \Delta t)$ in the velocity-Verlet  {eq}`velocity-verlet`. **Hint**: recast equations  {eq}`step1` and {eq}`step2` to a  timestep $\Delta t$ in the future, and use the result obtained  above.   
+Derive the form of $\mathbf{v}(t + \Delta t)$ in the velocity-Verlet  {eq}`velocity-verlet`, starting from equation {eq}`step1` with a timestep $\Delta t$ in the future. Make use of and equation {eq}`step2` to derive the final expression.   
 :::
 
 Your answer here
@@ -75,7 +75,7 @@ Your answer here
 
 :::{admonition} Exercise 8
 :class: exercise
-What do you observe during the trajectory? Try to relate what you see with the parameters set for the simulation (i.e. simulation length, time step, temperature). Explain the changes, if any, you observe in the simulation if you change one or two of those parameters (note: you will need to delete your traj.pdb 
+What do you observe during the trajectory? Try to relate what you see with the parameters set for the simulation (i.e. simulation length, time step, temperature). Explain the changes, if any, you observe in the simulation if you change one or two of those parameters (note: rename your traj.pdb file if you want to keep your previous run).
 :::
 
 Your answer here
