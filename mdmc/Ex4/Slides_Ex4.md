@@ -10,7 +10,7 @@ output: beamer_presentation
 
 - We encourage you to work together, but the content in your report should be original
 - If you use an image or wording from an external source please cite it correctly
-- Please upload the recognizable pictures with good enough quality and a size large enough
+- Please upload recognizable pictures with good enough quality and a size large enough
 - theoretical background & concepts for illustrating the exercises
 - Mock exam will be provided
         
@@ -30,7 +30,7 @@ output: beamer_presentation
 
 # Exercise 4 - Intro & Tips
 
-Today we will provide you a simple Molecular Dynamics (**Toy MD**) code in python and you will extend it to run a MD simulation.
+Today we will provide you with a simple Molecular Dynamics (**Toy MD**) code in python and you will extend it to run a MD simulation.
 
 - The theoretical part introduces you to MD  \
   Be sure to understand what we mean by:
