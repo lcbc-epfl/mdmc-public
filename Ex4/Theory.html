@@ -497,11 +497,11 @@ observable of a state <span class="math notranslate nohighlight">\(s\)</span> wi
 corresponding to its Boltzmann weight, and for a sufficiently long <span class="math notranslate nohighlight">\(t\)</span> -
 <em>i.e.</em> for a sufficiently high occurence of all events to be
 representative - the time-average over the <span class="math notranslate nohighlight">\(O(s)\)</span> will reproduce the
-ensemble average. The longer the simulation time <span class="math notranslate nohighlight">\(t\)</span> is chosen, the
+ensemble average. The longer the chosen simulation time <span class="math notranslate nohighlight">\(t\)</span>, the
 better the convergence of the time average towards the ensemble average
-(it is evident that too short <span class="math notranslate nohighlight">\(t\)</span> do not lead to a converged dynamics,
+(it is obvious that too short <span class="math notranslate nohighlight">\(t\)</span> do not lead to a converged dynamics,
 <em>i.e.</em> phase space is not properly sampled).</p>
-<p>In this spirit, a (suitable) starting conformer of a system can be
+<p>In this spirit, a (suitable) starting conformation of a system can be
 propagated in time according to Hamilton’s equations of motions:</p>
 <div class="math notranslate nohighlight" id="equation-hamiltoneqmotion">
 <span class="eqno">(50)<a class="headerlink" href="#equation-hamiltoneqmotion" title="Link to this equation">#</a></span>\[\begin{split}
@@ -538,15 +538,15 @@ molecular dynamics</em> (MD).</p>
 </section>
 <section id="time-evolution">
 <h2>Time Evolution<a class="headerlink" href="#time-evolution" title="Link to this heading">#</a></h2>
-<p>Given the potential <span class="math notranslate nohighlight">\(V\)</span> for atomic interaction, the force
+<p>Given the potential <span class="math notranslate nohighlight">\(V\)</span> of atomic interactions, the force
 acting upon the <span class="math notranslate nohighlight">\(i\)</span>th atom is determined by the gradient with respect to
 atomic displacements:</p>
 <div class="math notranslate nohighlight" id="equation-force-on-i">
 <span class="eqno">(52)<a class="headerlink" href="#equation-force-on-i" title="Link to this equation">#</a></span>\[
 \mathbf{F}_i = -\nabla_{\mathbf{r}_i} V \left( \mathbf{r_1}, \dots, \mathbf{r_N} \right) = - \left( \frac{\partial V}{\partial x_i}, \frac{\partial V}{\partial y_i}, \frac{\partial V}{\partial z_i} \right).
 \]</div>
-<p>Using Newton’s equations of motion one can then achieve propagation of
-atomic positions in time, using some time step <span class="math notranslate nohighlight">\(\Delta t\)</span>:</p>
+<p>Using Newton’s equations of motion and assuming constant acceleration <span class="math notranslate nohighlight">\(a\)</span> and velocities <span class="math notranslate nohighlight">\(v\)</span> over time, one can then achieve propagation of
+atomic positions in time using some time step <span class="math notranslate nohighlight">\(\Delta t\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-atomic-position-in-time">
 <span class="eqno">(53)<a class="headerlink" href="#equation-atomic-position-in-time" title="Link to this equation">#</a></span>\[\begin{split}
 \begin{aligned}
@@ -582,7 +582,7 @@ accelerations can be approximated by a Taylor series expansion:</p>
 \mathbf{r}(t - \Delta t) &amp;= \mathbf{r}(t) - \mathbf{v}(t)\Delta t + \frac{1}{2}\mathbf{a}(t)\Delta t^2, \\
 \end{aligned}
 \end{split}\]</div>
-<p>and by summing these the position-Verlet is obtained:</p>
+<p>and by summing these, the position-Verlet integrator is obtained using:</p>
 <div class="math notranslate nohighlight" id="equation-step2">
 <span class="eqno">(56)<a class="headerlink" href="#equation-step2" title="Link to this equation">#</a></span>\[
 \mathbf{r}(t + \Delta t) = 2\mathbf{r}(t) - \mathbf{r}(t - \Delta t) + \mathbf{a}(t) \Delta t^2,
@@ -597,7 +597,7 @@ accelerations can be approximated by a Taylor series expansion:</p>
 <section id="the-velocity-verlet-algorithm">
 <h3>The Velocity-Verlet Algorithm<a class="headerlink" href="#the-velocity-verlet-algorithm" title="Link to this heading">#</a></h3>
 <p>The position-Verlet algorithm uses positions and accelerations at time
-<span class="math notranslate nohighlight">\(t\)</span>, and the positions from time <span class="math notranslate nohighlight">\(t- \Delta t\)</span> to calculate new
+<span class="math notranslate nohighlight">\(t\)</span> together with the positions from time <span class="math notranslate nohighlight">\(t- \Delta t\)</span> to calculate new
 positions at time <span class="math notranslate nohighlight">\(t+\Delta t\)</span>. The position-Verlet algorithm does not
 use velocities explicitly, and as such it is straightforward to
 implement and requires minimal storage space. However, this form of the
