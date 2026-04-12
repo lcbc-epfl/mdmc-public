@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 4
-subtitle: MDMC Spring 2025
-date: April 08, 2025
-author: "Salomé Guilbert, Qihao Zhang, Thibault Kläy, Evan Vasey, Sophia Johnson, Andrea Levy"
+subtitle: MDMC Spring 2026
+date: April 14, 2026
+author: "Thibault Kläy, Amina Menhour, Alice Piantavigna, Evan Vasey, Qihao Zhang"
 output: beamer_presentation
 ---
 
@@ -47,7 +47,7 @@ Today we will provide you a simple Molecular Dynamics (**Toy MD**) code in pytho
 `ToyMD` code structure:
 
 - main code (propagation of MD steps) in `toy_md.py` script
-- additional code for specific tasks, i.e. `toy_forces.py`
+- additional code for specific tasks, i.e. `toy_md_forces.py`
 - parameters for the system in separate files (`carbon-dioxide` folder)
 
 ![](/data/mdmc/img_slides/Ex4/toy_MD.png) \
@@ -63,15 +63,6 @@ Today we will provide you a simple Molecular Dynamics (**Toy MD**) code in pytho
 (see instructions in the exercise). In both cases, you will execute a bash command, passing files as arguments to the `toy_md.py` script with the following structure (paths may change):
 
 
-`python3 toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
+`python3 ../toy_md.py -c co2.pdb -p params.txt -ff force_field.txt -o traj.pdb -w co2-output.pdb`
 
-If you'd like to re-run the code with different parameters, please delete the previous `traj.pdb` file or rename it
-
-# Exercises 4 & 5 - Additional Notes
-
-Due to the Easter Break, report 4 won't be due until Tuesday April 29th when we hold the session for Exercise 5.
-
-- 15 April: Course
-- 18 - 27 April: Easter Break
-- 29 April: Exercise 5 (and due date Ex4 @ 11am)
-- 6 May: Course
+If you'd like to re-run the code with different parameters but keep your generated data, please rename the previous `traj.pdb` file
