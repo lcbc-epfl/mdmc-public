@@ -477,50 +477,6 @@ differences between your scheme and Monte Carlo methods.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><style>
-    .admonition, div.admonition{margin: 0em auto;
-    padding: 0 .6rem .8rem;
-    overflow: hidden;
-    page-break-inside: avoid;
-    border-left: .2rem solid;
-    border-left-color: rgba(var(--pst-color-admonition-default),1);
-    border-bottom-color: rgba(var(--pst-color-admonition-default),1);
-    border-right-color: rgba(var(--pst-color-admonition-default),1);
-    border-top-color: rgba(var(--pst-color-admonition-default),1);
-    border-radius: .2rem;
-    box-shadow: 0 .2rem .5rem rgba(0,0,0,.05),0 0 .0625rem rgba(0,0,0,.1);
-    transition: color .25s,background-color .25s,border-color .25s;}
-.exercise {
-    border-color: #b51f1f !important;
-}
-     div.admonition, div.topic, blockquote {
-    clear: left;
-}
-
-div.admonition {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.admonition {
-    border-radius: .4em;
-    box-shadow: 0 0.2rem 0.5rem rgb(0 0 0 / 5%), 0 0 0.0625rem rgb(0 0 0 / 10%);
-}
-
-.admonition>.title, div.admonition>.title {
-    position: relative;
-  margin-top:-10px;
-  margin-left:-0.7em;
-    padding: .4rem .6rem .4rem .6rem;
-    font-weight: 700;
-    }
-
-.exercise>.title {
-    background-color: #e6e6e6 !important;
-    color: #212121 !important;
-}
-     </style></div></div>
 </div>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 4</p>
@@ -533,7 +489,37 @@ div.admonition {
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 6</p>
 <p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).</p>
-<p>With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>.</p>
+<p>With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> and three points the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code>. The distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>. The distance to the identical point in an adjacent box (e.g [-1.5,-1.5,-1.5]) should be [0, 0, 0].</p>
+</div>
+<p>You can test if your implementation of the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function in <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> is running correctly by replacing the expected values for distances in the following cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;ToyMD&quot;</span><span class="p">)</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">toy_md_forces</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">toy_md_forces</span><span class="w"> </span><span class="kn">import</span> <span class="n">distance_pbc</span>
+<span class="c1"># Your cubic box</span>
+<span class="n">box</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">])</span>
+
+<span class="c1"># Test 1</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">distance_pbc</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test 1: dx = </span><span class="si">{</span><span class="n">dx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="c1">### Expected distance [x,y,z] ###), f&quot;Failed: {dx}&quot;</span>
+
+<span class="c1"># Test 2</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">distance_pbc</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test 2: dx = </span><span class="si">{</span><span class="n">dx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="c1">### Expected distance [x,y,z] ###), f&quot;Failed: {dx}&quot;</span>
+
+<span class="c1"># Test 2</span>
+<span class="n">dx</span> <span class="o">=</span> <span class="n">distance_pbc</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Test 2: dx = </span><span class="si">{</span><span class="n">dx</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">dx</span><span class="p">,</span> <span class="c1">### Expected distance [x,y,z] ###), f&quot;Failed: {dx}&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">All tests passed!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <p>To test whether your implementation works you can run a short MD run of a box of a toy system consisting in CO2 molecules.</p>
 <p>You can run the <code class="docutils literal notranslate"><span class="pre">Toy</span> <span class="pre">MD</span></code> code in two ways:</p>

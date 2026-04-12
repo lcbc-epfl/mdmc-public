@@ -61,7 +61,7 @@ Your answer here
 :class: exercise
 Describe a possible implementation of periodic boundary conditions and provide an implementation in `toy_md_forces.py` to compute the distance of two particles taking into account the perodic boundary conditions in the `distance_PBC` function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell). 
     
-With a box size of `[2,2,2]` and three points the elementwise distances between point `[0.5,0.5,0.5]` should be the same to the points `[-0.5,-0.5,-0.5]` and `[1.5,1.5,1.5]`. The distance should be `[1,1,1]`.
+With a box size of `[2,2,2]` and three points the elementwise distances between point `[0.5,0.5,0.5]` should be the same to the points `[-0.5,-0.5,-0.5]` and `[1.5,1.5,1.5]`. The distance should be `[1,1,1]`. The distance to the identical point in an adjacent box (e.g [-1.5,-1.5,-1.5]) should be [0, 0, 0].
 :::
 
 Your answer here
