@@ -95,6 +95,23 @@ if __name__ == '__main__':
     for step in range(int(md_params["number-of-steps"])):
         
         ekin=0
+
+        ###########################
+        ###     Some HINTS      ###
+        ###########################
+
+        # To update coordinates use a loop like this
+
+        # for i in range(N):
+        #     for m in range(3):
+        #         coords[i][m] += # you can use velocities[i][m], time_step,masses[i],forces[i][m]
+        
+        # To update velocities replace `coords[i][m]` with `velocities[i][m]`
+
+        
+        ##########################################
+        ###     START YOUR IMPLEMENTATION      ###
+        ##########################################
         
         # Implement Velocity Verlet steps here 
 
@@ -113,19 +130,6 @@ if __name__ == '__main__':
 
         # 3rd Velocity verlet step
         # v(t+dt)=v(t+dt/2)+0.5 f(t+dt)/m dt
-
-        ###########################
-        ###     Some HINTS      ###
-        ###########################
-
-        # To update coordinates use a loop like this
-
-        # for i in range(N):
-        #     for m in range(3):
-        #         coords[i][m] += # you can use velocities[i][m], time_step,masses[i],forces[i][m]
-        
-        # To update velocities replace `coords[i][m]` with `velocities[i][m]`
-
 
         ekinetic = get_ekin(velocities, masses)
         T = get_temperature(len(coords), ekinetic)   
