@@ -68,7 +68,7 @@ Your answer here
 
 \begin{mdframed}
 \textbf{Exercise 3}\\
-How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps to perform a molecular dynamics simulation from start to finish? Point out the main
+How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps and main parameters to perform a molecular dynamics simulation from start to finish? Point out the main
 differences between your scheme and Monte Carlo methods.
 \end{mdframed}
 
@@ -92,7 +92,7 @@ Your answer here
 \textbf{Exercise 6}\\
 Describe a possible implementation of periodic boundary conditions and provide an implementation in \texttt{toy\_md\_forces.py} to compute the distance of two particles taking into account the perodic boundary conditions in the \texttt{distance\_PBC} function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).
 
-With a box size of \texttt{[2,2,2]} the elementwise distances between point \texttt{[0.5,0.5,0.5]} should be the same to the points \texttt{[-0.5,-0.5,-0.5]} and \texttt{[1.5,1.5,1.5]} and this distance should be \texttt{[1,1,1]}. Furthermore, the distance to the identical point in an adjacent box (e.g [-1.5,-1.5,-1.5]) should be [0, 0, 0].
+With a box size of \texttt{[2,2,2]} the elementwise distances between point \texttt{[0.5,0.5,0.5]} should be the same to the points \texttt{[-0.5,-0.5,-0.5]} and \texttt{[1.5,1.5,1.5]} and this distance should be \texttt{[1,1,1]}. Furthermore, the distance to the identical point in an adjacent box (e.g \texttt{[-1.5,-1.5,-1.5]}) should be \texttt{[0, 0, 0]}.
 \end{mdframed}
 
 Your answer here

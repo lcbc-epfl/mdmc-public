@@ -456,17 +456,17 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="md-simulation-from-scratch">
 <h1>MD simulation from scratch<a class="headerlink" href="#md-simulation-from-scratch" title="Link to this heading">#</a></h1>
-<p>The <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> code provided is a minimalistic python program to run MD simulations.
+<p>The provided <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> code is a minimalistic python program to run MD simulations.
 By clicking <a href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex4/ToyMD/toy_md.py&branch=main">here</a> you can open the files for this exercise on noto.</p>
 <p>The main program <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code> takes care of the MD propagation and runs different sub-programs for different calculations needed for an MD simulation For example, <code class="docutils literal notranslate"><span class="pre">toy_md_params.py</span></code> takes care of reading the parameters from the <code class="docutils literal notranslate"><span class="pre">params.txt</span></code> file, or <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> calculates bonded and non-bonded forces.</p>
-<p>For this exercise, we will focus of the main program <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code>, implementing a propagation algorithm, and <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code>, implementing PBCs.
+<p>For this exercise, we will focus on the main program <code class="docutils literal notranslate"><span class="pre">toy_md.py</span></code>, implementing a propagation algorithm, and on <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code>, implementing PBCs.
 Take some time to familarize yourself with the program structure in the <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> folder. In that folder, you will also find a <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder, containing parameters for our toy system: a box of <code class="docutils literal notranslate"><span class="pre">216</span></code> carbon dioxide molecules. At the end of the exercise, you will be able to run a MD simulation of this system.</p>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 3</p>
-<p>How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps to perform a molecular dynamics simulation from start to finish? Point out the main
+<p>How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps and main parameters to perform a molecular dynamics simulation from start to finish? Point out the main
 differences between your scheme and Monte Carlo methods.</p>
 </div>
-<p>In this exercise, you will implement a propagation algorithm and PBCs. Unfortunately, you will be able to verify your implementations are correct only when you will have modified both pieces of code needed (Ex4 and Ex6). However, you will find tips and suggestions as comments in the python codes to help you.</p>
+<p>In this exercise, you will implement a propagation algorithm and PBCs. Unfortunately, you will only be able to verify if your implementations are correct after modifying both pieces of code needed (Ex4 and Ex6). However, you will find tips and suggestions as comments in the python codes to help you.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
@@ -489,7 +489,7 @@ differences between your scheme and Monte Carlo methods.</p>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 6</p>
 <p>Describe a possible implementation of periodic boundary conditions and provide an implementation in <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> to compute the distance of two particles taking into account the perodic boundary conditions in the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function (i.e a particle at the edge of the primary cell has a very short distance to the particle in the next cell).</p>
-<p>With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code> and this distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>. Furthermore, the distance to the identical point in an adjacent box (e.g [-1.5,-1.5,-1.5]) should be [0, 0, 0].</p>
+<p>With a box size of <code class="docutils literal notranslate"><span class="pre">[2,2,2]</span></code> the elementwise distances between point <code class="docutils literal notranslate"><span class="pre">[0.5,0.5,0.5]</span></code> should be the same to the points <code class="docutils literal notranslate"><span class="pre">[-0.5,-0.5,-0.5]</span></code> and <code class="docutils literal notranslate"><span class="pre">[1.5,1.5,1.5]</span></code> and this distance should be <code class="docutils literal notranslate"><span class="pre">[1,1,1]</span></code>. Furthermore, the distance to the identical point in an adjacent box (e.g <code class="docutils literal notranslate"><span class="pre">[-1.5,-1.5,-1.5]</span></code>) should be <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>.</p>
 </div>
 <p>You can test if your implementation of the <code class="docutils literal notranslate"><span class="pre">distance_PBC</span></code> function in <code class="docutils literal notranslate"><span class="pre">toy_md_forces.py</span></code> is running correctly by replacing the expected values for the elementwise distances in the following cell.</p>
 <div class="cell docutils container">
@@ -521,7 +521,7 @@ differences between your scheme and Monte Carlo methods.</p>
 </div>
 </div>
 </div>
-<p>To test whether your whole implementation works you can run a short MD run of a box of a toy system consisting in CO2 molecules.</p>
+<p>To test whether your whole implementation works you can run a short MD run of a toy system consisting in CO2 molecules.</p>
 <p>You can run the <code class="docutils literal notranslate"><span class="pre">Toy</span> <span class="pre">MD</span></code> code in two ways:</p>
 <ol class="arabic">
 <li><p>via teminal:</p>
