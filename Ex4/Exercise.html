@@ -463,8 +463,8 @@ By clicking <a href="https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https:
 Take some time to familarize yourself with the program structure in the <code class="docutils literal notranslate"><span class="pre">ToyMD</span></code> folder. In that folder, you will also find a <code class="docutils literal notranslate"><span class="pre">carbon-dioxide</span></code> folder, containing parameters for our toy system: a box of <code class="docutils literal notranslate"><span class="pre">216</span></code> carbon dioxide molecules. At the end of the exercise, you will be able to run a MD simulation of this system.</p>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 3</p>
-<p>How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps and main parameters to perform a molecular dynamics simulation from start to finish? Point out the main
-differences between your scheme and Monte Carlo methods.</p>
+<p>How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps and main parameters/inputs to perform a molecular dynamics simulation from start to finish? Point out the main
+difference(s) between your scheme and Monte Carlo methods.</p>
 </div>
 <p>In this exercise, you will implement a propagation algorithm and PBCs. Unfortunately, you will only be able to verify if your implementations are correct after modifying both pieces of code needed (Ex4 and Ex6). However, you will find tips and suggestions as comments in the python codes to help you.</p>
 <div class="cell docutils container">
@@ -578,7 +578,7 @@ Step:     9 Epot   -782.979 Ekin    159.262 Etot   -623.717 T   19.71 lambda 1.0
 </div>
 <div class="exercise admonition">
 <p class="admonition-title">Exercise 7 - Bonus</p>
-<p>What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with and without periodic boundary conditions?</p>
+<p>What ensemble does the code in the ToyMD program sample in and what indicates it to you? Which of the quantities linear momentum <span class="math notranslate nohighlight">\(p\)</span> and angular momentum <span class="math notranslate nohighlight">\(L\)</span> are conserved when running with periodic boundary conditions?</p>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="visualize-trajectory">

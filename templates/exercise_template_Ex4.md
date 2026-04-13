@@ -37,8 +37,8 @@ Your answer here
 
 :::{admonition} Exercise 3
 :class: exercise
-How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps and main parameters to perform a molecular dynamics simulation from start to finish? Point out the main
-    differences between your scheme and Monte Carlo methods. 
+How does an MD program work? Describe schematically (either describe steps in words thoroughly and/or provide an annotated sketch of the steps). What are the main steps and main parameters/inputs to perform a molecular dynamics simulation from start to finish? Point out the main
+    difference(s) between your scheme and Monte Carlo methods. 
 :::
 
 Your answer here
@@ -68,7 +68,7 @@ Your answer here
 
 :::{admonition} Exercise 7 - Bonus
 :class: exercise
-What ensemble does the code in the ToyMD program sample in? Which of the quantities linear momentum $p$ and angular momentum $L$ are conserved when running with and without periodic boundary conditions?
+What ensemble does the code in the ToyMD program sample in and what indicates it to you? Which of the quantities linear momentum $p$ and angular momentum $L$ are conserved when running with periodic boundary conditions?
 :::
 
 Your answer here
