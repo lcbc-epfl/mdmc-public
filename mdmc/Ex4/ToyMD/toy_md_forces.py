@@ -13,12 +13,19 @@ import numpy as np
 # njit decorator to JIT compile python code using numba
 @njit
 def distance_pbc(box, x1, x2):
+
+     ###########################
+     ###       WARNING       ###
+     ###########################
+
+        # The directionality of the distance will matter
+        # during force calculation. Therefore, define dx
+        # as the distance going from x2 to x1 !
+    
     dx = np.zeros_like(box) # make an empty vector
     # compute the shortest elementwise distance here
     # Hint: Check if distance is smaller than half box width
     return dx
-
-
 
 
 @njit
@@ -79,7 +86,7 @@ def nonbonded_forces(box, coords, elem, exclude, force, sigma, epsilon, charge):
                         sr         = sigma_ij*dx_1
                         sr6        = sr**6
                         Evdw       = 4*epsilon_ij*(sr6**2 - sr6)
-                        Fvdw       = 4*epsilon_ij*((sr6*sr)**2 - sr6*sr**2)
+                        Fvdw       = 4*epsilon_ij*(12*(sr6*sr)**2 - 6*sr6*sr**2)
                     else:
                         Evdw       = 0
                         Fvdw       = 0
