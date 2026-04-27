@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 5
-subtitle: MDMC Spring 2025
-date: April 29, 2025
-author: "Evan Vasey, Thibault Kläy, Qihao Zhang, Salomé Guilbert, Sophia Johnson, Andrea Levy"
+subtitle: MDMC Spring 2026
+date: April 28, 2026
+author: "Thibault Kläy, Amina Menhour, Alice Piantavigna, Evan Vasey, Qihao Zhang"
 output: beamer_presentation
 ---
 
@@ -11,7 +11,6 @@ output: beamer_presentation
 - Always access the notebooks via  the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/)
 
 - Important Dates:
-  - Due date for Ex 5 will be Tuesday May 13th
   - Q&A Session on Tuesday May 20th in lecture classroom
   - Written exam on Tuesday May 27th in lecture classroom
 
