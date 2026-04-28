@@ -11,8 +11,8 @@ output: beamer_presentation
 - Always access the notebooks via  the rocket button on the top right of the code files and choose JupyterHub to launch [noto.epfl.ch](https://noto.epfl.ch/)
 
 - Important Dates:
-  - Q&A Session on Tuesday May 20th in lecture classroom
-  - Written exam on Tuesday May 27th in lecture classroom
+  - Q&A Session on Tuesday May 19th in lecture classroom
+  - Written exam on Tuesday May 26th in lecture classroom
 
 
 # Exercise 5 Learning Goals
