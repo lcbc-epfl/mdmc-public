@@ -12,13 +12,13 @@ output: beamer_presentation
 
 - No interview for report of Ex6
 
-- **Extended deadline** for this report: Tuesday May 26th at 23h59
+- **Extended deadline** for this report: Tuesday June 30th at 23h59
 
 - Even if you decide to not do the report, read the theory and the exercise! Important knowledge to better understand MD (possibly useful for the exam!)
 
 - Important Dates:
-  - Q&A Session and mock exam on Tuesday May 20th in lecture classroom -- send us your questions on moodle in advance!
-  - Written exam on Tuesay May 27th in lecure classroom
+  - Q&A Session and mock exam on Tuesday May 19th in lecture classroom -- send us your questions on moodle in advance!
+  - Written exam on Tuesay May 26th in lecture classroom
 
 # Written exam - information
 
@@ -37,13 +37,13 @@ output: beamer_presentation
 
 - To this end, please use the following link instead of the usual rocket button: [gnoto link](https://gnoto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A//github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex6/TRP_Cage.ipynb&branch=main)
 
-- **Select** the correct kernel for this exercise `CH-351`
+- **Select** the correct kernel for this exercise `TRP_CAGE`
 
 ![](/data/mdmc/img_slides/Ex6/gnoto.png)\
 
 # Exercise 6 - Set up gnoto
 
-- **Select** the correct kernel for this exercise `CH-351`
+- **Select** the correct kernel for this exercise `TRP_CAGE`
 
 ![](/data/mdmc/img_slides/Ex6/gnoto_kernel.png){width=30%} \
 
@@ -54,7 +54,7 @@ output: beamer_presentation
 
 # Exercise 6 - Context
 
-Today you will perform a MD simulation of a Trp-cahe miniprotein
+Today you will perform a MD simulation of a Trp-cage miniprotein
 
 - Smallest protein to display two state folding properties, ideal candidate for computational folding simulations
 
