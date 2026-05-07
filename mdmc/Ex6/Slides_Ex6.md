@@ -1,8 +1,8 @@
 ---
 title: Exercise Session 6
-subtitle: MDMC Spring 2025
-date: May 13, 2025
-author: "Evan Vasey, Thibault Kläy, Qihao Zhang, Salomé Guilbert, Sophia Johnson, Andrea Levy"
+subtitle: MDMC Spring 2026
+date: May 12, 2026
+author: "Amina Menhour, Evan Vasey, Thibault Kläy, Qihao Zhang, Salomé Guilbert, Sophia Johnson, Andrea Levy"
 output: beamer_presentation
 ---
 
@@ -12,7 +12,7 @@ output: beamer_presentation
 
 - No interview for report of Ex6
 
-- **Extended deadline** for this report: Sunday June 29th at 23h59
+- **Extended deadline** for this report: Tuesday May 26th at 23h59
 
 - Even if you decide to not do the report, read the theory and the exercise! Important knowledge to better understand MD (possibly useful for the exam!)
 
