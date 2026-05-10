@@ -37,13 +37,13 @@ output: beamer_presentation
 
 - To this end, please use the following link instead of the usual rocket button: [gnoto link](https://gnoto.epfl.ch/hub/user-redirect/git-pull?repo=https%3A//github.com/lcbc-epfl/mdmc-public&urlpath=lab/tree/mdmc-public/mdmc/Ex6/TRP_Cage.ipynb&branch=main)
 
-- **Select** the correct kernel for this exercise `TRP_CAGE`
+- **Select** the correct kernel for this exercise `Python3`
 
 ![](/data/mdmc/img_slides/Ex6/gnoto.png)\
 
 # Exercise 6 - Set up gnoto
 
-- **Select** the correct kernel for this exercise `TRP_CAGE`
+- **Select** the correct kernel for this exercise `Python3`
 
 ![](/data/mdmc/img_slides/Ex6/gnoto_kernel.png){width=30%} \
 
